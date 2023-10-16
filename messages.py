@@ -1,3 +1,13 @@
+from enum import Enum 
+class ControlType(Enum):
+    UNDEFINED=0
+    TRIM_TAB=1
+    RUDDER=2
+
+class ControlCommand:
+    control_type = ControlType.UNDEFINED
+    control_value = 0
+
 class Wind:
     speed = 0
     direction = 0
