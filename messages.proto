@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package sailbot;
+
+enum ControlType {
+    UNDEFINED = 0;
+    TRIM_TAB = 1;
+    RUDDER = 2;
+}
+
+message ControlCommand {
+    ControlType control_type = 1;
+    float control_value = 2;
+}
+
+message Wind {
+    float speed = 1;
+    float direction = 2;
+}
+
+message NodeStates {
+    bool airmar_reader = 1;
+    bool battery_monitor = 2;
+    bool control_system = 3;
+    bool network_comms = 4;
+    bool pwm_controller = 5;
+    bool serial_rc_receiver = 6;
+    bool trim_tab_comms = 7;
+}
+
+message BoatState {
+    double latitude = 1;
+    optional string latitude_direction = 2;
+    double longitude = 3;
+    optional string longitude_direction = 4;
+    float current_heading = 5;
+    optional float magnetic_deviation = 6;
+    optional string magnetic_deviation_direction = 7;
+    optional float magnetic_variation = 8;
+    optional string magnetic_variation_direction = 9;
+    float track_degrees_true = 10;
+    float track_degrees_magnetic = 11;
+    float speed_knots = 12;
+    float speed_kmh = 13;
+    float rate_of_turn = 14;
+    optional float outside_temp = 15;
+    optional float atmospheric_pressure = 16;
+    Wind true_wind = 17;
+    Wind apparent_wind = 18;
+    float pitch = 19;
+    float roll = 20;
+    NodeStates node_states = 21;
+}
