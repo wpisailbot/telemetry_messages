@@ -147,35 +147,15 @@ class Wind extends $pb.GeneratedMessage {
 
 class NodeStates extends $pb.GeneratedMessage {
   factory NodeStates({
-    $core.bool? airmarReader,
-    $core.bool? batteryMonitor,
-    $core.bool? controlSystem,
-    $core.bool? networkComms,
-    $core.bool? pwmController,
-    $core.bool? serialRcReceiver,
-    $core.bool? trimTabComms,
+    $core.Iterable<$core.String>? nodeNames,
+    $core.Iterable<$core.bool>? nodeStates,
   }) {
     final $result = create();
-    if (airmarReader != null) {
-      $result.airmarReader = airmarReader;
+    if (nodeNames != null) {
+      $result.nodeNames.addAll(nodeNames);
     }
-    if (batteryMonitor != null) {
-      $result.batteryMonitor = batteryMonitor;
-    }
-    if (controlSystem != null) {
-      $result.controlSystem = controlSystem;
-    }
-    if (networkComms != null) {
-      $result.networkComms = networkComms;
-    }
-    if (pwmController != null) {
-      $result.pwmController = pwmController;
-    }
-    if (serialRcReceiver != null) {
-      $result.serialRcReceiver = serialRcReceiver;
-    }
-    if (trimTabComms != null) {
-      $result.trimTabComms = trimTabComms;
+    if (nodeStates != null) {
+      $result.nodeStates.addAll(nodeStates);
     }
     return $result;
   }
@@ -184,13 +164,8 @@ class NodeStates extends $pb.GeneratedMessage {
   factory NodeStates.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NodeStates', package: const $pb.PackageName(_omitMessageNames ? '' : 'sailbot'), createEmptyInstance: create)
-    ..aOB(1, _omitFieldNames ? '' : 'airmarReader')
-    ..aOB(2, _omitFieldNames ? '' : 'batteryMonitor')
-    ..aOB(3, _omitFieldNames ? '' : 'controlSystem')
-    ..aOB(4, _omitFieldNames ? '' : 'networkComms')
-    ..aOB(5, _omitFieldNames ? '' : 'pwmController')
-    ..aOB(6, _omitFieldNames ? '' : 'serialRcReceiver')
-    ..aOB(7, _omitFieldNames ? '' : 'trimTabComms')
+    ..pPS(1, _omitFieldNames ? '' : 'nodeNames')
+    ..p<$core.bool>(2, _omitFieldNames ? '' : 'nodeStates', $pb.PbFieldType.KB)
     ..hasRequiredFields = false
   ;
 
@@ -216,67 +191,10 @@ class NodeStates extends $pb.GeneratedMessage {
   static NodeStates? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.bool get airmarReader => $_getBF(0);
-  @$pb.TagNumber(1)
-  set airmarReader($core.bool v) { $_setBool(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasAirmarReader() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearAirmarReader() => clearField(1);
+  $core.List<$core.String> get nodeNames => $_getList(0);
 
   @$pb.TagNumber(2)
-  $core.bool get batteryMonitor => $_getBF(1);
-  @$pb.TagNumber(2)
-  set batteryMonitor($core.bool v) { $_setBool(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasBatteryMonitor() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearBatteryMonitor() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.bool get controlSystem => $_getBF(2);
-  @$pb.TagNumber(3)
-  set controlSystem($core.bool v) { $_setBool(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasControlSystem() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearControlSystem() => clearField(3);
-
-  @$pb.TagNumber(4)
-  $core.bool get networkComms => $_getBF(3);
-  @$pb.TagNumber(4)
-  set networkComms($core.bool v) { $_setBool(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasNetworkComms() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearNetworkComms() => clearField(4);
-
-  @$pb.TagNumber(5)
-  $core.bool get pwmController => $_getBF(4);
-  @$pb.TagNumber(5)
-  set pwmController($core.bool v) { $_setBool(4, v); }
-  @$pb.TagNumber(5)
-  $core.bool hasPwmController() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearPwmController() => clearField(5);
-
-  @$pb.TagNumber(6)
-  $core.bool get serialRcReceiver => $_getBF(5);
-  @$pb.TagNumber(6)
-  set serialRcReceiver($core.bool v) { $_setBool(5, v); }
-  @$pb.TagNumber(6)
-  $core.bool hasSerialRcReceiver() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearSerialRcReceiver() => clearField(6);
-
-  @$pb.TagNumber(7)
-  $core.bool get trimTabComms => $_getBF(6);
-  @$pb.TagNumber(7)
-  set trimTabComms($core.bool v) { $_setBool(6, v); }
-  @$pb.TagNumber(7)
-  $core.bool hasTrimTabComms() => $_has(6);
-  @$pb.TagNumber(7)
-  void clearTrimTabComms() => clearField(7);
+  $core.List<$core.bool> get nodeStates => $_getList(1);
 }
 
 class BoatState extends $pb.GeneratedMessage {

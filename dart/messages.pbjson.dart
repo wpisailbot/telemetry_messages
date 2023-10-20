@@ -59,24 +59,15 @@ final $typed_data.Uint8List windDescriptor = $convert.base64Decode(
 const NodeStates$json = {
   '1': 'NodeStates',
   '2': [
-    {'1': 'airmar_reader', '3': 1, '4': 1, '5': 8, '10': 'airmarReader'},
-    {'1': 'battery_monitor', '3': 2, '4': 1, '5': 8, '10': 'batteryMonitor'},
-    {'1': 'control_system', '3': 3, '4': 1, '5': 8, '10': 'controlSystem'},
-    {'1': 'network_comms', '3': 4, '4': 1, '5': 8, '10': 'networkComms'},
-    {'1': 'pwm_controller', '3': 5, '4': 1, '5': 8, '10': 'pwmController'},
-    {'1': 'serial_rc_receiver', '3': 6, '4': 1, '5': 8, '10': 'serialRcReceiver'},
-    {'1': 'trim_tab_comms', '3': 7, '4': 1, '5': 8, '10': 'trimTabComms'},
+    {'1': 'node_names', '3': 1, '4': 3, '5': 9, '10': 'nodeNames'},
+    {'1': 'node_states', '3': 2, '4': 3, '5': 8, '10': 'nodeStates'},
   ],
 };
 
 /// Descriptor for `NodeStates`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List nodeStatesDescriptor = $convert.base64Decode(
-    'CgpOb2RlU3RhdGVzEiMKDWFpcm1hcl9yZWFkZXIYASABKAhSDGFpcm1hclJlYWRlchInCg9iYX'
-    'R0ZXJ5X21vbml0b3IYAiABKAhSDmJhdHRlcnlNb25pdG9yEiUKDmNvbnRyb2xfc3lzdGVtGAMg'
-    'ASgIUg1jb250cm9sU3lzdGVtEiMKDW5ldHdvcmtfY29tbXMYBCABKAhSDG5ldHdvcmtDb21tcx'
-    'IlCg5wd21fY29udHJvbGxlchgFIAEoCFINcHdtQ29udHJvbGxlchIsChJzZXJpYWxfcmNfcmVj'
-    'ZWl2ZXIYBiABKAhSEHNlcmlhbFJjUmVjZWl2ZXISJAoOdHJpbV90YWJfY29tbXMYByABKAhSDH'
-    'RyaW1UYWJDb21tcw==');
+    'CgpOb2RlU3RhdGVzEh0KCm5vZGVfbmFtZXMYASADKAlSCW5vZGVOYW1lcxIfCgtub2RlX3N0YX'
+    'RlcxgCIAMoCFIKbm9kZVN0YXRlcw==');
 
 @$core.Deprecated('Use boatStateDescriptor instead')
 const BoatState$json = {

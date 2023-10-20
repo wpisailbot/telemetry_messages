@@ -19,13 +19,8 @@ message Wind {
 }
 
 message NodeStates {
-    bool airmar_reader = 1;
-    bool battery_monitor = 2;
-    bool control_system = 3;
-    bool network_comms = 4;
-    bool pwm_controller = 5;
-    bool serial_rc_receiver = 6;
-    bool trim_tab_comms = 7;
+    repeated string node_names = 1;
+    repeated bool node_states = 2;
 }
 
 message BoatState {
