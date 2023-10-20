@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: messages.proto
+//  source: boat_state.proto
 //
 // @dart = 2.12
 
@@ -13,33 +13,36 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use controlTypeDescriptor instead')
-const ControlType$json = {
-  '1': 'ControlType',
+@$core.Deprecated('Use nodeStatusDescriptor instead')
+const NodeStatus$json = {
+  '1': 'NodeStatus',
   '2': [
     {'1': 'UNDEFINED', '2': 0},
-    {'1': 'TRIM_TAB', '2': 1},
-    {'1': 'RUDDER', '2': 2},
+    {'1': 'OK', '2': 1},
+    {'1': 'ERROR', '2': 2},
+    {'1': 'WARN', '2': 3},
   ],
 };
 
-/// Descriptor for `ControlType`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List controlTypeDescriptor = $convert.base64Decode(
-    'CgtDb250cm9sVHlwZRINCglVTkRFRklORUQQABIMCghUUklNX1RBQhABEgoKBlJVRERFUhAC');
+/// Descriptor for `NodeStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List nodeStatusDescriptor = $convert.base64Decode(
+    'CgpOb2RlU3RhdHVzEg0KCVVOREVGSU5FRBAAEgYKAk9LEAESCQoFRVJST1IQAhIICgRXQVJOEA'
+    'M=');
 
-@$core.Deprecated('Use controlCommandDescriptor instead')
-const ControlCommand$json = {
-  '1': 'ControlCommand',
+@$core.Deprecated('Use nodeInfoDescriptor instead')
+const NodeInfo$json = {
+  '1': 'NodeInfo',
   '2': [
-    {'1': 'control_type', '3': 1, '4': 1, '5': 14, '6': '.sailbot.ControlType', '10': 'controlType'},
-    {'1': 'control_value', '3': 2, '4': 1, '5': 2, '10': 'controlValue'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'status', '3': 2, '4': 1, '5': 14, '6': '.boat_state.NodeStatus', '10': 'status'},
+    {'1': 'info', '3': 3, '4': 1, '5': 9, '10': 'info'},
   ],
 };
 
-/// Descriptor for `ControlCommand`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List controlCommandDescriptor = $convert.base64Decode(
-    'Cg5Db250cm9sQ29tbWFuZBI3Cgxjb250cm9sX3R5cGUYASABKA4yFC5zYWlsYm90LkNvbnRyb2'
-    'xUeXBlUgtjb250cm9sVHlwZRIjCg1jb250cm9sX3ZhbHVlGAIgASgCUgxjb250cm9sVmFsdWU=');
+/// Descriptor for `NodeInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List nodeInfoDescriptor = $convert.base64Decode(
+    'CghOb2RlSW5mbxISCgRuYW1lGAEgASgJUgRuYW1lEi4KBnN0YXR1cxgCIAEoDjIWLmJvYXRfc3'
+    'RhdGUuTm9kZVN0YXR1c1IGc3RhdHVzEhIKBGluZm8YAyABKAlSBGluZm8=');
 
 @$core.Deprecated('Use windDescriptor instead')
 const Wind$json = {
@@ -54,20 +57,6 @@ const Wind$json = {
 final $typed_data.Uint8List windDescriptor = $convert.base64Decode(
     'CgRXaW5kEhQKBXNwZWVkGAEgASgCUgVzcGVlZBIcCglkaXJlY3Rpb24YAiABKAJSCWRpcmVjdG'
     'lvbg==');
-
-@$core.Deprecated('Use nodeStatesDescriptor instead')
-const NodeStates$json = {
-  '1': 'NodeStates',
-  '2': [
-    {'1': 'node_names', '3': 1, '4': 3, '5': 9, '10': 'nodeNames'},
-    {'1': 'node_states', '3': 2, '4': 3, '5': 8, '10': 'nodeStates'},
-  ],
-};
-
-/// Descriptor for `NodeStates`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List nodeStatesDescriptor = $convert.base64Decode(
-    'CgpOb2RlU3RhdGVzEh0KCm5vZGVfbmFtZXMYASADKAlSCW5vZGVOYW1lcxIfCgtub2RlX3N0YX'
-    'RlcxgCIAMoCFIKbm9kZVN0YXRlcw==');
 
 @$core.Deprecated('Use boatStateDescriptor instead')
 const BoatState$json = {
@@ -89,11 +78,11 @@ const BoatState$json = {
     {'1': 'rate_of_turn', '3': 14, '4': 1, '5': 2, '10': 'rateOfTurn'},
     {'1': 'outside_temp', '3': 15, '4': 1, '5': 2, '9': 6, '10': 'outsideTemp', '17': true},
     {'1': 'atmospheric_pressure', '3': 16, '4': 1, '5': 2, '9': 7, '10': 'atmosphericPressure', '17': true},
-    {'1': 'true_wind', '3': 17, '4': 1, '5': 11, '6': '.sailbot.Wind', '10': 'trueWind'},
-    {'1': 'apparent_wind', '3': 18, '4': 1, '5': 11, '6': '.sailbot.Wind', '10': 'apparentWind'},
+    {'1': 'true_wind', '3': 17, '4': 1, '5': 11, '6': '.boat_state.Wind', '10': 'trueWind'},
+    {'1': 'apparent_wind', '3': 18, '4': 1, '5': 11, '6': '.boat_state.Wind', '10': 'apparentWind'},
     {'1': 'pitch', '3': 19, '4': 1, '5': 2, '10': 'pitch'},
     {'1': 'roll', '3': 20, '4': 1, '5': 2, '10': 'roll'},
-    {'1': 'node_states', '3': 21, '4': 1, '5': 11, '6': '.sailbot.NodeStates', '10': 'nodeStates'},
+    {'1': 'node_states', '3': 21, '4': 3, '5': 11, '6': '.boat_state.NodeInfo', '10': 'nodeStates'},
   ],
   '8': [
     {'1': '_latitude_direction'},
@@ -122,12 +111,12 @@ final $typed_data.Uint8List boatStateDescriptor = $convert.base64Decode(
     'YWduZXRpYxIfCgtzcGVlZF9rbm90cxgMIAEoAlIKc3BlZWRLbm90cxIbCglzcGVlZF9rbWgYDS'
     'ABKAJSCHNwZWVkS21oEiAKDHJhdGVfb2ZfdHVybhgOIAEoAlIKcmF0ZU9mVHVybhImCgxvdXRz'
     'aWRlX3RlbXAYDyABKAJIBlILb3V0c2lkZVRlbXCIAQESNgoUYXRtb3NwaGVyaWNfcHJlc3N1cm'
-    'UYECABKAJIB1ITYXRtb3NwaGVyaWNQcmVzc3VyZYgBARIqCgl0cnVlX3dpbmQYESABKAsyDS5z'
-    'YWlsYm90LldpbmRSCHRydWVXaW5kEjIKDWFwcGFyZW50X3dpbmQYEiABKAsyDS5zYWlsYm90Ll'
-    'dpbmRSDGFwcGFyZW50V2luZBIUCgVwaXRjaBgTIAEoAlIFcGl0Y2gSEgoEcm9sbBgUIAEoAlIE'
-    'cm9sbBI0Cgtub2RlX3N0YXRlcxgVIAEoCzITLnNhaWxib3QuTm9kZVN0YXRlc1IKbm9kZVN0YX'
-    'Rlc0IVChNfbGF0aXR1ZGVfZGlyZWN0aW9uQhYKFF9sb25naXR1ZGVfZGlyZWN0aW9uQhUKE19t'
-    'YWduZXRpY19kZXZpYXRpb25CHwodX21hZ25ldGljX2RldmlhdGlvbl9kaXJlY3Rpb25CFQoTX2'
-    '1hZ25ldGljX3ZhcmlhdGlvbkIfCh1fbWFnbmV0aWNfdmFyaWF0aW9uX2RpcmVjdGlvbkIPCg1f'
-    'b3V0c2lkZV90ZW1wQhcKFV9hdG1vc3BoZXJpY19wcmVzc3VyZQ==');
+    'UYECABKAJIB1ITYXRtb3NwaGVyaWNQcmVzc3VyZYgBARItCgl0cnVlX3dpbmQYESABKAsyEC5i'
+    'b2F0X3N0YXRlLldpbmRSCHRydWVXaW5kEjUKDWFwcGFyZW50X3dpbmQYEiABKAsyEC5ib2F0X3'
+    'N0YXRlLldpbmRSDGFwcGFyZW50V2luZBIUCgVwaXRjaBgTIAEoAlIFcGl0Y2gSEgoEcm9sbBgU'
+    'IAEoAlIEcm9sbBI1Cgtub2RlX3N0YXRlcxgVIAMoCzIULmJvYXRfc3RhdGUuTm9kZUluZm9SCm'
+    '5vZGVTdGF0ZXNCFQoTX2xhdGl0dWRlX2RpcmVjdGlvbkIWChRfbG9uZ2l0dWRlX2RpcmVjdGlv'
+    'bkIVChNfbWFnbmV0aWNfZGV2aWF0aW9uQh8KHV9tYWduZXRpY19kZXZpYXRpb25fZGlyZWN0aW'
+    '9uQhUKE19tYWduZXRpY192YXJpYXRpb25CHwodX21hZ25ldGljX3ZhcmlhdGlvbl9kaXJlY3Rp'
+    'b25CDwoNX291dHNpZGVfdGVtcEIXChVfYXRtb3NwaGVyaWNfcHJlc3N1cmU=');
 

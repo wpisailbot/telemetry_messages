@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: messages.proto
+//  source: boat_state.proto
 //
 // @dart = 2.12
 
@@ -13,31 +13,36 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'messages.pbenum.dart';
+import 'boat_state.pbenum.dart';
 
-export 'messages.pbenum.dart';
+export 'boat_state.pbenum.dart';
 
-class ControlCommand extends $pb.GeneratedMessage {
-  factory ControlCommand({
-    ControlType? controlType,
-    $core.double? controlValue,
+class NodeInfo extends $pb.GeneratedMessage {
+  factory NodeInfo({
+    $core.String? name,
+    NodeStatus? status,
+    $core.String? info,
   }) {
     final $result = create();
-    if (controlType != null) {
-      $result.controlType = controlType;
+    if (name != null) {
+      $result.name = name;
     }
-    if (controlValue != null) {
-      $result.controlValue = controlValue;
+    if (status != null) {
+      $result.status = status;
+    }
+    if (info != null) {
+      $result.info = info;
     }
     return $result;
   }
-  ControlCommand._() : super();
-  factory ControlCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ControlCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  NodeInfo._() : super();
+  factory NodeInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory NodeInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ControlCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'sailbot'), createEmptyInstance: create)
-    ..e<ControlType>(1, _omitFieldNames ? '' : 'controlType', $pb.PbFieldType.OE, defaultOrMaker: ControlType.UNDEFINED, valueOf: ControlType.valueOf, enumValues: ControlType.values)
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'controlValue', $pb.PbFieldType.OF)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NodeInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..e<NodeStatus>(2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: NodeStatus.UNDEFINED, valueOf: NodeStatus.valueOf, enumValues: NodeStatus.values)
+    ..aOS(3, _omitFieldNames ? '' : 'info')
     ..hasRequiredFields = false
   ;
 
@@ -45,40 +50,49 @@ class ControlCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  ControlCommand clone() => ControlCommand()..mergeFromMessage(this);
+  NodeInfo clone() => NodeInfo()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ControlCommand copyWith(void Function(ControlCommand) updates) => super.copyWith((message) => updates(message as ControlCommand)) as ControlCommand;
+  NodeInfo copyWith(void Function(NodeInfo) updates) => super.copyWith((message) => updates(message as NodeInfo)) as NodeInfo;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ControlCommand create() => ControlCommand._();
-  ControlCommand createEmptyInstance() => create();
-  static $pb.PbList<ControlCommand> createRepeated() => $pb.PbList<ControlCommand>();
+  static NodeInfo create() => NodeInfo._();
+  NodeInfo createEmptyInstance() => create();
+  static $pb.PbList<NodeInfo> createRepeated() => $pb.PbList<NodeInfo>();
   @$core.pragma('dart2js:noInline')
-  static ControlCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ControlCommand>(create);
-  static ControlCommand? _defaultInstance;
+  static NodeInfo getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NodeInfo>(create);
+  static NodeInfo? _defaultInstance;
 
   @$pb.TagNumber(1)
-  ControlType get controlType => $_getN(0);
+  $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set controlType(ControlType v) { setField(1, v); }
+  set name($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasControlType() => $_has(0);
+  $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearControlType() => clearField(1);
+  void clearName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.double get controlValue => $_getN(1);
+  NodeStatus get status => $_getN(1);
   @$pb.TagNumber(2)
-  set controlValue($core.double v) { $_setFloat(1, v); }
+  set status(NodeStatus v) { setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasControlValue() => $_has(1);
+  $core.bool hasStatus() => $_has(1);
   @$pb.TagNumber(2)
-  void clearControlValue() => clearField(2);
+  void clearStatus() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get info => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set info($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasInfo() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearInfo() => clearField(3);
 }
 
 class Wind extends $pb.GeneratedMessage {
@@ -99,7 +113,7 @@ class Wind extends $pb.GeneratedMessage {
   factory Wind.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Wind.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Wind', package: const $pb.PackageName(_omitMessageNames ? '' : 'sailbot'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Wind', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
     ..a<$core.double>(1, _omitFieldNames ? '' : 'speed', $pb.PbFieldType.OF)
     ..a<$core.double>(2, _omitFieldNames ? '' : 'direction', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
@@ -145,58 +159,6 @@ class Wind extends $pb.GeneratedMessage {
   void clearDirection() => clearField(2);
 }
 
-class NodeStates extends $pb.GeneratedMessage {
-  factory NodeStates({
-    $core.Iterable<$core.String>? nodeNames,
-    $core.Iterable<$core.bool>? nodeStates,
-  }) {
-    final $result = create();
-    if (nodeNames != null) {
-      $result.nodeNames.addAll(nodeNames);
-    }
-    if (nodeStates != null) {
-      $result.nodeStates.addAll(nodeStates);
-    }
-    return $result;
-  }
-  NodeStates._() : super();
-  factory NodeStates.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory NodeStates.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NodeStates', package: const $pb.PackageName(_omitMessageNames ? '' : 'sailbot'), createEmptyInstance: create)
-    ..pPS(1, _omitFieldNames ? '' : 'nodeNames')
-    ..p<$core.bool>(2, _omitFieldNames ? '' : 'nodeStates', $pb.PbFieldType.KB)
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  NodeStates clone() => NodeStates()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  NodeStates copyWith(void Function(NodeStates) updates) => super.copyWith((message) => updates(message as NodeStates)) as NodeStates;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static NodeStates create() => NodeStates._();
-  NodeStates createEmptyInstance() => create();
-  static $pb.PbList<NodeStates> createRepeated() => $pb.PbList<NodeStates>();
-  @$core.pragma('dart2js:noInline')
-  static NodeStates getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NodeStates>(create);
-  static NodeStates? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.List<$core.String> get nodeNames => $_getList(0);
-
-  @$pb.TagNumber(2)
-  $core.List<$core.bool> get nodeStates => $_getList(1);
-}
-
 class BoatState extends $pb.GeneratedMessage {
   factory BoatState({
     $core.double? latitude,
@@ -219,7 +181,7 @@ class BoatState extends $pb.GeneratedMessage {
     Wind? apparentWind,
     $core.double? pitch,
     $core.double? roll,
-    NodeStates? nodeStates,
+    $core.Iterable<NodeInfo>? nodeStates,
   }) {
     final $result = create();
     if (latitude != null) {
@@ -283,7 +245,7 @@ class BoatState extends $pb.GeneratedMessage {
       $result.roll = roll;
     }
     if (nodeStates != null) {
-      $result.nodeStates = nodeStates;
+      $result.nodeStates.addAll(nodeStates);
     }
     return $result;
   }
@@ -291,7 +253,7 @@ class BoatState extends $pb.GeneratedMessage {
   factory BoatState.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BoatState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BoatState', package: const $pb.PackageName(_omitMessageNames ? '' : 'sailbot'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BoatState', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
     ..a<$core.double>(1, _omitFieldNames ? '' : 'latitude', $pb.PbFieldType.OD)
     ..aOS(2, _omitFieldNames ? '' : 'latitudeDirection')
     ..a<$core.double>(3, _omitFieldNames ? '' : 'longitude', $pb.PbFieldType.OD)
@@ -312,7 +274,7 @@ class BoatState extends $pb.GeneratedMessage {
     ..aOM<Wind>(18, _omitFieldNames ? '' : 'apparentWind', subBuilder: Wind.create)
     ..a<$core.double>(19, _omitFieldNames ? '' : 'pitch', $pb.PbFieldType.OF)
     ..a<$core.double>(20, _omitFieldNames ? '' : 'roll', $pb.PbFieldType.OF)
-    ..aOM<NodeStates>(21, _omitFieldNames ? '' : 'nodeStates', subBuilder: NodeStates.create)
+    ..pc<NodeInfo>(21, _omitFieldNames ? '' : 'nodeStates', $pb.PbFieldType.PM, subBuilder: NodeInfo.create)
     ..hasRequiredFields = false
   ;
 
@@ -522,15 +484,7 @@ class BoatState extends $pb.GeneratedMessage {
   void clearRoll() => clearField(20);
 
   @$pb.TagNumber(21)
-  NodeStates get nodeStates => $_getN(20);
-  @$pb.TagNumber(21)
-  set nodeStates(NodeStates v) { setField(21, v); }
-  @$pb.TagNumber(21)
-  $core.bool hasNodeStates() => $_has(20);
-  @$pb.TagNumber(21)
-  void clearNodeStates() => clearField(21);
-  @$pb.TagNumber(21)
-  NodeStates ensureNodeStates() => $_ensure(20);
+  $core.List<NodeInfo> get nodeStates => $_getList(20);
 }
 
 

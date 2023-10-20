@@ -1,26 +1,23 @@
 syntax = "proto3";
 
-package sailbot;
+package boat_state;
 
-enum ControlType {
-    UNDEFINED = 0;
-    TRIM_TAB = 1;
-    RUDDER = 2;
+enum NodeStatus {
+    UNDEFINED=0;
+    OK=1;
+    ERROR=2;
+    WARN=3;
 }
 
-message ControlCommand {
-    ControlType control_type = 1;
-    float control_value = 2;
+message NodeInfo {
+    string name = 1;
+    NodeStatus status = 2;
+    string info = 3;
 }
 
 message Wind {
     float speed = 1;
     float direction = 2;
-}
-
-message NodeStates {
-    repeated string node_names = 1;
-    repeated bool node_states = 2;
 }
 
 message BoatState {
@@ -44,5 +41,5 @@ message BoatState {
     Wind apparent_wind = 18;
     float pitch = 19;
     float roll = 20;
-    NodeStates node_states = 21;
+    repeated NodeInfo node_states = 21;
 }
