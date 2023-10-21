@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package boat_control;
+
+enum ControlType {
+    UNDEFINED = 0;
+    TRIM_TAB = 1;
+    RUDDER = 2;
+}
+
+message ControlCommand {
+    ControlType control_type = 1;
+    float control_value = 2;
+}
