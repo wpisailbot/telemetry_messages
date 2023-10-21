@@ -13,11 +13,15 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rcontrol.proto')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rcontrol.proto\x12\x0c\x62oat_control\"X\n\x0e\x43ontrolCommand\x12/\n\x0c\x63ontrol_type\x18\x01 \x01(\x0e\x32\x19.boat_control.ControlType\x12\x15\n\rcontrol_value\x18\x02 \x01(\x02*6\n\x0b\x43ontrolType\x12\r\n\tUNDEFINED\x10\x00\x12\x0c\n\x08TRIM_TAB\x10\x01\x12\n\n\x06RUDDER\x10\x02\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'control_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
+  _globals['_CONTROLTYPE']._serialized_start=121
+  _globals['_CONTROLTYPE']._serialized_end=175
+  _globals['_CONTROLCOMMAND']._serialized_start=31
+  _globals['_CONTROLCOMMAND']._serialized_end=119
 # @@protoc_insertion_point(module_scope)
