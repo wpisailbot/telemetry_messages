@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package create_connection;
+
+message ConnectRequest {
+
+}
+
+message ConnectResponse {
+
+}
+
+service ConnectToBoatService {
+    rpc ConnectToBoat (ConnectRequest) returns (ConnectResponse);
+}
