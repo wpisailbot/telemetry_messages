@@ -2,3 +2,65 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
+import boat_state_pb2 as boat__state__pb2
+
+
+class ReceiveBoatStateServiceStub(object):
+    """Missing associated documentation comment in .proto file."""
+
+    def __init__(self, channel):
+        """Constructor.
+
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.ReceiveBoatState = channel.unary_unary(
+                '/boat_state.ReceiveBoatStateService/ReceiveBoatState',
+                request_serializer=boat__state__pb2.BoatState.SerializeToString,
+                response_deserializer=boat__state__pb2.Empty.FromString,
+                )
+
+
+class ReceiveBoatStateServiceServicer(object):
+    """Missing associated documentation comment in .proto file."""
+
+    def ReceiveBoatState(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+
+def add_ReceiveBoatStateServiceServicer_to_server(servicer, server):
+    rpc_method_handlers = {
+            'ReceiveBoatState': grpc.unary_unary_rpc_method_handler(
+                    servicer.ReceiveBoatState,
+                    request_deserializer=boat__state__pb2.BoatState.FromString,
+                    response_serializer=boat__state__pb2.Empty.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'boat_state.ReceiveBoatStateService', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+
+
+ # This class is part of an EXPERIMENTAL API.
+class ReceiveBoatStateService(object):
+    """Missing associated documentation comment in .proto file."""
+
+    @staticmethod
+    def ReceiveBoatState(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/boat_state.ReceiveBoatStateService/ReceiveBoatState',
+            boat__state__pb2.BoatState.SerializeToString,
+            boat__state__pb2.Empty.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

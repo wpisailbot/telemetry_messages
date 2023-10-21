@@ -17,6 +17,56 @@ import 'control.pbenum.dart';
 
 export 'control.pbenum.dart';
 
+class ControlResponse extends $pb.GeneratedMessage {
+  factory ControlResponse({
+    ControlExecutionStatus? executionStatus,
+  }) {
+    final $result = create();
+    if (executionStatus != null) {
+      $result.executionStatus = executionStatus;
+    }
+    return $result;
+  }
+  ControlResponse._() : super();
+  factory ControlResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ControlResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ControlResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+    ..e<ControlExecutionStatus>(1, _omitFieldNames ? '' : 'executionStatus', $pb.PbFieldType.OE, defaultOrMaker: ControlExecutionStatus.CONTROL_EXECUTION_UNDEFINED, valueOf: ControlExecutionStatus.valueOf, enumValues: ControlExecutionStatus.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ControlResponse clone() => ControlResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ControlResponse copyWith(void Function(ControlResponse) updates) => super.copyWith((message) => updates(message as ControlResponse)) as ControlResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ControlResponse create() => ControlResponse._();
+  ControlResponse createEmptyInstance() => create();
+  static $pb.PbList<ControlResponse> createRepeated() => $pb.PbList<ControlResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ControlResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ControlResponse>(create);
+  static ControlResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  ControlExecutionStatus get executionStatus => $_getN(0);
+  @$pb.TagNumber(1)
+  set executionStatus(ControlExecutionStatus v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasExecutionStatus() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearExecutionStatus() => clearField(1);
+}
+
 class ControlCommand extends $pb.GeneratedMessage {
   factory ControlCommand({
     ControlType? controlType,
@@ -36,7 +86,7 @@ class ControlCommand extends $pb.GeneratedMessage {
   factory ControlCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ControlCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..e<ControlType>(1, _omitFieldNames ? '' : 'controlType', $pb.PbFieldType.OE, defaultOrMaker: ControlType.UNDEFINED, valueOf: ControlType.valueOf, enumValues: ControlType.values)
+    ..e<ControlType>(1, _omitFieldNames ? '' : 'controlType', $pb.PbFieldType.OE, defaultOrMaker: ControlType.CONTROL_TYPE_UNDEFINED, valueOf: ControlType.valueOf, enumValues: ControlType.values)
     ..a<$core.double>(2, _omitFieldNames ? '' : 'controlValue', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;

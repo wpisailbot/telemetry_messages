@@ -43,3 +43,11 @@ message BoatState {
     float roll = 20;
     repeated NodeInfo node_states = 21;
 }
+
+message Empty {
+
+}
+
+service ReceiveBoatStateService {
+    rpc ReceiveBoatState (BoatState) returns (Empty);
+}

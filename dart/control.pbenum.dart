@@ -14,20 +14,37 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ControlType extends $pb.ProtobufEnum {
-  static const ControlType UNDEFINED = ControlType._(0, _omitEnumNames ? '' : 'UNDEFINED');
-  static const ControlType TRIM_TAB = ControlType._(1, _omitEnumNames ? '' : 'TRIM_TAB');
-  static const ControlType RUDDER = ControlType._(2, _omitEnumNames ? '' : 'RUDDER');
+  static const ControlType CONTROL_TYPE_UNDEFINED = ControlType._(0, _omitEnumNames ? '' : 'CONTROL_TYPE_UNDEFINED');
+  static const ControlType CONTROL_TYPE_TRIM_TAB = ControlType._(1, _omitEnumNames ? '' : 'CONTROL_TYPE_TRIM_TAB');
+  static const ControlType CONTROL_TYPE_RUDDER = ControlType._(2, _omitEnumNames ? '' : 'CONTROL_TYPE_RUDDER');
 
   static const $core.List<ControlType> values = <ControlType> [
-    UNDEFINED,
-    TRIM_TAB,
-    RUDDER,
+    CONTROL_TYPE_UNDEFINED,
+    CONTROL_TYPE_TRIM_TAB,
+    CONTROL_TYPE_RUDDER,
   ];
 
   static final $core.Map<$core.int, ControlType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static ControlType? valueOf($core.int value) => _byValue[value];
 
   const ControlType._($core.int v, $core.String n) : super(v, n);
+}
+
+class ControlExecutionStatus extends $pb.ProtobufEnum {
+  static const ControlExecutionStatus CONTROL_EXECUTION_UNDEFINED = ControlExecutionStatus._(0, _omitEnumNames ? '' : 'CONTROL_EXECUTION_UNDEFINED');
+  static const ControlExecutionStatus CONTROL_EXECUTION_SUCCESS = ControlExecutionStatus._(1, _omitEnumNames ? '' : 'CONTROL_EXECUTION_SUCCESS');
+  static const ControlExecutionStatus CONTROL_EXECUTION_ERROR = ControlExecutionStatus._(2, _omitEnumNames ? '' : 'CONTROL_EXECUTION_ERROR');
+
+  static const $core.List<ControlExecutionStatus> values = <ControlExecutionStatus> [
+    CONTROL_EXECUTION_UNDEFINED,
+    CONTROL_EXECUTION_SUCCESS,
+    CONTROL_EXECUTION_ERROR,
+  ];
+
+  static final $core.Map<$core.int, ControlExecutionStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ControlExecutionStatus? valueOf($core.int value) => _byValue[value];
+
+  const ControlExecutionStatus._($core.int v, $core.String n) : super(v, n);
 }
 
 

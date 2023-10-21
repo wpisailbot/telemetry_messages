@@ -3,12 +3,26 @@ syntax = "proto3";
 package boat_control;
 
 enum ControlType {
-    UNDEFINED = 0;
-    TRIM_TAB = 1;
-    RUDDER = 2;
+    CONTROL_TYPE_UNDEFINED = 0;
+    CONTROL_TYPE_TRIM_TAB = 1;
+    CONTROL_TYPE_RUDDER = 2;
+}
+
+enum ControlExecutionStatus {
+    CONTROL_EXECUTION_UNDEFINED = 0;
+    CONTROL_EXECUTION_SUCCESS = 1;
+    CONTROL_EXECUTION_ERROR = 2;
+}
+
+message ControlResponse {
+    ControlExecutionStatus execution_status = 1;
 }
 
 message ControlCommand {
     ControlType control_type = 1;
     float control_value = 2;
+}
+
+service ExecuteControlCommandService {
+    rpc ExecuteControlCommand (ControlCommand) returns (ControlResponse);
 }

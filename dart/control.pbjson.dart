@@ -17,15 +17,45 @@ import 'dart:typed_data' as $typed_data;
 const ControlType$json = {
   '1': 'ControlType',
   '2': [
-    {'1': 'UNDEFINED', '2': 0},
-    {'1': 'TRIM_TAB', '2': 1},
-    {'1': 'RUDDER', '2': 2},
+    {'1': 'CONTROL_TYPE_UNDEFINED', '2': 0},
+    {'1': 'CONTROL_TYPE_TRIM_TAB', '2': 1},
+    {'1': 'CONTROL_TYPE_RUDDER', '2': 2},
   ],
 };
 
 /// Descriptor for `ControlType`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List controlTypeDescriptor = $convert.base64Decode(
-    'CgtDb250cm9sVHlwZRINCglVTkRFRklORUQQABIMCghUUklNX1RBQhABEgoKBlJVRERFUhAC');
+    'CgtDb250cm9sVHlwZRIaChZDT05UUk9MX1RZUEVfVU5ERUZJTkVEEAASGQoVQ09OVFJPTF9UWV'
+    'BFX1RSSU1fVEFCEAESFwoTQ09OVFJPTF9UWVBFX1JVRERFUhAC');
+
+@$core.Deprecated('Use controlExecutionStatusDescriptor instead')
+const ControlExecutionStatus$json = {
+  '1': 'ControlExecutionStatus',
+  '2': [
+    {'1': 'CONTROL_EXECUTION_UNDEFINED', '2': 0},
+    {'1': 'CONTROL_EXECUTION_SUCCESS', '2': 1},
+    {'1': 'CONTROL_EXECUTION_ERROR', '2': 2},
+  ],
+};
+
+/// Descriptor for `ControlExecutionStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List controlExecutionStatusDescriptor = $convert.base64Decode(
+    'ChZDb250cm9sRXhlY3V0aW9uU3RhdHVzEh8KG0NPTlRST0xfRVhFQ1VUSU9OX1VOREVGSU5FRB'
+    'AAEh0KGUNPTlRST0xfRVhFQ1VUSU9OX1NVQ0NFU1MQARIbChdDT05UUk9MX0VYRUNVVElPTl9F'
+    'UlJPUhAC');
+
+@$core.Deprecated('Use controlResponseDescriptor instead')
+const ControlResponse$json = {
+  '1': 'ControlResponse',
+  '2': [
+    {'1': 'execution_status', '3': 1, '4': 1, '5': 14, '6': '.boat_control.ControlExecutionStatus', '10': 'executionStatus'},
+  ],
+};
+
+/// Descriptor for `ControlResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List controlResponseDescriptor = $convert.base64Decode(
+    'Cg9Db250cm9sUmVzcG9uc2USTwoQZXhlY3V0aW9uX3N0YXR1cxgBIAEoDjIkLmJvYXRfY29udH'
+    'JvbC5Db250cm9sRXhlY3V0aW9uU3RhdHVzUg9leGVjdXRpb25TdGF0dXM=');
 
 @$core.Deprecated('Use controlCommandDescriptor instead')
 const ControlCommand$json = {

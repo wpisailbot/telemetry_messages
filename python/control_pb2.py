@@ -13,15 +13,21 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rcontrol.proto\x12\x0c\x62oat_control\"X\n\x0e\x43ontrolCommand\x12/\n\x0c\x63ontrol_type\x18\x01 \x01(\x0e\x32\x19.boat_control.ControlType\x12\x15\n\rcontrol_value\x18\x02 \x01(\x02*6\n\x0b\x43ontrolType\x12\r\n\tUNDEFINED\x10\x00\x12\x0c\n\x08TRIM_TAB\x10\x01\x12\n\n\x06RUDDER\x10\x02\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rcontrol.proto\x12\x0c\x62oat_control\"Q\n\x0f\x43ontrolResponse\x12>\n\x10\x65xecution_status\x18\x01 \x01(\x0e\x32$.boat_control.ControlExecutionStatus\"X\n\x0e\x43ontrolCommand\x12/\n\x0c\x63ontrol_type\x18\x01 \x01(\x0e\x32\x19.boat_control.ControlType\x12\x15\n\rcontrol_value\x18\x02 \x01(\x02*]\n\x0b\x43ontrolType\x12\x1a\n\x16\x43ONTROL_TYPE_UNDEFINED\x10\x00\x12\x19\n\x15\x43ONTROL_TYPE_TRIM_TAB\x10\x01\x12\x17\n\x13\x43ONTROL_TYPE_RUDDER\x10\x02*u\n\x16\x43ontrolExecutionStatus\x12\x1f\n\x1b\x43ONTROL_EXECUTION_UNDEFINED\x10\x00\x12\x1d\n\x19\x43ONTROL_EXECUTION_SUCCESS\x10\x01\x12\x1b\n\x17\x43ONTROL_EXECUTION_ERROR\x10\x02\x32t\n\x1c\x45xecuteControlCommandService\x12T\n\x15\x45xecuteControlCommand\x12\x1c.boat_control.ControlCommand\x1a\x1d.boat_control.ControlResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'control_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
-  _globals['_CONTROLTYPE']._serialized_start=121
-  _globals['_CONTROLTYPE']._serialized_end=175
-  _globals['_CONTROLCOMMAND']._serialized_start=31
-  _globals['_CONTROLCOMMAND']._serialized_end=119
+  _globals['_CONTROLTYPE']._serialized_start=204
+  _globals['_CONTROLTYPE']._serialized_end=297
+  _globals['_CONTROLEXECUTIONSTATUS']._serialized_start=299
+  _globals['_CONTROLEXECUTIONSTATUS']._serialized_end=416
+  _globals['_CONTROLRESPONSE']._serialized_start=31
+  _globals['_CONTROLRESPONSE']._serialized_end=112
+  _globals['_CONTROLCOMMAND']._serialized_start=114
+  _globals['_CONTROLCOMMAND']._serialized_end=202
+  _globals['_EXECUTECONTROLCOMMANDSERVICE']._serialized_start=418
+  _globals['_EXECUTECONTROLCOMMANDSERVICE']._serialized_end=534
 # @@protoc_insertion_point(module_scope)
