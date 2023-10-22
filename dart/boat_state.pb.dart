@@ -487,13 +487,13 @@ class BoatState extends $pb.GeneratedMessage {
   $core.List<NodeInfo> get nodeStates => $_getList(20);
 }
 
-class Empty extends $pb.GeneratedMessage {
-  factory Empty() => create();
-  Empty._() : super();
-  factory Empty.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Empty.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+class BoatStateRequest extends $pb.GeneratedMessage {
+  factory BoatStateRequest() => create();
+  BoatStateRequest._() : super();
+  factory BoatStateRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory BoatStateRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Empty', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BoatStateRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
@@ -501,22 +501,22 @@ class Empty extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Empty clone() => Empty()..mergeFromMessage(this);
+  BoatStateRequest clone() => BoatStateRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Empty copyWith(void Function(Empty) updates) => super.copyWith((message) => updates(message as Empty)) as Empty;
+  BoatStateRequest copyWith(void Function(BoatStateRequest) updates) => super.copyWith((message) => updates(message as BoatStateRequest)) as BoatStateRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static Empty create() => Empty._();
-  Empty createEmptyInstance() => create();
-  static $pb.PbList<Empty> createRepeated() => $pb.PbList<Empty>();
+  static BoatStateRequest create() => BoatStateRequest._();
+  BoatStateRequest createEmptyInstance() => create();
+  static $pb.PbList<BoatStateRequest> createRepeated() => $pb.PbList<BoatStateRequest>();
   @$core.pragma('dart2js:noInline')
-  static Empty getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Empty>(create);
-  static Empty? _defaultInstance;
+  static BoatStateRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BoatStateRequest>(create);
+  static BoatStateRequest? _defaultInstance;
 }
 
 

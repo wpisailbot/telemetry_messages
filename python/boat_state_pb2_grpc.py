@@ -5,7 +5,7 @@ import grpc
 import boat_state_pb2 as boat__state__pb2
 
 
-class ReceiveBoatStateServiceStub(object):
+class SendBoatStateServiceStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -14,42 +14,42 @@ class ReceiveBoatStateServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.ReceiveBoatState = channel.unary_unary(
-                '/boat_state.ReceiveBoatStateService/ReceiveBoatState',
-                request_serializer=boat__state__pb2.BoatState.SerializeToString,
-                response_deserializer=boat__state__pb2.Empty.FromString,
+        self.SendBoatState = channel.unary_unary(
+                '/boat_state.SendBoatStateService/SendBoatState',
+                request_serializer=boat__state__pb2.BoatStateRequest.SerializeToString,
+                response_deserializer=boat__state__pb2.BoatState.FromString,
                 )
 
 
-class ReceiveBoatStateServiceServicer(object):
+class SendBoatStateServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def ReceiveBoatState(self, request, context):
+    def SendBoatState(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
 
-def add_ReceiveBoatStateServiceServicer_to_server(servicer, server):
+def add_SendBoatStateServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'ReceiveBoatState': grpc.unary_unary_rpc_method_handler(
-                    servicer.ReceiveBoatState,
-                    request_deserializer=boat__state__pb2.BoatState.FromString,
-                    response_serializer=boat__state__pb2.Empty.SerializeToString,
+            'SendBoatState': grpc.unary_unary_rpc_method_handler(
+                    servicer.SendBoatState,
+                    request_deserializer=boat__state__pb2.BoatStateRequest.FromString,
+                    response_serializer=boat__state__pb2.BoatState.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'boat_state.ReceiveBoatStateService', rpc_method_handlers)
+            'boat_state.SendBoatStateService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class ReceiveBoatStateService(object):
+class SendBoatStateService(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def ReceiveBoatState(request,
+    def SendBoatState(request,
             target,
             options=(),
             channel_credentials=None,
@@ -59,8 +59,8 @@ class ReceiveBoatStateService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/boat_state.ReceiveBoatStateService/ReceiveBoatState',
-            boat__state__pb2.BoatState.SerializeToString,
-            boat__state__pb2.Empty.FromString,
+        return grpc.experimental.unary_unary(request, target, '/boat_state.SendBoatStateService/SendBoatState',
+            boat__state__pb2.BoatStateRequest.SerializeToString,
+            boat__state__pb2.BoatState.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

@@ -120,12 +120,12 @@ final $typed_data.Uint8List boatStateDescriptor = $convert.base64Decode(
     '9uQhUKE19tYWduZXRpY192YXJpYXRpb25CHwodX21hZ25ldGljX3ZhcmlhdGlvbl9kaXJlY3Rp'
     'b25CDwoNX291dHNpZGVfdGVtcEIXChVfYXRtb3NwaGVyaWNfcHJlc3N1cmU=');
 
-@$core.Deprecated('Use emptyDescriptor instead')
-const Empty$json = {
-  '1': 'Empty',
+@$core.Deprecated('Use boatStateRequestDescriptor instead')
+const BoatStateRequest$json = {
+  '1': 'BoatStateRequest',
 };
 
-/// Descriptor for `Empty`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List emptyDescriptor = $convert.base64Decode(
-    'CgVFbXB0eQ==');
+/// Descriptor for `BoatStateRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List boatStateRequestDescriptor = $convert.base64Decode(
+    'ChBCb2F0U3RhdGVSZXF1ZXN0');
 

@@ -44,10 +44,10 @@ message BoatState {
     repeated NodeInfo node_states = 21;
 }
 
-message Empty {
+message BoatStateRequest {
 
 }
 
-service ReceiveBoatStateService {
-    rpc ReceiveBoatState (BoatState) returns (Empty);
+service SendBoatStateService {
+    rpc SendBoatState (BoatStateRequest) returns (BoatState);
 }

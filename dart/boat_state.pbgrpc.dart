@@ -19,41 +19,41 @@ import 'boat_state.pb.dart' as $0;
 
 export 'boat_state.pb.dart';
 
-@$pb.GrpcServiceName('boat_state.ReceiveBoatStateService')
-class ReceiveBoatStateServiceClient extends $grpc.Client {
-  static final _$receiveBoatState = $grpc.ClientMethod<$0.BoatState, $0.Empty>(
-      '/boat_state.ReceiveBoatStateService/ReceiveBoatState',
-      ($0.BoatState value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+@$pb.GrpcServiceName('boat_state.SendBoatStateService')
+class SendBoatStateServiceClient extends $grpc.Client {
+  static final _$sendBoatState = $grpc.ClientMethod<$0.BoatStateRequest, $0.BoatState>(
+      '/boat_state.SendBoatStateService/SendBoatState',
+      ($0.BoatStateRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.BoatState.fromBuffer(value));
 
-  ReceiveBoatStateServiceClient($grpc.ClientChannel channel,
+  SendBoatStateServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
       $core.Iterable<$grpc.ClientInterceptor>? interceptors})
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.Empty> receiveBoatState($0.BoatState request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$receiveBoatState, request, options: options);
+  $grpc.ResponseFuture<$0.BoatState> sendBoatState($0.BoatStateRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$sendBoatState, request, options: options);
   }
 }
 
-@$pb.GrpcServiceName('boat_state.ReceiveBoatStateService')
-abstract class ReceiveBoatStateServiceBase extends $grpc.Service {
-  $core.String get $name => 'boat_state.ReceiveBoatStateService';
+@$pb.GrpcServiceName('boat_state.SendBoatStateService')
+abstract class SendBoatStateServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_state.SendBoatStateService';
 
-  ReceiveBoatStateServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.BoatState, $0.Empty>(
-        'ReceiveBoatState',
-        receiveBoatState_Pre,
+  SendBoatStateServiceBase() {
+    $addMethod($grpc.ServiceMethod<$0.BoatStateRequest, $0.BoatState>(
+        'SendBoatState',
+        sendBoatState_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.BoatState.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $0.BoatStateRequest.fromBuffer(value),
+        ($0.BoatState value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.Empty> receiveBoatState_Pre($grpc.ServiceCall call, $async.Future<$0.BoatState> request) async {
-    return receiveBoatState(call, await request);
+  $async.Future<$0.BoatState> sendBoatState_Pre($grpc.ServiceCall call, $async.Future<$0.BoatStateRequest> request) async {
+    return sendBoatState(call, await request);
   }
 
-  $async.Future<$0.Empty> receiveBoatState($grpc.ServiceCall call, $0.BoatState request);
+  $async.Future<$0.BoatState> sendBoatState($grpc.ServiceCall call, $0.BoatStateRequest request);
 }
