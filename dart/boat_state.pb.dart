@@ -318,7 +318,7 @@ class BoatState extends $pb.GeneratedMessage {
     $core.double? pitch,
     $core.double? roll,
     $core.Iterable<NodeInfo>? nodeStates,
-    AutonomousMode? crurrentAutonomousMode,
+    AutonomousMode? currentAutonomousMode,
     Path? currentPath,
   }) {
     final $result = create();
@@ -385,8 +385,8 @@ class BoatState extends $pb.GeneratedMessage {
     if (nodeStates != null) {
       $result.nodeStates.addAll(nodeStates);
     }
-    if (crurrentAutonomousMode != null) {
-      $result.crurrentAutonomousMode = crurrentAutonomousMode;
+    if (currentAutonomousMode != null) {
+      $result.currentAutonomousMode = currentAutonomousMode;
     }
     if (currentPath != null) {
       $result.currentPath = currentPath;
@@ -419,7 +419,7 @@ class BoatState extends $pb.GeneratedMessage {
     ..a<$core.double>(19, _omitFieldNames ? '' : 'pitch', $pb.PbFieldType.OF)
     ..a<$core.double>(20, _omitFieldNames ? '' : 'roll', $pb.PbFieldType.OF)
     ..pc<NodeInfo>(21, _omitFieldNames ? '' : 'nodeStates', $pb.PbFieldType.PM, subBuilder: NodeInfo.create)
-    ..e<AutonomousMode>(22, _omitFieldNames ? '' : 'crurrentAutonomousMode', $pb.PbFieldType.OE, defaultOrMaker: AutonomousMode.AUTONOMOUS_MODE_UNDEFINED, valueOf: AutonomousMode.valueOf, enumValues: AutonomousMode.values)
+    ..e<AutonomousMode>(22, _omitFieldNames ? '' : 'currentAutonomousMode', $pb.PbFieldType.OE, defaultOrMaker: AutonomousMode.AUTONOMOUS_MODE_UNDEFINED, valueOf: AutonomousMode.valueOf, enumValues: AutonomousMode.values)
     ..aOM<Path>(23, _omitFieldNames ? '' : 'currentPath', subBuilder: Path.create)
     ..hasRequiredFields = false
   ;
@@ -633,13 +633,13 @@ class BoatState extends $pb.GeneratedMessage {
   $core.List<NodeInfo> get nodeStates => $_getList(20);
 
   @$pb.TagNumber(22)
-  AutonomousMode get crurrentAutonomousMode => $_getN(21);
+  AutonomousMode get currentAutonomousMode => $_getN(21);
   @$pb.TagNumber(22)
-  set crurrentAutonomousMode(AutonomousMode v) { setField(22, v); }
+  set currentAutonomousMode(AutonomousMode v) { setField(22, v); }
   @$pb.TagNumber(22)
-  $core.bool hasCrurrentAutonomousMode() => $_has(21);
+  $core.bool hasCurrentAutonomousMode() => $_has(21);
   @$pb.TagNumber(22)
-  void clearCrurrentAutonomousMode() => clearField(22);
+  void clearCurrentAutonomousMode() => clearField(22);
 
   @$pb.TagNumber(23)
   Path get currentPath => $_getN(22);

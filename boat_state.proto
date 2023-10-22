@@ -60,7 +60,7 @@ message BoatState {
     float pitch = 19;
     float roll = 20;
     repeated NodeInfo node_states = 21;
-    AutonomousMode crurrent_autonomous_mode = 22;
+    AutonomousMode current_autonomous_mode = 22;
     optional Path current_path = 23;
 }
 
