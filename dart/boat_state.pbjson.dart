@@ -17,17 +17,34 @@ import 'dart:typed_data' as $typed_data;
 const NodeStatus$json = {
   '1': 'NodeStatus',
   '2': [
-    {'1': 'UNDEFINED', '2': 0},
-    {'1': 'OK', '2': 1},
-    {'1': 'ERROR', '2': 2},
-    {'1': 'WARN', '2': 3},
+    {'1': 'NODE_STATUS_UNDEFINED', '2': 0},
+    {'1': 'NODE_STATUS_OK', '2': 1},
+    {'1': 'NODE_STATUS_ERROR', '2': 2},
+    {'1': 'NODE_STATUS_WARN', '2': 3},
   ],
 };
 
 /// Descriptor for `NodeStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List nodeStatusDescriptor = $convert.base64Decode(
-    'CgpOb2RlU3RhdHVzEg0KCVVOREVGSU5FRBAAEgYKAk9LEAESCQoFRVJST1IQAhIICgRXQVJOEA'
-    'M=');
+    'CgpOb2RlU3RhdHVzEhkKFU5PREVfU1RBVFVTX1VOREVGSU5FRBAAEhIKDk5PREVfU1RBVFVTX0'
+    '9LEAESFQoRTk9ERV9TVEFUVVNfRVJST1IQAhIUChBOT0RFX1NUQVRVU19XQVJOEAM=');
+
+@$core.Deprecated('Use autonomousModeDescriptor instead')
+const AutonomousMode$json = {
+  '1': 'AutonomousMode',
+  '2': [
+    {'1': 'AUTONOMOUS_MODE_UNDEFINED', '2': 0},
+    {'1': 'AUTONOMOUS_MODE_NONE', '2': 1},
+    {'1': 'AUTONOMOUS_MODE_BALLAST', '2': 2},
+    {'1': 'AUTONOMOUS_MODE_FULL', '2': 3},
+  ],
+};
+
+/// Descriptor for `AutonomousMode`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List autonomousModeDescriptor = $convert.base64Decode(
+    'Cg5BdXRvbm9tb3VzTW9kZRIdChlBVVRPTk9NT1VTX01PREVfVU5ERUZJTkVEEAASGAoUQVVUT0'
+    '5PTU9VU19NT0RFX05PTkUQARIbChdBVVRPTk9NT1VTX01PREVfQkFMTEFTVBACEhgKFEFVVE9O'
+    'T01PVVNfTU9ERV9GVUxMEAM=');
 
 @$core.Deprecated('Use nodeInfoDescriptor instead')
 const NodeInfo$json = {
@@ -43,6 +60,41 @@ const NodeInfo$json = {
 final $typed_data.Uint8List nodeInfoDescriptor = $convert.base64Decode(
     'CghOb2RlSW5mbxISCgRuYW1lGAEgASgJUgRuYW1lEi4KBnN0YXR1cxgCIAEoDjIWLmJvYXRfc3'
     'RhdGUuTm9kZVN0YXR1c1IGc3RhdHVzEhIKBGluZm8YAyABKAlSBGluZm8=');
+
+@$core.Deprecated('Use pointDescriptor instead')
+const Point$json = {
+  '1': 'Point',
+  '2': [
+    {'1': 'latitude', '3': 1, '4': 1, '5': 1, '10': 'latitude'},
+    {'1': 'longitude', '3': 2, '4': 1, '5': 1, '10': 'longitude'},
+  ],
+};
+
+/// Descriptor for `Point`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List pointDescriptor = $convert.base64Decode(
+    'CgVQb2ludBIaCghsYXRpdHVkZRgBIAEoAVIIbGF0aXR1ZGUSHAoJbG9uZ2l0dWRlGAIgASgBUg'
+    'lsb25naXR1ZGU=');
+
+@$core.Deprecated('Use pathDescriptor instead')
+const Path$json = {
+  '1': 'Path',
+  '2': [
+    {'1': 'latitude_direction', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'latitudeDirection', '17': true},
+    {'1': 'longitude_direction', '3': 2, '4': 1, '5': 9, '9': 1, '10': 'longitudeDirection', '17': true},
+    {'1': 'points', '3': 3, '4': 3, '5': 11, '6': '.boat_state.Point', '10': 'points'},
+  ],
+  '8': [
+    {'1': '_latitude_direction'},
+    {'1': '_longitude_direction'},
+  ],
+};
+
+/// Descriptor for `Path`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List pathDescriptor = $convert.base64Decode(
+    'CgRQYXRoEjIKEmxhdGl0dWRlX2RpcmVjdGlvbhgBIAEoCUgAUhFsYXRpdHVkZURpcmVjdGlvbo'
+    'gBARI0ChNsb25naXR1ZGVfZGlyZWN0aW9uGAIgASgJSAFSEmxvbmdpdHVkZURpcmVjdGlvbogB'
+    'ARIpCgZwb2ludHMYAyADKAsyES5ib2F0X3N0YXRlLlBvaW50UgZwb2ludHNCFQoTX2xhdGl0dW'
+    'RlX2RpcmVjdGlvbkIWChRfbG9uZ2l0dWRlX2RpcmVjdGlvbg==');
 
 @$core.Deprecated('Use windDescriptor instead')
 const Wind$json = {
@@ -83,6 +135,8 @@ const BoatState$json = {
     {'1': 'pitch', '3': 19, '4': 1, '5': 2, '10': 'pitch'},
     {'1': 'roll', '3': 20, '4': 1, '5': 2, '10': 'roll'},
     {'1': 'node_states', '3': 21, '4': 3, '5': 11, '6': '.boat_state.NodeInfo', '10': 'nodeStates'},
+    {'1': 'crurrent_autonomous_mode', '3': 22, '4': 1, '5': 14, '6': '.boat_state.AutonomousMode', '10': 'crurrentAutonomousMode'},
+    {'1': 'current_path', '3': 23, '4': 1, '5': 11, '6': '.boat_state.Path', '9': 8, '10': 'currentPath', '17': true},
   ],
   '8': [
     {'1': '_latitude_direction'},
@@ -93,6 +147,7 @@ const BoatState$json = {
     {'1': '_magnetic_variation_direction'},
     {'1': '_outside_temp'},
     {'1': '_atmospheric_pressure'},
+    {'1': '_current_path'},
   ],
 };
 
@@ -115,10 +170,13 @@ final $typed_data.Uint8List boatStateDescriptor = $convert.base64Decode(
     'b2F0X3N0YXRlLldpbmRSCHRydWVXaW5kEjUKDWFwcGFyZW50X3dpbmQYEiABKAsyEC5ib2F0X3'
     'N0YXRlLldpbmRSDGFwcGFyZW50V2luZBIUCgVwaXRjaBgTIAEoAlIFcGl0Y2gSEgoEcm9sbBgU'
     'IAEoAlIEcm9sbBI1Cgtub2RlX3N0YXRlcxgVIAMoCzIULmJvYXRfc3RhdGUuTm9kZUluZm9SCm'
-    '5vZGVTdGF0ZXNCFQoTX2xhdGl0dWRlX2RpcmVjdGlvbkIWChRfbG9uZ2l0dWRlX2RpcmVjdGlv'
-    'bkIVChNfbWFnbmV0aWNfZGV2aWF0aW9uQh8KHV9tYWduZXRpY19kZXZpYXRpb25fZGlyZWN0aW'
-    '9uQhUKE19tYWduZXRpY192YXJpYXRpb25CHwodX21hZ25ldGljX3ZhcmlhdGlvbl9kaXJlY3Rp'
-    'b25CDwoNX291dHNpZGVfdGVtcEIXChVfYXRtb3NwaGVyaWNfcHJlc3N1cmU=');
+    '5vZGVTdGF0ZXMSVAoYY3J1cnJlbnRfYXV0b25vbW91c19tb2RlGBYgASgOMhouYm9hdF9zdGF0'
+    'ZS5BdXRvbm9tb3VzTW9kZVIWY3J1cnJlbnRBdXRvbm9tb3VzTW9kZRI4CgxjdXJyZW50X3BhdG'
+    'gYFyABKAsyEC5ib2F0X3N0YXRlLlBhdGhICFILY3VycmVudFBhdGiIAQFCFQoTX2xhdGl0dWRl'
+    'X2RpcmVjdGlvbkIWChRfbG9uZ2l0dWRlX2RpcmVjdGlvbkIVChNfbWFnbmV0aWNfZGV2aWF0aW'
+    '9uQh8KHV9tYWduZXRpY19kZXZpYXRpb25fZGlyZWN0aW9uQhUKE19tYWduZXRpY192YXJpYXRp'
+    'b25CHwodX21hZ25ldGljX3ZhcmlhdGlvbl9kaXJlY3Rpb25CDwoNX291dHNpZGVfdGVtcEIXCh'
+    'VfYXRtb3NwaGVyaWNfcHJlc3N1cmVCDwoNX2N1cnJlbnRfcGF0aA==');
 
 @$core.Deprecated('Use boatStateRequestDescriptor instead')
 const BoatStateRequest$json = {

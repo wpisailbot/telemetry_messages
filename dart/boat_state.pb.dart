@@ -41,7 +41,7 @@ class NodeInfo extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NodeInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<NodeStatus>(2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: NodeStatus.UNDEFINED, valueOf: NodeStatus.valueOf, enumValues: NodeStatus.values)
+    ..e<NodeStatus>(2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: NodeStatus.NODE_STATUS_UNDEFINED, valueOf: NodeStatus.valueOf, enumValues: NodeStatus.values)
     ..aOS(3, _omitFieldNames ? '' : 'info')
     ..hasRequiredFields = false
   ;
@@ -93,6 +93,142 @@ class NodeInfo extends $pb.GeneratedMessage {
   $core.bool hasInfo() => $_has(2);
   @$pb.TagNumber(3)
   void clearInfo() => clearField(3);
+}
+
+class Point extends $pb.GeneratedMessage {
+  factory Point({
+    $core.double? latitude,
+    $core.double? longitude,
+  }) {
+    final $result = create();
+    if (latitude != null) {
+      $result.latitude = latitude;
+    }
+    if (longitude != null) {
+      $result.longitude = longitude;
+    }
+    return $result;
+  }
+  Point._() : super();
+  factory Point.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Point.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Point', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'latitude', $pb.PbFieldType.OD)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'longitude', $pb.PbFieldType.OD)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Point clone() => Point()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Point copyWith(void Function(Point) updates) => super.copyWith((message) => updates(message as Point)) as Point;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Point create() => Point._();
+  Point createEmptyInstance() => create();
+  static $pb.PbList<Point> createRepeated() => $pb.PbList<Point>();
+  @$core.pragma('dart2js:noInline')
+  static Point getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Point>(create);
+  static Point? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get latitude => $_getN(0);
+  @$pb.TagNumber(1)
+  set latitude($core.double v) { $_setDouble(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasLatitude() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLatitude() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get longitude => $_getN(1);
+  @$pb.TagNumber(2)
+  set longitude($core.double v) { $_setDouble(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLongitude() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLongitude() => clearField(2);
+}
+
+class Path extends $pb.GeneratedMessage {
+  factory Path({
+    $core.String? latitudeDirection,
+    $core.String? longitudeDirection,
+    $core.Iterable<Point>? points,
+  }) {
+    final $result = create();
+    if (latitudeDirection != null) {
+      $result.latitudeDirection = latitudeDirection;
+    }
+    if (longitudeDirection != null) {
+      $result.longitudeDirection = longitudeDirection;
+    }
+    if (points != null) {
+      $result.points.addAll(points);
+    }
+    return $result;
+  }
+  Path._() : super();
+  factory Path.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Path.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Path', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'latitudeDirection')
+    ..aOS(2, _omitFieldNames ? '' : 'longitudeDirection')
+    ..pc<Point>(3, _omitFieldNames ? '' : 'points', $pb.PbFieldType.PM, subBuilder: Point.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Path clone() => Path()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Path copyWith(void Function(Path) updates) => super.copyWith((message) => updates(message as Path)) as Path;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Path create() => Path._();
+  Path createEmptyInstance() => create();
+  static $pb.PbList<Path> createRepeated() => $pb.PbList<Path>();
+  @$core.pragma('dart2js:noInline')
+  static Path getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Path>(create);
+  static Path? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get latitudeDirection => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set latitudeDirection($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasLatitudeDirection() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLatitudeDirection() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get longitudeDirection => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set longitudeDirection($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLongitudeDirection() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLongitudeDirection() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<Point> get points => $_getList(2);
 }
 
 class Wind extends $pb.GeneratedMessage {
@@ -182,6 +318,8 @@ class BoatState extends $pb.GeneratedMessage {
     $core.double? pitch,
     $core.double? roll,
     $core.Iterable<NodeInfo>? nodeStates,
+    AutonomousMode? crurrentAutonomousMode,
+    Path? currentPath,
   }) {
     final $result = create();
     if (latitude != null) {
@@ -247,6 +385,12 @@ class BoatState extends $pb.GeneratedMessage {
     if (nodeStates != null) {
       $result.nodeStates.addAll(nodeStates);
     }
+    if (crurrentAutonomousMode != null) {
+      $result.crurrentAutonomousMode = crurrentAutonomousMode;
+    }
+    if (currentPath != null) {
+      $result.currentPath = currentPath;
+    }
     return $result;
   }
   BoatState._() : super();
@@ -275,6 +419,8 @@ class BoatState extends $pb.GeneratedMessage {
     ..a<$core.double>(19, _omitFieldNames ? '' : 'pitch', $pb.PbFieldType.OF)
     ..a<$core.double>(20, _omitFieldNames ? '' : 'roll', $pb.PbFieldType.OF)
     ..pc<NodeInfo>(21, _omitFieldNames ? '' : 'nodeStates', $pb.PbFieldType.PM, subBuilder: NodeInfo.create)
+    ..e<AutonomousMode>(22, _omitFieldNames ? '' : 'crurrentAutonomousMode', $pb.PbFieldType.OE, defaultOrMaker: AutonomousMode.AUTONOMOUS_MODE_UNDEFINED, valueOf: AutonomousMode.valueOf, enumValues: AutonomousMode.values)
+    ..aOM<Path>(23, _omitFieldNames ? '' : 'currentPath', subBuilder: Path.create)
     ..hasRequiredFields = false
   ;
 
@@ -485,6 +631,26 @@ class BoatState extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(21)
   $core.List<NodeInfo> get nodeStates => $_getList(20);
+
+  @$pb.TagNumber(22)
+  AutonomousMode get crurrentAutonomousMode => $_getN(21);
+  @$pb.TagNumber(22)
+  set crurrentAutonomousMode(AutonomousMode v) { setField(22, v); }
+  @$pb.TagNumber(22)
+  $core.bool hasCrurrentAutonomousMode() => $_has(21);
+  @$pb.TagNumber(22)
+  void clearCrurrentAutonomousMode() => clearField(22);
+
+  @$pb.TagNumber(23)
+  Path get currentPath => $_getN(22);
+  @$pb.TagNumber(23)
+  set currentPath(Path v) { setField(23, v); }
+  @$pb.TagNumber(23)
+  $core.bool hasCurrentPath() => $_has(22);
+  @$pb.TagNumber(23)
+  void clearCurrentPath() => clearField(23);
+  @$pb.TagNumber(23)
+  Path ensureCurrentPath() => $_ensure(22);
 }
 
 class BoatStateRequest extends $pb.GeneratedMessage {

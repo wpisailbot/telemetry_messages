@@ -3,16 +3,34 @@ syntax = "proto3";
 package boat_state;
 
 enum NodeStatus {
-    UNDEFINED=0;
-    OK=1;
-    ERROR=2;
-    WARN=3;
+    NODE_STATUS_UNDEFINED=0;
+    NODE_STATUS_OK=1;
+    NODE_STATUS_ERROR=2;
+    NODE_STATUS_WARN=3;
 }
 
 message NodeInfo {
     string name = 1;
     NodeStatus status = 2;
     string info = 3;
+}
+
+enum AutonomousMode {
+    AUTONOMOUS_MODE_UNDEFINED=0;
+    AUTONOMOUS_MODE_NONE=1;
+    AUTONOMOUS_MODE_BALLAST=2;
+    AUTONOMOUS_MODE_FULL=3;
+}
+
+message Point {
+    double latitude = 1;
+    double longitude = 2;
+}
+
+message Path{
+    optional string latitude_direction = 1;
+    optional string longitude_direction = 2;
+    repeated Point points = 3;
 }
 
 message Wind {
@@ -42,6 +60,8 @@ message BoatState {
     float pitch = 19;
     float roll = 20;
     repeated NodeInfo node_states = 21;
+    AutonomousMode crurrent_autonomous_mode = 22;
+    optional Path current_path = 23;
 }
 
 message BoatStateRequest {

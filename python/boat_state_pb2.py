@@ -13,23 +13,29 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x10\x62oat_state.proto\x12\nboat_state\"N\n\x08NodeInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\x12&\n\x06status\x18\x02 \x01(\x0e\x32\x16.boat_state.NodeStatus\x12\x0c\n\x04info\x18\x03 \x01(\t\"(\n\x04Wind\x12\r\n\x05speed\x18\x01 \x01(\x02\x12\x11\n\tdirection\x18\x02 \x01(\x02\"\xbb\x06\n\tBoatState\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x1f\n\x12latitude_direction\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x11\n\tlongitude\x18\x03 \x01(\x01\x12 \n\x13longitude_direction\x18\x04 \x01(\tH\x01\x88\x01\x01\x12\x17\n\x0f\x63urrent_heading\x18\x05 \x01(\x02\x12\x1f\n\x12magnetic_deviation\x18\x06 \x01(\x02H\x02\x88\x01\x01\x12)\n\x1cmagnetic_deviation_direction\x18\x07 \x01(\tH\x03\x88\x01\x01\x12\x1f\n\x12magnetic_variation\x18\x08 \x01(\x02H\x04\x88\x01\x01\x12)\n\x1cmagnetic_variation_direction\x18\t \x01(\tH\x05\x88\x01\x01\x12\x1a\n\x12track_degrees_true\x18\n \x01(\x02\x12\x1e\n\x16track_degrees_magnetic\x18\x0b \x01(\x02\x12\x13\n\x0bspeed_knots\x18\x0c \x01(\x02\x12\x11\n\tspeed_kmh\x18\r \x01(\x02\x12\x14\n\x0crate_of_turn\x18\x0e \x01(\x02\x12\x19\n\x0coutside_temp\x18\x0f \x01(\x02H\x06\x88\x01\x01\x12!\n\x14\x61tmospheric_pressure\x18\x10 \x01(\x02H\x07\x88\x01\x01\x12#\n\ttrue_wind\x18\x11 \x01(\x0b\x32\x10.boat_state.Wind\x12\'\n\rapparent_wind\x18\x12 \x01(\x0b\x32\x10.boat_state.Wind\x12\r\n\x05pitch\x18\x13 \x01(\x02\x12\x0c\n\x04roll\x18\x14 \x01(\x02\x12)\n\x0bnode_states\x18\x15 \x03(\x0b\x32\x14.boat_state.NodeInfoB\x15\n\x13_latitude_directionB\x16\n\x14_longitude_directionB\x15\n\x13_magnetic_deviationB\x1f\n\x1d_magnetic_deviation_directionB\x15\n\x13_magnetic_variationB\x1f\n\x1d_magnetic_variation_directionB\x0f\n\r_outside_tempB\x17\n\x15_atmospheric_pressure\"\x12\n\x10\x42oatStateRequest*8\n\nNodeStatus\x12\r\n\tUNDEFINED\x10\x00\x12\x06\n\x02OK\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x12\x08\n\x04WARN\x10\x03\x32\\\n\x14SendBoatStateService\x12\x44\n\rSendBoatState\x12\x1c.boat_state.BoatStateRequest\x1a\x15.boat_state.BoatStateb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x10\x62oat_state.proto\x12\nboat_state\"N\n\x08NodeInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\x12&\n\x06status\x18\x02 \x01(\x0e\x32\x16.boat_state.NodeStatus\x12\x0c\n\x04info\x18\x03 \x01(\t\",\n\x05Point\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\"\x9b\x01\n\x04Path\x12\x1f\n\x12latitude_direction\x18\x01 \x01(\tH\x00\x88\x01\x01\x12 \n\x13longitude_direction\x18\x02 \x01(\tH\x01\x88\x01\x01\x12!\n\x06points\x18\x03 \x03(\x0b\x32\x11.boat_state.PointB\x15\n\x13_latitude_directionB\x16\n\x14_longitude_direction\"(\n\x04Wind\x12\r\n\x05speed\x18\x01 \x01(\x02\x12\x11\n\tdirection\x18\x02 \x01(\x02\"\xb7\x07\n\tBoatState\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x1f\n\x12latitude_direction\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x11\n\tlongitude\x18\x03 \x01(\x01\x12 \n\x13longitude_direction\x18\x04 \x01(\tH\x01\x88\x01\x01\x12\x17\n\x0f\x63urrent_heading\x18\x05 \x01(\x02\x12\x1f\n\x12magnetic_deviation\x18\x06 \x01(\x02H\x02\x88\x01\x01\x12)\n\x1cmagnetic_deviation_direction\x18\x07 \x01(\tH\x03\x88\x01\x01\x12\x1f\n\x12magnetic_variation\x18\x08 \x01(\x02H\x04\x88\x01\x01\x12)\n\x1cmagnetic_variation_direction\x18\t \x01(\tH\x05\x88\x01\x01\x12\x1a\n\x12track_degrees_true\x18\n \x01(\x02\x12\x1e\n\x16track_degrees_magnetic\x18\x0b \x01(\x02\x12\x13\n\x0bspeed_knots\x18\x0c \x01(\x02\x12\x11\n\tspeed_kmh\x18\r \x01(\x02\x12\x14\n\x0crate_of_turn\x18\x0e \x01(\x02\x12\x19\n\x0coutside_temp\x18\x0f \x01(\x02H\x06\x88\x01\x01\x12!\n\x14\x61tmospheric_pressure\x18\x10 \x01(\x02H\x07\x88\x01\x01\x12#\n\ttrue_wind\x18\x11 \x01(\x0b\x32\x10.boat_state.Wind\x12\'\n\rapparent_wind\x18\x12 \x01(\x0b\x32\x10.boat_state.Wind\x12\r\n\x05pitch\x18\x13 \x01(\x02\x12\x0c\n\x04roll\x18\x14 \x01(\x02\x12)\n\x0bnode_states\x18\x15 \x03(\x0b\x32\x14.boat_state.NodeInfo\x12<\n\x18\x63rurrent_autonomous_mode\x18\x16 \x01(\x0e\x32\x1a.boat_state.AutonomousMode\x12+\n\x0c\x63urrent_path\x18\x17 \x01(\x0b\x32\x10.boat_state.PathH\x08\x88\x01\x01\x42\x15\n\x13_latitude_directionB\x16\n\x14_longitude_directionB\x15\n\x13_magnetic_deviationB\x1f\n\x1d_magnetic_deviation_directionB\x15\n\x13_magnetic_variationB\x1f\n\x1d_magnetic_variation_directionB\x0f\n\r_outside_tempB\x17\n\x15_atmospheric_pressureB\x0f\n\r_current_path\"\x12\n\x10\x42oatStateRequest*h\n\nNodeStatus\x12\x19\n\x15NODE_STATUS_UNDEFINED\x10\x00\x12\x12\n\x0eNODE_STATUS_OK\x10\x01\x12\x15\n\x11NODE_STATUS_ERROR\x10\x02\x12\x14\n\x10NODE_STATUS_WARN\x10\x03*\x80\x01\n\x0e\x41utonomousMode\x12\x1d\n\x19\x41UTONOMOUS_MODE_UNDEFINED\x10\x00\x12\x18\n\x14\x41UTONOMOUS_MODE_NONE\x10\x01\x12\x1b\n\x17\x41UTONOMOUS_MODE_BALLAST\x10\x02\x12\x18\n\x14\x41UTONOMOUS_MODE_FULL\x10\x03\x32\\\n\x14SendBoatStateService\x12\x44\n\rSendBoatState\x12\x1c.boat_state.BoatStateRequest\x1a\x15.boat_state.BoatStateb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'boat_state_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
-  _globals['_NODESTATUS']._serialized_start=1004
-  _globals['_NODESTATUS']._serialized_end=1060
+  _globals['_NODESTATUS']._serialized_start=1332
+  _globals['_NODESTATUS']._serialized_end=1436
+  _globals['_AUTONOMOUSMODE']._serialized_start=1439
+  _globals['_AUTONOMOUSMODE']._serialized_end=1567
   _globals['_NODEINFO']._serialized_start=32
   _globals['_NODEINFO']._serialized_end=110
-  _globals['_WIND']._serialized_start=112
-  _globals['_WIND']._serialized_end=152
-  _globals['_BOATSTATE']._serialized_start=155
-  _globals['_BOATSTATE']._serialized_end=982
-  _globals['_BOATSTATEREQUEST']._serialized_start=984
-  _globals['_BOATSTATEREQUEST']._serialized_end=1002
-  _globals['_SENDBOATSTATESERVICE']._serialized_start=1062
-  _globals['_SENDBOATSTATESERVICE']._serialized_end=1154
+  _globals['_POINT']._serialized_start=112
+  _globals['_POINT']._serialized_end=156
+  _globals['_PATH']._serialized_start=159
+  _globals['_PATH']._serialized_end=314
+  _globals['_WIND']._serialized_start=316
+  _globals['_WIND']._serialized_end=356
+  _globals['_BOATSTATE']._serialized_start=359
+  _globals['_BOATSTATE']._serialized_end=1310
+  _globals['_BOATSTATEREQUEST']._serialized_start=1312
+  _globals['_BOATSTATEREQUEST']._serialized_end=1330
+  _globals['_SENDBOATSTATESERVICE']._serialized_start=1569
+  _globals['_SENDBOATSTATESERVICE']._serialized_end=1661
 # @@protoc_insertion_point(module_scope)
