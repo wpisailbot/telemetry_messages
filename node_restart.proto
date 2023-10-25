@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package node_restart;
+
+message RestartNodeRequest {
+    string node_name = 1;
+}
+
+message RestartNodeResponse {
+    bool success = 1;
+}
+
+service RestartNodeService {
+    rpc RestartNode (RestartNodeRequest) returns (RestartNodeRequest);
+}
