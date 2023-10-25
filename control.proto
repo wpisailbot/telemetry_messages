@@ -1,11 +1,14 @@
 syntax = "proto3";
-
+import "boat_state.proto";
 package boat_control;
 
 enum ControlType {
     CONTROL_TYPE_UNDEFINED = 0;
     CONTROL_TYPE_TRIM_TAB = 1;
     CONTROL_TYPE_RUDDER = 2;
+    CONTROL_TYPE_BALLAST = 3;
+    CONTROL_TYPE_SET_AUTONOMOUS_MODE = 4;
+    CONTROL_TYPE_OVERRIDE_PATH = 5;
 }
 
 enum ControlExecutionStatus {
@@ -20,7 +23,13 @@ message ControlResponse {
 
 message ControlCommand {
     ControlType control_type = 1;
-    float control_value = 2;
+    oneof control_value_union {
+        float rudder_control_value = 2;
+        float trimtab_control_value = 3;
+        float ballast_control_value = 4;
+        boat_state.AutonomousMode autonomous_mode = 5;
+        boat_state.Path new_path = 6;
+    }
 }
 
 service ExecuteControlCommandService {

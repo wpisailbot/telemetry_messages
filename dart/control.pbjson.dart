@@ -20,13 +20,18 @@ const ControlType$json = {
     {'1': 'CONTROL_TYPE_UNDEFINED', '2': 0},
     {'1': 'CONTROL_TYPE_TRIM_TAB', '2': 1},
     {'1': 'CONTROL_TYPE_RUDDER', '2': 2},
+    {'1': 'CONTROL_TYPE_BALLAST', '2': 3},
+    {'1': 'CONTROL_TYPE_SET_AUTONOMOUS_MODE', '2': 4},
+    {'1': 'CONTROL_TYPE_OVERRIDE_PATH', '2': 5},
   ],
 };
 
 /// Descriptor for `ControlType`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List controlTypeDescriptor = $convert.base64Decode(
     'CgtDb250cm9sVHlwZRIaChZDT05UUk9MX1RZUEVfVU5ERUZJTkVEEAASGQoVQ09OVFJPTF9UWV'
-    'BFX1RSSU1fVEFCEAESFwoTQ09OVFJPTF9UWVBFX1JVRERFUhAC');
+    'BFX1RSSU1fVEFCEAESFwoTQ09OVFJPTF9UWVBFX1JVRERFUhACEhgKFENPTlRST0xfVFlQRV9C'
+    'QUxMQVNUEAMSJAogQ09OVFJPTF9UWVBFX1NFVF9BVVRPTk9NT1VTX01PREUQBBIeChpDT05UUk'
+    '9MX1RZUEVfT1ZFUlJJREVfUEFUSBAF');
 
 @$core.Deprecated('Use controlExecutionStatusDescriptor instead')
 const ControlExecutionStatus$json = {
@@ -62,13 +67,24 @@ const ControlCommand$json = {
   '1': 'ControlCommand',
   '2': [
     {'1': 'control_type', '3': 1, '4': 1, '5': 14, '6': '.boat_control.ControlType', '10': 'controlType'},
-    {'1': 'control_value', '3': 2, '4': 1, '5': 2, '10': 'controlValue'},
+    {'1': 'rudder_control_value', '3': 2, '4': 1, '5': 2, '9': 0, '10': 'rudderControlValue'},
+    {'1': 'trimtab_control_value', '3': 3, '4': 1, '5': 2, '9': 0, '10': 'trimtabControlValue'},
+    {'1': 'ballast_control_value', '3': 4, '4': 1, '5': 2, '9': 0, '10': 'ballastControlValue'},
+    {'1': 'autonomous_mode', '3': 5, '4': 1, '5': 14, '6': '.boat_state.AutonomousMode', '9': 0, '10': 'autonomousMode'},
+    {'1': 'new_path', '3': 6, '4': 1, '5': 11, '6': '.boat_state.Path', '9': 0, '10': 'newPath'},
+  ],
+  '8': [
+    {'1': 'control_value_union'},
   ],
 };
 
 /// Descriptor for `ControlCommand`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List controlCommandDescriptor = $convert.base64Decode(
     'Cg5Db250cm9sQ29tbWFuZBI8Cgxjb250cm9sX3R5cGUYASABKA4yGS5ib2F0X2NvbnRyb2wuQ2'
-    '9udHJvbFR5cGVSC2NvbnRyb2xUeXBlEiMKDWNvbnRyb2xfdmFsdWUYAiABKAJSDGNvbnRyb2xW'
-    'YWx1ZQ==');
+    '9udHJvbFR5cGVSC2NvbnRyb2xUeXBlEjIKFHJ1ZGRlcl9jb250cm9sX3ZhbHVlGAIgASgCSABS'
+    'EnJ1ZGRlckNvbnRyb2xWYWx1ZRI0ChV0cmltdGFiX2NvbnRyb2xfdmFsdWUYAyABKAJIAFITdH'
+    'JpbXRhYkNvbnRyb2xWYWx1ZRI0ChViYWxsYXN0X2NvbnRyb2xfdmFsdWUYBCABKAJIAFITYmFs'
+    'bGFzdENvbnRyb2xWYWx1ZRJFCg9hdXRvbm9tb3VzX21vZGUYBSABKA4yGi5ib2F0X3N0YXRlLk'
+    'F1dG9ub21vdXNNb2RlSABSDmF1dG9ub21vdXNNb2RlEi0KCG5ld19wYXRoGAYgASgLMhAuYm9h'
+    'dF9zdGF0ZS5QYXRoSABSB25ld1BhdGhCFQoTY29udHJvbF92YWx1ZV91bmlvbg==');
 

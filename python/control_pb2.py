@@ -11,23 +11,24 @@ from google.protobuf.internal import builder as _builder
 _sym_db = _symbol_database.Default()
 
 
+import boat_state_pb2 as boat__state__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rcontrol.proto\x12\x0c\x62oat_control\"Q\n\x0f\x43ontrolResponse\x12>\n\x10\x65xecution_status\x18\x01 \x01(\x0e\x32$.boat_control.ControlExecutionStatus\"X\n\x0e\x43ontrolCommand\x12/\n\x0c\x63ontrol_type\x18\x01 \x01(\x0e\x32\x19.boat_control.ControlType\x12\x15\n\rcontrol_value\x18\x02 \x01(\x02*]\n\x0b\x43ontrolType\x12\x1a\n\x16\x43ONTROL_TYPE_UNDEFINED\x10\x00\x12\x19\n\x15\x43ONTROL_TYPE_TRIM_TAB\x10\x01\x12\x17\n\x13\x43ONTROL_TYPE_RUDDER\x10\x02*u\n\x16\x43ontrolExecutionStatus\x12\x1f\n\x1b\x43ONTROL_EXECUTION_UNDEFINED\x10\x00\x12\x1d\n\x19\x43ONTROL_EXECUTION_SUCCESS\x10\x01\x12\x1b\n\x17\x43ONTROL_EXECUTION_ERROR\x10\x02\x32t\n\x1c\x45xecuteControlCommandService\x12T\n\x15\x45xecuteControlCommand\x12\x1c.boat_control.ControlCommand\x1a\x1d.boat_control.ControlResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rcontrol.proto\x12\x0c\x62oat_control\x1a\x10\x62oat_state.proto\"Q\n\x0f\x43ontrolResponse\x12>\n\x10\x65xecution_status\x18\x01 \x01(\x0e\x32$.boat_control.ControlExecutionStatus\"\x97\x02\n\x0e\x43ontrolCommand\x12/\n\x0c\x63ontrol_type\x18\x01 \x01(\x0e\x32\x19.boat_control.ControlType\x12\x1e\n\x14rudder_control_value\x18\x02 \x01(\x02H\x00\x12\x1f\n\x15trimtab_control_value\x18\x03 \x01(\x02H\x00\x12\x1f\n\x15\x62\x61llast_control_value\x18\x04 \x01(\x02H\x00\x12\x35\n\x0f\x61utonomous_mode\x18\x05 \x01(\x0e\x32\x1a.boat_state.AutonomousModeH\x00\x12$\n\x08new_path\x18\x06 \x01(\x0b\x32\x10.boat_state.PathH\x00\x42\x15\n\x13\x63ontrol_value_union*\xbd\x01\n\x0b\x43ontrolType\x12\x1a\n\x16\x43ONTROL_TYPE_UNDEFINED\x10\x00\x12\x19\n\x15\x43ONTROL_TYPE_TRIM_TAB\x10\x01\x12\x17\n\x13\x43ONTROL_TYPE_RUDDER\x10\x02\x12\x18\n\x14\x43ONTROL_TYPE_BALLAST\x10\x03\x12$\n CONTROL_TYPE_SET_AUTONOMOUS_MODE\x10\x04\x12\x1e\n\x1a\x43ONTROL_TYPE_OVERRIDE_PATH\x10\x05*u\n\x16\x43ontrolExecutionStatus\x12\x1f\n\x1b\x43ONTROL_EXECUTION_UNDEFINED\x10\x00\x12\x1d\n\x19\x43ONTROL_EXECUTION_SUCCESS\x10\x01\x12\x1b\n\x17\x43ONTROL_EXECUTION_ERROR\x10\x02\x32t\n\x1c\x45xecuteControlCommandService\x12T\n\x15\x45xecuteControlCommand\x12\x1c.boat_control.ControlCommand\x1a\x1d.boat_control.ControlResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'control_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
-  _globals['_CONTROLTYPE']._serialized_start=204
-  _globals['_CONTROLTYPE']._serialized_end=297
-  _globals['_CONTROLEXECUTIONSTATUS']._serialized_start=299
-  _globals['_CONTROLEXECUTIONSTATUS']._serialized_end=416
-  _globals['_CONTROLRESPONSE']._serialized_start=31
-  _globals['_CONTROLRESPONSE']._serialized_end=112
-  _globals['_CONTROLCOMMAND']._serialized_start=114
-  _globals['_CONTROLCOMMAND']._serialized_end=202
-  _globals['_EXECUTECONTROLCOMMANDSERVICE']._serialized_start=418
-  _globals['_EXECUTECONTROLCOMMANDSERVICE']._serialized_end=534
+  _globals['_CONTROLTYPE']._serialized_start=415
+  _globals['_CONTROLTYPE']._serialized_end=604
+  _globals['_CONTROLEXECUTIONSTATUS']._serialized_start=606
+  _globals['_CONTROLEXECUTIONSTATUS']._serialized_end=723
+  _globals['_CONTROLRESPONSE']._serialized_start=49
+  _globals['_CONTROLRESPONSE']._serialized_end=130
+  _globals['_CONTROLCOMMAND']._serialized_start=133
+  _globals['_CONTROLCOMMAND']._serialized_end=412
+  _globals['_EXECUTECONTROLCOMMANDSERVICE']._serialized_start=725
+  _globals['_EXECUTECONTROLCOMMANDSERVICE']._serialized_end=841
 # @@protoc_insertion_point(module_scope)
