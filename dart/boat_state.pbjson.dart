@@ -137,6 +137,7 @@ const BoatState$json = {
     {'1': 'node_states', '3': 21, '4': 3, '5': 11, '6': '.boat_state.NodeInfo', '10': 'nodeStates'},
     {'1': 'current_autonomous_mode', '3': 22, '4': 1, '5': 14, '6': '.boat_state.AutonomousMode', '10': 'currentAutonomousMode'},
     {'1': 'current_path', '3': 23, '4': 1, '5': 11, '6': '.boat_state.Path', '9': 8, '10': 'currentPath', '17': true},
+    {'1': 'previous_positions', '3': 24, '4': 1, '5': 11, '6': '.boat_state.Path', '9': 9, '10': 'previousPositions', '17': true},
   ],
   '8': [
     {'1': '_latitude_direction'},
@@ -148,6 +149,7 @@ const BoatState$json = {
     {'1': '_outside_temp'},
     {'1': '_atmospheric_pressure'},
     {'1': '_current_path'},
+    {'1': '_previous_positions'},
   ],
 };
 
@@ -172,11 +174,13 @@ final $typed_data.Uint8List boatStateDescriptor = $convert.base64Decode(
     'IAEoAlIEcm9sbBI1Cgtub2RlX3N0YXRlcxgVIAMoCzIULmJvYXRfc3RhdGUuTm9kZUluZm9SCm'
     '5vZGVTdGF0ZXMSUgoXY3VycmVudF9hdXRvbm9tb3VzX21vZGUYFiABKA4yGi5ib2F0X3N0YXRl'
     'LkF1dG9ub21vdXNNb2RlUhVjdXJyZW50QXV0b25vbW91c01vZGUSOAoMY3VycmVudF9wYXRoGB'
-    'cgASgLMhAuYm9hdF9zdGF0ZS5QYXRoSAhSC2N1cnJlbnRQYXRoiAEBQhUKE19sYXRpdHVkZV9k'
-    'aXJlY3Rpb25CFgoUX2xvbmdpdHVkZV9kaXJlY3Rpb25CFQoTX21hZ25ldGljX2RldmlhdGlvbk'
-    'IfCh1fbWFnbmV0aWNfZGV2aWF0aW9uX2RpcmVjdGlvbkIVChNfbWFnbmV0aWNfdmFyaWF0aW9u'
-    'Qh8KHV9tYWduZXRpY192YXJpYXRpb25fZGlyZWN0aW9uQg8KDV9vdXRzaWRlX3RlbXBCFwoVX2'
-    'F0bW9zcGhlcmljX3ByZXNzdXJlQg8KDV9jdXJyZW50X3BhdGg=');
+    'cgASgLMhAuYm9hdF9zdGF0ZS5QYXRoSAhSC2N1cnJlbnRQYXRoiAEBEkQKEnByZXZpb3VzX3Bv'
+    'c2l0aW9ucxgYIAEoCzIQLmJvYXRfc3RhdGUuUGF0aEgJUhFwcmV2aW91c1Bvc2l0aW9uc4gBAU'
+    'IVChNfbGF0aXR1ZGVfZGlyZWN0aW9uQhYKFF9sb25naXR1ZGVfZGlyZWN0aW9uQhUKE19tYWdu'
+    'ZXRpY19kZXZpYXRpb25CHwodX21hZ25ldGljX2RldmlhdGlvbl9kaXJlY3Rpb25CFQoTX21hZ2'
+    '5ldGljX3ZhcmlhdGlvbkIfCh1fbWFnbmV0aWNfdmFyaWF0aW9uX2RpcmVjdGlvbkIPCg1fb3V0'
+    'c2lkZV90ZW1wQhcKFV9hdG1vc3BoZXJpY19wcmVzc3VyZUIPCg1fY3VycmVudF9wYXRoQhUKE1'
+    '9wcmV2aW91c19wb3NpdGlvbnM=');
 
 @$core.Deprecated('Use boatStateRequestDescriptor instead')
 const BoatStateRequest$json = {

@@ -62,6 +62,7 @@ message BoatState {
     repeated NodeInfo node_states = 21;
     AutonomousMode current_autonomous_mode = 22;
     optional Path current_path = 23;
+    optional Path previous_positions = 24;
 }
 
 message BoatStateRequest {
