@@ -17,7 +17,7 @@ class RestartNodeServiceStub(object):
         self.RestartNode = channel.unary_unary(
                 '/node_restart.RestartNodeService/RestartNode',
                 request_serializer=node__restart__pb2.RestartNodeRequest.SerializeToString,
-                response_deserializer=node__restart__pb2.RestartNodeRequest.FromString,
+                response_deserializer=node__restart__pb2.RestartNodeResponse.FromString,
                 )
 
 
@@ -36,7 +36,7 @@ def add_RestartNodeServiceServicer_to_server(servicer, server):
             'RestartNode': grpc.unary_unary_rpc_method_handler(
                     servicer.RestartNode,
                     request_deserializer=node__restart__pb2.RestartNodeRequest.FromString,
-                    response_serializer=node__restart__pb2.RestartNodeRequest.SerializeToString,
+                    response_serializer=node__restart__pb2.RestartNodeResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -61,6 +61,6 @@ class RestartNodeService(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/node_restart.RestartNodeService/RestartNode',
             node__restart__pb2.RestartNodeRequest.SerializeToString,
-            node__restart__pb2.RestartNodeRequest.FromString,
+            node__restart__pb2.RestartNodeResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

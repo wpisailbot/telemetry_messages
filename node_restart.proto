@@ -11,5 +11,5 @@ message RestartNodeResponse {
 }
 
 service RestartNodeService {
-    rpc RestartNode (RestartNodeRequest) returns (RestartNodeRequest);
+    rpc RestartNode (RestartNodeRequest) returns (RestartNodeResponse);
 }

@@ -21,10 +21,10 @@ export 'node_restart.pb.dart';
 
 @$pb.GrpcServiceName('node_restart.RestartNodeService')
 class RestartNodeServiceClient extends $grpc.Client {
-  static final _$restartNode = $grpc.ClientMethod<$0.RestartNodeRequest, $0.RestartNodeRequest>(
+  static final _$restartNode = $grpc.ClientMethod<$0.RestartNodeRequest, $0.RestartNodeResponse>(
       '/node_restart.RestartNodeService/RestartNode',
       ($0.RestartNodeRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.RestartNodeRequest.fromBuffer(value));
+      ($core.List<$core.int> value) => $0.RestartNodeResponse.fromBuffer(value));
 
   RestartNodeServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -32,7 +32,7 @@ class RestartNodeServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.RestartNodeRequest> restartNode($0.RestartNodeRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.RestartNodeResponse> restartNode($0.RestartNodeRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$restartNode, request, options: options);
   }
 }
@@ -42,18 +42,18 @@ abstract class RestartNodeServiceBase extends $grpc.Service {
   $core.String get $name => 'node_restart.RestartNodeService';
 
   RestartNodeServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.RestartNodeRequest, $0.RestartNodeRequest>(
+    $addMethod($grpc.ServiceMethod<$0.RestartNodeRequest, $0.RestartNodeResponse>(
         'RestartNode',
         restartNode_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.RestartNodeRequest.fromBuffer(value),
-        ($0.RestartNodeRequest value) => value.writeToBuffer()));
+        ($0.RestartNodeResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.RestartNodeRequest> restartNode_Pre($grpc.ServiceCall call, $async.Future<$0.RestartNodeRequest> request) async {
+  $async.Future<$0.RestartNodeResponse> restartNode_Pre($grpc.ServiceCall call, $async.Future<$0.RestartNodeRequest> request) async {
     return restartNode(call, await request);
   }
 
-  $async.Future<$0.RestartNodeRequest> restartNode($grpc.ServiceCall call, $0.RestartNodeRequest request);
+  $async.Future<$0.RestartNodeResponse> restartNode($grpc.ServiceCall call, $0.RestartNodeRequest request);
 }
