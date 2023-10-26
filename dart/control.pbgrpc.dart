@@ -19,41 +19,193 @@ import 'control.pb.dart' as $1;
 
 export 'control.pb.dart';
 
-@$pb.GrpcServiceName('boat_control.ExecuteControlCommandService')
-class ExecuteControlCommandServiceClient extends $grpc.Client {
-  static final _$executeControlCommand = $grpc.ClientMethod<$1.ControlCommand, $1.ControlResponse>(
-      '/boat_control.ExecuteControlCommandService/ExecuteControlCommand',
-      ($1.ControlCommand value) => value.writeToBuffer(),
+@$pb.GrpcServiceName('boat_control.ExecuteRudderCommandService')
+class ExecuteRudderCommandServiceClient extends $grpc.Client {
+  static final _$executeRudderCommand = $grpc.ClientMethod<$1.RudderCommand, $1.ControlResponse>(
+      '/boat_control.ExecuteRudderCommandService/ExecuteRudderCommand',
+      ($1.RudderCommand value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
 
-  ExecuteControlCommandServiceClient($grpc.ClientChannel channel,
+  ExecuteRudderCommandServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
       $core.Iterable<$grpc.ClientInterceptor>? interceptors})
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$1.ControlResponse> executeControlCommand($1.ControlCommand request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$executeControlCommand, request, options: options);
+  $grpc.ResponseFuture<$1.ControlResponse> executeRudderCommand($1.RudderCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeRudderCommand, request, options: options);
   }
 }
 
-@$pb.GrpcServiceName('boat_control.ExecuteControlCommandService')
-abstract class ExecuteControlCommandServiceBase extends $grpc.Service {
-  $core.String get $name => 'boat_control.ExecuteControlCommandService';
+@$pb.GrpcServiceName('boat_control.ExecuteRudderCommandService')
+abstract class ExecuteRudderCommandServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_control.ExecuteRudderCommandService';
 
-  ExecuteControlCommandServiceBase() {
-    $addMethod($grpc.ServiceMethod<$1.ControlCommand, $1.ControlResponse>(
-        'ExecuteControlCommand',
-        executeControlCommand_Pre,
+  ExecuteRudderCommandServiceBase() {
+    $addMethod($grpc.ServiceMethod<$1.RudderCommand, $1.ControlResponse>(
+        'ExecuteRudderCommand',
+        executeRudderCommand_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.ControlCommand.fromBuffer(value),
+        ($core.List<$core.int> value) => $1.RudderCommand.fromBuffer(value),
         ($1.ControlResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.ControlResponse> executeControlCommand_Pre($grpc.ServiceCall call, $async.Future<$1.ControlCommand> request) async {
-    return executeControlCommand(call, await request);
+  $async.Future<$1.ControlResponse> executeRudderCommand_Pre($grpc.ServiceCall call, $async.Future<$1.RudderCommand> request) async {
+    return executeRudderCommand(call, await request);
   }
 
-  $async.Future<$1.ControlResponse> executeControlCommand($grpc.ServiceCall call, $1.ControlCommand request);
+  $async.Future<$1.ControlResponse> executeRudderCommand($grpc.ServiceCall call, $1.RudderCommand request);
+}
+@$pb.GrpcServiceName('boat_control.ExecuteTrimTabCommandService')
+class ExecuteTrimTabCommandServiceClient extends $grpc.Client {
+  static final _$executeTrimTabCommand = $grpc.ClientMethod<$1.TrimTabCommand, $1.ControlResponse>(
+      '/boat_control.ExecuteTrimTabCommandService/ExecuteTrimTabCommand',
+      ($1.TrimTabCommand value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
+
+  ExecuteTrimTabCommandServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options,
+        interceptors: interceptors);
+
+  $grpc.ResponseFuture<$1.ControlResponse> executeTrimTabCommand($1.TrimTabCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeTrimTabCommand, request, options: options);
+  }
+}
+
+@$pb.GrpcServiceName('boat_control.ExecuteTrimTabCommandService')
+abstract class ExecuteTrimTabCommandServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_control.ExecuteTrimTabCommandService';
+
+  ExecuteTrimTabCommandServiceBase() {
+    $addMethod($grpc.ServiceMethod<$1.TrimTabCommand, $1.ControlResponse>(
+        'ExecuteTrimTabCommand',
+        executeTrimTabCommand_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.TrimTabCommand.fromBuffer(value),
+        ($1.ControlResponse value) => value.writeToBuffer()));
+  }
+
+  $async.Future<$1.ControlResponse> executeTrimTabCommand_Pre($grpc.ServiceCall call, $async.Future<$1.TrimTabCommand> request) async {
+    return executeTrimTabCommand(call, await request);
+  }
+
+  $async.Future<$1.ControlResponse> executeTrimTabCommand($grpc.ServiceCall call, $1.TrimTabCommand request);
+}
+@$pb.GrpcServiceName('boat_control.ExecuteBallastCommandService')
+class ExecuteBallastCommandServiceClient extends $grpc.Client {
+  static final _$executeBallastCommand = $grpc.ClientMethod<$1.BallastCommand, $1.ControlResponse>(
+      '/boat_control.ExecuteBallastCommandService/ExecuteBallastCommand',
+      ($1.BallastCommand value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
+
+  ExecuteBallastCommandServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options,
+        interceptors: interceptors);
+
+  $grpc.ResponseFuture<$1.ControlResponse> executeBallastCommand($1.BallastCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeBallastCommand, request, options: options);
+  }
+}
+
+@$pb.GrpcServiceName('boat_control.ExecuteBallastCommandService')
+abstract class ExecuteBallastCommandServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_control.ExecuteBallastCommandService';
+
+  ExecuteBallastCommandServiceBase() {
+    $addMethod($grpc.ServiceMethod<$1.BallastCommand, $1.ControlResponse>(
+        'ExecuteBallastCommand',
+        executeBallastCommand_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.BallastCommand.fromBuffer(value),
+        ($1.ControlResponse value) => value.writeToBuffer()));
+  }
+
+  $async.Future<$1.ControlResponse> executeBallastCommand_Pre($grpc.ServiceCall call, $async.Future<$1.BallastCommand> request) async {
+    return executeBallastCommand(call, await request);
+  }
+
+  $async.Future<$1.ControlResponse> executeBallastCommand($grpc.ServiceCall call, $1.BallastCommand request);
+}
+@$pb.GrpcServiceName('boat_control.ExecuteAutonomousModeCommandService')
+class ExecuteAutonomousModeCommandServiceClient extends $grpc.Client {
+  static final _$executeAutonomousModeCommand = $grpc.ClientMethod<$1.AutonomousModeCommand, $1.ControlResponse>(
+      '/boat_control.ExecuteAutonomousModeCommandService/ExecuteAutonomousModeCommand',
+      ($1.AutonomousModeCommand value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
+
+  ExecuteAutonomousModeCommandServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options,
+        interceptors: interceptors);
+
+  $grpc.ResponseFuture<$1.ControlResponse> executeAutonomousModeCommand($1.AutonomousModeCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeAutonomousModeCommand, request, options: options);
+  }
+}
+
+@$pb.GrpcServiceName('boat_control.ExecuteAutonomousModeCommandService')
+abstract class ExecuteAutonomousModeCommandServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_control.ExecuteAutonomousModeCommandService';
+
+  ExecuteAutonomousModeCommandServiceBase() {
+    $addMethod($grpc.ServiceMethod<$1.AutonomousModeCommand, $1.ControlResponse>(
+        'ExecuteAutonomousModeCommand',
+        executeAutonomousModeCommand_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.AutonomousModeCommand.fromBuffer(value),
+        ($1.ControlResponse value) => value.writeToBuffer()));
+  }
+
+  $async.Future<$1.ControlResponse> executeAutonomousModeCommand_Pre($grpc.ServiceCall call, $async.Future<$1.AutonomousModeCommand> request) async {
+    return executeAutonomousModeCommand(call, await request);
+  }
+
+  $async.Future<$1.ControlResponse> executeAutonomousModeCommand($grpc.ServiceCall call, $1.AutonomousModeCommand request);
+}
+@$pb.GrpcServiceName('boat_control.ExecuteSetPathCommandService')
+class ExecuteSetPathCommandServiceClient extends $grpc.Client {
+  static final _$executeSetPathCommand = $grpc.ClientMethod<$1.SetPathCommand, $1.ControlResponse>(
+      '/boat_control.ExecuteSetPathCommandService/ExecuteSetPathCommand',
+      ($1.SetPathCommand value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
+
+  ExecuteSetPathCommandServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options,
+        interceptors: interceptors);
+
+  $grpc.ResponseFuture<$1.ControlResponse> executeSetPathCommand($1.SetPathCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeSetPathCommand, request, options: options);
+  }
+}
+
+@$pb.GrpcServiceName('boat_control.ExecuteSetPathCommandService')
+abstract class ExecuteSetPathCommandServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_control.ExecuteSetPathCommandService';
+
+  ExecuteSetPathCommandServiceBase() {
+    $addMethod($grpc.ServiceMethod<$1.SetPathCommand, $1.ControlResponse>(
+        'ExecuteSetPathCommand',
+        executeSetPathCommand_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.SetPathCommand.fromBuffer(value),
+        ($1.ControlResponse value) => value.writeToBuffer()));
+  }
+
+  $async.Future<$1.ControlResponse> executeSetPathCommand_Pre($grpc.ServiceCall call, $async.Future<$1.SetPathCommand> request) async {
+    return executeSetPathCommand(call, await request);
+  }
+
+  $async.Future<$1.ControlResponse> executeSetPathCommand($grpc.ServiceCall call, $1.SetPathCommand request);
 }

@@ -2,15 +2,6 @@ syntax = "proto3";
 import "boat_state.proto";
 package boat_control;
 
-enum ControlType {
-    CONTROL_TYPE_UNDEFINED = 0;
-    CONTROL_TYPE_TRIM_TAB = 1;
-    CONTROL_TYPE_RUDDER = 2;
-    CONTROL_TYPE_BALLAST = 3;
-    CONTROL_TYPE_SET_AUTONOMOUS_MODE = 4;
-    CONTROL_TYPE_OVERRIDE_PATH = 5;
-}
-
 enum ControlExecutionStatus {
     CONTROL_EXECUTION_UNDEFINED = 0;
     CONTROL_EXECUTION_SUCCESS = 1;
@@ -21,17 +12,42 @@ message ControlResponse {
     ControlExecutionStatus execution_status = 1;
 }
 
-message ControlCommand {
-    ControlType control_type = 1;
-    oneof control_value_union {
-        float rudder_control_value = 2;
-        float trimtab_control_value = 3;
-        float ballast_control_value = 4;
-        boat_state.AutonomousMode autonomous_mode = 5;
-        boat_state.Path new_path = 6;
-    }
+message RudderCommand {
+    float rudder_control_value = 1;
 }
 
-service ExecuteControlCommandService {
-    rpc ExecuteControlCommand (ControlCommand) returns (ControlResponse);
+message TrimTabCommand {
+    float trimtab_control_value = 1;
+}
+
+message BallastCommand {
+    float ballast_control_value = 1;
+}
+
+message AutonomousModeCommand {
+    boat_state.AutonomousMode autonomous_mode = 5;
+}
+
+message SetPathCommand {
+    boat_state.Path new_path = 1;
+}
+
+service ExecuteRudderCommandService {
+    rpc ExecuteRudderCommand (RudderCommand) returns (ControlResponse);
+}
+
+service ExecuteTrimTabCommandService {
+    rpc ExecuteTrimTabCommand (TrimTabCommand) returns (ControlResponse);
+}
+
+service ExecuteBallastCommandService {
+    rpc ExecuteBallastCommand (BallastCommand) returns (ControlResponse);
+}
+
+service ExecuteAutonomousModeCommandService {
+    rpc ExecuteAutonomousModeCommand (AutonomousModeCommand) returns (ControlResponse);
+}
+
+service ExecuteSetPathCommandService {
+    rpc ExecuteSetPathCommand (SetPathCommand) returns (ControlResponse);
 }
