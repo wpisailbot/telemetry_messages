@@ -29,6 +29,32 @@ final $typed_data.Uint8List nodeStatusDescriptor = $convert.base64Decode(
     'CgpOb2RlU3RhdHVzEhkKFU5PREVfU1RBVFVTX1VOREVGSU5FRBAAEhIKDk5PREVfU1RBVFVTX0'
     '9LEAESFQoRTk9ERV9TVEFUVVNfRVJST1IQAhIUChBOT0RFX1NUQVRVU19XQVJOEAM=');
 
+@$core.Deprecated('Use nodeLifecycleStateDescriptor instead')
+const NodeLifecycleState$json = {
+  '1': 'NodeLifecycleState',
+  '2': [
+    {'1': 'NODE_STATUS_UNCONFIGURED', '2': 0},
+    {'1': 'NODE_STATUS_CONFIGURING', '2': 1},
+    {'1': 'NODE_STATUS_INACTIVE', '2': 2},
+    {'1': 'NODE_STATUS_ACTIVATING', '2': 3},
+    {'1': 'NODE_STATUS_ACTIVE', '2': 4},
+    {'1': 'NODE_STATUS_DEACTIVATING', '2': 5},
+    {'1': 'NODE_STATUS_CLEANING_UP', '2': 6},
+    {'1': 'NODE_STATUS_SHUTTING_DOWN', '2': 7},
+    {'1': 'NODE_STATUS_FINALIZED', '2': 8},
+    {'1': 'NODE_STATUS_ERROR_PROCESSING', '2': 9},
+  ],
+};
+
+/// Descriptor for `NodeLifecycleState`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List nodeLifecycleStateDescriptor = $convert.base64Decode(
+    'ChJOb2RlTGlmZWN5Y2xlU3RhdGUSHAoYTk9ERV9TVEFUVVNfVU5DT05GSUdVUkVEEAASGwoXTk'
+    '9ERV9TVEFUVVNfQ09ORklHVVJJTkcQARIYChROT0RFX1NUQVRVU19JTkFDVElWRRACEhoKFk5P'
+    'REVfU1RBVFVTX0FDVElWQVRJTkcQAxIWChJOT0RFX1NUQVRVU19BQ1RJVkUQBBIcChhOT0RFX1'
+    'NUQVRVU19ERUFDVElWQVRJTkcQBRIbChdOT0RFX1NUQVRVU19DTEVBTklOR19VUBAGEh0KGU5P'
+    'REVfU1RBVFVTX1NIVVRUSU5HX0RPV04QBxIZChVOT0RFX1NUQVRVU19GSU5BTElaRUQQCBIgCh'
+    'xOT0RFX1NUQVRVU19FUlJPUl9QUk9DRVNTSU5HEAk=');
+
 @$core.Deprecated('Use autonomousModeDescriptor instead')
 const AutonomousMode$json = {
   '1': 'AutonomousMode',
@@ -52,14 +78,17 @@ const NodeInfo$json = {
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     {'1': 'status', '3': 2, '4': 1, '5': 14, '6': '.boat_state.NodeStatus', '10': 'status'},
-    {'1': 'info', '3': 3, '4': 1, '5': 9, '10': 'info'},
+    {'1': 'lifecycle_state', '3': 3, '4': 1, '5': 14, '6': '.boat_state.NodeLifecycleState', '10': 'lifecycleState'},
+    {'1': 'info', '3': 4, '4': 1, '5': 9, '10': 'info'},
   ],
 };
 
 /// Descriptor for `NodeInfo`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List nodeInfoDescriptor = $convert.base64Decode(
     'CghOb2RlSW5mbxISCgRuYW1lGAEgASgJUgRuYW1lEi4KBnN0YXR1cxgCIAEoDjIWLmJvYXRfc3'
-    'RhdGUuTm9kZVN0YXR1c1IGc3RhdHVzEhIKBGluZm8YAyABKAlSBGluZm8=');
+    'RhdGUuTm9kZVN0YXR1c1IGc3RhdHVzEkcKD2xpZmVjeWNsZV9zdGF0ZRgDIAEoDjIeLmJvYXRf'
+    'c3RhdGUuTm9kZUxpZmVjeWNsZVN0YXRlUg5saWZlY3ljbGVTdGF0ZRISCgRpbmZvGAQgASgJUg'
+    'RpbmZv');
 
 @$core.Deprecated('Use pointDescriptor instead')
 const Point$json = {

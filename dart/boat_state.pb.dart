@@ -21,6 +21,7 @@ class NodeInfo extends $pb.GeneratedMessage {
   factory NodeInfo({
     $core.String? name,
     NodeStatus? status,
+    NodeLifecycleState? lifecycleState,
     $core.String? info,
   }) {
     final $result = create();
@@ -29,6 +30,9 @@ class NodeInfo extends $pb.GeneratedMessage {
     }
     if (status != null) {
       $result.status = status;
+    }
+    if (lifecycleState != null) {
+      $result.lifecycleState = lifecycleState;
     }
     if (info != null) {
       $result.info = info;
@@ -42,7 +46,8 @@ class NodeInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NodeInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..e<NodeStatus>(2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: NodeStatus.NODE_STATUS_UNDEFINED, valueOf: NodeStatus.valueOf, enumValues: NodeStatus.values)
-    ..aOS(3, _omitFieldNames ? '' : 'info')
+    ..e<NodeLifecycleState>(3, _omitFieldNames ? '' : 'lifecycleState', $pb.PbFieldType.OE, defaultOrMaker: NodeLifecycleState.NODE_STATUS_UNCONFIGURED, valueOf: NodeLifecycleState.valueOf, enumValues: NodeLifecycleState.values)
+    ..aOS(4, _omitFieldNames ? '' : 'info')
     ..hasRequiredFields = false
   ;
 
@@ -86,13 +91,22 @@ class NodeInfo extends $pb.GeneratedMessage {
   void clearStatus() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get info => $_getSZ(2);
+  NodeLifecycleState get lifecycleState => $_getN(2);
   @$pb.TagNumber(3)
-  set info($core.String v) { $_setString(2, v); }
+  set lifecycleState(NodeLifecycleState v) { setField(3, v); }
   @$pb.TagNumber(3)
-  $core.bool hasInfo() => $_has(2);
+  $core.bool hasLifecycleState() => $_has(2);
   @$pb.TagNumber(3)
-  void clearInfo() => clearField(3);
+  void clearLifecycleState() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get info => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set info($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasInfo() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearInfo() => clearField(4);
 }
 
 class Point extends $pb.GeneratedMessage {

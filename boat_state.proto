@@ -9,10 +9,24 @@ enum NodeStatus {
     NODE_STATUS_WARN=3;
 }
 
+enum NodeLifecycleState {
+    NODE_STATUS_UNCONFIGURED=0;
+    NODE_STATUS_CONFIGURING=1;
+    NODE_STATUS_INACTIVE=2;
+    NODE_STATUS_ACTIVATING=3; 
+    NODE_STATUS_ACTIVE=4;
+    NODE_STATUS_DEACTIVATING=5;
+    NODE_STATUS_CLEANING_UP=6;
+    NODE_STATUS_SHUTTING_DOWN=7;
+    NODE_STATUS_FINALIZED=8;
+    NODE_STATUS_ERROR_PROCESSING=9;
+}
+
 message NodeInfo {
     string name = 1;
     NodeStatus status = 2;
-    string info = 3;
+    NodeLifecycleState lifecycle_state = 3;
+    string info = 4;
 }
 
 enum AutonomousMode {
