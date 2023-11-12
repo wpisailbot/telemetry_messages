@@ -43,6 +43,7 @@ class NodeLifecycleState extends $pb.ProtobufEnum {
   static const NodeLifecycleState NODE_LIFECYCLE_STATE_SHUTTING_DOWN = NodeLifecycleState._(7, _omitEnumNames ? '' : 'NODE_LIFECYCLE_STATE_SHUTTING_DOWN');
   static const NodeLifecycleState NODE_LIFECYCLE_STATE_FINALIZED = NodeLifecycleState._(8, _omitEnumNames ? '' : 'NODE_LIFECYCLE_STATE_FINALIZED');
   static const NodeLifecycleState NODE_LIFECYCLE_STATE_ERROR_PROCESSING = NodeLifecycleState._(9, _omitEnumNames ? '' : 'NODE_LIFECYCLE_STATE_ERROR_PROCESSING');
+  static const NodeLifecycleState NODE_LIFECYCLE_STATE_UNKNOWN = NodeLifecycleState._(10, _omitEnumNames ? '' : 'NODE_LIFECYCLE_STATE_UNKNOWN');
 
   static const $core.List<NodeLifecycleState> values = <NodeLifecycleState> [
     NODE_LIFECYCLE_STATE_UNCONFIGURED,
@@ -55,6 +56,7 @@ class NodeLifecycleState extends $pb.ProtobufEnum {
     NODE_LIFECYCLE_STATE_SHUTTING_DOWN,
     NODE_LIFECYCLE_STATE_FINALIZED,
     NODE_LIFECYCLE_STATE_ERROR_PROCESSING,
+    NODE_LIFECYCLE_STATE_UNKNOWN,
   ];
 
   static final $core.Map<$core.int, NodeLifecycleState> _byValue = $pb.ProtobufEnum.initByValue(values);
