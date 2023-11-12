@@ -46,7 +46,7 @@ class NodeInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NodeInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..e<NodeStatus>(2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: NodeStatus.NODE_STATUS_UNDEFINED, valueOf: NodeStatus.valueOf, enumValues: NodeStatus.values)
-    ..e<NodeLifecycleState>(3, _omitFieldNames ? '' : 'lifecycleState', $pb.PbFieldType.OE, defaultOrMaker: NodeLifecycleState.NODE_STATUS_UNCONFIGURED, valueOf: NodeLifecycleState.valueOf, enumValues: NodeLifecycleState.values)
+    ..e<NodeLifecycleState>(3, _omitFieldNames ? '' : 'lifecycleState', $pb.PbFieldType.OE, defaultOrMaker: NodeLifecycleState.NODE_LIFECYCLE_STATE_UNCONFIGURED, valueOf: NodeLifecycleState.valueOf, enumValues: NodeLifecycleState.values)
     ..aOS(4, _omitFieldNames ? '' : 'info')
     ..hasRequiredFields = false
   ;

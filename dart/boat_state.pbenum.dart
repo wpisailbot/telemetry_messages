@@ -33,28 +33,28 @@ class NodeStatus extends $pb.ProtobufEnum {
 }
 
 class NodeLifecycleState extends $pb.ProtobufEnum {
-  static const NodeLifecycleState NODE_STATUS_UNCONFIGURED = NodeLifecycleState._(0, _omitEnumNames ? '' : 'NODE_STATUS_UNCONFIGURED');
-  static const NodeLifecycleState NODE_STATUS_CONFIGURING = NodeLifecycleState._(1, _omitEnumNames ? '' : 'NODE_STATUS_CONFIGURING');
-  static const NodeLifecycleState NODE_STATUS_INACTIVE = NodeLifecycleState._(2, _omitEnumNames ? '' : 'NODE_STATUS_INACTIVE');
-  static const NodeLifecycleState NODE_STATUS_ACTIVATING = NodeLifecycleState._(3, _omitEnumNames ? '' : 'NODE_STATUS_ACTIVATING');
-  static const NodeLifecycleState NODE_STATUS_ACTIVE = NodeLifecycleState._(4, _omitEnumNames ? '' : 'NODE_STATUS_ACTIVE');
-  static const NodeLifecycleState NODE_STATUS_DEACTIVATING = NodeLifecycleState._(5, _omitEnumNames ? '' : 'NODE_STATUS_DEACTIVATING');
-  static const NodeLifecycleState NODE_STATUS_CLEANING_UP = NodeLifecycleState._(6, _omitEnumNames ? '' : 'NODE_STATUS_CLEANING_UP');
-  static const NodeLifecycleState NODE_STATUS_SHUTTING_DOWN = NodeLifecycleState._(7, _omitEnumNames ? '' : 'NODE_STATUS_SHUTTING_DOWN');
-  static const NodeLifecycleState NODE_STATUS_FINALIZED = NodeLifecycleState._(8, _omitEnumNames ? '' : 'NODE_STATUS_FINALIZED');
-  static const NodeLifecycleState NODE_STATUS_ERROR_PROCESSING = NodeLifecycleState._(9, _omitEnumNames ? '' : 'NODE_STATUS_ERROR_PROCESSING');
+  static const NodeLifecycleState NODE_LIFECYCLE_STATE_UNCONFIGURED = NodeLifecycleState._(0, _omitEnumNames ? '' : 'NODE_LIFECYCLE_STATE_UNCONFIGURED');
+  static const NodeLifecycleState NODE_LIFECYCLE_STATE_CONFIGURING = NodeLifecycleState._(1, _omitEnumNames ? '' : 'NODE_LIFECYCLE_STATE_CONFIGURING');
+  static const NodeLifecycleState NODE_LIFECYCLE_STATE_INACTIVE = NodeLifecycleState._(2, _omitEnumNames ? '' : 'NODE_LIFECYCLE_STATE_INACTIVE');
+  static const NodeLifecycleState NODE_LIFECYCLE_STATE_ACTIVATING = NodeLifecycleState._(3, _omitEnumNames ? '' : 'NODE_LIFECYCLE_STATE_ACTIVATING');
+  static const NodeLifecycleState NODE_LIFECYCLE_STATE_ACTIVE = NodeLifecycleState._(4, _omitEnumNames ? '' : 'NODE_LIFECYCLE_STATE_ACTIVE');
+  static const NodeLifecycleState NODE_LIFECYCLE_STATE_DEACTIVATING = NodeLifecycleState._(5, _omitEnumNames ? '' : 'NODE_LIFECYCLE_STATE_DEACTIVATING');
+  static const NodeLifecycleState NODE_LIFECYCLE_STATE_CLEANING_UP = NodeLifecycleState._(6, _omitEnumNames ? '' : 'NODE_LIFECYCLE_STATE_CLEANING_UP');
+  static const NodeLifecycleState NODE_LIFECYCLE_STATE_SHUTTING_DOWN = NodeLifecycleState._(7, _omitEnumNames ? '' : 'NODE_LIFECYCLE_STATE_SHUTTING_DOWN');
+  static const NodeLifecycleState NODE_LIFECYCLE_STATE_FINALIZED = NodeLifecycleState._(8, _omitEnumNames ? '' : 'NODE_LIFECYCLE_STATE_FINALIZED');
+  static const NodeLifecycleState NODE_LIFECYCLE_STATE_ERROR_PROCESSING = NodeLifecycleState._(9, _omitEnumNames ? '' : 'NODE_LIFECYCLE_STATE_ERROR_PROCESSING');
 
   static const $core.List<NodeLifecycleState> values = <NodeLifecycleState> [
-    NODE_STATUS_UNCONFIGURED,
-    NODE_STATUS_CONFIGURING,
-    NODE_STATUS_INACTIVE,
-    NODE_STATUS_ACTIVATING,
-    NODE_STATUS_ACTIVE,
-    NODE_STATUS_DEACTIVATING,
-    NODE_STATUS_CLEANING_UP,
-    NODE_STATUS_SHUTTING_DOWN,
-    NODE_STATUS_FINALIZED,
-    NODE_STATUS_ERROR_PROCESSING,
+    NODE_LIFECYCLE_STATE_UNCONFIGURED,
+    NODE_LIFECYCLE_STATE_CONFIGURING,
+    NODE_LIFECYCLE_STATE_INACTIVE,
+    NODE_LIFECYCLE_STATE_ACTIVATING,
+    NODE_LIFECYCLE_STATE_ACTIVE,
+    NODE_LIFECYCLE_STATE_DEACTIVATING,
+    NODE_LIFECYCLE_STATE_CLEANING_UP,
+    NODE_LIFECYCLE_STATE_SHUTTING_DOWN,
+    NODE_LIFECYCLE_STATE_FINALIZED,
+    NODE_LIFECYCLE_STATE_ERROR_PROCESSING,
   ];
 
   static final $core.Map<$core.int, NodeLifecycleState> _byValue = $pb.ProtobufEnum.initByValue(values);
