@@ -107,3 +107,27 @@ final $typed_data.Uint8List setPathCommandDescriptor = $convert.base64Decode(
     'Cg5TZXRQYXRoQ29tbWFuZBIrCghuZXdfcGF0aBgBIAEoCzIQLmJvYXRfc3RhdGUuUGF0aFIHbm'
     'V3UGF0aA==');
 
+@$core.Deprecated('Use mapRequestDescriptor instead')
+const MapRequest$json = {
+  '1': 'MapRequest',
+  '2': [
+    {'1': 'mapId', '3': 1, '4': 1, '5': 9, '10': 'mapId'},
+  ],
+};
+
+/// Descriptor for `MapRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List mapRequestDescriptor = $convert.base64Decode(
+    'CgpNYXBSZXF1ZXN0EhQKBW1hcElkGAEgASgJUgVtYXBJZA==');
+
+@$core.Deprecated('Use mapResponseDescriptor instead')
+const MapResponse$json = {
+  '1': 'MapResponse',
+  '2': [
+    {'1': 'imageData', '3': 1, '4': 1, '5': 12, '10': 'imageData'},
+  ],
+};
+
+/// Descriptor for `MapResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List mapResponseDescriptor = $convert.base64Decode(
+    'CgtNYXBSZXNwb25zZRIcCglpbWFnZURhdGEYASABKAxSCWltYWdlRGF0YQ==');
+
