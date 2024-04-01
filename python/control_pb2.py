@@ -14,15 +14,15 @@ _sym_db = _symbol_database.Default()
 import boat_state_pb2 as boat__state__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rcontrol.proto\x12\x0c\x62oat_control\x1a\x10\x62oat_state.proto\"Q\n\x0f\x43ontrolResponse\x12>\n\x10\x65xecution_status\x18\x01 \x01(\x0e\x32$.boat_control.ControlExecutionStatus\"-\n\rRudderCommand\x12\x1c\n\x14rudder_control_value\x18\x01 \x01(\x02\"/\n\x0eTrimTabCommand\x12\x1d\n\x15trimtab_control_value\x18\x01 \x01(\x02\"/\n\x0e\x42\x61llastCommand\x12\x1d\n\x15\x62\x61llast_control_value\x18\x01 \x01(\x02\"L\n\x15\x41utonomousModeCommand\x12\x33\n\x0f\x61utonomous_mode\x18\x05 \x01(\x0e\x32\x1a.boat_state.AutonomousMode\"4\n\x0eSetPathCommand\x12\"\n\x08new_path\x18\x01 \x01(\x0b\x32\x10.boat_state.Path\"\x1b\n\nMapRequest\x12\r\n\x05mapId\x18\x01 \x01(\t\" \n\x0bMapResponse\x12\x11\n\timageData\x18\x01 \x01(\x0c*u\n\x16\x43ontrolExecutionStatus\x12\x1f\n\x1b\x43ONTROL_EXECUTION_UNDEFINED\x10\x00\x12\x1d\n\x19\x43ONTROL_EXECUTION_SUCCESS\x10\x01\x12\x1b\n\x17\x43ONTROL_EXECUTION_ERROR\x10\x02\x32q\n\x1b\x45xecuteRudderCommandService\x12R\n\x14\x45xecuteRudderCommand\x12\x1b.boat_control.RudderCommand\x1a\x1d.boat_control.ControlResponse2t\n\x1c\x45xecuteTrimTabCommandService\x12T\n\x15\x45xecuteTrimTabCommand\x12\x1c.boat_control.TrimTabCommand\x1a\x1d.boat_control.ControlResponse2t\n\x1c\x45xecuteBallastCommandService\x12T\n\x15\x45xecuteBallastCommand\x12\x1c.boat_control.BallastCommand\x1a\x1d.boat_control.ControlResponse2\x89\x01\n#ExecuteAutonomousModeCommandService\x12\x62\n\x1c\x45xecuteAutonomousModeCommand\x12#.boat_control.AutonomousModeCommand\x1a\x1d.boat_control.ControlResponse2t\n\x1c\x45xecuteSetPathCommandService\x12T\n\x15\x45xecuteSetPathCommand\x12\x1c.boat_control.SetPathCommand\x1a\x1d.boat_control.ControlResponse2P\n\rGetMapService\x12?\n\x06GetMap\x12\x18.boat_control.MapRequest\x1a\x19.boat_control.MapResponse\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rcontrol.proto\x12\x0c\x62oat_control\x1a\x10\x62oat_state.proto\"Q\n\x0f\x43ontrolResponse\x12>\n\x10\x65xecution_status\x18\x01 \x01(\x0e\x32$.boat_control.ControlExecutionStatus\"-\n\rRudderCommand\x12\x1c\n\x14rudder_control_value\x18\x01 \x01(\x02\"/\n\x0eTrimTabCommand\x12\x1d\n\x15trimtab_control_value\x18\x01 \x01(\x02\"/\n\x0e\x42\x61llastCommand\x12\x1d\n\x15\x62\x61llast_control_value\x18\x01 \x01(\x02\"L\n\x15\x41utonomousModeCommand\x12\x33\n\x0f\x61utonomous_mode\x18\x05 \x01(\x0e\x32\x1a.boat_state.AutonomousMode\"4\n\x0eSetPathCommand\x12\"\n\x08new_path\x18\x01 \x01(\x0b\x32\x10.boat_state.Path*u\n\x16\x43ontrolExecutionStatus\x12\x1f\n\x1b\x43ONTROL_EXECUTION_UNDEFINED\x10\x00\x12\x1d\n\x19\x43ONTROL_EXECUTION_SUCCESS\x10\x01\x12\x1b\n\x17\x43ONTROL_EXECUTION_ERROR\x10\x02\x32q\n\x1b\x45xecuteRudderCommandService\x12R\n\x14\x45xecuteRudderCommand\x12\x1b.boat_control.RudderCommand\x1a\x1d.boat_control.ControlResponse2t\n\x1c\x45xecuteTrimTabCommandService\x12T\n\x15\x45xecuteTrimTabCommand\x12\x1c.boat_control.TrimTabCommand\x1a\x1d.boat_control.ControlResponse2t\n\x1c\x45xecuteBallastCommandService\x12T\n\x15\x45xecuteBallastCommand\x12\x1c.boat_control.BallastCommand\x1a\x1d.boat_control.ControlResponse2\x89\x01\n#ExecuteAutonomousModeCommandService\x12\x62\n\x1c\x45xecuteAutonomousModeCommand\x12#.boat_control.AutonomousModeCommand\x1a\x1d.boat_control.ControlResponse2t\n\x1c\x45xecuteSetPathCommandService\x12T\n\x15\x45xecuteSetPathCommand\x12\x1c.boat_control.SetPathCommand\x1a\x1d.boat_control.ControlResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'control_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
-  _globals['_CONTROLEXECUTIONSTATUS']._serialized_start=472
-  _globals['_CONTROLEXECUTIONSTATUS']._serialized_end=589
+  _globals['_CONTROLEXECUTIONSTATUS']._serialized_start=409
+  _globals['_CONTROLEXECUTIONSTATUS']._serialized_end=526
   _globals['_CONTROLRESPONSE']._serialized_start=49
   _globals['_CONTROLRESPONSE']._serialized_end=130
   _globals['_RUDDERCOMMAND']._serialized_start=132
@@ -35,20 +35,14 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _globals['_AUTONOMOUSMODECOMMAND']._serialized_end=353
   _globals['_SETPATHCOMMAND']._serialized_start=355
   _globals['_SETPATHCOMMAND']._serialized_end=407
-  _globals['_MAPREQUEST']._serialized_start=409
-  _globals['_MAPREQUEST']._serialized_end=436
-  _globals['_MAPRESPONSE']._serialized_start=438
-  _globals['_MAPRESPONSE']._serialized_end=470
-  _globals['_EXECUTERUDDERCOMMANDSERVICE']._serialized_start=591
-  _globals['_EXECUTERUDDERCOMMANDSERVICE']._serialized_end=704
-  _globals['_EXECUTETRIMTABCOMMANDSERVICE']._serialized_start=706
-  _globals['_EXECUTETRIMTABCOMMANDSERVICE']._serialized_end=822
-  _globals['_EXECUTEBALLASTCOMMANDSERVICE']._serialized_start=824
-  _globals['_EXECUTEBALLASTCOMMANDSERVICE']._serialized_end=940
-  _globals['_EXECUTEAUTONOMOUSMODECOMMANDSERVICE']._serialized_start=943
-  _globals['_EXECUTEAUTONOMOUSMODECOMMANDSERVICE']._serialized_end=1080
-  _globals['_EXECUTESETPATHCOMMANDSERVICE']._serialized_start=1082
-  _globals['_EXECUTESETPATHCOMMANDSERVICE']._serialized_end=1198
-  _globals['_GETMAPSERVICE']._serialized_start=1200
-  _globals['_GETMAPSERVICE']._serialized_end=1280
+  _globals['_EXECUTERUDDERCOMMANDSERVICE']._serialized_start=528
+  _globals['_EXECUTERUDDERCOMMANDSERVICE']._serialized_end=641
+  _globals['_EXECUTETRIMTABCOMMANDSERVICE']._serialized_start=643
+  _globals['_EXECUTETRIMTABCOMMANDSERVICE']._serialized_end=759
+  _globals['_EXECUTEBALLASTCOMMANDSERVICE']._serialized_start=761
+  _globals['_EXECUTEBALLASTCOMMANDSERVICE']._serialized_end=877
+  _globals['_EXECUTEAUTONOMOUSMODECOMMANDSERVICE']._serialized_start=880
+  _globals['_EXECUTEAUTONOMOUSMODECOMMANDSERVICE']._serialized_end=1017
+  _globals['_EXECUTESETPATHCOMMANDSERVICE']._serialized_start=1019
+  _globals['_EXECUTESETPATHCOMMANDSERVICE']._serialized_end=1135
 # @@protoc_insertion_point(module_scope)

@@ -87,3 +87,19 @@ message BoatStateRequest {
 service SendBoatStateService {
     rpc SendBoatState (BoatStateRequest) returns (BoatState);
 }
+
+message MapRequest {
+    string mapId = 1; // Map ID, unused for now
+}
+
+message MapResponse {
+    bytes image_data = 1;
+    float north = 2; // bounding box values
+    float south = 3;
+    float east = 4;
+    float west = 5;
+}
+
+service GetMapService {
+    rpc GetMap (MapRequest) returns (MapResponse) {}
+}

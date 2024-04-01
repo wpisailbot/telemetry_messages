@@ -223,3 +223,33 @@ const BoatStateRequest$json = {
 final $typed_data.Uint8List boatStateRequestDescriptor = $convert.base64Decode(
     'ChBCb2F0U3RhdGVSZXF1ZXN0');
 
+@$core.Deprecated('Use mapRequestDescriptor instead')
+const MapRequest$json = {
+  '1': 'MapRequest',
+  '2': [
+    {'1': 'mapId', '3': 1, '4': 1, '5': 9, '10': 'mapId'},
+  ],
+};
+
+/// Descriptor for `MapRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List mapRequestDescriptor = $convert.base64Decode(
+    'CgpNYXBSZXF1ZXN0EhQKBW1hcElkGAEgASgJUgVtYXBJZA==');
+
+@$core.Deprecated('Use mapResponseDescriptor instead')
+const MapResponse$json = {
+  '1': 'MapResponse',
+  '2': [
+    {'1': 'image_data', '3': 1, '4': 1, '5': 12, '10': 'imageData'},
+    {'1': 'north', '3': 2, '4': 1, '5': 2, '10': 'north'},
+    {'1': 'south', '3': 3, '4': 1, '5': 2, '10': 'south'},
+    {'1': 'east', '3': 4, '4': 1, '5': 2, '10': 'east'},
+    {'1': 'west', '3': 5, '4': 1, '5': 2, '10': 'west'},
+  ],
+};
+
+/// Descriptor for `MapResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List mapResponseDescriptor = $convert.base64Decode(
+    'CgtNYXBSZXNwb25zZRIdCgppbWFnZV9kYXRhGAEgASgMUglpbWFnZURhdGESFAoFbm9ydGgYAi'
+    'ABKAJSBW5vcnRoEhQKBXNvdXRoGAMgASgCUgVzb3V0aBISCgRlYXN0GAQgASgCUgRlYXN0EhIK'
+    'BHdlc3QYBSABKAJSBHdlc3Q=');
+

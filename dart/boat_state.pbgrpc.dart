@@ -57,3 +57,41 @@ abstract class SendBoatStateServiceBase extends $grpc.Service {
 
   $async.Future<$0.BoatState> sendBoatState($grpc.ServiceCall call, $0.BoatStateRequest request);
 }
+@$pb.GrpcServiceName('boat_state.GetMapService')
+class GetMapServiceClient extends $grpc.Client {
+  static final _$getMap = $grpc.ClientMethod<$0.MapRequest, $0.MapResponse>(
+      '/boat_state.GetMapService/GetMap',
+      ($0.MapRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.MapResponse.fromBuffer(value));
+
+  GetMapServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options,
+        interceptors: interceptors);
+
+  $grpc.ResponseFuture<$0.MapResponse> getMap($0.MapRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getMap, request, options: options);
+  }
+}
+
+@$pb.GrpcServiceName('boat_state.GetMapService')
+abstract class GetMapServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_state.GetMapService';
+
+  GetMapServiceBase() {
+    $addMethod($grpc.ServiceMethod<$0.MapRequest, $0.MapResponse>(
+        'GetMap',
+        getMap_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.MapRequest.fromBuffer(value),
+        ($0.MapResponse value) => value.writeToBuffer()));
+  }
+
+  $async.Future<$0.MapResponse> getMap_Pre($grpc.ServiceCall call, $async.Future<$0.MapRequest> request) async {
+    return getMap(call, await request);
+  }
+
+  $async.Future<$0.MapResponse> getMap($grpc.ServiceCall call, $0.MapRequest request);
+}

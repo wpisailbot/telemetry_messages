@@ -51,15 +51,3 @@ service ExecuteAutonomousModeCommandService {
 service ExecuteSetPathCommandService {
     rpc ExecuteSetPathCommand (SetPathCommand) returns (ControlResponse);
 }
-
-message MapRequest {
-    string mapId = 1; // Map ID, unused for now
-}
-
-message MapResponse {
-    bytes imageData = 1;
-}
-
-service GetMapService {
-    rpc GetMap (MapRequest) returns (MapResponse) {}
-}
