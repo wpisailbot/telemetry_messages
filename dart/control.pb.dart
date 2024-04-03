@@ -271,11 +271,11 @@ class AutonomousModeCommand extends $pb.GeneratedMessage {
 
 class SetWaypointsCommand extends $pb.GeneratedMessage {
   factory SetWaypointsCommand({
-    $0.Path? newPath,
+    $0.Path? newWaypoints,
   }) {
     final $result = create();
-    if (newPath != null) {
-      $result.newPath = newPath;
+    if (newWaypoints != null) {
+      $result.newWaypoints = newWaypoints;
     }
     return $result;
   }
@@ -284,7 +284,7 @@ class SetWaypointsCommand extends $pb.GeneratedMessage {
   factory SetWaypointsCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetWaypointsCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..aOM<$0.Path>(1, _omitFieldNames ? '' : 'newPath', subBuilder: $0.Path.create)
+    ..aOM<$0.Path>(1, _omitFieldNames ? '' : 'newWaypoints', subBuilder: $0.Path.create)
     ..hasRequiredFields = false
   ;
 
@@ -310,15 +310,15 @@ class SetWaypointsCommand extends $pb.GeneratedMessage {
   static SetWaypointsCommand? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.Path get newPath => $_getN(0);
+  $0.Path get newWaypoints => $_getN(0);
   @$pb.TagNumber(1)
-  set newPath($0.Path v) { setField(1, v); }
+  set newWaypoints($0.Path v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasNewPath() => $_has(0);
+  $core.bool hasNewWaypoints() => $_has(0);
   @$pb.TagNumber(1)
-  void clearNewPath() => clearField(1);
+  void clearNewWaypoints() => clearField(1);
   @$pb.TagNumber(1)
-  $0.Path ensureNewPath() => $_ensure(0);
+  $0.Path ensureNewWaypoints() => $_ensure(0);
 }
 
 
