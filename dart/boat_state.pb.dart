@@ -335,6 +335,7 @@ class BoatState extends $pb.GeneratedMessage {
     AutonomousMode? currentAutonomousMode,
     Path? currentPath,
     Path? previousPositions,
+    Path? currentWaypoints,
   }) {
     final $result = create();
     if (latitude != null) {
@@ -409,6 +410,9 @@ class BoatState extends $pb.GeneratedMessage {
     if (previousPositions != null) {
       $result.previousPositions = previousPositions;
     }
+    if (currentWaypoints != null) {
+      $result.currentWaypoints = currentWaypoints;
+    }
     return $result;
   }
   BoatState._() : super();
@@ -440,6 +444,7 @@ class BoatState extends $pb.GeneratedMessage {
     ..e<AutonomousMode>(22, _omitFieldNames ? '' : 'currentAutonomousMode', $pb.PbFieldType.OE, defaultOrMaker: AutonomousMode.AUTONOMOUS_MODE_UNDEFINED, valueOf: AutonomousMode.valueOf, enumValues: AutonomousMode.values)
     ..aOM<Path>(23, _omitFieldNames ? '' : 'currentPath', subBuilder: Path.create)
     ..aOM<Path>(24, _omitFieldNames ? '' : 'previousPositions', subBuilder: Path.create)
+    ..aOM<Path>(25, _omitFieldNames ? '' : 'currentWaypoints', subBuilder: Path.create)
     ..hasRequiredFields = false
   ;
 
@@ -681,6 +686,17 @@ class BoatState extends $pb.GeneratedMessage {
   void clearPreviousPositions() => clearField(24);
   @$pb.TagNumber(24)
   Path ensurePreviousPositions() => $_ensure(23);
+
+  @$pb.TagNumber(25)
+  Path get currentWaypoints => $_getN(24);
+  @$pb.TagNumber(25)
+  set currentWaypoints(Path v) { setField(25, v); }
+  @$pb.TagNumber(25)
+  $core.bool hasCurrentWaypoints() => $_has(24);
+  @$pb.TagNumber(25)
+  void clearCurrentWaypoints() => clearField(25);
+  @$pb.TagNumber(25)
+  Path ensureCurrentWaypoints() => $_ensure(24);
 }
 
 class BoatStateRequest extends $pb.GeneratedMessage {

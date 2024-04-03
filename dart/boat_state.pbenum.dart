@@ -69,12 +69,14 @@ class AutonomousMode extends $pb.ProtobufEnum {
   static const AutonomousMode AUTONOMOUS_MODE_UNDEFINED = AutonomousMode._(0, _omitEnumNames ? '' : 'AUTONOMOUS_MODE_UNDEFINED');
   static const AutonomousMode AUTONOMOUS_MODE_NONE = AutonomousMode._(1, _omitEnumNames ? '' : 'AUTONOMOUS_MODE_NONE');
   static const AutonomousMode AUTONOMOUS_MODE_BALLAST = AutonomousMode._(2, _omitEnumNames ? '' : 'AUTONOMOUS_MODE_BALLAST');
-  static const AutonomousMode AUTONOMOUS_MODE_FULL = AutonomousMode._(3, _omitEnumNames ? '' : 'AUTONOMOUS_MODE_FULL');
+  static const AutonomousMode AUTONOMOUS_MODE_TRIMTAB = AutonomousMode._(3, _omitEnumNames ? '' : 'AUTONOMOUS_MODE_TRIMTAB');
+  static const AutonomousMode AUTONOMOUS_MODE_FULL = AutonomousMode._(4, _omitEnumNames ? '' : 'AUTONOMOUS_MODE_FULL');
 
   static const $core.List<AutonomousMode> values = <AutonomousMode> [
     AUTONOMOUS_MODE_UNDEFINED,
     AUTONOMOUS_MODE_NONE,
     AUTONOMOUS_MODE_BALLAST,
+    AUTONOMOUS_MODE_TRIMTAB,
     AUTONOMOUS_MODE_FULL,
   ];
 

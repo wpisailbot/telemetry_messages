@@ -269,8 +269,8 @@ class AutonomousModeCommand extends $pb.GeneratedMessage {
   void clearAutonomousMode() => clearField(5);
 }
 
-class SetPathCommand extends $pb.GeneratedMessage {
-  factory SetPathCommand({
+class SetWaypointsCommand extends $pb.GeneratedMessage {
+  factory SetWaypointsCommand({
     $0.Path? newPath,
   }) {
     final $result = create();
@@ -279,11 +279,11 @@ class SetPathCommand extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  SetPathCommand._() : super();
-  factory SetPathCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetPathCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  SetWaypointsCommand._() : super();
+  factory SetWaypointsCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetWaypointsCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetPathCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetWaypointsCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
     ..aOM<$0.Path>(1, _omitFieldNames ? '' : 'newPath', subBuilder: $0.Path.create)
     ..hasRequiredFields = false
   ;
@@ -292,22 +292,22 @@ class SetPathCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  SetPathCommand clone() => SetPathCommand()..mergeFromMessage(this);
+  SetWaypointsCommand clone() => SetWaypointsCommand()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SetPathCommand copyWith(void Function(SetPathCommand) updates) => super.copyWith((message) => updates(message as SetPathCommand)) as SetPathCommand;
+  SetWaypointsCommand copyWith(void Function(SetWaypointsCommand) updates) => super.copyWith((message) => updates(message as SetWaypointsCommand)) as SetWaypointsCommand;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static SetPathCommand create() => SetPathCommand._();
-  SetPathCommand createEmptyInstance() => create();
-  static $pb.PbList<SetPathCommand> createRepeated() => $pb.PbList<SetPathCommand>();
+  static SetWaypointsCommand create() => SetWaypointsCommand._();
+  SetWaypointsCommand createEmptyInstance() => create();
+  static $pb.PbList<SetWaypointsCommand> createRepeated() => $pb.PbList<SetWaypointsCommand>();
   @$core.pragma('dart2js:noInline')
-  static SetPathCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetPathCommand>(create);
-  static SetPathCommand? _defaultInstance;
+  static SetWaypointsCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetWaypointsCommand>(create);
+  static SetWaypointsCommand? _defaultInstance;
 
   @$pb.TagNumber(1)
   $0.Path get newPath => $_getN(0);

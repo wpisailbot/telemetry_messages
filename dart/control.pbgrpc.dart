@@ -171,41 +171,41 @@ abstract class ExecuteAutonomousModeCommandServiceBase extends $grpc.Service {
 
   $async.Future<$1.ControlResponse> executeAutonomousModeCommand($grpc.ServiceCall call, $1.AutonomousModeCommand request);
 }
-@$pb.GrpcServiceName('boat_control.ExecuteSetPathCommandService')
-class ExecuteSetPathCommandServiceClient extends $grpc.Client {
-  static final _$executeSetPathCommand = $grpc.ClientMethod<$1.SetPathCommand, $1.ControlResponse>(
-      '/boat_control.ExecuteSetPathCommandService/ExecuteSetPathCommand',
-      ($1.SetPathCommand value) => value.writeToBuffer(),
+@$pb.GrpcServiceName('boat_control.ExecuteSetWaypointsCommandService')
+class ExecuteSetWaypointsCommandServiceClient extends $grpc.Client {
+  static final _$executeSetWaypointsCommand = $grpc.ClientMethod<$1.SetWaypointsCommand, $1.ControlResponse>(
+      '/boat_control.ExecuteSetWaypointsCommandService/ExecuteSetWaypointsCommand',
+      ($1.SetWaypointsCommand value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
 
-  ExecuteSetPathCommandServiceClient($grpc.ClientChannel channel,
+  ExecuteSetWaypointsCommandServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
       $core.Iterable<$grpc.ClientInterceptor>? interceptors})
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$1.ControlResponse> executeSetPathCommand($1.SetPathCommand request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$executeSetPathCommand, request, options: options);
+  $grpc.ResponseFuture<$1.ControlResponse> executeSetWaypointsCommand($1.SetWaypointsCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeSetWaypointsCommand, request, options: options);
   }
 }
 
-@$pb.GrpcServiceName('boat_control.ExecuteSetPathCommandService')
-abstract class ExecuteSetPathCommandServiceBase extends $grpc.Service {
-  $core.String get $name => 'boat_control.ExecuteSetPathCommandService';
+@$pb.GrpcServiceName('boat_control.ExecuteSetWaypointsCommandService')
+abstract class ExecuteSetWaypointsCommandServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_control.ExecuteSetWaypointsCommandService';
 
-  ExecuteSetPathCommandServiceBase() {
-    $addMethod($grpc.ServiceMethod<$1.SetPathCommand, $1.ControlResponse>(
-        'ExecuteSetPathCommand',
-        executeSetPathCommand_Pre,
+  ExecuteSetWaypointsCommandServiceBase() {
+    $addMethod($grpc.ServiceMethod<$1.SetWaypointsCommand, $1.ControlResponse>(
+        'ExecuteSetWaypointsCommand',
+        executeSetWaypointsCommand_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.SetPathCommand.fromBuffer(value),
+        ($core.List<$core.int> value) => $1.SetWaypointsCommand.fromBuffer(value),
         ($1.ControlResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.ControlResponse> executeSetPathCommand_Pre($grpc.ServiceCall call, $async.Future<$1.SetPathCommand> request) async {
-    return executeSetPathCommand(call, await request);
+  $async.Future<$1.ControlResponse> executeSetWaypointsCommand_Pre($grpc.ServiceCall call, $async.Future<$1.SetWaypointsCommand> request) async {
+    return executeSetWaypointsCommand(call, await request);
   }
 
-  $async.Future<$1.ControlResponse> executeSetPathCommand($grpc.ServiceCall call, $1.SetPathCommand request);
+  $async.Future<$1.ControlResponse> executeSetWaypointsCommand($grpc.ServiceCall call, $1.SetWaypointsCommand request);
 }

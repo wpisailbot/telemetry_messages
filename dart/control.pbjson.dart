@@ -94,16 +94,16 @@ final $typed_data.Uint8List autonomousModeCommandDescriptor = $convert.base64Dec
     'ChVBdXRvbm9tb3VzTW9kZUNvbW1hbmQSQwoPYXV0b25vbW91c19tb2RlGAUgASgOMhouYm9hdF'
     '9zdGF0ZS5BdXRvbm9tb3VzTW9kZVIOYXV0b25vbW91c01vZGU=');
 
-@$core.Deprecated('Use setPathCommandDescriptor instead')
-const SetPathCommand$json = {
-  '1': 'SetPathCommand',
+@$core.Deprecated('Use setWaypointsCommandDescriptor instead')
+const SetWaypointsCommand$json = {
+  '1': 'SetWaypointsCommand',
   '2': [
     {'1': 'new_path', '3': 1, '4': 1, '5': 11, '6': '.boat_state.Path', '10': 'newPath'},
   ],
 };
 
-/// Descriptor for `SetPathCommand`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List setPathCommandDescriptor = $convert.base64Decode(
-    'Cg5TZXRQYXRoQ29tbWFuZBIrCghuZXdfcGF0aBgBIAEoCzIQLmJvYXRfc3RhdGUuUGF0aFIHbm'
-    'V3UGF0aA==');
+/// Descriptor for `SetWaypointsCommand`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setWaypointsCommandDescriptor = $convert.base64Decode(
+    'ChNTZXRXYXlwb2ludHNDb21tYW5kEisKCG5ld19wYXRoGAEgASgLMhAuYm9hdF9zdGF0ZS5QYX'
+    'RoUgduZXdQYXRo');
 

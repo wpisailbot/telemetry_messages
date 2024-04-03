@@ -28,7 +28,7 @@ message AutonomousModeCommand {
     boat_state.AutonomousMode autonomous_mode = 5;
 }
 
-message SetPathCommand {
+message SetWaypointsCommand {
     boat_state.Path new_path = 1;
 }
 
@@ -48,6 +48,6 @@ service ExecuteAutonomousModeCommandService {
     rpc ExecuteAutonomousModeCommand (AutonomousModeCommand) returns (ControlResponse);
 }
 
-service ExecuteSetPathCommandService {
-    rpc ExecuteSetPathCommand (SetPathCommand) returns (ControlResponse);
+service ExecuteSetWaypointsCommandService {
+    rpc ExecuteSetWaypointsCommand (SetWaypointsCommand) returns (ControlResponse);
 }

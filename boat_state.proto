@@ -34,7 +34,8 @@ enum AutonomousMode {
     AUTONOMOUS_MODE_UNDEFINED=0;
     AUTONOMOUS_MODE_NONE=1;
     AUTONOMOUS_MODE_BALLAST=2;
-    AUTONOMOUS_MODE_FULL=3;
+    AUTONOMOUS_MODE_TRIMTAB=3;
+    AUTONOMOUS_MODE_FULL=4;
 }
 
 message Point {
@@ -78,6 +79,7 @@ message BoatState {
     AutonomousMode current_autonomous_mode = 22;
     optional Path current_path = 23;
     optional Path previous_positions = 24;
+    optional Path current_waypoints = 25;
 }
 
 message BoatStateRequest {
