@@ -172,6 +172,7 @@ const BoatState$json = {
     {'1': 'current_path', '3': 23, '4': 1, '5': 11, '6': '.boat_state.Path', '9': 8, '10': 'currentPath', '17': true},
     {'1': 'previous_positions', '3': 24, '4': 1, '5': 11, '6': '.boat_state.Path', '9': 9, '10': 'previousPositions', '17': true},
     {'1': 'current_waypoints', '3': 25, '4': 1, '5': 11, '6': '.boat_state.Path', '9': 10, '10': 'currentWaypoints', '17': true},
+    {'1': 'current_target_point', '3': 26, '4': 1, '5': 11, '6': '.boat_state.Point', '9': 11, '10': 'currentTargetPoint', '17': true},
   ],
   '8': [
     {'1': '_latitude_direction'},
@@ -185,6 +186,7 @@ const BoatState$json = {
     {'1': '_current_path'},
     {'1': '_previous_positions'},
     {'1': '_current_waypoints'},
+    {'1': '_current_target_point'},
   ],
 };
 
@@ -212,11 +214,13 @@ final $typed_data.Uint8List boatStateDescriptor = $convert.base64Decode(
     'cgASgLMhAuYm9hdF9zdGF0ZS5QYXRoSAhSC2N1cnJlbnRQYXRoiAEBEkQKEnByZXZpb3VzX3Bv'
     'c2l0aW9ucxgYIAEoCzIQLmJvYXRfc3RhdGUuUGF0aEgJUhFwcmV2aW91c1Bvc2l0aW9uc4gBAR'
     'JCChFjdXJyZW50X3dheXBvaW50cxgZIAEoCzIQLmJvYXRfc3RhdGUuUGF0aEgKUhBjdXJyZW50'
-    'V2F5cG9pbnRziAEBQhUKE19sYXRpdHVkZV9kaXJlY3Rpb25CFgoUX2xvbmdpdHVkZV9kaXJlY3'
-    'Rpb25CFQoTX21hZ25ldGljX2RldmlhdGlvbkIfCh1fbWFnbmV0aWNfZGV2aWF0aW9uX2RpcmVj'
-    'dGlvbkIVChNfbWFnbmV0aWNfdmFyaWF0aW9uQh8KHV9tYWduZXRpY192YXJpYXRpb25fZGlyZW'
-    'N0aW9uQg8KDV9vdXRzaWRlX3RlbXBCFwoVX2F0bW9zcGhlcmljX3ByZXNzdXJlQg8KDV9jdXJy'
-    'ZW50X3BhdGhCFQoTX3ByZXZpb3VzX3Bvc2l0aW9uc0IUChJfY3VycmVudF93YXlwb2ludHM=');
+    'V2F5cG9pbnRziAEBEkgKFGN1cnJlbnRfdGFyZ2V0X3BvaW50GBogASgLMhEuYm9hdF9zdGF0ZS'
+    '5Qb2ludEgLUhJjdXJyZW50VGFyZ2V0UG9pbnSIAQFCFQoTX2xhdGl0dWRlX2RpcmVjdGlvbkIW'
+    'ChRfbG9uZ2l0dWRlX2RpcmVjdGlvbkIVChNfbWFnbmV0aWNfZGV2aWF0aW9uQh8KHV9tYWduZX'
+    'RpY19kZXZpYXRpb25fZGlyZWN0aW9uQhUKE19tYWduZXRpY192YXJpYXRpb25CHwodX21hZ25l'
+    'dGljX3ZhcmlhdGlvbl9kaXJlY3Rpb25CDwoNX291dHNpZGVfdGVtcEIXChVfYXRtb3NwaGVyaW'
+    'NfcHJlc3N1cmVCDwoNX2N1cnJlbnRfcGF0aEIVChNfcHJldmlvdXNfcG9zaXRpb25zQhQKEl9j'
+    'dXJyZW50X3dheXBvaW50c0IXChVfY3VycmVudF90YXJnZXRfcG9pbnQ=');
 
 @$core.Deprecated('Use boatStateRequestDescriptor instead')
 const BoatStateRequest$json = {

@@ -336,6 +336,7 @@ class BoatState extends $pb.GeneratedMessage {
     Path? currentPath,
     Path? previousPositions,
     Path? currentWaypoints,
+    Point? currentTargetPoint,
   }) {
     final $result = create();
     if (latitude != null) {
@@ -413,6 +414,9 @@ class BoatState extends $pb.GeneratedMessage {
     if (currentWaypoints != null) {
       $result.currentWaypoints = currentWaypoints;
     }
+    if (currentTargetPoint != null) {
+      $result.currentTargetPoint = currentTargetPoint;
+    }
     return $result;
   }
   BoatState._() : super();
@@ -445,6 +449,7 @@ class BoatState extends $pb.GeneratedMessage {
     ..aOM<Path>(23, _omitFieldNames ? '' : 'currentPath', subBuilder: Path.create)
     ..aOM<Path>(24, _omitFieldNames ? '' : 'previousPositions', subBuilder: Path.create)
     ..aOM<Path>(25, _omitFieldNames ? '' : 'currentWaypoints', subBuilder: Path.create)
+    ..aOM<Point>(26, _omitFieldNames ? '' : 'currentTargetPoint', subBuilder: Point.create)
     ..hasRequiredFields = false
   ;
 
@@ -697,6 +702,17 @@ class BoatState extends $pb.GeneratedMessage {
   void clearCurrentWaypoints() => clearField(25);
   @$pb.TagNumber(25)
   Path ensureCurrentWaypoints() => $_ensure(24);
+
+  @$pb.TagNumber(26)
+  Point get currentTargetPoint => $_getN(25);
+  @$pb.TagNumber(26)
+  set currentTargetPoint(Point v) { setField(26, v); }
+  @$pb.TagNumber(26)
+  $core.bool hasCurrentTargetPoint() => $_has(25);
+  @$pb.TagNumber(26)
+  void clearCurrentTargetPoint() => clearField(26);
+  @$pb.TagNumber(26)
+  Point ensureCurrentTargetPoint() => $_ensure(25);
 }
 
 class BoatStateRequest extends $pb.GeneratedMessage {

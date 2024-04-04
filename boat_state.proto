@@ -80,6 +80,7 @@ message BoatState {
     optional Path current_path = 23;
     optional Path previous_positions = 24;
     optional Path current_waypoints = 25;
+    optional Point current_target_point = 26;
 }
 
 message BoatStateRequest {
