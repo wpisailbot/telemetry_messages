@@ -34,8 +34,17 @@ enum AutonomousMode {
     AUTONOMOUS_MODE_UNDEFINED=0;
     AUTONOMOUS_MODE_NONE=1;
     AUTONOMOUS_MODE_BALLAST=2;
-    AUTONOMOUS_MODE_TRIMTAB=3;
-    AUTONOMOUS_MODE_FULL=4;
+    AUTONOMOUS_MODE_RUDDER=3;
+    AUTONOMOUS_MODE_TRIMTAB=4;
+    AUTONOMOUS_MODE_FULL=5;
+}
+
+enum TrimState {
+    TRIM_STATE_MIN_LIFT = 0;
+    TRIM_STATE_MAX_DRAG_PORT = 1;
+    TRIM_STATE_MAX_DRAG_STARBOARD = 2;
+    TRIM_STATE_MAX_LIFT_PORT = 3;
+    TRIM_STATE_MAX_LIFT_STARBOARD = 4;
 }
 
 message Point {
@@ -44,8 +53,8 @@ message Point {
 }
 
 message Path{
-    optional string latitude_direction = 1;
-    optional string longitude_direction = 2;
+    string latitude_direction = 1;
+    string longitude_direction = 2;
     repeated Point points = 3;
 }
 
@@ -56,31 +65,32 @@ message Wind {
 
 message BoatState {
     double latitude = 1;
-    optional string latitude_direction = 2;
+    string latitude_direction = 2;
     double longitude = 3;
-    optional string longitude_direction = 4;
+    string longitude_direction = 4;
     float current_heading = 5;
-    optional float magnetic_deviation = 6;
-    optional string magnetic_deviation_direction = 7;
-    optional float magnetic_variation = 8;
-    optional string magnetic_variation_direction = 9;
+    float magnetic_deviation = 6;
+    string magnetic_deviation_direction = 7;
+    float magnetic_variation = 8;
+    string magnetic_variation_direction = 9;
     float track_degrees_true = 10;
     float track_degrees_magnetic = 11;
     float speed_knots = 12;
     float speed_kmh = 13;
     float rate_of_turn = 14;
-    optional float outside_temp = 15;
-    optional float atmospheric_pressure = 16;
+    float outside_temp = 15;
+    float atmospheric_pressure = 16;
     Wind true_wind = 17;
     Wind apparent_wind = 18;
     float pitch = 19;
     float roll = 20;
     repeated NodeInfo node_states = 21;
     AutonomousMode current_autonomous_mode = 22;
-    optional Path current_path = 23;
-    optional Path previous_positions = 24;
-    optional Path current_waypoints = 25;
-    optional Point current_target_point = 26;
+    Path current_path = 23;
+    Path previous_positions = 24;
+    Path current_waypoints = 25;
+    Point current_target_point = 26;
+    TrimState current_trim_state = 27;
 }
 
 message BoatStateRequest {

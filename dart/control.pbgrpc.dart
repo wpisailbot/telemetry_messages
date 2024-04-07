@@ -209,3 +209,41 @@ abstract class ExecuteSetWaypointsCommandServiceBase extends $grpc.Service {
 
   $async.Future<$1.ControlResponse> executeSetWaypointsCommand($grpc.ServiceCall call, $1.SetWaypointsCommand request);
 }
+@$pb.GrpcServiceName('boat_control.ExecuteMarkBuoyCommandService')
+class ExecuteMarkBuoyCommandServiceClient extends $grpc.Client {
+  static final _$executeMarkBuoyCommand = $grpc.ClientMethod<$1.MarkBuoyCommand, $1.ControlResponse>(
+      '/boat_control.ExecuteMarkBuoyCommandService/ExecuteMarkBuoyCommand',
+      ($1.MarkBuoyCommand value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
+
+  ExecuteMarkBuoyCommandServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options,
+        interceptors: interceptors);
+
+  $grpc.ResponseFuture<$1.ControlResponse> executeMarkBuoyCommand($1.MarkBuoyCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeMarkBuoyCommand, request, options: options);
+  }
+}
+
+@$pb.GrpcServiceName('boat_control.ExecuteMarkBuoyCommandService')
+abstract class ExecuteMarkBuoyCommandServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_control.ExecuteMarkBuoyCommandService';
+
+  ExecuteMarkBuoyCommandServiceBase() {
+    $addMethod($grpc.ServiceMethod<$1.MarkBuoyCommand, $1.ControlResponse>(
+        'ExecuteMarkBuoyCommand',
+        executeMarkBuoyCommand_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.MarkBuoyCommand.fromBuffer(value),
+        ($1.ControlResponse value) => value.writeToBuffer()));
+  }
+
+  $async.Future<$1.ControlResponse> executeMarkBuoyCommand_Pre($grpc.ServiceCall call, $async.Future<$1.MarkBuoyCommand> request) async {
+    return executeMarkBuoyCommand(call, await request);
+  }
+
+  $async.Future<$1.ControlResponse> executeMarkBuoyCommand($grpc.ServiceCall call, $1.MarkBuoyCommand request);
+}

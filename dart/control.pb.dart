@@ -321,6 +321,58 @@ class SetWaypointsCommand extends $pb.GeneratedMessage {
   $0.Path ensureNewWaypoints() => $_ensure(0);
 }
 
+class MarkBuoyCommand extends $pb.GeneratedMessage {
+  factory MarkBuoyCommand({
+    $0.Point? position,
+  }) {
+    final $result = create();
+    if (position != null) {
+      $result.position = position;
+    }
+    return $result;
+  }
+  MarkBuoyCommand._() : super();
+  factory MarkBuoyCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MarkBuoyCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MarkBuoyCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+    ..aOM<$0.Point>(1, _omitFieldNames ? '' : 'position', subBuilder: $0.Point.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MarkBuoyCommand clone() => MarkBuoyCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MarkBuoyCommand copyWith(void Function(MarkBuoyCommand) updates) => super.copyWith((message) => updates(message as MarkBuoyCommand)) as MarkBuoyCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static MarkBuoyCommand create() => MarkBuoyCommand._();
+  MarkBuoyCommand createEmptyInstance() => create();
+  static $pb.PbList<MarkBuoyCommand> createRepeated() => $pb.PbList<MarkBuoyCommand>();
+  @$core.pragma('dart2js:noInline')
+  static MarkBuoyCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MarkBuoyCommand>(create);
+  static MarkBuoyCommand? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.Point get position => $_getN(0);
+  @$pb.TagNumber(1)
+  set position($0.Point v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasPosition() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPosition() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Point ensurePosition() => $_ensure(0);
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

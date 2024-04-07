@@ -69,13 +69,15 @@ class AutonomousMode extends $pb.ProtobufEnum {
   static const AutonomousMode AUTONOMOUS_MODE_UNDEFINED = AutonomousMode._(0, _omitEnumNames ? '' : 'AUTONOMOUS_MODE_UNDEFINED');
   static const AutonomousMode AUTONOMOUS_MODE_NONE = AutonomousMode._(1, _omitEnumNames ? '' : 'AUTONOMOUS_MODE_NONE');
   static const AutonomousMode AUTONOMOUS_MODE_BALLAST = AutonomousMode._(2, _omitEnumNames ? '' : 'AUTONOMOUS_MODE_BALLAST');
-  static const AutonomousMode AUTONOMOUS_MODE_TRIMTAB = AutonomousMode._(3, _omitEnumNames ? '' : 'AUTONOMOUS_MODE_TRIMTAB');
-  static const AutonomousMode AUTONOMOUS_MODE_FULL = AutonomousMode._(4, _omitEnumNames ? '' : 'AUTONOMOUS_MODE_FULL');
+  static const AutonomousMode AUTONOMOUS_MODE_RUDDER = AutonomousMode._(3, _omitEnumNames ? '' : 'AUTONOMOUS_MODE_RUDDER');
+  static const AutonomousMode AUTONOMOUS_MODE_TRIMTAB = AutonomousMode._(4, _omitEnumNames ? '' : 'AUTONOMOUS_MODE_TRIMTAB');
+  static const AutonomousMode AUTONOMOUS_MODE_FULL = AutonomousMode._(5, _omitEnumNames ? '' : 'AUTONOMOUS_MODE_FULL');
 
   static const $core.List<AutonomousMode> values = <AutonomousMode> [
     AUTONOMOUS_MODE_UNDEFINED,
     AUTONOMOUS_MODE_NONE,
     AUTONOMOUS_MODE_BALLAST,
+    AUTONOMOUS_MODE_RUDDER,
     AUTONOMOUS_MODE_TRIMTAB,
     AUTONOMOUS_MODE_FULL,
   ];
@@ -84,6 +86,27 @@ class AutonomousMode extends $pb.ProtobufEnum {
   static AutonomousMode? valueOf($core.int value) => _byValue[value];
 
   const AutonomousMode._($core.int v, $core.String n) : super(v, n);
+}
+
+class TrimState extends $pb.ProtobufEnum {
+  static const TrimState TRIM_STATE_MIN_LIFT = TrimState._(0, _omitEnumNames ? '' : 'TRIM_STATE_MIN_LIFT');
+  static const TrimState TRIM_STATE_MAX_DRAG_PORT = TrimState._(1, _omitEnumNames ? '' : 'TRIM_STATE_MAX_DRAG_PORT');
+  static const TrimState TRIM_STATE_MAX_DRAG_STARBOARD = TrimState._(2, _omitEnumNames ? '' : 'TRIM_STATE_MAX_DRAG_STARBOARD');
+  static const TrimState TRIM_STATE_MAX_LIFT_PORT = TrimState._(3, _omitEnumNames ? '' : 'TRIM_STATE_MAX_LIFT_PORT');
+  static const TrimState TRIM_STATE_MAX_LIFT_STARBOARD = TrimState._(4, _omitEnumNames ? '' : 'TRIM_STATE_MAX_LIFT_STARBOARD');
+
+  static const $core.List<TrimState> values = <TrimState> [
+    TRIM_STATE_MIN_LIFT,
+    TRIM_STATE_MAX_DRAG_PORT,
+    TRIM_STATE_MAX_DRAG_STARBOARD,
+    TRIM_STATE_MAX_LIFT_PORT,
+    TRIM_STATE_MAX_LIFT_STARBOARD,
+  ];
+
+  static final $core.Map<$core.int, TrimState> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static TrimState? valueOf($core.int value) => _byValue[value];
+
+  const TrimState._($core.int v, $core.String n) : super(v, n);
 }
 
 

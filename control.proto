@@ -32,6 +32,10 @@ message SetWaypointsCommand {
     boat_state.Path new_waypoints = 1;
 }
 
+message MarkBuoyCommand {
+    boat_state.Point position = 1;
+}
+
 service ExecuteRudderCommandService {
     rpc ExecuteRudderCommand (RudderCommand) returns (ControlResponse);
 }
@@ -50,4 +54,8 @@ service ExecuteAutonomousModeCommandService {
 
 service ExecuteSetWaypointsCommandService {
     rpc ExecuteSetWaypointsCommand (SetWaypointsCommand) returns (ControlResponse);
+}
+
+service ExecuteMarkBuoyCommandService {
+    rpc ExecuteMarkBuoyCommand (MarkBuoyCommand) returns (ControlResponse);
 }
