@@ -52,10 +52,21 @@ message Point {
     double longitude = 2;
 }
 
+enum WaypointType {
+    WAYPOINT_TYPE_INTERSECT = 0;
+    WAYPOINT_TYPE_CIRCLE_RIGHT = 1;
+    WAYPOINT_TYPE_CIRCLE_LEFT = 2;
+}
+
+message Waypoint {
+    Point point = 1;
+    WaypointType type = 2;
+}
+
 message Path{
     string latitude_direction = 1;
     string longitude_direction = 2;
-    repeated Point points = 3;
+    repeated Waypoint waypoints = 3;
 }
 
 message Wind {

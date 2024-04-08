@@ -109,5 +109,22 @@ class TrimState extends $pb.ProtobufEnum {
   const TrimState._($core.int v, $core.String n) : super(v, n);
 }
 
+class WaypointType extends $pb.ProtobufEnum {
+  static const WaypointType WAYPOINT_TYPE_INTERSECT = WaypointType._(0, _omitEnumNames ? '' : 'WAYPOINT_TYPE_INTERSECT');
+  static const WaypointType WAYPOINT_TYPE_CIRCLE_RIGHT = WaypointType._(1, _omitEnumNames ? '' : 'WAYPOINT_TYPE_CIRCLE_RIGHT');
+  static const WaypointType WAYPOINT_TYPE_CIRCLE_LEFT = WaypointType._(2, _omitEnumNames ? '' : 'WAYPOINT_TYPE_CIRCLE_LEFT');
+
+  static const $core.List<WaypointType> values = <WaypointType> [
+    WAYPOINT_TYPE_INTERSECT,
+    WAYPOINT_TYPE_CIRCLE_RIGHT,
+    WAYPOINT_TYPE_CIRCLE_LEFT,
+  ];
+
+  static final $core.Map<$core.int, WaypointType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static WaypointType? valueOf($core.int value) => _byValue[value];
+
+  const WaypointType._($core.int v, $core.String n) : super(v, n);
+}
+
 
 const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

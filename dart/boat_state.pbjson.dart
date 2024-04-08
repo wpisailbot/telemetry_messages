@@ -97,6 +97,21 @@ final $typed_data.Uint8List trimStateDescriptor = $convert.base64Decode(
     'VEFURV9NQVhfTElGVF9QT1JUEAMSIQodVFJJTV9TVEFURV9NQVhfTElGVF9TVEFSQk9BUkQQBA'
     '==');
 
+@$core.Deprecated('Use waypointTypeDescriptor instead')
+const WaypointType$json = {
+  '1': 'WaypointType',
+  '2': [
+    {'1': 'WAYPOINT_TYPE_INTERSECT', '2': 0},
+    {'1': 'WAYPOINT_TYPE_CIRCLE_RIGHT', '2': 1},
+    {'1': 'WAYPOINT_TYPE_CIRCLE_LEFT', '2': 2},
+  ],
+};
+
+/// Descriptor for `WaypointType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List waypointTypeDescriptor = $convert.base64Decode(
+    'CgxXYXlwb2ludFR5cGUSGwoXV0FZUE9JTlRfVFlQRV9JTlRFUlNFQ1QQABIeChpXQVlQT0lOVF'
+    '9UWVBFX0NJUkNMRV9SSUdIVBABEh0KGVdBWVBPSU5UX1RZUEVfQ0lSQ0xFX0xFRlQQAg==');
+
 @$core.Deprecated('Use nodeInfoDescriptor instead')
 const NodeInfo$json = {
   '1': 'NodeInfo',
@@ -129,21 +144,35 @@ final $typed_data.Uint8List pointDescriptor = $convert.base64Decode(
     'CgVQb2ludBIaCghsYXRpdHVkZRgBIAEoAVIIbGF0aXR1ZGUSHAoJbG9uZ2l0dWRlGAIgASgBUg'
     'lsb25naXR1ZGU=');
 
+@$core.Deprecated('Use waypointDescriptor instead')
+const Waypoint$json = {
+  '1': 'Waypoint',
+  '2': [
+    {'1': 'point', '3': 1, '4': 1, '5': 11, '6': '.boat_state.Point', '10': 'point'},
+    {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.boat_state.WaypointType', '10': 'type'},
+  ],
+};
+
+/// Descriptor for `Waypoint`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List waypointDescriptor = $convert.base64Decode(
+    'CghXYXlwb2ludBInCgVwb2ludBgBIAEoCzIRLmJvYXRfc3RhdGUuUG9pbnRSBXBvaW50EiwKBH'
+    'R5cGUYAiABKA4yGC5ib2F0X3N0YXRlLldheXBvaW50VHlwZVIEdHlwZQ==');
+
 @$core.Deprecated('Use pathDescriptor instead')
 const Path$json = {
   '1': 'Path',
   '2': [
     {'1': 'latitude_direction', '3': 1, '4': 1, '5': 9, '10': 'latitudeDirection'},
     {'1': 'longitude_direction', '3': 2, '4': 1, '5': 9, '10': 'longitudeDirection'},
-    {'1': 'points', '3': 3, '4': 3, '5': 11, '6': '.boat_state.Point', '10': 'points'},
+    {'1': 'waypoints', '3': 3, '4': 3, '5': 11, '6': '.boat_state.Waypoint', '10': 'waypoints'},
   ],
 };
 
 /// Descriptor for `Path`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List pathDescriptor = $convert.base64Decode(
     'CgRQYXRoEi0KEmxhdGl0dWRlX2RpcmVjdGlvbhgBIAEoCVIRbGF0aXR1ZGVEaXJlY3Rpb24SLw'
-    'oTbG9uZ2l0dWRlX2RpcmVjdGlvbhgCIAEoCVISbG9uZ2l0dWRlRGlyZWN0aW9uEikKBnBvaW50'
-    'cxgDIAMoCzIRLmJvYXRfc3RhdGUuUG9pbnRSBnBvaW50cw==');
+    'oTbG9uZ2l0dWRlX2RpcmVjdGlvbhgCIAEoCVISbG9uZ2l0dWRlRGlyZWN0aW9uEjIKCXdheXBv'
+    'aW50cxgDIAMoCzIULmJvYXRfc3RhdGUuV2F5cG9pbnRSCXdheXBvaW50cw==');
 
 @$core.Deprecated('Use windDescriptor instead')
 const Wind$json = {

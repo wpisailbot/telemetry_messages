@@ -173,11 +173,77 @@ class Point extends $pb.GeneratedMessage {
   void clearLongitude() => clearField(2);
 }
 
+class Waypoint extends $pb.GeneratedMessage {
+  factory Waypoint({
+    Point? point,
+    WaypointType? type,
+  }) {
+    final $result = create();
+    if (point != null) {
+      $result.point = point;
+    }
+    if (type != null) {
+      $result.type = type;
+    }
+    return $result;
+  }
+  Waypoint._() : super();
+  factory Waypoint.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Waypoint.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Waypoint', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
+    ..aOM<Point>(1, _omitFieldNames ? '' : 'point', subBuilder: Point.create)
+    ..e<WaypointType>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: WaypointType.WAYPOINT_TYPE_INTERSECT, valueOf: WaypointType.valueOf, enumValues: WaypointType.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Waypoint clone() => Waypoint()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Waypoint copyWith(void Function(Waypoint) updates) => super.copyWith((message) => updates(message as Waypoint)) as Waypoint;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Waypoint create() => Waypoint._();
+  Waypoint createEmptyInstance() => create();
+  static $pb.PbList<Waypoint> createRepeated() => $pb.PbList<Waypoint>();
+  @$core.pragma('dart2js:noInline')
+  static Waypoint getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Waypoint>(create);
+  static Waypoint? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  Point get point => $_getN(0);
+  @$pb.TagNumber(1)
+  set point(Point v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasPoint() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPoint() => clearField(1);
+  @$pb.TagNumber(1)
+  Point ensurePoint() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  WaypointType get type => $_getN(1);
+  @$pb.TagNumber(2)
+  set type(WaypointType v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearType() => clearField(2);
+}
+
 class Path extends $pb.GeneratedMessage {
   factory Path({
     $core.String? latitudeDirection,
     $core.String? longitudeDirection,
-    $core.Iterable<Point>? points,
+    $core.Iterable<Waypoint>? waypoints,
   }) {
     final $result = create();
     if (latitudeDirection != null) {
@@ -186,8 +252,8 @@ class Path extends $pb.GeneratedMessage {
     if (longitudeDirection != null) {
       $result.longitudeDirection = longitudeDirection;
     }
-    if (points != null) {
-      $result.points.addAll(points);
+    if (waypoints != null) {
+      $result.waypoints.addAll(waypoints);
     }
     return $result;
   }
@@ -198,7 +264,7 @@ class Path extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Path', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'latitudeDirection')
     ..aOS(2, _omitFieldNames ? '' : 'longitudeDirection')
-    ..pc<Point>(3, _omitFieldNames ? '' : 'points', $pb.PbFieldType.PM, subBuilder: Point.create)
+    ..pc<Waypoint>(3, _omitFieldNames ? '' : 'waypoints', $pb.PbFieldType.PM, subBuilder: Waypoint.create)
     ..hasRequiredFields = false
   ;
 
@@ -242,7 +308,7 @@ class Path extends $pb.GeneratedMessage {
   void clearLongitudeDirection() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.List<Point> get points => $_getList(2);
+  $core.List<Waypoint> get waypoints => $_getList(2);
 }
 
 class Wind extends $pb.GeneratedMessage {
