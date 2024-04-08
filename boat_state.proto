@@ -63,10 +63,14 @@ message Waypoint {
     WaypointType type = 2;
 }
 
+message WaypointPath {
+    repeated Waypoint waypoints = 1;
+}
+
 message Path{
     string latitude_direction = 1;
     string longitude_direction = 2;
-    repeated Waypoint waypoints = 3;
+    repeated Point points = 3;
 }
 
 message Wind {
