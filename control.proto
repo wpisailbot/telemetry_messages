@@ -29,7 +29,7 @@ message AutonomousModeCommand {
 }
 
 message SetWaypointsCommand {
-    boat_state.Path new_waypoints = 1;
+    boat_state.WaypointPath new_waypoints = 1;
 }
 
 message MarkBuoyCommand {

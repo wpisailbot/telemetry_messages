@@ -14,15 +14,15 @@ _sym_db = _symbol_database.Default()
 import boat_state_pb2 as boat__state__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rcontrol.proto\x12\x0c\x62oat_control\x1a\x10\x62oat_state.proto\"Q\n\x0f\x43ontrolResponse\x12>\n\x10\x65xecution_status\x18\x01 \x01(\x0e\x32$.boat_control.ControlExecutionStatus\"-\n\rRudderCommand\x12\x1c\n\x14rudder_control_value\x18\x01 \x01(\x02\"/\n\x0eTrimTabCommand\x12\x1d\n\x15trimtab_control_value\x18\x01 \x01(\x02\"/\n\x0e\x42\x61llastCommand\x12\x1d\n\x15\x62\x61llast_control_value\x18\x01 \x01(\x02\"L\n\x15\x41utonomousModeCommand\x12\x33\n\x0f\x61utonomous_mode\x18\x05 \x01(\x0e\x32\x1a.boat_state.AutonomousMode\">\n\x13SetWaypointsCommand\x12\'\n\rnew_waypoints\x18\x01 \x01(\x0b\x32\x10.boat_state.Path\"6\n\x0fMarkBuoyCommand\x12#\n\x08position\x18\x01 \x01(\x0b\x32\x11.boat_state.Point*u\n\x16\x43ontrolExecutionStatus\x12\x1f\n\x1b\x43ONTROL_EXECUTION_UNDEFINED\x10\x00\x12\x1d\n\x19\x43ONTROL_EXECUTION_SUCCESS\x10\x01\x12\x1b\n\x17\x43ONTROL_EXECUTION_ERROR\x10\x02\x32q\n\x1b\x45xecuteRudderCommandService\x12R\n\x14\x45xecuteRudderCommand\x12\x1b.boat_control.RudderCommand\x1a\x1d.boat_control.ControlResponse2t\n\x1c\x45xecuteTrimTabCommandService\x12T\n\x15\x45xecuteTrimTabCommand\x12\x1c.boat_control.TrimTabCommand\x1a\x1d.boat_control.ControlResponse2t\n\x1c\x45xecuteBallastCommandService\x12T\n\x15\x45xecuteBallastCommand\x12\x1c.boat_control.BallastCommand\x1a\x1d.boat_control.ControlResponse2\x89\x01\n#ExecuteAutonomousModeCommandService\x12\x62\n\x1c\x45xecuteAutonomousModeCommand\x12#.boat_control.AutonomousModeCommand\x1a\x1d.boat_control.ControlResponse2\x83\x01\n!ExecuteSetWaypointsCommandService\x12^\n\x1a\x45xecuteSetWaypointsCommand\x12!.boat_control.SetWaypointsCommand\x1a\x1d.boat_control.ControlResponse2w\n\x1d\x45xecuteMarkBuoyCommandService\x12V\n\x16\x45xecuteMarkBuoyCommand\x12\x1d.boat_control.MarkBuoyCommand\x1a\x1d.boat_control.ControlResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rcontrol.proto\x12\x0c\x62oat_control\x1a\x10\x62oat_state.proto\"Q\n\x0f\x43ontrolResponse\x12>\n\x10\x65xecution_status\x18\x01 \x01(\x0e\x32$.boat_control.ControlExecutionStatus\"-\n\rRudderCommand\x12\x1c\n\x14rudder_control_value\x18\x01 \x01(\x02\"/\n\x0eTrimTabCommand\x12\x1d\n\x15trimtab_control_value\x18\x01 \x01(\x02\"/\n\x0e\x42\x61llastCommand\x12\x1d\n\x15\x62\x61llast_control_value\x18\x01 \x01(\x02\"L\n\x15\x41utonomousModeCommand\x12\x33\n\x0f\x61utonomous_mode\x18\x05 \x01(\x0e\x32\x1a.boat_state.AutonomousMode\"F\n\x13SetWaypointsCommand\x12/\n\rnew_waypoints\x18\x01 \x01(\x0b\x32\x18.boat_state.WaypointPath\"6\n\x0fMarkBuoyCommand\x12#\n\x08position\x18\x01 \x01(\x0b\x32\x11.boat_state.Point*u\n\x16\x43ontrolExecutionStatus\x12\x1f\n\x1b\x43ONTROL_EXECUTION_UNDEFINED\x10\x00\x12\x1d\n\x19\x43ONTROL_EXECUTION_SUCCESS\x10\x01\x12\x1b\n\x17\x43ONTROL_EXECUTION_ERROR\x10\x02\x32q\n\x1b\x45xecuteRudderCommandService\x12R\n\x14\x45xecuteRudderCommand\x12\x1b.boat_control.RudderCommand\x1a\x1d.boat_control.ControlResponse2t\n\x1c\x45xecuteTrimTabCommandService\x12T\n\x15\x45xecuteTrimTabCommand\x12\x1c.boat_control.TrimTabCommand\x1a\x1d.boat_control.ControlResponse2t\n\x1c\x45xecuteBallastCommandService\x12T\n\x15\x45xecuteBallastCommand\x12\x1c.boat_control.BallastCommand\x1a\x1d.boat_control.ControlResponse2\x89\x01\n#ExecuteAutonomousModeCommandService\x12\x62\n\x1c\x45xecuteAutonomousModeCommand\x12#.boat_control.AutonomousModeCommand\x1a\x1d.boat_control.ControlResponse2\x83\x01\n!ExecuteSetWaypointsCommandService\x12^\n\x1a\x45xecuteSetWaypointsCommand\x12!.boat_control.SetWaypointsCommand\x1a\x1d.boat_control.ControlResponse2w\n\x1d\x45xecuteMarkBuoyCommandService\x12V\n\x16\x45xecuteMarkBuoyCommand\x12\x1d.boat_control.MarkBuoyCommand\x1a\x1d.boat_control.ControlResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'control_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
-  _globals['_CONTROLEXECUTIONSTATUS']._serialized_start=475
-  _globals['_CONTROLEXECUTIONSTATUS']._serialized_end=592
+  _globals['_CONTROLEXECUTIONSTATUS']._serialized_start=483
+  _globals['_CONTROLEXECUTIONSTATUS']._serialized_end=600
   _globals['_CONTROLRESPONSE']._serialized_start=49
   _globals['_CONTROLRESPONSE']._serialized_end=130
   _globals['_RUDDERCOMMAND']._serialized_start=132
@@ -34,19 +34,19 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _globals['_AUTONOMOUSMODECOMMAND']._serialized_start=277
   _globals['_AUTONOMOUSMODECOMMAND']._serialized_end=353
   _globals['_SETWAYPOINTSCOMMAND']._serialized_start=355
-  _globals['_SETWAYPOINTSCOMMAND']._serialized_end=417
-  _globals['_MARKBUOYCOMMAND']._serialized_start=419
-  _globals['_MARKBUOYCOMMAND']._serialized_end=473
-  _globals['_EXECUTERUDDERCOMMANDSERVICE']._serialized_start=594
-  _globals['_EXECUTERUDDERCOMMANDSERVICE']._serialized_end=707
-  _globals['_EXECUTETRIMTABCOMMANDSERVICE']._serialized_start=709
-  _globals['_EXECUTETRIMTABCOMMANDSERVICE']._serialized_end=825
-  _globals['_EXECUTEBALLASTCOMMANDSERVICE']._serialized_start=827
-  _globals['_EXECUTEBALLASTCOMMANDSERVICE']._serialized_end=943
-  _globals['_EXECUTEAUTONOMOUSMODECOMMANDSERVICE']._serialized_start=946
-  _globals['_EXECUTEAUTONOMOUSMODECOMMANDSERVICE']._serialized_end=1083
-  _globals['_EXECUTESETWAYPOINTSCOMMANDSERVICE']._serialized_start=1086
-  _globals['_EXECUTESETWAYPOINTSCOMMANDSERVICE']._serialized_end=1217
-  _globals['_EXECUTEMARKBUOYCOMMANDSERVICE']._serialized_start=1219
-  _globals['_EXECUTEMARKBUOYCOMMANDSERVICE']._serialized_end=1338
+  _globals['_SETWAYPOINTSCOMMAND']._serialized_end=425
+  _globals['_MARKBUOYCOMMAND']._serialized_start=427
+  _globals['_MARKBUOYCOMMAND']._serialized_end=481
+  _globals['_EXECUTERUDDERCOMMANDSERVICE']._serialized_start=602
+  _globals['_EXECUTERUDDERCOMMANDSERVICE']._serialized_end=715
+  _globals['_EXECUTETRIMTABCOMMANDSERVICE']._serialized_start=717
+  _globals['_EXECUTETRIMTABCOMMANDSERVICE']._serialized_end=833
+  _globals['_EXECUTEBALLASTCOMMANDSERVICE']._serialized_start=835
+  _globals['_EXECUTEBALLASTCOMMANDSERVICE']._serialized_end=951
+  _globals['_EXECUTEAUTONOMOUSMODECOMMANDSERVICE']._serialized_start=954
+  _globals['_EXECUTEAUTONOMOUSMODECOMMANDSERVICE']._serialized_end=1091
+  _globals['_EXECUTESETWAYPOINTSCOMMANDSERVICE']._serialized_start=1094
+  _globals['_EXECUTESETWAYPOINTSCOMMANDSERVICE']._serialized_end=1225
+  _globals['_EXECUTEMARKBUOYCOMMANDSERVICE']._serialized_start=1227
+  _globals['_EXECUTEMARKBUOYCOMMANDSERVICE']._serialized_end=1346
 # @@protoc_insertion_point(module_scope)
