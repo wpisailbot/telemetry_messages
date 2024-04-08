@@ -239,11 +239,55 @@ class Waypoint extends $pb.GeneratedMessage {
   void clearType() => clearField(2);
 }
 
+class WaypointPath extends $pb.GeneratedMessage {
+  factory WaypointPath({
+    $core.Iterable<Waypoint>? waypoints,
+  }) {
+    final $result = create();
+    if (waypoints != null) {
+      $result.waypoints.addAll(waypoints);
+    }
+    return $result;
+  }
+  WaypointPath._() : super();
+  factory WaypointPath.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory WaypointPath.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'WaypointPath', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
+    ..pc<Waypoint>(1, _omitFieldNames ? '' : 'waypoints', $pb.PbFieldType.PM, subBuilder: Waypoint.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  WaypointPath clone() => WaypointPath()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  WaypointPath copyWith(void Function(WaypointPath) updates) => super.copyWith((message) => updates(message as WaypointPath)) as WaypointPath;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static WaypointPath create() => WaypointPath._();
+  WaypointPath createEmptyInstance() => create();
+  static $pb.PbList<WaypointPath> createRepeated() => $pb.PbList<WaypointPath>();
+  @$core.pragma('dart2js:noInline')
+  static WaypointPath getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WaypointPath>(create);
+  static WaypointPath? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<Waypoint> get waypoints => $_getList(0);
+}
+
 class Path extends $pb.GeneratedMessage {
   factory Path({
     $core.String? latitudeDirection,
     $core.String? longitudeDirection,
-    $core.Iterable<Waypoint>? waypoints,
+    $core.Iterable<Point>? points,
   }) {
     final $result = create();
     if (latitudeDirection != null) {
@@ -252,8 +296,8 @@ class Path extends $pb.GeneratedMessage {
     if (longitudeDirection != null) {
       $result.longitudeDirection = longitudeDirection;
     }
-    if (waypoints != null) {
-      $result.waypoints.addAll(waypoints);
+    if (points != null) {
+      $result.points.addAll(points);
     }
     return $result;
   }
@@ -264,7 +308,7 @@ class Path extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Path', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'latitudeDirection')
     ..aOS(2, _omitFieldNames ? '' : 'longitudeDirection')
-    ..pc<Waypoint>(3, _omitFieldNames ? '' : 'waypoints', $pb.PbFieldType.PM, subBuilder: Waypoint.create)
+    ..pc<Point>(3, _omitFieldNames ? '' : 'points', $pb.PbFieldType.PM, subBuilder: Point.create)
     ..hasRequiredFields = false
   ;
 
@@ -308,7 +352,7 @@ class Path extends $pb.GeneratedMessage {
   void clearLongitudeDirection() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.List<Waypoint> get waypoints => $_getList(2);
+  $core.List<Point> get points => $_getList(2);
 }
 
 class Wind extends $pb.GeneratedMessage {
