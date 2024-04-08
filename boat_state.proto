@@ -103,7 +103,7 @@ message BoatState {
     AutonomousMode current_autonomous_mode = 22;
     Path current_path = 23;
     Path previous_positions = 24;
-    Path current_waypoints = 25;
+    WaypointPath current_waypoints = 25;
     Point current_target_point = 26;
     TrimState current_trim_state = 27;
 }

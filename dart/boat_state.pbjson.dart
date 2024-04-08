@@ -229,7 +229,7 @@ const BoatState$json = {
     {'1': 'current_autonomous_mode', '3': 22, '4': 1, '5': 14, '6': '.boat_state.AutonomousMode', '10': 'currentAutonomousMode'},
     {'1': 'current_path', '3': 23, '4': 1, '5': 11, '6': '.boat_state.Path', '10': 'currentPath'},
     {'1': 'previous_positions', '3': 24, '4': 1, '5': 11, '6': '.boat_state.Path', '10': 'previousPositions'},
-    {'1': 'current_waypoints', '3': 25, '4': 1, '5': 11, '6': '.boat_state.Path', '10': 'currentWaypoints'},
+    {'1': 'current_waypoints', '3': 25, '4': 1, '5': 11, '6': '.boat_state.WaypointPath', '10': 'currentWaypoints'},
     {'1': 'current_target_point', '3': 26, '4': 1, '5': 11, '6': '.boat_state.Point', '10': 'currentTargetPoint'},
     {'1': 'current_trim_state', '3': 27, '4': 1, '5': 14, '6': '.boat_state.TrimState', '10': 'currentTrimState'},
   ],
@@ -257,10 +257,10 @@ final $typed_data.Uint8List boatStateDescriptor = $convert.base64Decode(
     'EoDjIaLmJvYXRfc3RhdGUuQXV0b25vbW91c01vZGVSFWN1cnJlbnRBdXRvbm9tb3VzTW9kZRIz'
     'CgxjdXJyZW50X3BhdGgYFyABKAsyEC5ib2F0X3N0YXRlLlBhdGhSC2N1cnJlbnRQYXRoEj8KEn'
     'ByZXZpb3VzX3Bvc2l0aW9ucxgYIAEoCzIQLmJvYXRfc3RhdGUuUGF0aFIRcHJldmlvdXNQb3Np'
-    'dGlvbnMSPQoRY3VycmVudF93YXlwb2ludHMYGSABKAsyEC5ib2F0X3N0YXRlLlBhdGhSEGN1cn'
-    'JlbnRXYXlwb2ludHMSQwoUY3VycmVudF90YXJnZXRfcG9pbnQYGiABKAsyES5ib2F0X3N0YXRl'
-    'LlBvaW50UhJjdXJyZW50VGFyZ2V0UG9pbnQSQwoSY3VycmVudF90cmltX3N0YXRlGBsgASgOMh'
-    'UuYm9hdF9zdGF0ZS5UcmltU3RhdGVSEGN1cnJlbnRUcmltU3RhdGU=');
+    'dGlvbnMSRQoRY3VycmVudF93YXlwb2ludHMYGSABKAsyGC5ib2F0X3N0YXRlLldheXBvaW50UG'
+    'F0aFIQY3VycmVudFdheXBvaW50cxJDChRjdXJyZW50X3RhcmdldF9wb2ludBgaIAEoCzIRLmJv'
+    'YXRfc3RhdGUuUG9pbnRSEmN1cnJlbnRUYXJnZXRQb2ludBJDChJjdXJyZW50X3RyaW1fc3RhdG'
+    'UYGyABKA4yFS5ib2F0X3N0YXRlLlRyaW1TdGF0ZVIQY3VycmVudFRyaW1TdGF0ZQ==');
 
 @$core.Deprecated('Use boatStateRequestDescriptor instead')
 const BoatStateRequest$json = {
