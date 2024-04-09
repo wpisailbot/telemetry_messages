@@ -209,6 +209,44 @@ abstract class ExecuteSetWaypointsCommandServiceBase extends $grpc.Service {
 
   $async.Future<$1.ControlResponse> executeSetWaypointsCommand($grpc.ServiceCall call, $1.SetWaypointsCommand request);
 }
+@$pb.GrpcServiceName('boat_control.ExecuteAddWaypointCommandService')
+class ExecuteAddWaypointCommandServiceClient extends $grpc.Client {
+  static final _$executeAddWaypointCommandService = $grpc.ClientMethod<$1.AddWaypointCommand, $1.ControlResponse>(
+      '/boat_control.ExecuteAddWaypointCommandService/ExecuteAddWaypointCommandService',
+      ($1.AddWaypointCommand value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
+
+  ExecuteAddWaypointCommandServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options,
+        interceptors: interceptors);
+
+  $grpc.ResponseFuture<$1.ControlResponse> executeAddWaypointCommandService($1.AddWaypointCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeAddWaypointCommandService, request, options: options);
+  }
+}
+
+@$pb.GrpcServiceName('boat_control.ExecuteAddWaypointCommandService')
+abstract class ExecuteAddWaypointCommandServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_control.ExecuteAddWaypointCommandService';
+
+  ExecuteAddWaypointCommandServiceBase() {
+    $addMethod($grpc.ServiceMethod<$1.AddWaypointCommand, $1.ControlResponse>(
+        'ExecuteAddWaypointCommandService',
+        executeAddWaypointCommandService_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.AddWaypointCommand.fromBuffer(value),
+        ($1.ControlResponse value) => value.writeToBuffer()));
+  }
+
+  $async.Future<$1.ControlResponse> executeAddWaypointCommandService_Pre($grpc.ServiceCall call, $async.Future<$1.AddWaypointCommand> request) async {
+    return executeAddWaypointCommandService(call, await request);
+  }
+
+  $async.Future<$1.ControlResponse> executeAddWaypointCommandService($grpc.ServiceCall call, $1.AddWaypointCommand request);
+}
 @$pb.GrpcServiceName('boat_control.ExecuteMarkBuoyCommandService')
 class ExecuteMarkBuoyCommandServiceClient extends $grpc.Client {
   static final _$executeMarkBuoyCommand = $grpc.ClientMethod<$1.MarkBuoyCommand, $1.ControlResponse>(

@@ -310,6 +310,67 @@ class ExecuteSetWaypointsCommandService(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
 
+class ExecuteAddWaypointCommandServiceStub(object):
+    """Missing associated documentation comment in .proto file."""
+
+    def __init__(self, channel):
+        """Constructor.
+
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.ExecuteAddWaypointCommandService = channel.unary_unary(
+                '/boat_control.ExecuteAddWaypointCommandService/ExecuteAddWaypointCommandService',
+                request_serializer=control__pb2.AddWaypointCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                )
+
+
+class ExecuteAddWaypointCommandServiceServicer(object):
+    """Missing associated documentation comment in .proto file."""
+
+    def ExecuteAddWaypointCommandService(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+
+def add_ExecuteAddWaypointCommandServiceServicer_to_server(servicer, server):
+    rpc_method_handlers = {
+            'ExecuteAddWaypointCommandService': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteAddWaypointCommandService,
+                    request_deserializer=control__pb2.AddWaypointCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'boat_control.ExecuteAddWaypointCommandService', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+
+
+ # This class is part of an EXPERIMENTAL API.
+class ExecuteAddWaypointCommandService(object):
+    """Missing associated documentation comment in .proto file."""
+
+    @staticmethod
+    def ExecuteAddWaypointCommandService(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/boat_control.ExecuteAddWaypointCommandService/ExecuteAddWaypointCommandService',
+            control__pb2.AddWaypointCommand.SerializeToString,
+            control__pb2.ControlResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+
 class ExecuteMarkBuoyCommandServiceStub(object):
     """Missing associated documentation comment in .proto file."""
 

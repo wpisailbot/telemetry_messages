@@ -32,6 +32,10 @@ message SetWaypointsCommand {
     boat_state.WaypointPath new_waypoints = 1;
 }
 
+message AddWaypointCommand {
+    boat_state.Waypoint new_waypoint = 1;
+}
+
 message MarkBuoyCommand {
     boat_state.Point position = 1;
 }
@@ -54,6 +58,10 @@ service ExecuteAutonomousModeCommandService {
 
 service ExecuteSetWaypointsCommandService {
     rpc ExecuteSetWaypointsCommand (SetWaypointsCommand) returns (ControlResponse);
+}
+
+service ExecuteAddWaypointCommandService {
+    rpc ExecuteAddWaypointCommandService (AddWaypointCommand) returns (ControlResponse);
 }
 
 service ExecuteMarkBuoyCommandService {

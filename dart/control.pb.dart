@@ -321,6 +321,58 @@ class SetWaypointsCommand extends $pb.GeneratedMessage {
   $0.WaypointPath ensureNewWaypoints() => $_ensure(0);
 }
 
+class AddWaypointCommand extends $pb.GeneratedMessage {
+  factory AddWaypointCommand({
+    $0.Waypoint? newWaypoint,
+  }) {
+    final $result = create();
+    if (newWaypoint != null) {
+      $result.newWaypoint = newWaypoint;
+    }
+    return $result;
+  }
+  AddWaypointCommand._() : super();
+  factory AddWaypointCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AddWaypointCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AddWaypointCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+    ..aOM<$0.Waypoint>(1, _omitFieldNames ? '' : 'newWaypoint', subBuilder: $0.Waypoint.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  AddWaypointCommand clone() => AddWaypointCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AddWaypointCommand copyWith(void Function(AddWaypointCommand) updates) => super.copyWith((message) => updates(message as AddWaypointCommand)) as AddWaypointCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddWaypointCommand create() => AddWaypointCommand._();
+  AddWaypointCommand createEmptyInstance() => create();
+  static $pb.PbList<AddWaypointCommand> createRepeated() => $pb.PbList<AddWaypointCommand>();
+  @$core.pragma('dart2js:noInline')
+  static AddWaypointCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AddWaypointCommand>(create);
+  static AddWaypointCommand? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.Waypoint get newWaypoint => $_getN(0);
+  @$pb.TagNumber(1)
+  set newWaypoint($0.Waypoint v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNewWaypoint() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNewWaypoint() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Waypoint ensureNewWaypoint() => $_ensure(0);
+}
+
 class MarkBuoyCommand extends $pb.GeneratedMessage {
   factory MarkBuoyCommand({
     $0.Point? position,
