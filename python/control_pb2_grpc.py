@@ -319,8 +319,8 @@ class ExecuteAddWaypointCommandServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.ExecuteAddWaypointCommandService = channel.unary_unary(
-                '/boat_control.ExecuteAddWaypointCommandService/ExecuteAddWaypointCommandService',
+        self.ExecuteAddWaypointCommand = channel.unary_unary(
+                '/boat_control.ExecuteAddWaypointCommandService/ExecuteAddWaypointCommand',
                 request_serializer=control__pb2.AddWaypointCommand.SerializeToString,
                 response_deserializer=control__pb2.ControlResponse.FromString,
                 )
@@ -329,7 +329,7 @@ class ExecuteAddWaypointCommandServiceStub(object):
 class ExecuteAddWaypointCommandServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def ExecuteAddWaypointCommandService(self, request, context):
+    def ExecuteAddWaypointCommand(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -338,8 +338,8 @@ class ExecuteAddWaypointCommandServiceServicer(object):
 
 def add_ExecuteAddWaypointCommandServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'ExecuteAddWaypointCommandService': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExecuteAddWaypointCommandService,
+            'ExecuteAddWaypointCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteAddWaypointCommand,
                     request_deserializer=control__pb2.AddWaypointCommand.FromString,
                     response_serializer=control__pb2.ControlResponse.SerializeToString,
             ),
@@ -354,7 +354,7 @@ class ExecuteAddWaypointCommandService(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def ExecuteAddWaypointCommandService(request,
+    def ExecuteAddWaypointCommand(request,
             target,
             options=(),
             channel_credentials=None,
@@ -364,7 +364,7 @@ class ExecuteAddWaypointCommandService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/boat_control.ExecuteAddWaypointCommandService/ExecuteAddWaypointCommandService',
+        return grpc.experimental.unary_unary(request, target, '/boat_control.ExecuteAddWaypointCommandService/ExecuteAddWaypointCommand',
             control__pb2.AddWaypointCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options, channel_credentials,

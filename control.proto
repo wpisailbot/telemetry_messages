@@ -61,7 +61,7 @@ service ExecuteSetWaypointsCommandService {
 }
 
 service ExecuteAddWaypointCommandService {
-    rpc ExecuteAddWaypointCommandService (AddWaypointCommand) returns (ControlResponse);
+    rpc ExecuteAddWaypointCommand (AddWaypointCommand) returns (ControlResponse);
 }
 
 service ExecuteMarkBuoyCommandService {
