@@ -94,6 +94,7 @@ class TrimState extends $pb.ProtobufEnum {
   static const TrimState TRIM_STATE_MAX_DRAG_STARBOARD = TrimState._(2, _omitEnumNames ? '' : 'TRIM_STATE_MAX_DRAG_STARBOARD');
   static const TrimState TRIM_STATE_MAX_LIFT_PORT = TrimState._(3, _omitEnumNames ? '' : 'TRIM_STATE_MAX_LIFT_PORT');
   static const TrimState TRIM_STATE_MAX_LIFT_STARBOARD = TrimState._(4, _omitEnumNames ? '' : 'TRIM_STATE_MAX_LIFT_STARBOARD');
+  static const TrimState TRIM_STATE_MANUAL = TrimState._(5, _omitEnumNames ? '' : 'TRIM_STATE_MANUAL');
 
   static const $core.List<TrimState> values = <TrimState> [
     TRIM_STATE_MIN_LIFT,
@@ -101,6 +102,7 @@ class TrimState extends $pb.ProtobufEnum {
     TRIM_STATE_MAX_DRAG_STARBOARD,
     TRIM_STATE_MAX_LIFT_PORT,
     TRIM_STATE_MAX_LIFT_STARBOARD,
+    TRIM_STATE_MANUAL,
   ];
 
   static final $core.Map<$core.int, TrimState> _byValue = $pb.ProtobufEnum.initByValue(values);

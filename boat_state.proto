@@ -45,6 +45,7 @@ enum TrimState {
     TRIM_STATE_MAX_DRAG_STARBOARD = 2;
     TRIM_STATE_MAX_LIFT_PORT = 3;
     TRIM_STATE_MAX_LIFT_STARBOARD = 4;
+    TRIM_STATE_MANUAL = 5;
 }
 
 message Point {

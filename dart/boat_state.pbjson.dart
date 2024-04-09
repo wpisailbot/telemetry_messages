@@ -87,6 +87,7 @@ const TrimState$json = {
     {'1': 'TRIM_STATE_MAX_DRAG_STARBOARD', '2': 2},
     {'1': 'TRIM_STATE_MAX_LIFT_PORT', '2': 3},
     {'1': 'TRIM_STATE_MAX_LIFT_STARBOARD', '2': 4},
+    {'1': 'TRIM_STATE_MANUAL', '2': 5},
   ],
 };
 
@@ -94,8 +95,8 @@ const TrimState$json = {
 final $typed_data.Uint8List trimStateDescriptor = $convert.base64Decode(
     'CglUcmltU3RhdGUSFwoTVFJJTV9TVEFURV9NSU5fTElGVBAAEhwKGFRSSU1fU1RBVEVfTUFYX0'
     'RSQUdfUE9SVBABEiEKHVRSSU1fU1RBVEVfTUFYX0RSQUdfU1RBUkJPQVJEEAISHAoYVFJJTV9T'
-    'VEFURV9NQVhfTElGVF9QT1JUEAMSIQodVFJJTV9TVEFURV9NQVhfTElGVF9TVEFSQk9BUkQQBA'
-    '==');
+    'VEFURV9NQVhfTElGVF9QT1JUEAMSIQodVFJJTV9TVEFURV9NQVhfTElGVF9TVEFSQk9BUkQQBB'
+    'IVChFUUklNX1NUQVRFX01BTlVBTBAF');
 
 @$core.Deprecated('Use waypointTypeDescriptor instead')
 const WaypointType$json = {
