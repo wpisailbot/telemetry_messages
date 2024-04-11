@@ -14,7 +14,7 @@ class SendBoatStateServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.SendBoatState = channel.unary_unary(
+        self.SendBoatState = channel.unary_stream(
                 '/boat_state.SendBoatStateService/SendBoatState',
                 request_serializer=boat__state__pb2.BoatStateRequest.SerializeToString,
                 response_deserializer=boat__state__pb2.BoatState.FromString,
@@ -33,7 +33,7 @@ class SendBoatStateServiceServicer(object):
 
 def add_SendBoatStateServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'SendBoatState': grpc.unary_unary_rpc_method_handler(
+            'SendBoatState': grpc.unary_stream_rpc_method_handler(
                     servicer.SendBoatState,
                     request_deserializer=boat__state__pb2.BoatStateRequest.FromString,
                     response_serializer=boat__state__pb2.BoatState.SerializeToString,
@@ -59,7 +59,7 @@ class SendBoatStateService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/boat_state.SendBoatStateService/SendBoatState',
+        return grpc.experimental.unary_stream(request, target, '/boat_state.SendBoatStateService/SendBoatState',
             boat__state__pb2.BoatStateRequest.SerializeToString,
             boat__state__pb2.BoatState.FromString,
             options, channel_credentials,
