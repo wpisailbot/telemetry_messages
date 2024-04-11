@@ -118,7 +118,7 @@ service SendBoatStateService {
 }
 
 service StreamBoatStateService {
-    rpc SendBoatState (BoatStateRequest) returns (stream BoatState) {}
+    rpc StreamBoatState (BoatStateRequest) returns (stream BoatState) {}
 }
 
 

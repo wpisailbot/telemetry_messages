@@ -59,8 +59,8 @@ abstract class SendBoatStateServiceBase extends $grpc.Service {
 }
 @$pb.GrpcServiceName('boat_state.StreamBoatStateService')
 class StreamBoatStateServiceClient extends $grpc.Client {
-  static final _$sendBoatState = $grpc.ClientMethod<$0.BoatStateRequest, $0.BoatState>(
-      '/boat_state.StreamBoatStateService/SendBoatState',
+  static final _$streamBoatState = $grpc.ClientMethod<$0.BoatStateRequest, $0.BoatState>(
+      '/boat_state.StreamBoatStateService/StreamBoatState',
       ($0.BoatStateRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.BoatState.fromBuffer(value));
 
@@ -70,8 +70,8 @@ class StreamBoatStateServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseStream<$0.BoatState> sendBoatState($0.BoatStateRequest request, {$grpc.CallOptions? options}) {
-    return $createStreamingCall(_$sendBoatState, $async.Stream.fromIterable([request]), options: options);
+  $grpc.ResponseStream<$0.BoatState> streamBoatState($0.BoatStateRequest request, {$grpc.CallOptions? options}) {
+    return $createStreamingCall(_$streamBoatState, $async.Stream.fromIterable([request]), options: options);
   }
 }
 
@@ -81,19 +81,19 @@ abstract class StreamBoatStateServiceBase extends $grpc.Service {
 
   StreamBoatStateServiceBase() {
     $addMethod($grpc.ServiceMethod<$0.BoatStateRequest, $0.BoatState>(
-        'SendBoatState',
-        sendBoatState_Pre,
+        'StreamBoatState',
+        streamBoatState_Pre,
         false,
         true,
         ($core.List<$core.int> value) => $0.BoatStateRequest.fromBuffer(value),
         ($0.BoatState value) => value.writeToBuffer()));
   }
 
-  $async.Stream<$0.BoatState> sendBoatState_Pre($grpc.ServiceCall call, $async.Future<$0.BoatStateRequest> request) async* {
-    yield* sendBoatState(call, await request);
+  $async.Stream<$0.BoatState> streamBoatState_Pre($grpc.ServiceCall call, $async.Future<$0.BoatStateRequest> request) async* {
+    yield* streamBoatState(call, await request);
   }
 
-  $async.Stream<$0.BoatState> sendBoatState($grpc.ServiceCall call, $0.BoatStateRequest request);
+  $async.Stream<$0.BoatState> streamBoatState($grpc.ServiceCall call, $0.BoatStateRequest request);
 }
 @$pb.GrpcServiceName('boat_state.GetMapService')
 class GetMapServiceClient extends $grpc.Client {

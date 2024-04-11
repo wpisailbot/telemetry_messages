@@ -75,8 +75,8 @@ class StreamBoatStateServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.SendBoatState = channel.unary_stream(
-                '/boat_state.StreamBoatStateService/SendBoatState',
+        self.StreamBoatState = channel.unary_stream(
+                '/boat_state.StreamBoatStateService/StreamBoatState',
                 request_serializer=boat__state__pb2.BoatStateRequest.SerializeToString,
                 response_deserializer=boat__state__pb2.BoatState.FromString,
                 )
@@ -85,7 +85,7 @@ class StreamBoatStateServiceStub(object):
 class StreamBoatStateServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def SendBoatState(self, request, context):
+    def StreamBoatState(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -94,8 +94,8 @@ class StreamBoatStateServiceServicer(object):
 
 def add_StreamBoatStateServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'SendBoatState': grpc.unary_stream_rpc_method_handler(
-                    servicer.SendBoatState,
+            'StreamBoatState': grpc.unary_stream_rpc_method_handler(
+                    servicer.StreamBoatState,
                     request_deserializer=boat__state__pb2.BoatStateRequest.FromString,
                     response_serializer=boat__state__pb2.BoatState.SerializeToString,
             ),
@@ -110,7 +110,7 @@ class StreamBoatStateService(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def SendBoatState(request,
+    def StreamBoatState(request,
             target,
             options=(),
             channel_credentials=None,
@@ -120,7 +120,7 @@ class StreamBoatStateService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/boat_state.StreamBoatStateService/SendBoatState',
+        return grpc.experimental.unary_stream(request, target, '/boat_state.StreamBoatStateService/StreamBoatState',
             boat__state__pb2.BoatStateRequest.SerializeToString,
             boat__state__pb2.BoatState.FromString,
             options, channel_credentials,
