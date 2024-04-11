@@ -117,6 +117,11 @@ service SendBoatStateService {
     rpc SendBoatState (BoatStateRequest) returns (BoatState);
 }
 
+service StreamBoatStateService {
+    rpc SendBoatState (BoatStateRequest) returns (stream BoatState) {}
+}
+
+
 message MapRequest {
     string mapId = 1; // Map ID, unused for now
 }

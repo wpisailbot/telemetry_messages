@@ -66,6 +66,67 @@ class SendBoatStateService(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
 
+class StreamBoatStateServiceStub(object):
+    """Missing associated documentation comment in .proto file."""
+
+    def __init__(self, channel):
+        """Constructor.
+
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.SendBoatState = channel.unary_stream(
+                '/boat_state.StreamBoatStateService/SendBoatState',
+                request_serializer=boat__state__pb2.BoatStateRequest.SerializeToString,
+                response_deserializer=boat__state__pb2.BoatState.FromString,
+                )
+
+
+class StreamBoatStateServiceServicer(object):
+    """Missing associated documentation comment in .proto file."""
+
+    def SendBoatState(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+
+def add_StreamBoatStateServiceServicer_to_server(servicer, server):
+    rpc_method_handlers = {
+            'SendBoatState': grpc.unary_stream_rpc_method_handler(
+                    servicer.SendBoatState,
+                    request_deserializer=boat__state__pb2.BoatStateRequest.FromString,
+                    response_serializer=boat__state__pb2.BoatState.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'boat_state.StreamBoatStateService', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+
+
+ # This class is part of an EXPERIMENTAL API.
+class StreamBoatStateService(object):
+    """Missing associated documentation comment in .proto file."""
+
+    @staticmethod
+    def SendBoatState(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_stream(request, target, '/boat_state.StreamBoatStateService/SendBoatState',
+            boat__state__pb2.BoatStateRequest.SerializeToString,
+            boat__state__pb2.BoatState.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+
 class GetMapServiceStub(object):
     """Missing associated documentation comment in .proto file."""
 

@@ -57,6 +57,44 @@ abstract class SendBoatStateServiceBase extends $grpc.Service {
 
   $async.Future<$0.BoatState> sendBoatState($grpc.ServiceCall call, $0.BoatStateRequest request);
 }
+@$pb.GrpcServiceName('boat_state.StreamBoatStateService')
+class StreamBoatStateServiceClient extends $grpc.Client {
+  static final _$sendBoatState = $grpc.ClientMethod<$0.BoatStateRequest, $0.BoatState>(
+      '/boat_state.StreamBoatStateService/SendBoatState',
+      ($0.BoatStateRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.BoatState.fromBuffer(value));
+
+  StreamBoatStateServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options,
+        interceptors: interceptors);
+
+  $grpc.ResponseStream<$0.BoatState> sendBoatState($0.BoatStateRequest request, {$grpc.CallOptions? options}) {
+    return $createStreamingCall(_$sendBoatState, $async.Stream.fromIterable([request]), options: options);
+  }
+}
+
+@$pb.GrpcServiceName('boat_state.StreamBoatStateService')
+abstract class StreamBoatStateServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_state.StreamBoatStateService';
+
+  StreamBoatStateServiceBase() {
+    $addMethod($grpc.ServiceMethod<$0.BoatStateRequest, $0.BoatState>(
+        'SendBoatState',
+        sendBoatState_Pre,
+        false,
+        true,
+        ($core.List<$core.int> value) => $0.BoatStateRequest.fromBuffer(value),
+        ($0.BoatState value) => value.writeToBuffer()));
+  }
+
+  $async.Stream<$0.BoatState> sendBoatState_Pre($grpc.ServiceCall call, $async.Future<$0.BoatStateRequest> request) async* {
+    yield* sendBoatState(call, await request);
+  }
+
+  $async.Stream<$0.BoatState> sendBoatState($grpc.ServiceCall call, $0.BoatStateRequest request);
+}
 @$pb.GrpcServiceName('boat_state.GetMapService')
 class GetMapServiceClient extends $grpc.Client {
   static final _$getMap = $grpc.ClientMethod<$0.MapRequest, $0.MapResponse>(
