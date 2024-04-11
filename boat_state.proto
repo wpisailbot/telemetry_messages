@@ -114,7 +114,7 @@ message BoatStateRequest {
 }
 
 service SendBoatStateService {
-    rpc SendBoatState (BoatStateRequest) returns (stream BoatState);
+    rpc SendBoatState (BoatStateRequest) returns (BoatState);
 }
 
 message MapRequest {

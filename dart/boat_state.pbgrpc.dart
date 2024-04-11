@@ -32,8 +32,8 @@ class SendBoatStateServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseStream<$0.BoatState> sendBoatState($0.BoatStateRequest request, {$grpc.CallOptions? options}) {
-    return $createStreamingCall(_$sendBoatState, $async.Stream.fromIterable([request]), options: options);
+  $grpc.ResponseFuture<$0.BoatState> sendBoatState($0.BoatStateRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$sendBoatState, request, options: options);
   }
 }
 
@@ -46,16 +46,16 @@ abstract class SendBoatStateServiceBase extends $grpc.Service {
         'SendBoatState',
         sendBoatState_Pre,
         false,
-        true,
+        false,
         ($core.List<$core.int> value) => $0.BoatStateRequest.fromBuffer(value),
         ($0.BoatState value) => value.writeToBuffer()));
   }
 
-  $async.Stream<$0.BoatState> sendBoatState_Pre($grpc.ServiceCall call, $async.Future<$0.BoatStateRequest> request) async* {
-    yield* sendBoatState(call, await request);
+  $async.Future<$0.BoatState> sendBoatState_Pre($grpc.ServiceCall call, $async.Future<$0.BoatStateRequest> request) async {
+    return sendBoatState(call, await request);
   }
 
-  $async.Stream<$0.BoatState> sendBoatState($grpc.ServiceCall call, $0.BoatStateRequest request);
+  $async.Future<$0.BoatState> sendBoatState($grpc.ServiceCall call, $0.BoatStateRequest request);
 }
 @$pb.GrpcServiceName('boat_state.GetMapService')
 class GetMapServiceClient extends $grpc.Client {
