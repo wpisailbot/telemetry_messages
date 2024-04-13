@@ -448,6 +448,7 @@ class BoatState extends $pb.GeneratedMessage {
     WaypointPath? currentWaypoints,
     Point? currentTargetPoint,
     TrimState? currentTrimState,
+    $core.Iterable<Point>? buoyPositions,
   }) {
     final $result = create();
     if (latitude != null) {
@@ -531,6 +532,9 @@ class BoatState extends $pb.GeneratedMessage {
     if (currentTrimState != null) {
       $result.currentTrimState = currentTrimState;
     }
+    if (buoyPositions != null) {
+      $result.buoyPositions.addAll(buoyPositions);
+    }
     return $result;
   }
   BoatState._() : super();
@@ -565,6 +569,7 @@ class BoatState extends $pb.GeneratedMessage {
     ..aOM<WaypointPath>(25, _omitFieldNames ? '' : 'currentWaypoints', subBuilder: WaypointPath.create)
     ..aOM<Point>(26, _omitFieldNames ? '' : 'currentTargetPoint', subBuilder: Point.create)
     ..e<TrimState>(27, _omitFieldNames ? '' : 'currentTrimState', $pb.PbFieldType.OE, defaultOrMaker: TrimState.TRIM_STATE_MIN_LIFT, valueOf: TrimState.valueOf, enumValues: TrimState.values)
+    ..pc<Point>(28, _omitFieldNames ? '' : 'buoyPositions', $pb.PbFieldType.PM, subBuilder: Point.create)
     ..hasRequiredFields = false
   ;
 
@@ -837,6 +842,9 @@ class BoatState extends $pb.GeneratedMessage {
   $core.bool hasCurrentTrimState() => $_has(26);
   @$pb.TagNumber(27)
   void clearCurrentTrimState() => clearField(27);
+
+  @$pb.TagNumber(28)
+  $core.List<Point> get buoyPositions => $_getList(27);
 }
 
 class BoatStateRequest extends $pb.GeneratedMessage {

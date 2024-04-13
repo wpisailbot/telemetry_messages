@@ -233,6 +233,7 @@ const BoatState$json = {
     {'1': 'current_waypoints', '3': 25, '4': 1, '5': 11, '6': '.boat_state.WaypointPath', '10': 'currentWaypoints'},
     {'1': 'current_target_point', '3': 26, '4': 1, '5': 11, '6': '.boat_state.Point', '10': 'currentTargetPoint'},
     {'1': 'current_trim_state', '3': 27, '4': 1, '5': 14, '6': '.boat_state.TrimState', '10': 'currentTrimState'},
+    {'1': 'buoy_positions', '3': 28, '4': 3, '5': 11, '6': '.boat_state.Point', '10': 'buoyPositions'},
   ],
 };
 
@@ -261,7 +262,8 @@ final $typed_data.Uint8List boatStateDescriptor = $convert.base64Decode(
     'dGlvbnMSRQoRY3VycmVudF93YXlwb2ludHMYGSABKAsyGC5ib2F0X3N0YXRlLldheXBvaW50UG'
     'F0aFIQY3VycmVudFdheXBvaW50cxJDChRjdXJyZW50X3RhcmdldF9wb2ludBgaIAEoCzIRLmJv'
     'YXRfc3RhdGUuUG9pbnRSEmN1cnJlbnRUYXJnZXRQb2ludBJDChJjdXJyZW50X3RyaW1fc3RhdG'
-    'UYGyABKA4yFS5ib2F0X3N0YXRlLlRyaW1TdGF0ZVIQY3VycmVudFRyaW1TdGF0ZQ==');
+    'UYGyABKA4yFS5ib2F0X3N0YXRlLlRyaW1TdGF0ZVIQY3VycmVudFRyaW1TdGF0ZRI4Cg5idW95'
+    'X3Bvc2l0aW9ucxgcIAMoCzIRLmJvYXRfc3RhdGUuUG9pbnRSDWJ1b3lQb3NpdGlvbnM=');
 
 @$core.Deprecated('Use boatStateRequestDescriptor instead')
 const BoatStateRequest$json = {

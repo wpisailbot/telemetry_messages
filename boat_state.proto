@@ -107,6 +107,7 @@ message BoatState {
     WaypointPath current_waypoints = 25;
     Point current_target_point = 26;
     TrimState current_trim_state = 27;
+    repeated Point buoy_positions = 28;
 }
 
 message BoatStateRequest {
