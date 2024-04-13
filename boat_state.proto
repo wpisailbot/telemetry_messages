@@ -108,6 +108,9 @@ message BoatState {
     Point current_target_point = 26;
     TrimState current_trim_state = 27;
     repeated Point buoy_positions = 28;
+    float rudder_position = 29;
+    float ballast_position = 30;
+    float trim_tab_position = 31;
 }
 
 message BoatStateRequest {

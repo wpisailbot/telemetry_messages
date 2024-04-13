@@ -449,6 +449,9 @@ class BoatState extends $pb.GeneratedMessage {
     Point? currentTargetPoint,
     TrimState? currentTrimState,
     $core.Iterable<Point>? buoyPositions,
+    $core.double? rudderPosition,
+    $core.double? ballastPosition,
+    $core.double? trimTabPosition,
   }) {
     final $result = create();
     if (latitude != null) {
@@ -535,6 +538,15 @@ class BoatState extends $pb.GeneratedMessage {
     if (buoyPositions != null) {
       $result.buoyPositions.addAll(buoyPositions);
     }
+    if (rudderPosition != null) {
+      $result.rudderPosition = rudderPosition;
+    }
+    if (ballastPosition != null) {
+      $result.ballastPosition = ballastPosition;
+    }
+    if (trimTabPosition != null) {
+      $result.trimTabPosition = trimTabPosition;
+    }
     return $result;
   }
   BoatState._() : super();
@@ -570,6 +582,9 @@ class BoatState extends $pb.GeneratedMessage {
     ..aOM<Point>(26, _omitFieldNames ? '' : 'currentTargetPoint', subBuilder: Point.create)
     ..e<TrimState>(27, _omitFieldNames ? '' : 'currentTrimState', $pb.PbFieldType.OE, defaultOrMaker: TrimState.TRIM_STATE_MIN_LIFT, valueOf: TrimState.valueOf, enumValues: TrimState.values)
     ..pc<Point>(28, _omitFieldNames ? '' : 'buoyPositions', $pb.PbFieldType.PM, subBuilder: Point.create)
+    ..a<$core.double>(29, _omitFieldNames ? '' : 'rudderPosition', $pb.PbFieldType.OF)
+    ..a<$core.double>(30, _omitFieldNames ? '' : 'ballastPosition', $pb.PbFieldType.OF)
+    ..a<$core.double>(31, _omitFieldNames ? '' : 'trimTabPosition', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
@@ -845,6 +860,33 @@ class BoatState extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(28)
   $core.List<Point> get buoyPositions => $_getList(27);
+
+  @$pb.TagNumber(29)
+  $core.double get rudderPosition => $_getN(28);
+  @$pb.TagNumber(29)
+  set rudderPosition($core.double v) { $_setFloat(28, v); }
+  @$pb.TagNumber(29)
+  $core.bool hasRudderPosition() => $_has(28);
+  @$pb.TagNumber(29)
+  void clearRudderPosition() => clearField(29);
+
+  @$pb.TagNumber(30)
+  $core.double get ballastPosition => $_getN(29);
+  @$pb.TagNumber(30)
+  set ballastPosition($core.double v) { $_setFloat(29, v); }
+  @$pb.TagNumber(30)
+  $core.bool hasBallastPosition() => $_has(29);
+  @$pb.TagNumber(30)
+  void clearBallastPosition() => clearField(30);
+
+  @$pb.TagNumber(31)
+  $core.double get trimTabPosition => $_getN(30);
+  @$pb.TagNumber(31)
+  set trimTabPosition($core.double v) { $_setFloat(30, v); }
+  @$pb.TagNumber(31)
+  $core.bool hasTrimTabPosition() => $_has(30);
+  @$pb.TagNumber(31)
+  void clearTrimTabPosition() => clearField(31);
 }
 
 class BoatStateRequest extends $pb.GeneratedMessage {

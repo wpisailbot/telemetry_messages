@@ -234,6 +234,9 @@ const BoatState$json = {
     {'1': 'current_target_point', '3': 26, '4': 1, '5': 11, '6': '.boat_state.Point', '10': 'currentTargetPoint'},
     {'1': 'current_trim_state', '3': 27, '4': 1, '5': 14, '6': '.boat_state.TrimState', '10': 'currentTrimState'},
     {'1': 'buoy_positions', '3': 28, '4': 3, '5': 11, '6': '.boat_state.Point', '10': 'buoyPositions'},
+    {'1': 'rudder_position', '3': 29, '4': 1, '5': 2, '10': 'rudderPosition'},
+    {'1': 'ballast_position', '3': 30, '4': 1, '5': 2, '10': 'ballastPosition'},
+    {'1': 'trim_tab_position', '3': 31, '4': 1, '5': 2, '10': 'trimTabPosition'},
   ],
 };
 
@@ -263,7 +266,10 @@ final $typed_data.Uint8List boatStateDescriptor = $convert.base64Decode(
     'F0aFIQY3VycmVudFdheXBvaW50cxJDChRjdXJyZW50X3RhcmdldF9wb2ludBgaIAEoCzIRLmJv'
     'YXRfc3RhdGUuUG9pbnRSEmN1cnJlbnRUYXJnZXRQb2ludBJDChJjdXJyZW50X3RyaW1fc3RhdG'
     'UYGyABKA4yFS5ib2F0X3N0YXRlLlRyaW1TdGF0ZVIQY3VycmVudFRyaW1TdGF0ZRI4Cg5idW95'
-    'X3Bvc2l0aW9ucxgcIAMoCzIRLmJvYXRfc3RhdGUuUG9pbnRSDWJ1b3lQb3NpdGlvbnM=');
+    'X3Bvc2l0aW9ucxgcIAMoCzIRLmJvYXRfc3RhdGUuUG9pbnRSDWJ1b3lQb3NpdGlvbnMSJwoPcn'
+    'VkZGVyX3Bvc2l0aW9uGB0gASgCUg5ydWRkZXJQb3NpdGlvbhIpChBiYWxsYXN0X3Bvc2l0aW9u'
+    'GB4gASgCUg9iYWxsYXN0UG9zaXRpb24SKgoRdHJpbV90YWJfcG9zaXRpb24YHyABKAJSD3RyaW'
+    '1UYWJQb3NpdGlvbg==');
 
 @$core.Deprecated('Use boatStateRequestDescriptor instead')
 const BoatStateRequest$json = {
