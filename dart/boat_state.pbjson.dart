@@ -188,6 +188,20 @@ final $typed_data.Uint8List pathDescriptor = $convert.base64Decode(
     'oTbG9uZ2l0dWRlX2RpcmVjdGlvbhgCIAEoCVISbG9uZ2l0dWRlRGlyZWN0aW9uEikKBnBvaW50'
     'cxgDIAMoCzIRLmJvYXRfc3RhdGUuUG9pbnRSBnBvaW50cw==');
 
+@$core.Deprecated('Use pathSegmentDescriptor instead')
+const PathSegment$json = {
+  '1': 'PathSegment',
+  '2': [
+    {'1': 'start', '3': 1, '4': 1, '5': 11, '6': '.boat_state.Point', '10': 'start'},
+    {'1': 'end', '3': 2, '4': 1, '5': 11, '6': '.boat_state.Point', '10': 'end'},
+  ],
+};
+
+/// Descriptor for `PathSegment`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List pathSegmentDescriptor = $convert.base64Decode(
+    'CgtQYXRoU2VnbWVudBInCgVzdGFydBgBIAEoCzIRLmJvYXRfc3RhdGUuUG9pbnRSBXN0YXJ0Ei'
+    'MKA2VuZBgCIAEoCzIRLmJvYXRfc3RhdGUuUG9pbnRSA2VuZA==');
+
 @$core.Deprecated('Use windDescriptor instead')
 const Wind$json = {
   '1': 'Wind',
@@ -237,6 +251,8 @@ const BoatState$json = {
     {'1': 'rudder_position', '3': 29, '4': 1, '5': 2, '10': 'rudderPosition'},
     {'1': 'ballast_position', '3': 30, '4': 1, '5': 2, '10': 'ballastPosition'},
     {'1': 'trim_tab_position', '3': 31, '4': 1, '5': 2, '10': 'trimTabPosition'},
+    {'1': 'has_current_path_segment', '3': 32, '4': 1, '5': 8, '10': 'hasCurrentPathSegment'},
+    {'1': 'current_path_segment', '3': 33, '4': 1, '5': 11, '6': '.boat_state.PathSegment', '10': 'currentPathSegment'},
   ],
 };
 
@@ -269,7 +285,9 @@ final $typed_data.Uint8List boatStateDescriptor = $convert.base64Decode(
     'X3Bvc2l0aW9ucxgcIAMoCzIRLmJvYXRfc3RhdGUuUG9pbnRSDWJ1b3lQb3NpdGlvbnMSJwoPcn'
     'VkZGVyX3Bvc2l0aW9uGB0gASgCUg5ydWRkZXJQb3NpdGlvbhIpChBiYWxsYXN0X3Bvc2l0aW9u'
     'GB4gASgCUg9iYWxsYXN0UG9zaXRpb24SKgoRdHJpbV90YWJfcG9zaXRpb24YHyABKAJSD3RyaW'
-    '1UYWJQb3NpdGlvbg==');
+    '1UYWJQb3NpdGlvbhI3ChhoYXNfY3VycmVudF9wYXRoX3NlZ21lbnQYICABKAhSFWhhc0N1cnJl'
+    'bnRQYXRoU2VnbWVudBJJChRjdXJyZW50X3BhdGhfc2VnbWVudBghIAEoCzIXLmJvYXRfc3RhdG'
+    'UuUGF0aFNlZ21lbnRSEmN1cnJlbnRQYXRoU2VnbWVudA==');
 
 @$core.Deprecated('Use boatStateRequestDescriptor instead')
 const BoatStateRequest$json = {

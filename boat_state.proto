@@ -74,6 +74,11 @@ message Path{
     repeated Point points = 3;
 }
 
+message PathSegment {
+    Point start = 1;
+    Point end = 2;
+}
+
 message Wind {
     float speed = 1;
     float direction = 2;
@@ -111,6 +116,8 @@ message BoatState {
     float rudder_position = 29;
     float ballast_position = 30;
     float trim_tab_position = 31;
+    bool has_current_path_segment = 32;
+    PathSegment current_path_segment = 33;
 }
 
 message BoatStateRequest {

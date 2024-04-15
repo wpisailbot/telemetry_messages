@@ -355,6 +355,74 @@ class Path extends $pb.GeneratedMessage {
   $core.List<Point> get points => $_getList(2);
 }
 
+class PathSegment extends $pb.GeneratedMessage {
+  factory PathSegment({
+    Point? start,
+    Point? end,
+  }) {
+    final $result = create();
+    if (start != null) {
+      $result.start = start;
+    }
+    if (end != null) {
+      $result.end = end;
+    }
+    return $result;
+  }
+  PathSegment._() : super();
+  factory PathSegment.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PathSegment.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PathSegment', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
+    ..aOM<Point>(1, _omitFieldNames ? '' : 'start', subBuilder: Point.create)
+    ..aOM<Point>(2, _omitFieldNames ? '' : 'end', subBuilder: Point.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PathSegment clone() => PathSegment()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PathSegment copyWith(void Function(PathSegment) updates) => super.copyWith((message) => updates(message as PathSegment)) as PathSegment;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static PathSegment create() => PathSegment._();
+  PathSegment createEmptyInstance() => create();
+  static $pb.PbList<PathSegment> createRepeated() => $pb.PbList<PathSegment>();
+  @$core.pragma('dart2js:noInline')
+  static PathSegment getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PathSegment>(create);
+  static PathSegment? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  Point get start => $_getN(0);
+  @$pb.TagNumber(1)
+  set start(Point v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasStart() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStart() => clearField(1);
+  @$pb.TagNumber(1)
+  Point ensureStart() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  Point get end => $_getN(1);
+  @$pb.TagNumber(2)
+  set end(Point v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEnd() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEnd() => clearField(2);
+  @$pb.TagNumber(2)
+  Point ensureEnd() => $_ensure(1);
+}
+
 class Wind extends $pb.GeneratedMessage {
   factory Wind({
     $core.double? speed,
@@ -452,6 +520,8 @@ class BoatState extends $pb.GeneratedMessage {
     $core.double? rudderPosition,
     $core.double? ballastPosition,
     $core.double? trimTabPosition,
+    $core.bool? hasCurrentPathSegment,
+    PathSegment? currentPathSegment_33,
   }) {
     final $result = create();
     if (latitude != null) {
@@ -547,6 +617,12 @@ class BoatState extends $pb.GeneratedMessage {
     if (trimTabPosition != null) {
       $result.trimTabPosition = trimTabPosition;
     }
+    if (hasCurrentPathSegment != null) {
+      $result.hasCurrentPathSegment = hasCurrentPathSegment;
+    }
+    if (currentPathSegment_33 != null) {
+      $result.currentPathSegment_33 = currentPathSegment_33;
+    }
     return $result;
   }
   BoatState._() : super();
@@ -585,6 +661,8 @@ class BoatState extends $pb.GeneratedMessage {
     ..a<$core.double>(29, _omitFieldNames ? '' : 'rudderPosition', $pb.PbFieldType.OF)
     ..a<$core.double>(30, _omitFieldNames ? '' : 'ballastPosition', $pb.PbFieldType.OF)
     ..a<$core.double>(31, _omitFieldNames ? '' : 'trimTabPosition', $pb.PbFieldType.OF)
+    ..aOB(32, _omitFieldNames ? '' : 'hasCurrentPathSegment')
+    ..aOM<PathSegment>(33, _omitFieldNames ? '' : 'currentPathSegment', subBuilder: PathSegment.create)
     ..hasRequiredFields = false
   ;
 
@@ -887,6 +965,26 @@ class BoatState extends $pb.GeneratedMessage {
   $core.bool hasTrimTabPosition() => $_has(30);
   @$pb.TagNumber(31)
   void clearTrimTabPosition() => clearField(31);
+
+  @$pb.TagNumber(32)
+  $core.bool get hasCurrentPathSegment => $_getBF(31);
+  @$pb.TagNumber(32)
+  set hasCurrentPathSegment($core.bool v) { $_setBool(31, v); }
+  @$pb.TagNumber(32)
+  $core.bool hasHasCurrentPathSegment() => $_has(31);
+  @$pb.TagNumber(32)
+  void clearHasCurrentPathSegment() => clearField(32);
+
+  @$pb.TagNumber(33)
+  PathSegment get currentPathSegment_33 => $_getN(32);
+  @$pb.TagNumber(33)
+  set currentPathSegment_33(PathSegment v) { setField(33, v); }
+  @$pb.TagNumber(33)
+  $core.bool hasCurrentPathSegment_33() => $_has(32);
+  @$pb.TagNumber(33)
+  void clearCurrentPathSegment_33() => clearField(33);
+  @$pb.TagNumber(33)
+  PathSegment ensureCurrentPathSegment_33() => $_ensure(32);
 }
 
 class BoatStateRequest extends $pb.GeneratedMessage {
