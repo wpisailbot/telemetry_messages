@@ -522,6 +522,7 @@ class BoatState extends $pb.GeneratedMessage {
     $core.double? trimTabPosition,
     $core.bool? hasCurrentPathSegment,
     PathSegment? currentPathSegment_33,
+    $core.double? targetHeading,
   }) {
     final $result = create();
     if (latitude != null) {
@@ -623,6 +624,9 @@ class BoatState extends $pb.GeneratedMessage {
     if (currentPathSegment_33 != null) {
       $result.currentPathSegment_33 = currentPathSegment_33;
     }
+    if (targetHeading != null) {
+      $result.targetHeading = targetHeading;
+    }
     return $result;
   }
   BoatState._() : super();
@@ -663,6 +667,7 @@ class BoatState extends $pb.GeneratedMessage {
     ..a<$core.double>(31, _omitFieldNames ? '' : 'trimTabPosition', $pb.PbFieldType.OF)
     ..aOB(32, _omitFieldNames ? '' : 'hasCurrentPathSegment')
     ..aOM<PathSegment>(33, _omitFieldNames ? '' : 'currentPathSegment', subBuilder: PathSegment.create)
+    ..a<$core.double>(34, _omitFieldNames ? '' : 'targetHeading', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
@@ -985,6 +990,15 @@ class BoatState extends $pb.GeneratedMessage {
   void clearCurrentPathSegment_33() => clearField(33);
   @$pb.TagNumber(33)
   PathSegment ensureCurrentPathSegment_33() => $_ensure(32);
+
+  @$pb.TagNumber(34)
+  $core.double get targetHeading => $_getN(33);
+  @$pb.TagNumber(34)
+  set targetHeading($core.double v) { $_setFloat(33, v); }
+  @$pb.TagNumber(34)
+  $core.bool hasTargetHeading() => $_has(33);
+  @$pb.TagNumber(34)
+  void clearTargetHeading() => clearField(34);
 }
 
 class BoatStateRequest extends $pb.GeneratedMessage {

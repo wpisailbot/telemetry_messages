@@ -118,6 +118,7 @@ message BoatState {
     float trim_tab_position = 31;
     bool has_current_path_segment = 32;
     PathSegment current_path_segment = 33;
+    float target_heading = 34;
 }
 
 message BoatStateRequest {
