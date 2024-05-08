@@ -40,6 +40,10 @@ message MarkBuoyCommand {
     boat_state.Point position = 1;
 }
 
+message SetVFForwardMagnitudeCommand {
+    float magnitude = 1;
+}
+
 service ExecuteRudderCommandService {
     rpc ExecuteRudderCommand (RudderCommand) returns (ControlResponse);
 }
@@ -66,4 +70,8 @@ service ExecuteAddWaypointCommandService {
 
 service ExecuteMarkBuoyCommandService {
     rpc ExecuteMarkBuoyCommand (MarkBuoyCommand) returns (ControlResponse);
+}
+
+service ExecuteSetVFForwardMagnitudeCommandService {
+    rpc ExecuteSetVFForwardMagnitude (SetVFForwardMagnitudeCommand) returns (ControlResponse);
 }

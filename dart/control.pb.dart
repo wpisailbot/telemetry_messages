@@ -425,6 +425,56 @@ class MarkBuoyCommand extends $pb.GeneratedMessage {
   $0.Point ensurePosition() => $_ensure(0);
 }
 
+class SetVFForwardMagnitudeCommand extends $pb.GeneratedMessage {
+  factory SetVFForwardMagnitudeCommand({
+    $core.double? magnitude,
+  }) {
+    final $result = create();
+    if (magnitude != null) {
+      $result.magnitude = magnitude;
+    }
+    return $result;
+  }
+  SetVFForwardMagnitudeCommand._() : super();
+  factory SetVFForwardMagnitudeCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetVFForwardMagnitudeCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetVFForwardMagnitudeCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'magnitude', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SetVFForwardMagnitudeCommand clone() => SetVFForwardMagnitudeCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SetVFForwardMagnitudeCommand copyWith(void Function(SetVFForwardMagnitudeCommand) updates) => super.copyWith((message) => updates(message as SetVFForwardMagnitudeCommand)) as SetVFForwardMagnitudeCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SetVFForwardMagnitudeCommand create() => SetVFForwardMagnitudeCommand._();
+  SetVFForwardMagnitudeCommand createEmptyInstance() => create();
+  static $pb.PbList<SetVFForwardMagnitudeCommand> createRepeated() => $pb.PbList<SetVFForwardMagnitudeCommand>();
+  @$core.pragma('dart2js:noInline')
+  static SetVFForwardMagnitudeCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetVFForwardMagnitudeCommand>(create);
+  static SetVFForwardMagnitudeCommand? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get magnitude => $_getN(0);
+  @$pb.TagNumber(1)
+  set magnitude($core.double v) { $_setFloat(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasMagnitude() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMagnitude() => clearField(1);
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

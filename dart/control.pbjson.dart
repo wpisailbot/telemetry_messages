@@ -133,3 +133,16 @@ final $typed_data.Uint8List markBuoyCommandDescriptor = $convert.base64Decode(
     'Cg9NYXJrQnVveUNvbW1hbmQSLQoIcG9zaXRpb24YASABKAsyES5ib2F0X3N0YXRlLlBvaW50Ug'
     'hwb3NpdGlvbg==');
 
+@$core.Deprecated('Use setVFForwardMagnitudeCommandDescriptor instead')
+const SetVFForwardMagnitudeCommand$json = {
+  '1': 'SetVFForwardMagnitudeCommand',
+  '2': [
+    {'1': 'magnitude', '3': 1, '4': 1, '5': 2, '10': 'magnitude'},
+  ],
+};
+
+/// Descriptor for `SetVFForwardMagnitudeCommand`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setVFForwardMagnitudeCommandDescriptor = $convert.base64Decode(
+    'ChxTZXRWRkZvcndhcmRNYWduaXR1ZGVDb21tYW5kEhwKCW1hZ25pdHVkZRgBIAEoAlIJbWFnbm'
+    'l0dWRl');
+
