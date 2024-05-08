@@ -287,8 +287,8 @@ abstract class ExecuteMarkBuoyCommandServiceBase extends $grpc.Service {
 }
 @$pb.GrpcServiceName('boat_control.ExecuteSetVFForwardMagnitudeCommandService')
 class ExecuteSetVFForwardMagnitudeCommandServiceClient extends $grpc.Client {
-  static final _$executeSetVFForwardMagnitude = $grpc.ClientMethod<$1.SetVFForwardMagnitudeCommand, $1.ControlResponse>(
-      '/boat_control.ExecuteSetVFForwardMagnitudeCommandService/ExecuteSetVFForwardMagnitude',
+  static final _$executeSetVFForwardMagnitudeCommand = $grpc.ClientMethod<$1.SetVFForwardMagnitudeCommand, $1.ControlResponse>(
+      '/boat_control.ExecuteSetVFForwardMagnitudeCommandService/ExecuteSetVFForwardMagnitudeCommand',
       ($1.SetVFForwardMagnitudeCommand value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
 
@@ -298,8 +298,8 @@ class ExecuteSetVFForwardMagnitudeCommandServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$1.ControlResponse> executeSetVFForwardMagnitude($1.SetVFForwardMagnitudeCommand request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$executeSetVFForwardMagnitude, request, options: options);
+  $grpc.ResponseFuture<$1.ControlResponse> executeSetVFForwardMagnitudeCommand($1.SetVFForwardMagnitudeCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeSetVFForwardMagnitudeCommand, request, options: options);
   }
 }
 
@@ -309,17 +309,17 @@ abstract class ExecuteSetVFForwardMagnitudeCommandServiceBase extends $grpc.Serv
 
   ExecuteSetVFForwardMagnitudeCommandServiceBase() {
     $addMethod($grpc.ServiceMethod<$1.SetVFForwardMagnitudeCommand, $1.ControlResponse>(
-        'ExecuteSetVFForwardMagnitude',
-        executeSetVFForwardMagnitude_Pre,
+        'ExecuteSetVFForwardMagnitudeCommand',
+        executeSetVFForwardMagnitudeCommand_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $1.SetVFForwardMagnitudeCommand.fromBuffer(value),
         ($1.ControlResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.ControlResponse> executeSetVFForwardMagnitude_Pre($grpc.ServiceCall call, $async.Future<$1.SetVFForwardMagnitudeCommand> request) async {
-    return executeSetVFForwardMagnitude(call, await request);
+  $async.Future<$1.ControlResponse> executeSetVFForwardMagnitudeCommand_Pre($grpc.ServiceCall call, $async.Future<$1.SetVFForwardMagnitudeCommand> request) async {
+    return executeSetVFForwardMagnitudeCommand(call, await request);
   }
 
-  $async.Future<$1.ControlResponse> executeSetVFForwardMagnitude($grpc.ServiceCall call, $1.SetVFForwardMagnitudeCommand request);
+  $async.Future<$1.ControlResponse> executeSetVFForwardMagnitudeCommand($grpc.ServiceCall call, $1.SetVFForwardMagnitudeCommand request);
 }

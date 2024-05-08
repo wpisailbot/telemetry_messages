@@ -73,5 +73,5 @@ service ExecuteMarkBuoyCommandService {
 }
 
 service ExecuteSetVFForwardMagnitudeCommandService {
-    rpc ExecuteSetVFForwardMagnitude (SetVFForwardMagnitudeCommand) returns (ControlResponse);
+    rpc ExecuteSetVFForwardMagnitudeCommand (SetVFForwardMagnitudeCommand) returns (ControlResponse);
 }

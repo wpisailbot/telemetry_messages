@@ -441,8 +441,8 @@ class ExecuteSetVFForwardMagnitudeCommandServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.ExecuteSetVFForwardMagnitude = channel.unary_unary(
-                '/boat_control.ExecuteSetVFForwardMagnitudeCommandService/ExecuteSetVFForwardMagnitude',
+        self.ExecuteSetVFForwardMagnitudeCommand = channel.unary_unary(
+                '/boat_control.ExecuteSetVFForwardMagnitudeCommandService/ExecuteSetVFForwardMagnitudeCommand',
                 request_serializer=control__pb2.SetVFForwardMagnitudeCommand.SerializeToString,
                 response_deserializer=control__pb2.ControlResponse.FromString,
                 )
@@ -451,7 +451,7 @@ class ExecuteSetVFForwardMagnitudeCommandServiceStub(object):
 class ExecuteSetVFForwardMagnitudeCommandServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def ExecuteSetVFForwardMagnitude(self, request, context):
+    def ExecuteSetVFForwardMagnitudeCommand(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -460,8 +460,8 @@ class ExecuteSetVFForwardMagnitudeCommandServiceServicer(object):
 
 def add_ExecuteSetVFForwardMagnitudeCommandServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'ExecuteSetVFForwardMagnitude': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExecuteSetVFForwardMagnitude,
+            'ExecuteSetVFForwardMagnitudeCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteSetVFForwardMagnitudeCommand,
                     request_deserializer=control__pb2.SetVFForwardMagnitudeCommand.FromString,
                     response_serializer=control__pb2.ControlResponse.SerializeToString,
             ),
@@ -476,7 +476,7 @@ class ExecuteSetVFForwardMagnitudeCommandService(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def ExecuteSetVFForwardMagnitude(request,
+    def ExecuteSetVFForwardMagnitudeCommand(request,
             target,
             options=(),
             channel_credentials=None,
@@ -486,7 +486,7 @@ class ExecuteSetVFForwardMagnitudeCommandService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/boat_control.ExecuteSetVFForwardMagnitudeCommandService/ExecuteSetVFForwardMagnitude',
+        return grpc.experimental.unary_unary(request, target, '/boat_control.ExecuteSetVFForwardMagnitudeCommandService/ExecuteSetVFForwardMagnitudeCommand',
             control__pb2.SetVFForwardMagnitudeCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options, channel_credentials,
