@@ -325,8 +325,8 @@ abstract class ExecuteSetVFForwardMagnitudeCommandServiceBase extends $grpc.Serv
 }
 @$pb.GrpcServiceName('boat_control.ExecuteSetRudderKPCommandService')
 class ExecuteSetRudderKPCommandServiceClient extends $grpc.Client {
-  static final _$execureSetRudderKPCommand = $grpc.ClientMethod<$1.SetRudderKPCommand, $1.ControlResponse>(
-      '/boat_control.ExecuteSetRudderKPCommandService/ExecureSetRudderKPCommand',
+  static final _$executeSetRudderKPCommand = $grpc.ClientMethod<$1.SetRudderKPCommand, $1.ControlResponse>(
+      '/boat_control.ExecuteSetRudderKPCommandService/ExecuteSetRudderKPCommand',
       ($1.SetRudderKPCommand value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
 
@@ -336,8 +336,8 @@ class ExecuteSetRudderKPCommandServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$1.ControlResponse> execureSetRudderKPCommand($1.SetRudderKPCommand request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$execureSetRudderKPCommand, request, options: options);
+  $grpc.ResponseFuture<$1.ControlResponse> executeSetRudderKPCommand($1.SetRudderKPCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeSetRudderKPCommand, request, options: options);
   }
 }
 
@@ -347,17 +347,17 @@ abstract class ExecuteSetRudderKPCommandServiceBase extends $grpc.Service {
 
   ExecuteSetRudderKPCommandServiceBase() {
     $addMethod($grpc.ServiceMethod<$1.SetRudderKPCommand, $1.ControlResponse>(
-        'ExecureSetRudderKPCommand',
-        execureSetRudderKPCommand_Pre,
+        'ExecuteSetRudderKPCommand',
+        executeSetRudderKPCommand_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $1.SetRudderKPCommand.fromBuffer(value),
         ($1.ControlResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.ControlResponse> execureSetRudderKPCommand_Pre($grpc.ServiceCall call, $async.Future<$1.SetRudderKPCommand> request) async {
-    return execureSetRudderKPCommand(call, await request);
+  $async.Future<$1.ControlResponse> executeSetRudderKPCommand_Pre($grpc.ServiceCall call, $async.Future<$1.SetRudderKPCommand> request) async {
+    return executeSetRudderKPCommand(call, await request);
   }
 
-  $async.Future<$1.ControlResponse> execureSetRudderKPCommand($grpc.ServiceCall call, $1.SetRudderKPCommand request);
+  $async.Future<$1.ControlResponse> executeSetRudderKPCommand($grpc.ServiceCall call, $1.SetRudderKPCommand request);
 }

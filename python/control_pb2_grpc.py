@@ -502,8 +502,8 @@ class ExecuteSetRudderKPCommandServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.ExecureSetRudderKPCommand = channel.unary_unary(
-                '/boat_control.ExecuteSetRudderKPCommandService/ExecureSetRudderKPCommand',
+        self.ExecuteSetRudderKPCommand = channel.unary_unary(
+                '/boat_control.ExecuteSetRudderKPCommandService/ExecuteSetRudderKPCommand',
                 request_serializer=control__pb2.SetRudderKPCommand.SerializeToString,
                 response_deserializer=control__pb2.ControlResponse.FromString,
                 )
@@ -512,7 +512,7 @@ class ExecuteSetRudderKPCommandServiceStub(object):
 class ExecuteSetRudderKPCommandServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def ExecureSetRudderKPCommand(self, request, context):
+    def ExecuteSetRudderKPCommand(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -521,8 +521,8 @@ class ExecuteSetRudderKPCommandServiceServicer(object):
 
 def add_ExecuteSetRudderKPCommandServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'ExecureSetRudderKPCommand': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExecureSetRudderKPCommand,
+            'ExecuteSetRudderKPCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteSetRudderKPCommand,
                     request_deserializer=control__pb2.SetRudderKPCommand.FromString,
                     response_serializer=control__pb2.ControlResponse.SerializeToString,
             ),
@@ -537,7 +537,7 @@ class ExecuteSetRudderKPCommandService(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def ExecureSetRudderKPCommand(request,
+    def ExecuteSetRudderKPCommand(request,
             target,
             options=(),
             channel_credentials=None,
@@ -547,7 +547,7 @@ class ExecuteSetRudderKPCommandService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/boat_control.ExecuteSetRudderKPCommandService/ExecureSetRudderKPCommand',
+        return grpc.experimental.unary_unary(request, target, '/boat_control.ExecuteSetRudderKPCommandService/ExecuteSetRudderKPCommand',
             control__pb2.SetRudderKPCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options, channel_credentials,

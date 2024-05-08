@@ -81,5 +81,5 @@ service ExecuteSetVFForwardMagnitudeCommandService {
 }
 
 service ExecuteSetRudderKPCommandService {
-    rpc ExecureSetRudderKPCommand (SetRudderKPCommand) returns (ControlResponse);
+    rpc ExecuteSetRudderKPCommand (SetRudderKPCommand) returns (ControlResponse);
 }
