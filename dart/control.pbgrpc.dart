@@ -323,3 +323,41 @@ abstract class ExecuteSetVFForwardMagnitudeCommandServiceBase extends $grpc.Serv
 
   $async.Future<$1.ControlResponse> executeSetVFForwardMagnitudeCommand($grpc.ServiceCall call, $1.SetVFForwardMagnitudeCommand request);
 }
+@$pb.GrpcServiceName('boat_control.ExecuteSetRudderKPCommandService')
+class ExecuteSetRudderKPCommandServiceClient extends $grpc.Client {
+  static final _$execureSetRudderKPCommand = $grpc.ClientMethod<$1.SetRudderKPCommand, $1.ControlResponse>(
+      '/boat_control.ExecuteSetRudderKPCommandService/ExecureSetRudderKPCommand',
+      ($1.SetRudderKPCommand value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
+
+  ExecuteSetRudderKPCommandServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options,
+        interceptors: interceptors);
+
+  $grpc.ResponseFuture<$1.ControlResponse> execureSetRudderKPCommand($1.SetRudderKPCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$execureSetRudderKPCommand, request, options: options);
+  }
+}
+
+@$pb.GrpcServiceName('boat_control.ExecuteSetRudderKPCommandService')
+abstract class ExecuteSetRudderKPCommandServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_control.ExecuteSetRudderKPCommandService';
+
+  ExecuteSetRudderKPCommandServiceBase() {
+    $addMethod($grpc.ServiceMethod<$1.SetRudderKPCommand, $1.ControlResponse>(
+        'ExecureSetRudderKPCommand',
+        execureSetRudderKPCommand_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.SetRudderKPCommand.fromBuffer(value),
+        ($1.ControlResponse value) => value.writeToBuffer()));
+  }
+
+  $async.Future<$1.ControlResponse> execureSetRudderKPCommand_Pre($grpc.ServiceCall call, $async.Future<$1.SetRudderKPCommand> request) async {
+    return execureSetRudderKPCommand(call, await request);
+  }
+
+  $async.Future<$1.ControlResponse> execureSetRudderKPCommand($grpc.ServiceCall call, $1.SetRudderKPCommand request);
+}

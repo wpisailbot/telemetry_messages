@@ -146,3 +146,15 @@ final $typed_data.Uint8List setVFForwardMagnitudeCommandDescriptor = $convert.ba
     'ChxTZXRWRkZvcndhcmRNYWduaXR1ZGVDb21tYW5kEhwKCW1hZ25pdHVkZRgBIAEoAlIJbWFnbm'
     'l0dWRl');
 
+@$core.Deprecated('Use setRudderKPCommandDescriptor instead')
+const SetRudderKPCommand$json = {
+  '1': 'SetRudderKPCommand',
+  '2': [
+    {'1': 'kp', '3': 1, '4': 1, '5': 2, '10': 'kp'},
+  ],
+};
+
+/// Descriptor for `SetRudderKPCommand`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setRudderKPCommandDescriptor = $convert.base64Decode(
+    'ChJTZXRSdWRkZXJLUENvbW1hbmQSDgoCa3AYASABKAJSAmtw');
+

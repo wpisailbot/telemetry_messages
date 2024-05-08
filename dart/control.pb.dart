@@ -475,6 +475,56 @@ class SetVFForwardMagnitudeCommand extends $pb.GeneratedMessage {
   void clearMagnitude() => clearField(1);
 }
 
+class SetRudderKPCommand extends $pb.GeneratedMessage {
+  factory SetRudderKPCommand({
+    $core.double? kp,
+  }) {
+    final $result = create();
+    if (kp != null) {
+      $result.kp = kp;
+    }
+    return $result;
+  }
+  SetRudderKPCommand._() : super();
+  factory SetRudderKPCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetRudderKPCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetRudderKPCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'kp', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SetRudderKPCommand clone() => SetRudderKPCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SetRudderKPCommand copyWith(void Function(SetRudderKPCommand) updates) => super.copyWith((message) => updates(message as SetRudderKPCommand)) as SetRudderKPCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SetRudderKPCommand create() => SetRudderKPCommand._();
+  SetRudderKPCommand createEmptyInstance() => create();
+  static $pb.PbList<SetRudderKPCommand> createRepeated() => $pb.PbList<SetRudderKPCommand>();
+  @$core.pragma('dart2js:noInline')
+  static SetRudderKPCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetRudderKPCommand>(create);
+  static SetRudderKPCommand? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get kp => $_getN(0);
+  @$pb.TagNumber(1)
+  set kp($core.double v) { $_setFloat(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasKp() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKp() => clearField(1);
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

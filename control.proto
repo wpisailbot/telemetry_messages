@@ -44,6 +44,10 @@ message SetVFForwardMagnitudeCommand {
     float magnitude = 1;
 }
 
+message SetRudderKPCommand {
+    float kp = 1;
+} 
+
 service ExecuteRudderCommandService {
     rpc ExecuteRudderCommand (RudderCommand) returns (ControlResponse);
 }
@@ -74,4 +78,8 @@ service ExecuteMarkBuoyCommandService {
 
 service ExecuteSetVFForwardMagnitudeCommandService {
     rpc ExecuteSetVFForwardMagnitudeCommand (SetVFForwardMagnitudeCommand) returns (ControlResponse);
+}
+
+service ExecuteSetRudderKPCommandService {
+    rpc ExecureSetRudderKPCommand (SetRudderKPCommand) returns (ControlResponse);
 }

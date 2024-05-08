@@ -491,3 +491,64 @@ class ExecuteSetVFForwardMagnitudeCommandService(object):
             control__pb2.ControlResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+
+class ExecuteSetRudderKPCommandServiceStub(object):
+    """Missing associated documentation comment in .proto file."""
+
+    def __init__(self, channel):
+        """Constructor.
+
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.ExecureSetRudderKPCommand = channel.unary_unary(
+                '/boat_control.ExecuteSetRudderKPCommandService/ExecureSetRudderKPCommand',
+                request_serializer=control__pb2.SetRudderKPCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                )
+
+
+class ExecuteSetRudderKPCommandServiceServicer(object):
+    """Missing associated documentation comment in .proto file."""
+
+    def ExecureSetRudderKPCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+
+def add_ExecuteSetRudderKPCommandServiceServicer_to_server(servicer, server):
+    rpc_method_handlers = {
+            'ExecureSetRudderKPCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecureSetRudderKPCommand,
+                    request_deserializer=control__pb2.SetRudderKPCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'boat_control.ExecuteSetRudderKPCommandService', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+
+
+ # This class is part of an EXPERIMENTAL API.
+class ExecuteSetRudderKPCommandService(object):
+    """Missing associated documentation comment in .proto file."""
+
+    @staticmethod
+    def ExecureSetRudderKPCommand(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/boat_control.ExecuteSetRudderKPCommandService/ExecureSetRudderKPCommand',
+            control__pb2.SetRudderKPCommand.SerializeToString,
+            control__pb2.ControlResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
