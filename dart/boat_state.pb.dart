@@ -522,6 +522,8 @@ class BoatState extends $pb.GeneratedMessage {
     $core.double? trimTabPosition,
     $core.bool? hasCurrentPathSegment,
     PathSegment? currentPathSegment_33,
+    $core.bool? hasTargetHeading,
+    $core.double? targetHeading_35,
   }) {
     final $result = create();
     if (latitude != null) {
@@ -623,6 +625,12 @@ class BoatState extends $pb.GeneratedMessage {
     if (currentPathSegment_33 != null) {
       $result.currentPathSegment_33 = currentPathSegment_33;
     }
+    if (hasTargetHeading != null) {
+      $result.hasTargetHeading = hasTargetHeading;
+    }
+    if (targetHeading_35 != null) {
+      $result.targetHeading_35 = targetHeading_35;
+    }
     return $result;
   }
   BoatState._() : super();
@@ -663,6 +671,8 @@ class BoatState extends $pb.GeneratedMessage {
     ..a<$core.double>(31, _omitFieldNames ? '' : 'trimTabPosition', $pb.PbFieldType.OF)
     ..aOB(32, _omitFieldNames ? '' : 'hasCurrentPathSegment')
     ..aOM<PathSegment>(33, _omitFieldNames ? '' : 'currentPathSegment', subBuilder: PathSegment.create)
+    ..aOB(34, _omitFieldNames ? '' : 'hasTargetHeading')
+    ..a<$core.double>(35, _omitFieldNames ? '' : 'targetHeading', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
@@ -985,6 +995,24 @@ class BoatState extends $pb.GeneratedMessage {
   void clearCurrentPathSegment_33() => clearField(33);
   @$pb.TagNumber(33)
   PathSegment ensureCurrentPathSegment_33() => $_ensure(32);
+
+  @$pb.TagNumber(34)
+  $core.bool get hasTargetHeading => $_getBF(33);
+  @$pb.TagNumber(34)
+  set hasTargetHeading($core.bool v) { $_setBool(33, v); }
+  @$pb.TagNumber(34)
+  $core.bool hasHasTargetHeading() => $_has(33);
+  @$pb.TagNumber(34)
+  void clearHasTargetHeading() => clearField(34);
+
+  @$pb.TagNumber(35)
+  $core.double get targetHeading_35 => $_getN(34);
+  @$pb.TagNumber(35)
+  set targetHeading_35($core.double v) { $_setFloat(34, v); }
+  @$pb.TagNumber(35)
+  $core.bool hasTargetHeading_35() => $_has(34);
+  @$pb.TagNumber(35)
+  void clearTargetHeading_35() => clearField(35);
 }
 
 class BoatStateRequest extends $pb.GeneratedMessage {
