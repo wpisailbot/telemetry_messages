@@ -667,3 +667,74 @@ class ExecuteSetRudderKPCommandService(object):
             timeout,
             metadata,
             _registered_method=True)
+
+
+class ExecuteSetCVHSVParametersCommandServiceStub(object):
+    """Missing associated documentation comment in .proto file."""
+
+    def __init__(self, channel):
+        """Constructor.
+
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.ExecuteSetCVHSVParametersCommand = channel.unary_unary(
+                '/boat_control.ExecuteSetCVHSVParametersCommandService/ExecuteSetCVHSVParametersCommand',
+                request_serializer=control__pb2.SetCVHSVParametersCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                _registered_method=True)
+
+
+class ExecuteSetCVHSVParametersCommandServiceServicer(object):
+    """Missing associated documentation comment in .proto file."""
+
+    def ExecuteSetCVHSVParametersCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+
+def add_ExecuteSetCVHSVParametersCommandServiceServicer_to_server(servicer, server):
+    rpc_method_handlers = {
+            'ExecuteSetCVHSVParametersCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteSetCVHSVParametersCommand,
+                    request_deserializer=control__pb2.SetCVHSVParametersCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'boat_control.ExecuteSetCVHSVParametersCommandService', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+
+
+ # This class is part of an EXPERIMENTAL API.
+class ExecuteSetCVHSVParametersCommandService(object):
+    """Missing associated documentation comment in .proto file."""
+
+    @staticmethod
+    def ExecuteSetCVHSVParametersCommand(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/boat_control.ExecuteSetCVHSVParametersCommandService/ExecuteSetCVHSVParametersCommand',
+            control__pb2.SetCVHSVParametersCommand.SerializeToString,
+            control__pb2.ControlResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

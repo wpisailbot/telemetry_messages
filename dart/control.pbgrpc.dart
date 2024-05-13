@@ -361,3 +361,41 @@ abstract class ExecuteSetRudderKPCommandServiceBase extends $grpc.Service {
 
   $async.Future<$1.ControlResponse> executeSetRudderKPCommand($grpc.ServiceCall call, $1.SetRudderKPCommand request);
 }
+@$pb.GrpcServiceName('boat_control.ExecuteSetCVHSVParametersCommandService')
+class ExecuteSetCVHSVParametersCommandServiceClient extends $grpc.Client {
+  static final _$executeSetCVHSVParametersCommand = $grpc.ClientMethod<$1.SetCVHSVParametersCommand, $1.ControlResponse>(
+      '/boat_control.ExecuteSetCVHSVParametersCommandService/ExecuteSetCVHSVParametersCommand',
+      ($1.SetCVHSVParametersCommand value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
+
+  ExecuteSetCVHSVParametersCommandServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options,
+        interceptors: interceptors);
+
+  $grpc.ResponseFuture<$1.ControlResponse> executeSetCVHSVParametersCommand($1.SetCVHSVParametersCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeSetCVHSVParametersCommand, request, options: options);
+  }
+}
+
+@$pb.GrpcServiceName('boat_control.ExecuteSetCVHSVParametersCommandService')
+abstract class ExecuteSetCVHSVParametersCommandServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_control.ExecuteSetCVHSVParametersCommandService';
+
+  ExecuteSetCVHSVParametersCommandServiceBase() {
+    $addMethod($grpc.ServiceMethod<$1.SetCVHSVParametersCommand, $1.ControlResponse>(
+        'ExecuteSetCVHSVParametersCommand',
+        executeSetCVHSVParametersCommand_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.SetCVHSVParametersCommand.fromBuffer(value),
+        ($1.ControlResponse value) => value.writeToBuffer()));
+  }
+
+  $async.Future<$1.ControlResponse> executeSetCVHSVParametersCommand_Pre($grpc.ServiceCall call, $async.Future<$1.SetCVHSVParametersCommand> request) async {
+    return executeSetCVHSVParametersCommand(call, await request);
+  }
+
+  $async.Future<$1.ControlResponse> executeSetCVHSVParametersCommand($grpc.ServiceCall call, $1.SetCVHSVParametersCommand request);
+}

@@ -158,3 +158,23 @@ const SetRudderKPCommand$json = {
 final $typed_data.Uint8List setRudderKPCommandDescriptor = $convert.base64Decode(
     'ChJTZXRSdWRkZXJLUENvbW1hbmQSDgoCa3AYASABKAJSAmtw');
 
+@$core.Deprecated('Use setCVHSVParametersCommandDescriptor instead')
+const SetCVHSVParametersCommand$json = {
+  '1': 'SetCVHSVParametersCommand',
+  '2': [
+    {'1': 'lower_h', '3': 1, '4': 1, '5': 2, '10': 'lowerH'},
+    {'1': 'lower_s', '3': 2, '4': 1, '5': 2, '10': 'lowerS'},
+    {'1': 'lower_v', '3': 3, '4': 1, '5': 2, '10': 'lowerV'},
+    {'1': 'upper_h', '3': 4, '4': 1, '5': 2, '10': 'upperH'},
+    {'1': 'upper_s', '3': 5, '4': 1, '5': 2, '10': 'upperS'},
+    {'1': 'upper_v', '3': 6, '4': 1, '5': 2, '10': 'upperV'},
+  ],
+};
+
+/// Descriptor for `SetCVHSVParametersCommand`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setCVHSVParametersCommandDescriptor = $convert.base64Decode(
+    'ChlTZXRDVkhTVlBhcmFtZXRlcnNDb21tYW5kEhcKB2xvd2VyX2gYASABKAJSBmxvd2VySBIXCg'
+    'dsb3dlcl9zGAIgASgCUgZsb3dlclMSFwoHbG93ZXJfdhgDIAEoAlIGbG93ZXJWEhcKB3VwcGVy'
+    'X2gYBCABKAJSBnVwcGVySBIXCgd1cHBlcl9zGAUgASgCUgZ1cHBlclMSFwoHdXBwZXJfdhgGIA'
+    'EoAlIGdXBwZXJW');
+

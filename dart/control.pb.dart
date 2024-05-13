@@ -525,6 +525,126 @@ class SetRudderKPCommand extends $pb.GeneratedMessage {
   void clearKp() => clearField(1);
 }
 
+class SetCVHSVParametersCommand extends $pb.GeneratedMessage {
+  factory SetCVHSVParametersCommand({
+    $core.double? lowerH,
+    $core.double? lowerS,
+    $core.double? lowerV,
+    $core.double? upperH,
+    $core.double? upperS,
+    $core.double? upperV,
+  }) {
+    final $result = create();
+    if (lowerH != null) {
+      $result.lowerH = lowerH;
+    }
+    if (lowerS != null) {
+      $result.lowerS = lowerS;
+    }
+    if (lowerV != null) {
+      $result.lowerV = lowerV;
+    }
+    if (upperH != null) {
+      $result.upperH = upperH;
+    }
+    if (upperS != null) {
+      $result.upperS = upperS;
+    }
+    if (upperV != null) {
+      $result.upperV = upperV;
+    }
+    return $result;
+  }
+  SetCVHSVParametersCommand._() : super();
+  factory SetCVHSVParametersCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetCVHSVParametersCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetCVHSVParametersCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'lowerH', $pb.PbFieldType.OF)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'lowerS', $pb.PbFieldType.OF)
+    ..a<$core.double>(3, _omitFieldNames ? '' : 'lowerV', $pb.PbFieldType.OF)
+    ..a<$core.double>(4, _omitFieldNames ? '' : 'upperH', $pb.PbFieldType.OF)
+    ..a<$core.double>(5, _omitFieldNames ? '' : 'upperS', $pb.PbFieldType.OF)
+    ..a<$core.double>(6, _omitFieldNames ? '' : 'upperV', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SetCVHSVParametersCommand clone() => SetCVHSVParametersCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SetCVHSVParametersCommand copyWith(void Function(SetCVHSVParametersCommand) updates) => super.copyWith((message) => updates(message as SetCVHSVParametersCommand)) as SetCVHSVParametersCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SetCVHSVParametersCommand create() => SetCVHSVParametersCommand._();
+  SetCVHSVParametersCommand createEmptyInstance() => create();
+  static $pb.PbList<SetCVHSVParametersCommand> createRepeated() => $pb.PbList<SetCVHSVParametersCommand>();
+  @$core.pragma('dart2js:noInline')
+  static SetCVHSVParametersCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetCVHSVParametersCommand>(create);
+  static SetCVHSVParametersCommand? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get lowerH => $_getN(0);
+  @$pb.TagNumber(1)
+  set lowerH($core.double v) { $_setFloat(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasLowerH() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLowerH() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get lowerS => $_getN(1);
+  @$pb.TagNumber(2)
+  set lowerS($core.double v) { $_setFloat(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLowerS() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLowerS() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.double get lowerV => $_getN(2);
+  @$pb.TagNumber(3)
+  set lowerV($core.double v) { $_setFloat(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasLowerV() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearLowerV() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.double get upperH => $_getN(3);
+  @$pb.TagNumber(4)
+  set upperH($core.double v) { $_setFloat(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasUpperH() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUpperH() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.double get upperS => $_getN(4);
+  @$pb.TagNumber(5)
+  set upperS($core.double v) { $_setFloat(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasUpperS() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearUpperS() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.double get upperV => $_getN(5);
+  @$pb.TagNumber(6)
+  set upperV($core.double v) { $_setFloat(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasUpperV() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearUpperV() => clearField(6);
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

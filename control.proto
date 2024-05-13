@@ -48,6 +48,15 @@ message SetRudderKPCommand {
     float kp = 1;
 } 
 
+message SetCVHSVParametersCommand {
+    float lower_h = 1;
+    float lower_s = 2;
+    float lower_v = 3;
+    float upper_h = 4;
+    float upper_s = 5;
+    float upper_v = 6;
+}
+
 service ExecuteRudderCommandService {
     rpc ExecuteRudderCommand (RudderCommand) returns (ControlResponse);
 }
@@ -82,4 +91,8 @@ service ExecuteSetVFForwardMagnitudeCommandService {
 
 service ExecuteSetRudderKPCommandService {
     rpc ExecuteSetRudderKPCommand (SetRudderKPCommand) returns (ControlResponse);
+}
+
+service ExecuteSetCVHSVParametersCommandService {
+    rpc ExecuteSetCVHSVParametersCommand (SetCVHSVParametersCommand) returns (ControlResponse);
 }
