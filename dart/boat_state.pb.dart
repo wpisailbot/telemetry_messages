@@ -524,6 +524,8 @@ class BoatState extends $pb.GeneratedMessage {
     PathSegment? currentPathSegment_33,
     $core.bool? hasTargetHeading,
     $core.double? targetHeading_35,
+    $core.bool? hasTargetTrack,
+    $core.double? targetTrack_37,
   }) {
     final $result = create();
     if (latitude != null) {
@@ -631,6 +633,12 @@ class BoatState extends $pb.GeneratedMessage {
     if (targetHeading_35 != null) {
       $result.targetHeading_35 = targetHeading_35;
     }
+    if (hasTargetTrack != null) {
+      $result.hasTargetTrack = hasTargetTrack;
+    }
+    if (targetTrack_37 != null) {
+      $result.targetTrack_37 = targetTrack_37;
+    }
     return $result;
   }
   BoatState._() : super();
@@ -673,6 +681,8 @@ class BoatState extends $pb.GeneratedMessage {
     ..aOM<PathSegment>(33, _omitFieldNames ? '' : 'currentPathSegment', subBuilder: PathSegment.create)
     ..aOB(34, _omitFieldNames ? '' : 'hasTargetHeading')
     ..a<$core.double>(35, _omitFieldNames ? '' : 'targetHeading', $pb.PbFieldType.OF)
+    ..aOB(36, _omitFieldNames ? '' : 'hasTargetTrack')
+    ..a<$core.double>(37, _omitFieldNames ? '' : 'targetTrack', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
@@ -1013,6 +1023,24 @@ class BoatState extends $pb.GeneratedMessage {
   $core.bool hasTargetHeading_35() => $_has(34);
   @$pb.TagNumber(35)
   void clearTargetHeading_35() => clearField(35);
+
+  @$pb.TagNumber(36)
+  $core.bool get hasTargetTrack => $_getBF(35);
+  @$pb.TagNumber(36)
+  set hasTargetTrack($core.bool v) { $_setBool(35, v); }
+  @$pb.TagNumber(36)
+  $core.bool hasHasTargetTrack() => $_has(35);
+  @$pb.TagNumber(36)
+  void clearHasTargetTrack() => clearField(36);
+
+  @$pb.TagNumber(37)
+  $core.double get targetTrack_37 => $_getN(36);
+  @$pb.TagNumber(37)
+  set targetTrack_37($core.double v) { $_setFloat(36, v); }
+  @$pb.TagNumber(37)
+  $core.bool hasTargetTrack_37() => $_has(36);
+  @$pb.TagNumber(37)
+  void clearTargetTrack_37() => clearField(37);
 }
 
 class BoatStateRequest extends $pb.GeneratedMessage {

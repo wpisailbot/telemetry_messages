@@ -120,6 +120,8 @@ message BoatState {
     PathSegment current_path_segment = 33;
     bool has_target_heading = 34;
     float target_heading = 35;
+    bool has_target_track = 36;
+    float target_track = 37;
 }
 
 message BoatStateRequest {

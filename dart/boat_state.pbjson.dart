@@ -255,6 +255,8 @@ const BoatState$json = {
     {'1': 'current_path_segment', '3': 33, '4': 1, '5': 11, '6': '.boat_state.PathSegment', '10': 'currentPathSegment'},
     {'1': 'has_target_heading', '3': 34, '4': 1, '5': 8, '10': 'hasTargetHeading'},
     {'1': 'target_heading', '3': 35, '4': 1, '5': 2, '10': 'targetHeading'},
+    {'1': 'has_target_track', '3': 36, '4': 1, '5': 8, '10': 'hasTargetTrack'},
+    {'1': 'target_track', '3': 37, '4': 1, '5': 2, '10': 'targetTrack'},
   ],
 };
 
@@ -291,7 +293,8 @@ final $typed_data.Uint8List boatStateDescriptor = $convert.base64Decode(
     'bnRQYXRoU2VnbWVudBJJChRjdXJyZW50X3BhdGhfc2VnbWVudBghIAEoCzIXLmJvYXRfc3RhdG'
     'UuUGF0aFNlZ21lbnRSEmN1cnJlbnRQYXRoU2VnbWVudBIsChJoYXNfdGFyZ2V0X2hlYWRpbmcY'
     'IiABKAhSEGhhc1RhcmdldEhlYWRpbmcSJQoOdGFyZ2V0X2hlYWRpbmcYIyABKAJSDXRhcmdldE'
-    'hlYWRpbmc=');
+    'hlYWRpbmcSKAoQaGFzX3RhcmdldF90cmFjaxgkIAEoCFIOaGFzVGFyZ2V0VHJhY2sSIQoMdGFy'
+    'Z2V0X3RyYWNrGCUgASgCUgt0YXJnZXRUcmFjaw==');
 
 @$core.Deprecated('Use boatStateRequestDescriptor instead')
 const BoatStateRequest$json = {
