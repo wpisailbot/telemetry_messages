@@ -361,41 +361,41 @@ abstract class ExecuteSetRudderKPCommandServiceBase extends $grpc.Service {
 
   $async.Future<$1.ControlResponse> executeSetRudderKPCommand($grpc.ServiceCall call, $1.SetRudderKPCommand request);
 }
-@$pb.GrpcServiceName('boat_control.ExecuteSetCVHSVParametersCommandService')
-class ExecuteSetCVHSVParametersCommandServiceClient extends $grpc.Client {
-  static final _$executeSetCVHSVParametersCommand = $grpc.ClientMethod<$1.SetCVHSVParametersCommand, $1.ControlResponse>(
-      '/boat_control.ExecuteSetCVHSVParametersCommandService/ExecuteSetCVHSVParametersCommand',
-      ($1.SetCVHSVParametersCommand value) => value.writeToBuffer(),
+@$pb.GrpcServiceName('boat_control.ExecuteSetCVParametersCommandService')
+class ExecuteSetCVParametersCommandServiceClient extends $grpc.Client {
+  static final _$executeSetCVParametersCommand = $grpc.ClientMethod<$1.SetCVParametersCommand, $1.ControlResponse>(
+      '/boat_control.ExecuteSetCVParametersCommandService/ExecuteSetCVParametersCommand',
+      ($1.SetCVParametersCommand value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
 
-  ExecuteSetCVHSVParametersCommandServiceClient($grpc.ClientChannel channel,
+  ExecuteSetCVParametersCommandServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
       $core.Iterable<$grpc.ClientInterceptor>? interceptors})
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$1.ControlResponse> executeSetCVHSVParametersCommand($1.SetCVHSVParametersCommand request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$executeSetCVHSVParametersCommand, request, options: options);
+  $grpc.ResponseFuture<$1.ControlResponse> executeSetCVParametersCommand($1.SetCVParametersCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeSetCVParametersCommand, request, options: options);
   }
 }
 
-@$pb.GrpcServiceName('boat_control.ExecuteSetCVHSVParametersCommandService')
-abstract class ExecuteSetCVHSVParametersCommandServiceBase extends $grpc.Service {
-  $core.String get $name => 'boat_control.ExecuteSetCVHSVParametersCommandService';
+@$pb.GrpcServiceName('boat_control.ExecuteSetCVParametersCommandService')
+abstract class ExecuteSetCVParametersCommandServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_control.ExecuteSetCVParametersCommandService';
 
-  ExecuteSetCVHSVParametersCommandServiceBase() {
-    $addMethod($grpc.ServiceMethod<$1.SetCVHSVParametersCommand, $1.ControlResponse>(
-        'ExecuteSetCVHSVParametersCommand',
-        executeSetCVHSVParametersCommand_Pre,
+  ExecuteSetCVParametersCommandServiceBase() {
+    $addMethod($grpc.ServiceMethod<$1.SetCVParametersCommand, $1.ControlResponse>(
+        'ExecuteSetCVParametersCommand',
+        executeSetCVParametersCommand_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.SetCVHSVParametersCommand.fromBuffer(value),
+        ($core.List<$core.int> value) => $1.SetCVParametersCommand.fromBuffer(value),
         ($1.ControlResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.ControlResponse> executeSetCVHSVParametersCommand_Pre($grpc.ServiceCall call, $async.Future<$1.SetCVHSVParametersCommand> request) async {
-    return executeSetCVHSVParametersCommand(call, await request);
+  $async.Future<$1.ControlResponse> executeSetCVParametersCommand_Pre($grpc.ServiceCall call, $async.Future<$1.SetCVParametersCommand> request) async {
+    return executeSetCVParametersCommand(call, await request);
   }
 
-  $async.Future<$1.ControlResponse> executeSetCVHSVParametersCommand($grpc.ServiceCall call, $1.SetCVHSVParametersCommand request);
+  $async.Future<$1.ControlResponse> executeSetCVParametersCommand($grpc.ServiceCall call, $1.SetCVParametersCommand request);
 }

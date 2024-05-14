@@ -525,14 +525,16 @@ class SetRudderKPCommand extends $pb.GeneratedMessage {
   void clearKp() => clearField(1);
 }
 
-class SetCVHSVParametersCommand extends $pb.GeneratedMessage {
-  factory SetCVHSVParametersCommand({
+class SetCVParametersCommand extends $pb.GeneratedMessage {
+  factory SetCVParametersCommand({
     $core.double? lowerH,
     $core.double? lowerS,
     $core.double? lowerV,
     $core.double? upperH,
     $core.double? upperS,
     $core.double? upperV,
+    $core.double? circularityThreshold,
+    $core.double? buoyDiameter,
   }) {
     final $result = create();
     if (lowerH != null) {
@@ -553,19 +555,27 @@ class SetCVHSVParametersCommand extends $pb.GeneratedMessage {
     if (upperV != null) {
       $result.upperV = upperV;
     }
+    if (circularityThreshold != null) {
+      $result.circularityThreshold = circularityThreshold;
+    }
+    if (buoyDiameter != null) {
+      $result.buoyDiameter = buoyDiameter;
+    }
     return $result;
   }
-  SetCVHSVParametersCommand._() : super();
-  factory SetCVHSVParametersCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetCVHSVParametersCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  SetCVParametersCommand._() : super();
+  factory SetCVParametersCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetCVParametersCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetCVHSVParametersCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetCVParametersCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
     ..a<$core.double>(1, _omitFieldNames ? '' : 'lowerH', $pb.PbFieldType.OF)
     ..a<$core.double>(2, _omitFieldNames ? '' : 'lowerS', $pb.PbFieldType.OF)
     ..a<$core.double>(3, _omitFieldNames ? '' : 'lowerV', $pb.PbFieldType.OF)
     ..a<$core.double>(4, _omitFieldNames ? '' : 'upperH', $pb.PbFieldType.OF)
     ..a<$core.double>(5, _omitFieldNames ? '' : 'upperS', $pb.PbFieldType.OF)
     ..a<$core.double>(6, _omitFieldNames ? '' : 'upperV', $pb.PbFieldType.OF)
+    ..a<$core.double>(7, _omitFieldNames ? '' : 'circularityThreshold', $pb.PbFieldType.OF)
+    ..a<$core.double>(8, _omitFieldNames ? '' : 'buoyDiameter', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
@@ -573,22 +583,22 @@ class SetCVHSVParametersCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  SetCVHSVParametersCommand clone() => SetCVHSVParametersCommand()..mergeFromMessage(this);
+  SetCVParametersCommand clone() => SetCVParametersCommand()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SetCVHSVParametersCommand copyWith(void Function(SetCVHSVParametersCommand) updates) => super.copyWith((message) => updates(message as SetCVHSVParametersCommand)) as SetCVHSVParametersCommand;
+  SetCVParametersCommand copyWith(void Function(SetCVParametersCommand) updates) => super.copyWith((message) => updates(message as SetCVParametersCommand)) as SetCVParametersCommand;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static SetCVHSVParametersCommand create() => SetCVHSVParametersCommand._();
-  SetCVHSVParametersCommand createEmptyInstance() => create();
-  static $pb.PbList<SetCVHSVParametersCommand> createRepeated() => $pb.PbList<SetCVHSVParametersCommand>();
+  static SetCVParametersCommand create() => SetCVParametersCommand._();
+  SetCVParametersCommand createEmptyInstance() => create();
+  static $pb.PbList<SetCVParametersCommand> createRepeated() => $pb.PbList<SetCVParametersCommand>();
   @$core.pragma('dart2js:noInline')
-  static SetCVHSVParametersCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetCVHSVParametersCommand>(create);
-  static SetCVHSVParametersCommand? _defaultInstance;
+  static SetCVParametersCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetCVParametersCommand>(create);
+  static SetCVParametersCommand? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.double get lowerH => $_getN(0);
@@ -643,6 +653,24 @@ class SetCVHSVParametersCommand extends $pb.GeneratedMessage {
   $core.bool hasUpperV() => $_has(5);
   @$pb.TagNumber(6)
   void clearUpperV() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.double get circularityThreshold => $_getN(6);
+  @$pb.TagNumber(7)
+  set circularityThreshold($core.double v) { $_setFloat(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasCircularityThreshold() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearCircularityThreshold() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.double get buoyDiameter => $_getN(7);
+  @$pb.TagNumber(8)
+  set buoyDiameter($core.double v) { $_setFloat(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasBuoyDiameter() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearBuoyDiameter() => clearField(8);
 }
 
 

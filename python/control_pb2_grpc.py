@@ -669,7 +669,7 @@ class ExecuteSetRudderKPCommandService(object):
             _registered_method=True)
 
 
-class ExecuteSetCVHSVParametersCommandServiceStub(object):
+class ExecuteSetCVParametersCommandServiceStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -678,42 +678,42 @@ class ExecuteSetCVHSVParametersCommandServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.ExecuteSetCVHSVParametersCommand = channel.unary_unary(
-                '/boat_control.ExecuteSetCVHSVParametersCommandService/ExecuteSetCVHSVParametersCommand',
-                request_serializer=control__pb2.SetCVHSVParametersCommand.SerializeToString,
+        self.ExecuteSetCVParametersCommand = channel.unary_unary(
+                '/boat_control.ExecuteSetCVParametersCommandService/ExecuteSetCVParametersCommand',
+                request_serializer=control__pb2.SetCVParametersCommand.SerializeToString,
                 response_deserializer=control__pb2.ControlResponse.FromString,
                 _registered_method=True)
 
 
-class ExecuteSetCVHSVParametersCommandServiceServicer(object):
+class ExecuteSetCVParametersCommandServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def ExecuteSetCVHSVParametersCommand(self, request, context):
+    def ExecuteSetCVParametersCommand(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
 
-def add_ExecuteSetCVHSVParametersCommandServiceServicer_to_server(servicer, server):
+def add_ExecuteSetCVParametersCommandServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'ExecuteSetCVHSVParametersCommand': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExecuteSetCVHSVParametersCommand,
-                    request_deserializer=control__pb2.SetCVHSVParametersCommand.FromString,
+            'ExecuteSetCVParametersCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteSetCVParametersCommand,
+                    request_deserializer=control__pb2.SetCVParametersCommand.FromString,
                     response_serializer=control__pb2.ControlResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'boat_control.ExecuteSetCVHSVParametersCommandService', rpc_method_handlers)
+            'boat_control.ExecuteSetCVParametersCommandService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class ExecuteSetCVHSVParametersCommandService(object):
+class ExecuteSetCVParametersCommandService(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def ExecuteSetCVHSVParametersCommand(request,
+    def ExecuteSetCVParametersCommand(request,
             target,
             options=(),
             channel_credentials=None,
@@ -726,8 +726,8 @@ class ExecuteSetCVHSVParametersCommandService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/boat_control.ExecuteSetCVHSVParametersCommandService/ExecuteSetCVHSVParametersCommand',
-            control__pb2.SetCVHSVParametersCommand.SerializeToString,
+            '/boat_control.ExecuteSetCVParametersCommandService/ExecuteSetCVParametersCommand',
+            control__pb2.SetCVParametersCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options,
             channel_credentials,
