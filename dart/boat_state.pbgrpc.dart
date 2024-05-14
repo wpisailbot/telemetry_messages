@@ -133,3 +133,41 @@ abstract class GetMapServiceBase extends $grpc.Service {
 
   $async.Future<$0.MapResponse> getMap($grpc.ServiceCall call, $0.MapRequest request);
 }
+@$pb.GrpcServiceName('boat_state.GetCVParametersService')
+class GetCVParametersServiceClient extends $grpc.Client {
+  static final _$getCVParameters = $grpc.ClientMethod<$0.GetCVParametersRequest, $0.CVParameters>(
+      '/boat_state.GetCVParametersService/GetCVParameters',
+      ($0.GetCVParametersRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.CVParameters.fromBuffer(value));
+
+  GetCVParametersServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options,
+        interceptors: interceptors);
+
+  $grpc.ResponseFuture<$0.CVParameters> getCVParameters($0.GetCVParametersRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getCVParameters, request, options: options);
+  }
+}
+
+@$pb.GrpcServiceName('boat_state.GetCVParametersService')
+abstract class GetCVParametersServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_state.GetCVParametersService';
+
+  GetCVParametersServiceBase() {
+    $addMethod($grpc.ServiceMethod<$0.GetCVParametersRequest, $0.CVParameters>(
+        'GetCVParameters',
+        getCVParameters_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.GetCVParametersRequest.fromBuffer(value),
+        ($0.CVParameters value) => value.writeToBuffer()));
+  }
+
+  $async.Future<$0.CVParameters> getCVParameters_Pre($grpc.ServiceCall call, $async.Future<$0.GetCVParametersRequest> request) async {
+    return getCVParameters(call, await request);
+  }
+
+  $async.Future<$0.CVParameters> getCVParameters($grpc.ServiceCall call, $0.GetCVParametersRequest request);
+}

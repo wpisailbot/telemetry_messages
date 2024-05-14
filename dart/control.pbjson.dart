@@ -162,22 +162,12 @@ final $typed_data.Uint8List setRudderKPCommandDescriptor = $convert.base64Decode
 const SetCVParametersCommand$json = {
   '1': 'SetCVParametersCommand',
   '2': [
-    {'1': 'lower_h', '3': 1, '4': 1, '5': 2, '10': 'lowerH'},
-    {'1': 'lower_s', '3': 2, '4': 1, '5': 2, '10': 'lowerS'},
-    {'1': 'lower_v', '3': 3, '4': 1, '5': 2, '10': 'lowerV'},
-    {'1': 'upper_h', '3': 4, '4': 1, '5': 2, '10': 'upperH'},
-    {'1': 'upper_s', '3': 5, '4': 1, '5': 2, '10': 'upperS'},
-    {'1': 'upper_v', '3': 6, '4': 1, '5': 2, '10': 'upperV'},
-    {'1': 'circularity_threshold', '3': 7, '4': 1, '5': 2, '10': 'circularityThreshold'},
-    {'1': 'buoy_diameter', '3': 8, '4': 1, '5': 2, '10': 'buoyDiameter'},
+    {'1': 'parameters', '3': 1, '4': 1, '5': 11, '6': '.boat_state.CVParameters', '10': 'parameters'},
   ],
 };
 
 /// Descriptor for `SetCVParametersCommand`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List setCVParametersCommandDescriptor = $convert.base64Decode(
-    'ChZTZXRDVlBhcmFtZXRlcnNDb21tYW5kEhcKB2xvd2VyX2gYASABKAJSBmxvd2VySBIXCgdsb3'
-    'dlcl9zGAIgASgCUgZsb3dlclMSFwoHbG93ZXJfdhgDIAEoAlIGbG93ZXJWEhcKB3VwcGVyX2gY'
-    'BCABKAJSBnVwcGVySBIXCgd1cHBlcl9zGAUgASgCUgZ1cHBlclMSFwoHdXBwZXJfdhgGIAEoAl'
-    'IGdXBwZXJWEjMKFWNpcmN1bGFyaXR5X3RocmVzaG9sZBgHIAEoAlIUY2lyY3VsYXJpdHlUaHJl'
-    'c2hvbGQSIwoNYnVveV9kaWFtZXRlchgIIAEoAlIMYnVveURpYW1ldGVy');
+    'ChZTZXRDVlBhcmFtZXRlcnNDb21tYW5kEjgKCnBhcmFtZXRlcnMYASABKAsyGC5ib2F0X3N0YX'
+    'RlLkNWUGFyYW1ldGVyc1IKcGFyYW1ldGVycw==');
 

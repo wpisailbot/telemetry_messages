@@ -335,3 +335,35 @@ final $typed_data.Uint8List mapResponseDescriptor = $convert.base64Decode(
     'ABKAJSBW5vcnRoEhQKBXNvdXRoGAMgASgCUgVzb3V0aBISCgRlYXN0GAQgASgCUgRlYXN0EhIK'
     'BHdlc3QYBSABKAJSBHdlc3Q=');
 
+@$core.Deprecated('Use cVParametersDescriptor instead')
+const CVParameters$json = {
+  '1': 'CVParameters',
+  '2': [
+    {'1': 'lower_h', '3': 1, '4': 1, '5': 2, '10': 'lowerH'},
+    {'1': 'lower_s', '3': 2, '4': 1, '5': 2, '10': 'lowerS'},
+    {'1': 'lower_v', '3': 3, '4': 1, '5': 2, '10': 'lowerV'},
+    {'1': 'upper_h', '3': 4, '4': 1, '5': 2, '10': 'upperH'},
+    {'1': 'upper_s', '3': 5, '4': 1, '5': 2, '10': 'upperS'},
+    {'1': 'upper_v', '3': 6, '4': 1, '5': 2, '10': 'upperV'},
+    {'1': 'circularity_threshold', '3': 7, '4': 1, '5': 2, '10': 'circularityThreshold'},
+    {'1': 'buoy_diameter', '3': 8, '4': 1, '5': 2, '10': 'buoyDiameter'},
+  ],
+};
+
+/// Descriptor for `CVParameters`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cVParametersDescriptor = $convert.base64Decode(
+    'CgxDVlBhcmFtZXRlcnMSFwoHbG93ZXJfaBgBIAEoAlIGbG93ZXJIEhcKB2xvd2VyX3MYAiABKA'
+    'JSBmxvd2VyUxIXCgdsb3dlcl92GAMgASgCUgZsb3dlclYSFwoHdXBwZXJfaBgEIAEoAlIGdXBw'
+    'ZXJIEhcKB3VwcGVyX3MYBSABKAJSBnVwcGVyUxIXCgd1cHBlcl92GAYgASgCUgZ1cHBlclYSMw'
+    'oVY2lyY3VsYXJpdHlfdGhyZXNob2xkGAcgASgCUhRjaXJjdWxhcml0eVRocmVzaG9sZBIjCg1i'
+    'dW95X2RpYW1ldGVyGAggASgCUgxidW95RGlhbWV0ZXI=');
+
+@$core.Deprecated('Use getCVParametersRequestDescriptor instead')
+const GetCVParametersRequest$json = {
+  '1': 'GetCVParametersRequest',
+};
+
+/// Descriptor for `GetCVParametersRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getCVParametersRequestDescriptor = $convert.base64Decode(
+    'ChZHZXRDVlBhcmFtZXRlcnNSZXF1ZXN0');
+

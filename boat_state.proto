@@ -149,6 +149,25 @@ message MapResponse {
     float west = 5;
 }
 
+message CVParameters {
+    float lower_h = 1;
+    float lower_s = 2;
+    float lower_v = 3;
+    float upper_h = 4;
+    float upper_s = 5;
+    float upper_v = 6;
+    float circularity_threshold = 7;
+    float buoy_diameter = 8;
+}
+
+message GetCVParametersRequest {
+
+}
+
 service GetMapService {
     rpc GetMap (MapRequest) returns (MapResponse) {}
+}
+
+service GetCVParametersService {
+    rpc GetCVParameters (GetCVParametersRequest) returns (CVParameters) {}
 }

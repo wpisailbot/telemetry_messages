@@ -49,14 +49,7 @@ message SetRudderKPCommand {
 } 
 
 message SetCVParametersCommand {
-    float lower_h = 1;
-    float lower_s = 2;
-    float lower_v = 3;
-    float upper_h = 4;
-    float upper_s = 5;
-    float upper_v = 6;
-    float circularity_threshold = 7;
-    float buoy_diameter = 8;
+    boat_state.CVParameters parameters = 1;
 }
 
 service ExecuteRudderCommandService {
