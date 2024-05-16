@@ -525,6 +525,56 @@ class SetRudderKPCommand extends $pb.GeneratedMessage {
   void clearKp() => clearField(1);
 }
 
+class SetRudderKDCommand extends $pb.GeneratedMessage {
+  factory SetRudderKDCommand({
+    $core.double? kd,
+  }) {
+    final $result = create();
+    if (kd != null) {
+      $result.kd = kd;
+    }
+    return $result;
+  }
+  SetRudderKDCommand._() : super();
+  factory SetRudderKDCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetRudderKDCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetRudderKDCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'kd', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SetRudderKDCommand clone() => SetRudderKDCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SetRudderKDCommand copyWith(void Function(SetRudderKDCommand) updates) => super.copyWith((message) => updates(message as SetRudderKDCommand)) as SetRudderKDCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SetRudderKDCommand create() => SetRudderKDCommand._();
+  SetRudderKDCommand createEmptyInstance() => create();
+  static $pb.PbList<SetRudderKDCommand> createRepeated() => $pb.PbList<SetRudderKDCommand>();
+  @$core.pragma('dart2js:noInline')
+  static SetRudderKDCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetRudderKDCommand>(create);
+  static SetRudderKDCommand? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get kd => $_getN(0);
+  @$pb.TagNumber(1)
+  set kd($core.double v) { $_setFloat(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasKd() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKd() => clearField(1);
+}
+
 class SetCVParametersCommand extends $pb.GeneratedMessage {
   factory SetCVParametersCommand({
     $0.CVParameters? parameters,

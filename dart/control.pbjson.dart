@@ -158,6 +158,18 @@ const SetRudderKPCommand$json = {
 final $typed_data.Uint8List setRudderKPCommandDescriptor = $convert.base64Decode(
     'ChJTZXRSdWRkZXJLUENvbW1hbmQSDgoCa3AYASABKAJSAmtw');
 
+@$core.Deprecated('Use setRudderKDCommandDescriptor instead')
+const SetRudderKDCommand$json = {
+  '1': 'SetRudderKDCommand',
+  '2': [
+    {'1': 'kd', '3': 1, '4': 1, '5': 2, '10': 'kd'},
+  ],
+};
+
+/// Descriptor for `SetRudderKDCommand`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setRudderKDCommandDescriptor = $convert.base64Decode(
+    'ChJTZXRSdWRkZXJLRENvbW1hbmQSDgoCa2QYASABKAJSAmtk');
+
 @$core.Deprecated('Use setCVParametersCommandDescriptor instead')
 const SetCVParametersCommand$json = {
   '1': 'SetCVParametersCommand',

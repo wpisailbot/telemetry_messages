@@ -48,6 +48,10 @@ message SetRudderKPCommand {
     float kp = 1;
 } 
 
+message SetRudderKDCommand {
+    float kd = 1;
+} 
+
 message SetCVParametersCommand {
     boat_state.CVParameters parameters = 1;
 }
@@ -86,6 +90,10 @@ service ExecuteSetVFForwardMagnitudeCommandService {
 
 service ExecuteSetRudderKPCommandService {
     rpc ExecuteSetRudderKPCommand (SetRudderKPCommand) returns (ControlResponse);
+}
+
+service ExecuteSetRudderKDCommandService {
+    rpc ExecuteSetRudderKDCommand (SetRudderKDCommand) returns (ControlResponse);
 }
 
 service ExecuteSetCVParametersCommandService {

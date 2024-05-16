@@ -361,6 +361,44 @@ abstract class ExecuteSetRudderKPCommandServiceBase extends $grpc.Service {
 
   $async.Future<$1.ControlResponse> executeSetRudderKPCommand($grpc.ServiceCall call, $1.SetRudderKPCommand request);
 }
+@$pb.GrpcServiceName('boat_control.ExecuteSetRudderKDCommandService')
+class ExecuteSetRudderKDCommandServiceClient extends $grpc.Client {
+  static final _$executeSetRudderKDCommand = $grpc.ClientMethod<$1.SetRudderKDCommand, $1.ControlResponse>(
+      '/boat_control.ExecuteSetRudderKDCommandService/ExecuteSetRudderKDCommand',
+      ($1.SetRudderKDCommand value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
+
+  ExecuteSetRudderKDCommandServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options,
+        interceptors: interceptors);
+
+  $grpc.ResponseFuture<$1.ControlResponse> executeSetRudderKDCommand($1.SetRudderKDCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeSetRudderKDCommand, request, options: options);
+  }
+}
+
+@$pb.GrpcServiceName('boat_control.ExecuteSetRudderKDCommandService')
+abstract class ExecuteSetRudderKDCommandServiceBase extends $grpc.Service {
+  $core.String get $name => 'boat_control.ExecuteSetRudderKDCommandService';
+
+  ExecuteSetRudderKDCommandServiceBase() {
+    $addMethod($grpc.ServiceMethod<$1.SetRudderKDCommand, $1.ControlResponse>(
+        'ExecuteSetRudderKDCommand',
+        executeSetRudderKDCommand_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.SetRudderKDCommand.fromBuffer(value),
+        ($1.ControlResponse value) => value.writeToBuffer()));
+  }
+
+  $async.Future<$1.ControlResponse> executeSetRudderKDCommand_Pre($grpc.ServiceCall call, $async.Future<$1.SetRudderKDCommand> request) async {
+    return executeSetRudderKDCommand(call, await request);
+  }
+
+  $async.Future<$1.ControlResponse> executeSetRudderKDCommand($grpc.ServiceCall call, $1.SetRudderKDCommand request);
+}
 @$pb.GrpcServiceName('boat_control.ExecuteSetCVParametersCommandService')
 class ExecuteSetCVParametersCommandServiceClient extends $grpc.Client {
   static final _$executeSetCVParametersCommand = $grpc.ClientMethod<$1.SetCVParametersCommand, $1.ControlResponse>(
