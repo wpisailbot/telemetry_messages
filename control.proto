@@ -44,58 +44,31 @@ message SetVFForwardMagnitudeCommand {
     float magnitude = 1;
 }
 
-message SetRudderKPCommand {
-    float kp = 1;
+message SetRudderAdjustmentScaleCommand {
+    float scale = 1;
 } 
 
-message SetRudderKDCommand {
-    float kd = 1;
+message SetRudderOvershootBiasCommand {
+    float bias = 1;
 } 
 
 message SetCVParametersCommand {
     boat_state.CVParameters parameters = 1;
 }
 
-service ExecuteRudderCommandService {
+service ControlCommandService {
     rpc ExecuteRudderCommand (RudderCommand) returns (ControlResponse);
-}
-
-service ExecuteTrimTabCommandService {
     rpc ExecuteTrimTabCommand (TrimTabCommand) returns (ControlResponse);
-}
-
-service ExecuteBallastCommandService {
     rpc ExecuteBallastCommand (BallastCommand) returns (ControlResponse);
-}
-
-service ExecuteAutonomousModeCommandService {
     rpc ExecuteAutonomousModeCommand (AutonomousModeCommand) returns (ControlResponse);
-}
-
-service ExecuteSetWaypointsCommandService {
     rpc ExecuteSetWaypointsCommand (SetWaypointsCommand) returns (ControlResponse);
-}
-
-service ExecuteAddWaypointCommandService {
     rpc ExecuteAddWaypointCommand (AddWaypointCommand) returns (ControlResponse);
-}
-
-service ExecuteMarkBuoyCommandService {
     rpc ExecuteMarkBuoyCommand (MarkBuoyCommand) returns (ControlResponse);
 }
 
-service ExecuteSetVFForwardMagnitudeCommandService {
+service SetParameterService {
     rpc ExecuteSetVFForwardMagnitudeCommand (SetVFForwardMagnitudeCommand) returns (ControlResponse);
-}
-
-service ExecuteSetRudderKPCommandService {
-    rpc ExecuteSetRudderKPCommand (SetRudderKPCommand) returns (ControlResponse);
-}
-
-service ExecuteSetRudderKDCommandService {
-    rpc ExecuteSetRudderKDCommand (SetRudderKDCommand) returns (ControlResponse);
-}
-
-service ExecuteSetCVParametersCommandService {
+    rpc ExecuteSetRudderAdjustmentScaleCommand (SetRudderAdjustmentScaleCommand) returns (ControlResponse);
+    rpc ExecuteSetRudderOvershootBiasCommand (SetRudderOvershootBiasCommand) returns (ControlResponse);
     rpc ExecuteSetCVParametersCommand (SetCVParametersCommand) returns (ControlResponse);
 }

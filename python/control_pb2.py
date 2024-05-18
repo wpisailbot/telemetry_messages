@@ -15,15 +15,15 @@ _sym_db = _symbol_database.Default()
 import boat_state_pb2 as boat__state__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rcontrol.proto\x12\x0c\x62oat_control\x1a\x10\x62oat_state.proto\"Q\n\x0f\x43ontrolResponse\x12>\n\x10\x65xecution_status\x18\x01 \x01(\x0e\x32$.boat_control.ControlExecutionStatus\"-\n\rRudderCommand\x12\x1c\n\x14rudder_control_value\x18\x01 \x01(\x02\"/\n\x0eTrimTabCommand\x12\x1d\n\x15trimtab_control_value\x18\x01 \x01(\x02\"/\n\x0e\x42\x61llastCommand\x12\x1d\n\x15\x62\x61llast_control_value\x18\x01 \x01(\x02\"L\n\x15\x41utonomousModeCommand\x12\x33\n\x0f\x61utonomous_mode\x18\x05 \x01(\x0e\x32\x1a.boat_state.AutonomousMode\"F\n\x13SetWaypointsCommand\x12/\n\rnew_waypoints\x18\x01 \x01(\x0b\x32\x18.boat_state.WaypointPath\"@\n\x12\x41\x64\x64WaypointCommand\x12*\n\x0cnew_waypoint\x18\x01 \x01(\x0b\x32\x14.boat_state.Waypoint\"6\n\x0fMarkBuoyCommand\x12#\n\x08position\x18\x01 \x01(\x0b\x32\x11.boat_state.Point\"1\n\x1cSetVFForwardMagnitudeCommand\x12\x11\n\tmagnitude\x18\x01 \x01(\x02\" \n\x12SetRudderKPCommand\x12\n\n\x02kp\x18\x01 \x01(\x02\" \n\x12SetRudderKDCommand\x12\n\n\x02kd\x18\x01 \x01(\x02\"F\n\x16SetCVParametersCommand\x12,\n\nparameters\x18\x01 \x01(\x0b\x32\x18.boat_state.CVParameters*u\n\x16\x43ontrolExecutionStatus\x12\x1f\n\x1b\x43ONTROL_EXECUTION_UNDEFINED\x10\x00\x12\x1d\n\x19\x43ONTROL_EXECUTION_SUCCESS\x10\x01\x12\x1b\n\x17\x43ONTROL_EXECUTION_ERROR\x10\x02\x32q\n\x1b\x45xecuteRudderCommandService\x12R\n\x14\x45xecuteRudderCommand\x12\x1b.boat_control.RudderCommand\x1a\x1d.boat_control.ControlResponse2t\n\x1c\x45xecuteTrimTabCommandService\x12T\n\x15\x45xecuteTrimTabCommand\x12\x1c.boat_control.TrimTabCommand\x1a\x1d.boat_control.ControlResponse2t\n\x1c\x45xecuteBallastCommandService\x12T\n\x15\x45xecuteBallastCommand\x12\x1c.boat_control.BallastCommand\x1a\x1d.boat_control.ControlResponse2\x89\x01\n#ExecuteAutonomousModeCommandService\x12\x62\n\x1c\x45xecuteAutonomousModeCommand\x12#.boat_control.AutonomousModeCommand\x1a\x1d.boat_control.ControlResponse2\x83\x01\n!ExecuteSetWaypointsCommandService\x12^\n\x1a\x45xecuteSetWaypointsCommand\x12!.boat_control.SetWaypointsCommand\x1a\x1d.boat_control.ControlResponse2\x80\x01\n ExecuteAddWaypointCommandService\x12\\\n\x19\x45xecuteAddWaypointCommand\x12 .boat_control.AddWaypointCommand\x1a\x1d.boat_control.ControlResponse2w\n\x1d\x45xecuteMarkBuoyCommandService\x12V\n\x16\x45xecuteMarkBuoyCommand\x12\x1d.boat_control.MarkBuoyCommand\x1a\x1d.boat_control.ControlResponse2\x9e\x01\n*ExecuteSetVFForwardMagnitudeCommandService\x12p\n#ExecuteSetVFForwardMagnitudeCommand\x12*.boat_control.SetVFForwardMagnitudeCommand\x1a\x1d.boat_control.ControlResponse2\x80\x01\n ExecuteSetRudderKPCommandService\x12\\\n\x19\x45xecuteSetRudderKPCommand\x12 .boat_control.SetRudderKPCommand\x1a\x1d.boat_control.ControlResponse2\x80\x01\n ExecuteSetRudderKDCommandService\x12\\\n\x19\x45xecuteSetRudderKDCommand\x12 .boat_control.SetRudderKDCommand\x1a\x1d.boat_control.ControlResponse2\x8c\x01\n$ExecuteSetCVParametersCommandService\x12\x64\n\x1d\x45xecuteSetCVParametersCommand\x12$.boat_control.SetCVParametersCommand\x1a\x1d.boat_control.ControlResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rcontrol.proto\x12\x0c\x62oat_control\x1a\x10\x62oat_state.proto\"Q\n\x0f\x43ontrolResponse\x12>\n\x10\x65xecution_status\x18\x01 \x01(\x0e\x32$.boat_control.ControlExecutionStatus\"-\n\rRudderCommand\x12\x1c\n\x14rudder_control_value\x18\x01 \x01(\x02\"/\n\x0eTrimTabCommand\x12\x1d\n\x15trimtab_control_value\x18\x01 \x01(\x02\"/\n\x0e\x42\x61llastCommand\x12\x1d\n\x15\x62\x61llast_control_value\x18\x01 \x01(\x02\"L\n\x15\x41utonomousModeCommand\x12\x33\n\x0f\x61utonomous_mode\x18\x05 \x01(\x0e\x32\x1a.boat_state.AutonomousMode\"F\n\x13SetWaypointsCommand\x12/\n\rnew_waypoints\x18\x01 \x01(\x0b\x32\x18.boat_state.WaypointPath\"@\n\x12\x41\x64\x64WaypointCommand\x12*\n\x0cnew_waypoint\x18\x01 \x01(\x0b\x32\x14.boat_state.Waypoint\"6\n\x0fMarkBuoyCommand\x12#\n\x08position\x18\x01 \x01(\x0b\x32\x11.boat_state.Point\"1\n\x1cSetVFForwardMagnitudeCommand\x12\x11\n\tmagnitude\x18\x01 \x01(\x02\"0\n\x1fSetRudderAdjustmentScaleCommand\x12\r\n\x05scale\x18\x01 \x01(\x02\"-\n\x1dSetRudderOvershootBiasCommand\x12\x0c\n\x04\x62ias\x18\x01 \x01(\x02\"F\n\x16SetCVParametersCommand\x12,\n\nparameters\x18\x01 \x01(\x0b\x32\x18.boat_state.CVParameters*u\n\x16\x43ontrolExecutionStatus\x12\x1f\n\x1b\x43ONTROL_EXECUTION_UNDEFINED\x10\x00\x12\x1d\n\x19\x43ONTROL_EXECUTION_SUCCESS\x10\x01\x12\x1b\n\x17\x43ONTROL_EXECUTION_ERROR\x10\x02\x32\x91\x05\n\x15\x43ontrolCommandService\x12R\n\x14\x45xecuteRudderCommand\x12\x1b.boat_control.RudderCommand\x1a\x1d.boat_control.ControlResponse\x12T\n\x15\x45xecuteTrimTabCommand\x12\x1c.boat_control.TrimTabCommand\x1a\x1d.boat_control.ControlResponse\x12T\n\x15\x45xecuteBallastCommand\x12\x1c.boat_control.BallastCommand\x1a\x1d.boat_control.ControlResponse\x12\x62\n\x1c\x45xecuteAutonomousModeCommand\x12#.boat_control.AutonomousModeCommand\x1a\x1d.boat_control.ControlResponse\x12^\n\x1a\x45xecuteSetWaypointsCommand\x12!.boat_control.SetWaypointsCommand\x1a\x1d.boat_control.ControlResponse\x12\\\n\x19\x45xecuteAddWaypointCommand\x12 .boat_control.AddWaypointCommand\x1a\x1d.boat_control.ControlResponse\x12V\n\x16\x45xecuteMarkBuoyCommand\x12\x1d.boat_control.MarkBuoyCommand\x1a\x1d.boat_control.ControlResponse2\xd9\x03\n\x13SetParameterService\x12p\n#ExecuteSetVFForwardMagnitudeCommand\x12*.boat_control.SetVFForwardMagnitudeCommand\x1a\x1d.boat_control.ControlResponse\x12v\n&ExecuteSetRudderAdjustmentScaleCommand\x12-.boat_control.SetRudderAdjustmentScaleCommand\x1a\x1d.boat_control.ControlResponse\x12r\n$ExecuteSetRudderOvershootBiasCommand\x12+.boat_control.SetRudderOvershootBiasCommand\x1a\x1d.boat_control.ControlResponse\x12\x64\n\x1d\x45xecuteSetCVParametersCommand\x12$.boat_control.SetCVParametersCommand\x1a\x1d.boat_control.ControlResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'control_pb2', _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
   DESCRIPTOR._loaded_options = None
-  _globals['_CONTROLEXECUTIONSTATUS']._serialized_start=740
-  _globals['_CONTROLEXECUTIONSTATUS']._serialized_end=857
+  _globals['_CONTROLEXECUTIONSTATUS']._serialized_start=769
+  _globals['_CONTROLEXECUTIONSTATUS']._serialized_end=886
   _globals['_CONTROLRESPONSE']._serialized_start=49
   _globals['_CONTROLRESPONSE']._serialized_end=130
   _globals['_RUDDERCOMMAND']._serialized_start=132
@@ -42,32 +42,14 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_MARKBUOYCOMMAND']._serialized_end=547
   _globals['_SETVFFORWARDMAGNITUDECOMMAND']._serialized_start=549
   _globals['_SETVFFORWARDMAGNITUDECOMMAND']._serialized_end=598
-  _globals['_SETRUDDERKPCOMMAND']._serialized_start=600
-  _globals['_SETRUDDERKPCOMMAND']._serialized_end=632
-  _globals['_SETRUDDERKDCOMMAND']._serialized_start=634
-  _globals['_SETRUDDERKDCOMMAND']._serialized_end=666
-  _globals['_SETCVPARAMETERSCOMMAND']._serialized_start=668
-  _globals['_SETCVPARAMETERSCOMMAND']._serialized_end=738
-  _globals['_EXECUTERUDDERCOMMANDSERVICE']._serialized_start=859
-  _globals['_EXECUTERUDDERCOMMANDSERVICE']._serialized_end=972
-  _globals['_EXECUTETRIMTABCOMMANDSERVICE']._serialized_start=974
-  _globals['_EXECUTETRIMTABCOMMANDSERVICE']._serialized_end=1090
-  _globals['_EXECUTEBALLASTCOMMANDSERVICE']._serialized_start=1092
-  _globals['_EXECUTEBALLASTCOMMANDSERVICE']._serialized_end=1208
-  _globals['_EXECUTEAUTONOMOUSMODECOMMANDSERVICE']._serialized_start=1211
-  _globals['_EXECUTEAUTONOMOUSMODECOMMANDSERVICE']._serialized_end=1348
-  _globals['_EXECUTESETWAYPOINTSCOMMANDSERVICE']._serialized_start=1351
-  _globals['_EXECUTESETWAYPOINTSCOMMANDSERVICE']._serialized_end=1482
-  _globals['_EXECUTEADDWAYPOINTCOMMANDSERVICE']._serialized_start=1485
-  _globals['_EXECUTEADDWAYPOINTCOMMANDSERVICE']._serialized_end=1613
-  _globals['_EXECUTEMARKBUOYCOMMANDSERVICE']._serialized_start=1615
-  _globals['_EXECUTEMARKBUOYCOMMANDSERVICE']._serialized_end=1734
-  _globals['_EXECUTESETVFFORWARDMAGNITUDECOMMANDSERVICE']._serialized_start=1737
-  _globals['_EXECUTESETVFFORWARDMAGNITUDECOMMANDSERVICE']._serialized_end=1895
-  _globals['_EXECUTESETRUDDERKPCOMMANDSERVICE']._serialized_start=1898
-  _globals['_EXECUTESETRUDDERKPCOMMANDSERVICE']._serialized_end=2026
-  _globals['_EXECUTESETRUDDERKDCOMMANDSERVICE']._serialized_start=2029
-  _globals['_EXECUTESETRUDDERKDCOMMANDSERVICE']._serialized_end=2157
-  _globals['_EXECUTESETCVPARAMETERSCOMMANDSERVICE']._serialized_start=2160
-  _globals['_EXECUTESETCVPARAMETERSCOMMANDSERVICE']._serialized_end=2300
+  _globals['_SETRUDDERADJUSTMENTSCALECOMMAND']._serialized_start=600
+  _globals['_SETRUDDERADJUSTMENTSCALECOMMAND']._serialized_end=648
+  _globals['_SETRUDDEROVERSHOOTBIASCOMMAND']._serialized_start=650
+  _globals['_SETRUDDEROVERSHOOTBIASCOMMAND']._serialized_end=695
+  _globals['_SETCVPARAMETERSCOMMAND']._serialized_start=697
+  _globals['_SETCVPARAMETERSCOMMAND']._serialized_end=767
+  _globals['_CONTROLCOMMANDSERVICE']._serialized_start=889
+  _globals['_CONTROLCOMMANDSERVICE']._serialized_end=1546
+  _globals['_SETPARAMETERSERVICE']._serialized_start=1549
+  _globals['_SETPARAMETERSERVICE']._serialized_end=2022
 # @@protoc_insertion_point(module_scope)

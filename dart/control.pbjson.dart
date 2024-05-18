@@ -146,29 +146,30 @@ final $typed_data.Uint8List setVFForwardMagnitudeCommandDescriptor = $convert.ba
     'ChxTZXRWRkZvcndhcmRNYWduaXR1ZGVDb21tYW5kEhwKCW1hZ25pdHVkZRgBIAEoAlIJbWFnbm'
     'l0dWRl');
 
-@$core.Deprecated('Use setRudderKPCommandDescriptor instead')
-const SetRudderKPCommand$json = {
-  '1': 'SetRudderKPCommand',
+@$core.Deprecated('Use setRudderAdjustmentScaleCommandDescriptor instead')
+const SetRudderAdjustmentScaleCommand$json = {
+  '1': 'SetRudderAdjustmentScaleCommand',
   '2': [
-    {'1': 'kp', '3': 1, '4': 1, '5': 2, '10': 'kp'},
+    {'1': 'scale', '3': 1, '4': 1, '5': 2, '10': 'scale'},
   ],
 };
 
-/// Descriptor for `SetRudderKPCommand`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List setRudderKPCommandDescriptor = $convert.base64Decode(
-    'ChJTZXRSdWRkZXJLUENvbW1hbmQSDgoCa3AYASABKAJSAmtw');
+/// Descriptor for `SetRudderAdjustmentScaleCommand`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setRudderAdjustmentScaleCommandDescriptor = $convert.base64Decode(
+    'Ch9TZXRSdWRkZXJBZGp1c3RtZW50U2NhbGVDb21tYW5kEhQKBXNjYWxlGAEgASgCUgVzY2FsZQ'
+    '==');
 
-@$core.Deprecated('Use setRudderKDCommandDescriptor instead')
-const SetRudderKDCommand$json = {
-  '1': 'SetRudderKDCommand',
+@$core.Deprecated('Use setRudderOvershootBiasCommandDescriptor instead')
+const SetRudderOvershootBiasCommand$json = {
+  '1': 'SetRudderOvershootBiasCommand',
   '2': [
-    {'1': 'kd', '3': 1, '4': 1, '5': 2, '10': 'kd'},
+    {'1': 'bias', '3': 1, '4': 1, '5': 2, '10': 'bias'},
   ],
 };
 
-/// Descriptor for `SetRudderKDCommand`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List setRudderKDCommandDescriptor = $convert.base64Decode(
-    'ChJTZXRSdWRkZXJLRENvbW1hbmQSDgoCa2QYASABKAJSAmtk');
+/// Descriptor for `SetRudderOvershootBiasCommand`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setRudderOvershootBiasCommandDescriptor = $convert.base64Decode(
+    'Ch1TZXRSdWRkZXJPdmVyc2hvb3RCaWFzQ29tbWFuZBISCgRiaWFzGAEgASgCUgRiaWFz');
 
 @$core.Deprecated('Use setCVParametersCommandDescriptor instead')
 const SetCVParametersCommand$json = {

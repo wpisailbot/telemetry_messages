@@ -475,22 +475,22 @@ class SetVFForwardMagnitudeCommand extends $pb.GeneratedMessage {
   void clearMagnitude() => clearField(1);
 }
 
-class SetRudderKPCommand extends $pb.GeneratedMessage {
-  factory SetRudderKPCommand({
-    $core.double? kp,
+class SetRudderAdjustmentScaleCommand extends $pb.GeneratedMessage {
+  factory SetRudderAdjustmentScaleCommand({
+    $core.double? scale,
   }) {
     final $result = create();
-    if (kp != null) {
-      $result.kp = kp;
+    if (scale != null) {
+      $result.scale = scale;
     }
     return $result;
   }
-  SetRudderKPCommand._() : super();
-  factory SetRudderKPCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetRudderKPCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  SetRudderAdjustmentScaleCommand._() : super();
+  factory SetRudderAdjustmentScaleCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetRudderAdjustmentScaleCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetRudderKPCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'kp', $pb.PbFieldType.OF)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetRudderAdjustmentScaleCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'scale', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
@@ -498,49 +498,49 @@ class SetRudderKPCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  SetRudderKPCommand clone() => SetRudderKPCommand()..mergeFromMessage(this);
+  SetRudderAdjustmentScaleCommand clone() => SetRudderAdjustmentScaleCommand()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SetRudderKPCommand copyWith(void Function(SetRudderKPCommand) updates) => super.copyWith((message) => updates(message as SetRudderKPCommand)) as SetRudderKPCommand;
+  SetRudderAdjustmentScaleCommand copyWith(void Function(SetRudderAdjustmentScaleCommand) updates) => super.copyWith((message) => updates(message as SetRudderAdjustmentScaleCommand)) as SetRudderAdjustmentScaleCommand;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static SetRudderKPCommand create() => SetRudderKPCommand._();
-  SetRudderKPCommand createEmptyInstance() => create();
-  static $pb.PbList<SetRudderKPCommand> createRepeated() => $pb.PbList<SetRudderKPCommand>();
+  static SetRudderAdjustmentScaleCommand create() => SetRudderAdjustmentScaleCommand._();
+  SetRudderAdjustmentScaleCommand createEmptyInstance() => create();
+  static $pb.PbList<SetRudderAdjustmentScaleCommand> createRepeated() => $pb.PbList<SetRudderAdjustmentScaleCommand>();
   @$core.pragma('dart2js:noInline')
-  static SetRudderKPCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetRudderKPCommand>(create);
-  static SetRudderKPCommand? _defaultInstance;
+  static SetRudderAdjustmentScaleCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetRudderAdjustmentScaleCommand>(create);
+  static SetRudderAdjustmentScaleCommand? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.double get kp => $_getN(0);
+  $core.double get scale => $_getN(0);
   @$pb.TagNumber(1)
-  set kp($core.double v) { $_setFloat(0, v); }
+  set scale($core.double v) { $_setFloat(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasKp() => $_has(0);
+  $core.bool hasScale() => $_has(0);
   @$pb.TagNumber(1)
-  void clearKp() => clearField(1);
+  void clearScale() => clearField(1);
 }
 
-class SetRudderKDCommand extends $pb.GeneratedMessage {
-  factory SetRudderKDCommand({
-    $core.double? kd,
+class SetRudderOvershootBiasCommand extends $pb.GeneratedMessage {
+  factory SetRudderOvershootBiasCommand({
+    $core.double? bias,
   }) {
     final $result = create();
-    if (kd != null) {
-      $result.kd = kd;
+    if (bias != null) {
+      $result.bias = bias;
     }
     return $result;
   }
-  SetRudderKDCommand._() : super();
-  factory SetRudderKDCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetRudderKDCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  SetRudderOvershootBiasCommand._() : super();
+  factory SetRudderOvershootBiasCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetRudderOvershootBiasCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetRudderKDCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'kd', $pb.PbFieldType.OF)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetRudderOvershootBiasCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'bias', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
@@ -548,31 +548,31 @@ class SetRudderKDCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  SetRudderKDCommand clone() => SetRudderKDCommand()..mergeFromMessage(this);
+  SetRudderOvershootBiasCommand clone() => SetRudderOvershootBiasCommand()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SetRudderKDCommand copyWith(void Function(SetRudderKDCommand) updates) => super.copyWith((message) => updates(message as SetRudderKDCommand)) as SetRudderKDCommand;
+  SetRudderOvershootBiasCommand copyWith(void Function(SetRudderOvershootBiasCommand) updates) => super.copyWith((message) => updates(message as SetRudderOvershootBiasCommand)) as SetRudderOvershootBiasCommand;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static SetRudderKDCommand create() => SetRudderKDCommand._();
-  SetRudderKDCommand createEmptyInstance() => create();
-  static $pb.PbList<SetRudderKDCommand> createRepeated() => $pb.PbList<SetRudderKDCommand>();
+  static SetRudderOvershootBiasCommand create() => SetRudderOvershootBiasCommand._();
+  SetRudderOvershootBiasCommand createEmptyInstance() => create();
+  static $pb.PbList<SetRudderOvershootBiasCommand> createRepeated() => $pb.PbList<SetRudderOvershootBiasCommand>();
   @$core.pragma('dart2js:noInline')
-  static SetRudderKDCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetRudderKDCommand>(create);
-  static SetRudderKDCommand? _defaultInstance;
+  static SetRudderOvershootBiasCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetRudderOvershootBiasCommand>(create);
+  static SetRudderOvershootBiasCommand? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.double get kd => $_getN(0);
+  $core.double get bias => $_getN(0);
   @$pb.TagNumber(1)
-  set kd($core.double v) { $_setFloat(0, v); }
+  set bias($core.double v) { $_setFloat(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasKd() => $_has(0);
+  $core.bool hasBias() => $_has(0);
   @$pb.TagNumber(1)
-  void clearKd() => clearField(1);
+  void clearBias() => clearField(1);
 }
 
 class SetCVParametersCommand extends $pb.GeneratedMessage {

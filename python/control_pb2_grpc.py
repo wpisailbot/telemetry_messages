@@ -30,7 +30,7 @@ if _version_not_supported:
     )
 
 
-class ExecuteRudderCommandServiceStub(object):
+class ControlCommandServiceStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -40,13 +40,43 @@ class ExecuteRudderCommandServiceStub(object):
             channel: A grpc.Channel.
         """
         self.ExecuteRudderCommand = channel.unary_unary(
-                '/boat_control.ExecuteRudderCommandService/ExecuteRudderCommand',
+                '/boat_control.ControlCommandService/ExecuteRudderCommand',
                 request_serializer=control__pb2.RudderCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                _registered_method=True)
+        self.ExecuteTrimTabCommand = channel.unary_unary(
+                '/boat_control.ControlCommandService/ExecuteTrimTabCommand',
+                request_serializer=control__pb2.TrimTabCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                _registered_method=True)
+        self.ExecuteBallastCommand = channel.unary_unary(
+                '/boat_control.ControlCommandService/ExecuteBallastCommand',
+                request_serializer=control__pb2.BallastCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                _registered_method=True)
+        self.ExecuteAutonomousModeCommand = channel.unary_unary(
+                '/boat_control.ControlCommandService/ExecuteAutonomousModeCommand',
+                request_serializer=control__pb2.AutonomousModeCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                _registered_method=True)
+        self.ExecuteSetWaypointsCommand = channel.unary_unary(
+                '/boat_control.ControlCommandService/ExecuteSetWaypointsCommand',
+                request_serializer=control__pb2.SetWaypointsCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                _registered_method=True)
+        self.ExecuteAddWaypointCommand = channel.unary_unary(
+                '/boat_control.ControlCommandService/ExecuteAddWaypointCommand',
+                request_serializer=control__pb2.AddWaypointCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                _registered_method=True)
+        self.ExecuteMarkBuoyCommand = channel.unary_unary(
+                '/boat_control.ControlCommandService/ExecuteMarkBuoyCommand',
+                request_serializer=control__pb2.MarkBuoyCommand.SerializeToString,
                 response_deserializer=control__pb2.ControlResponse.FromString,
                 _registered_method=True)
 
 
-class ExecuteRudderCommandServiceServicer(object):
+class ControlCommandServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def ExecuteRudderCommand(self, request, context):
@@ -55,22 +85,88 @@ class ExecuteRudderCommandServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def ExecuteTrimTabCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-def add_ExecuteRudderCommandServiceServicer_to_server(servicer, server):
+    def ExecuteBallastCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ExecuteAutonomousModeCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ExecuteSetWaypointsCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ExecuteAddWaypointCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ExecuteMarkBuoyCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+
+def add_ControlCommandServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'ExecuteRudderCommand': grpc.unary_unary_rpc_method_handler(
                     servicer.ExecuteRudderCommand,
                     request_deserializer=control__pb2.RudderCommand.FromString,
                     response_serializer=control__pb2.ControlResponse.SerializeToString,
             ),
+            'ExecuteTrimTabCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteTrimTabCommand,
+                    request_deserializer=control__pb2.TrimTabCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
+            'ExecuteBallastCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteBallastCommand,
+                    request_deserializer=control__pb2.BallastCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
+            'ExecuteAutonomousModeCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteAutonomousModeCommand,
+                    request_deserializer=control__pb2.AutonomousModeCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
+            'ExecuteSetWaypointsCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteSetWaypointsCommand,
+                    request_deserializer=control__pb2.SetWaypointsCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
+            'ExecuteAddWaypointCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteAddWaypointCommand,
+                    request_deserializer=control__pb2.AddWaypointCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
+            'ExecuteMarkBuoyCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteMarkBuoyCommand,
+                    request_deserializer=control__pb2.MarkBuoyCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'boat_control.ExecuteRudderCommandService', rpc_method_handlers)
+            'boat_control.ControlCommandService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class ExecuteRudderCommandService(object):
+class ControlCommandService(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
@@ -87,7 +183,7 @@ class ExecuteRudderCommandService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/boat_control.ExecuteRudderCommandService/ExecuteRudderCommand',
+            '/boat_control.ControlCommandService/ExecuteRudderCommand',
             control__pb2.RudderCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options,
@@ -99,50 +195,6 @@ class ExecuteRudderCommandService(object):
             timeout,
             metadata,
             _registered_method=True)
-
-
-class ExecuteTrimTabCommandServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def __init__(self, channel):
-        """Constructor.
-
-        Args:
-            channel: A grpc.Channel.
-        """
-        self.ExecuteTrimTabCommand = channel.unary_unary(
-                '/boat_control.ExecuteTrimTabCommandService/ExecuteTrimTabCommand',
-                request_serializer=control__pb2.TrimTabCommand.SerializeToString,
-                response_deserializer=control__pb2.ControlResponse.FromString,
-                _registered_method=True)
-
-
-class ExecuteTrimTabCommandServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def ExecuteTrimTabCommand(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-
-def add_ExecuteTrimTabCommandServiceServicer_to_server(servicer, server):
-    rpc_method_handlers = {
-            'ExecuteTrimTabCommand': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExecuteTrimTabCommand,
-                    request_deserializer=control__pb2.TrimTabCommand.FromString,
-                    response_serializer=control__pb2.ControlResponse.SerializeToString,
-            ),
-    }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'boat_control.ExecuteTrimTabCommandService', rpc_method_handlers)
-    server.add_generic_rpc_handlers((generic_handler,))
-
-
- # This class is part of an EXPERIMENTAL API.
-class ExecuteTrimTabCommandService(object):
-    """Missing associated documentation comment in .proto file."""
 
     @staticmethod
     def ExecuteTrimTabCommand(request,
@@ -158,7 +210,7 @@ class ExecuteTrimTabCommandService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/boat_control.ExecuteTrimTabCommandService/ExecuteTrimTabCommand',
+            '/boat_control.ControlCommandService/ExecuteTrimTabCommand',
             control__pb2.TrimTabCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options,
@@ -170,50 +222,6 @@ class ExecuteTrimTabCommandService(object):
             timeout,
             metadata,
             _registered_method=True)
-
-
-class ExecuteBallastCommandServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def __init__(self, channel):
-        """Constructor.
-
-        Args:
-            channel: A grpc.Channel.
-        """
-        self.ExecuteBallastCommand = channel.unary_unary(
-                '/boat_control.ExecuteBallastCommandService/ExecuteBallastCommand',
-                request_serializer=control__pb2.BallastCommand.SerializeToString,
-                response_deserializer=control__pb2.ControlResponse.FromString,
-                _registered_method=True)
-
-
-class ExecuteBallastCommandServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def ExecuteBallastCommand(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-
-def add_ExecuteBallastCommandServiceServicer_to_server(servicer, server):
-    rpc_method_handlers = {
-            'ExecuteBallastCommand': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExecuteBallastCommand,
-                    request_deserializer=control__pb2.BallastCommand.FromString,
-                    response_serializer=control__pb2.ControlResponse.SerializeToString,
-            ),
-    }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'boat_control.ExecuteBallastCommandService', rpc_method_handlers)
-    server.add_generic_rpc_handlers((generic_handler,))
-
-
- # This class is part of an EXPERIMENTAL API.
-class ExecuteBallastCommandService(object):
-    """Missing associated documentation comment in .proto file."""
 
     @staticmethod
     def ExecuteBallastCommand(request,
@@ -229,7 +237,7 @@ class ExecuteBallastCommandService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/boat_control.ExecuteBallastCommandService/ExecuteBallastCommand',
+            '/boat_control.ControlCommandService/ExecuteBallastCommand',
             control__pb2.BallastCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options,
@@ -241,50 +249,6 @@ class ExecuteBallastCommandService(object):
             timeout,
             metadata,
             _registered_method=True)
-
-
-class ExecuteAutonomousModeCommandServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def __init__(self, channel):
-        """Constructor.
-
-        Args:
-            channel: A grpc.Channel.
-        """
-        self.ExecuteAutonomousModeCommand = channel.unary_unary(
-                '/boat_control.ExecuteAutonomousModeCommandService/ExecuteAutonomousModeCommand',
-                request_serializer=control__pb2.AutonomousModeCommand.SerializeToString,
-                response_deserializer=control__pb2.ControlResponse.FromString,
-                _registered_method=True)
-
-
-class ExecuteAutonomousModeCommandServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def ExecuteAutonomousModeCommand(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-
-def add_ExecuteAutonomousModeCommandServiceServicer_to_server(servicer, server):
-    rpc_method_handlers = {
-            'ExecuteAutonomousModeCommand': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExecuteAutonomousModeCommand,
-                    request_deserializer=control__pb2.AutonomousModeCommand.FromString,
-                    response_serializer=control__pb2.ControlResponse.SerializeToString,
-            ),
-    }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'boat_control.ExecuteAutonomousModeCommandService', rpc_method_handlers)
-    server.add_generic_rpc_handlers((generic_handler,))
-
-
- # This class is part of an EXPERIMENTAL API.
-class ExecuteAutonomousModeCommandService(object):
-    """Missing associated documentation comment in .proto file."""
 
     @staticmethod
     def ExecuteAutonomousModeCommand(request,
@@ -300,7 +264,7 @@ class ExecuteAutonomousModeCommandService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/boat_control.ExecuteAutonomousModeCommandService/ExecuteAutonomousModeCommand',
+            '/boat_control.ControlCommandService/ExecuteAutonomousModeCommand',
             control__pb2.AutonomousModeCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options,
@@ -312,50 +276,6 @@ class ExecuteAutonomousModeCommandService(object):
             timeout,
             metadata,
             _registered_method=True)
-
-
-class ExecuteSetWaypointsCommandServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def __init__(self, channel):
-        """Constructor.
-
-        Args:
-            channel: A grpc.Channel.
-        """
-        self.ExecuteSetWaypointsCommand = channel.unary_unary(
-                '/boat_control.ExecuteSetWaypointsCommandService/ExecuteSetWaypointsCommand',
-                request_serializer=control__pb2.SetWaypointsCommand.SerializeToString,
-                response_deserializer=control__pb2.ControlResponse.FromString,
-                _registered_method=True)
-
-
-class ExecuteSetWaypointsCommandServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def ExecuteSetWaypointsCommand(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-
-def add_ExecuteSetWaypointsCommandServiceServicer_to_server(servicer, server):
-    rpc_method_handlers = {
-            'ExecuteSetWaypointsCommand': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExecuteSetWaypointsCommand,
-                    request_deserializer=control__pb2.SetWaypointsCommand.FromString,
-                    response_serializer=control__pb2.ControlResponse.SerializeToString,
-            ),
-    }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'boat_control.ExecuteSetWaypointsCommandService', rpc_method_handlers)
-    server.add_generic_rpc_handlers((generic_handler,))
-
-
- # This class is part of an EXPERIMENTAL API.
-class ExecuteSetWaypointsCommandService(object):
-    """Missing associated documentation comment in .proto file."""
 
     @staticmethod
     def ExecuteSetWaypointsCommand(request,
@@ -371,7 +291,7 @@ class ExecuteSetWaypointsCommandService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/boat_control.ExecuteSetWaypointsCommandService/ExecuteSetWaypointsCommand',
+            '/boat_control.ControlCommandService/ExecuteSetWaypointsCommand',
             control__pb2.SetWaypointsCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options,
@@ -383,50 +303,6 @@ class ExecuteSetWaypointsCommandService(object):
             timeout,
             metadata,
             _registered_method=True)
-
-
-class ExecuteAddWaypointCommandServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def __init__(self, channel):
-        """Constructor.
-
-        Args:
-            channel: A grpc.Channel.
-        """
-        self.ExecuteAddWaypointCommand = channel.unary_unary(
-                '/boat_control.ExecuteAddWaypointCommandService/ExecuteAddWaypointCommand',
-                request_serializer=control__pb2.AddWaypointCommand.SerializeToString,
-                response_deserializer=control__pb2.ControlResponse.FromString,
-                _registered_method=True)
-
-
-class ExecuteAddWaypointCommandServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def ExecuteAddWaypointCommand(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-
-def add_ExecuteAddWaypointCommandServiceServicer_to_server(servicer, server):
-    rpc_method_handlers = {
-            'ExecuteAddWaypointCommand': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExecuteAddWaypointCommand,
-                    request_deserializer=control__pb2.AddWaypointCommand.FromString,
-                    response_serializer=control__pb2.ControlResponse.SerializeToString,
-            ),
-    }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'boat_control.ExecuteAddWaypointCommandService', rpc_method_handlers)
-    server.add_generic_rpc_handlers((generic_handler,))
-
-
- # This class is part of an EXPERIMENTAL API.
-class ExecuteAddWaypointCommandService(object):
-    """Missing associated documentation comment in .proto file."""
 
     @staticmethod
     def ExecuteAddWaypointCommand(request,
@@ -442,7 +318,7 @@ class ExecuteAddWaypointCommandService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/boat_control.ExecuteAddWaypointCommandService/ExecuteAddWaypointCommand',
+            '/boat_control.ControlCommandService/ExecuteAddWaypointCommand',
             control__pb2.AddWaypointCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options,
@@ -454,50 +330,6 @@ class ExecuteAddWaypointCommandService(object):
             timeout,
             metadata,
             _registered_method=True)
-
-
-class ExecuteMarkBuoyCommandServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def __init__(self, channel):
-        """Constructor.
-
-        Args:
-            channel: A grpc.Channel.
-        """
-        self.ExecuteMarkBuoyCommand = channel.unary_unary(
-                '/boat_control.ExecuteMarkBuoyCommandService/ExecuteMarkBuoyCommand',
-                request_serializer=control__pb2.MarkBuoyCommand.SerializeToString,
-                response_deserializer=control__pb2.ControlResponse.FromString,
-                _registered_method=True)
-
-
-class ExecuteMarkBuoyCommandServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def ExecuteMarkBuoyCommand(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-
-def add_ExecuteMarkBuoyCommandServiceServicer_to_server(servicer, server):
-    rpc_method_handlers = {
-            'ExecuteMarkBuoyCommand': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExecuteMarkBuoyCommand,
-                    request_deserializer=control__pb2.MarkBuoyCommand.FromString,
-                    response_serializer=control__pb2.ControlResponse.SerializeToString,
-            ),
-    }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'boat_control.ExecuteMarkBuoyCommandService', rpc_method_handlers)
-    server.add_generic_rpc_handlers((generic_handler,))
-
-
- # This class is part of an EXPERIMENTAL API.
-class ExecuteMarkBuoyCommandService(object):
-    """Missing associated documentation comment in .proto file."""
 
     @staticmethod
     def ExecuteMarkBuoyCommand(request,
@@ -513,7 +345,7 @@ class ExecuteMarkBuoyCommandService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/boat_control.ExecuteMarkBuoyCommandService/ExecuteMarkBuoyCommand',
+            '/boat_control.ControlCommandService/ExecuteMarkBuoyCommand',
             control__pb2.MarkBuoyCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options,
@@ -527,7 +359,7 @@ class ExecuteMarkBuoyCommandService(object):
             _registered_method=True)
 
 
-class ExecuteSetVFForwardMagnitudeCommandServiceStub(object):
+class SetParameterServiceStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -537,13 +369,28 @@ class ExecuteSetVFForwardMagnitudeCommandServiceStub(object):
             channel: A grpc.Channel.
         """
         self.ExecuteSetVFForwardMagnitudeCommand = channel.unary_unary(
-                '/boat_control.ExecuteSetVFForwardMagnitudeCommandService/ExecuteSetVFForwardMagnitudeCommand',
+                '/boat_control.SetParameterService/ExecuteSetVFForwardMagnitudeCommand',
                 request_serializer=control__pb2.SetVFForwardMagnitudeCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                _registered_method=True)
+        self.ExecuteSetRudderAdjustmentScaleCommand = channel.unary_unary(
+                '/boat_control.SetParameterService/ExecuteSetRudderAdjustmentScaleCommand',
+                request_serializer=control__pb2.SetRudderAdjustmentScaleCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                _registered_method=True)
+        self.ExecuteSetRudderOvershootBiasCommand = channel.unary_unary(
+                '/boat_control.SetParameterService/ExecuteSetRudderOvershootBiasCommand',
+                request_serializer=control__pb2.SetRudderOvershootBiasCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                _registered_method=True)
+        self.ExecuteSetCVParametersCommand = channel.unary_unary(
+                '/boat_control.SetParameterService/ExecuteSetCVParametersCommand',
+                request_serializer=control__pb2.SetCVParametersCommand.SerializeToString,
                 response_deserializer=control__pb2.ControlResponse.FromString,
                 _registered_method=True)
 
 
-class ExecuteSetVFForwardMagnitudeCommandServiceServicer(object):
+class SetParameterServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def ExecuteSetVFForwardMagnitudeCommand(self, request, context):
@@ -552,22 +399,55 @@ class ExecuteSetVFForwardMagnitudeCommandServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def ExecuteSetRudderAdjustmentScaleCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-def add_ExecuteSetVFForwardMagnitudeCommandServiceServicer_to_server(servicer, server):
+    def ExecuteSetRudderOvershootBiasCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ExecuteSetCVParametersCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+
+def add_SetParameterServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'ExecuteSetVFForwardMagnitudeCommand': grpc.unary_unary_rpc_method_handler(
                     servicer.ExecuteSetVFForwardMagnitudeCommand,
                     request_deserializer=control__pb2.SetVFForwardMagnitudeCommand.FromString,
                     response_serializer=control__pb2.ControlResponse.SerializeToString,
             ),
+            'ExecuteSetRudderAdjustmentScaleCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteSetRudderAdjustmentScaleCommand,
+                    request_deserializer=control__pb2.SetRudderAdjustmentScaleCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
+            'ExecuteSetRudderOvershootBiasCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteSetRudderOvershootBiasCommand,
+                    request_deserializer=control__pb2.SetRudderOvershootBiasCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
+            'ExecuteSetCVParametersCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteSetCVParametersCommand,
+                    request_deserializer=control__pb2.SetCVParametersCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'boat_control.ExecuteSetVFForwardMagnitudeCommandService', rpc_method_handlers)
+            'boat_control.SetParameterService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class ExecuteSetVFForwardMagnitudeCommandService(object):
+class SetParameterService(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
@@ -584,7 +464,7 @@ class ExecuteSetVFForwardMagnitudeCommandService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/boat_control.ExecuteSetVFForwardMagnitudeCommandService/ExecuteSetVFForwardMagnitudeCommand',
+            '/boat_control.SetParameterService/ExecuteSetVFForwardMagnitudeCommand',
             control__pb2.SetVFForwardMagnitudeCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options,
@@ -597,52 +477,8 @@ class ExecuteSetVFForwardMagnitudeCommandService(object):
             metadata,
             _registered_method=True)
 
-
-class ExecuteSetRudderKPCommandServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def __init__(self, channel):
-        """Constructor.
-
-        Args:
-            channel: A grpc.Channel.
-        """
-        self.ExecuteSetRudderKPCommand = channel.unary_unary(
-                '/boat_control.ExecuteSetRudderKPCommandService/ExecuteSetRudderKPCommand',
-                request_serializer=control__pb2.SetRudderKPCommand.SerializeToString,
-                response_deserializer=control__pb2.ControlResponse.FromString,
-                _registered_method=True)
-
-
-class ExecuteSetRudderKPCommandServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def ExecuteSetRudderKPCommand(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-
-def add_ExecuteSetRudderKPCommandServiceServicer_to_server(servicer, server):
-    rpc_method_handlers = {
-            'ExecuteSetRudderKPCommand': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExecuteSetRudderKPCommand,
-                    request_deserializer=control__pb2.SetRudderKPCommand.FromString,
-                    response_serializer=control__pb2.ControlResponse.SerializeToString,
-            ),
-    }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'boat_control.ExecuteSetRudderKPCommandService', rpc_method_handlers)
-    server.add_generic_rpc_handlers((generic_handler,))
-
-
- # This class is part of an EXPERIMENTAL API.
-class ExecuteSetRudderKPCommandService(object):
-    """Missing associated documentation comment in .proto file."""
-
     @staticmethod
-    def ExecuteSetRudderKPCommand(request,
+    def ExecuteSetRudderAdjustmentScaleCommand(request,
             target,
             options=(),
             channel_credentials=None,
@@ -655,8 +491,8 @@ class ExecuteSetRudderKPCommandService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/boat_control.ExecuteSetRudderKPCommandService/ExecuteSetRudderKPCommand',
-            control__pb2.SetRudderKPCommand.SerializeToString,
+            '/boat_control.SetParameterService/ExecuteSetRudderAdjustmentScaleCommand',
+            control__pb2.SetRudderAdjustmentScaleCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options,
             channel_credentials,
@@ -668,52 +504,8 @@ class ExecuteSetRudderKPCommandService(object):
             metadata,
             _registered_method=True)
 
-
-class ExecuteSetRudderKDCommandServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def __init__(self, channel):
-        """Constructor.
-
-        Args:
-            channel: A grpc.Channel.
-        """
-        self.ExecuteSetRudderKDCommand = channel.unary_unary(
-                '/boat_control.ExecuteSetRudderKDCommandService/ExecuteSetRudderKDCommand',
-                request_serializer=control__pb2.SetRudderKDCommand.SerializeToString,
-                response_deserializer=control__pb2.ControlResponse.FromString,
-                _registered_method=True)
-
-
-class ExecuteSetRudderKDCommandServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def ExecuteSetRudderKDCommand(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-
-def add_ExecuteSetRudderKDCommandServiceServicer_to_server(servicer, server):
-    rpc_method_handlers = {
-            'ExecuteSetRudderKDCommand': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExecuteSetRudderKDCommand,
-                    request_deserializer=control__pb2.SetRudderKDCommand.FromString,
-                    response_serializer=control__pb2.ControlResponse.SerializeToString,
-            ),
-    }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'boat_control.ExecuteSetRudderKDCommandService', rpc_method_handlers)
-    server.add_generic_rpc_handlers((generic_handler,))
-
-
- # This class is part of an EXPERIMENTAL API.
-class ExecuteSetRudderKDCommandService(object):
-    """Missing associated documentation comment in .proto file."""
-
     @staticmethod
-    def ExecuteSetRudderKDCommand(request,
+    def ExecuteSetRudderOvershootBiasCommand(request,
             target,
             options=(),
             channel_credentials=None,
@@ -726,8 +518,8 @@ class ExecuteSetRudderKDCommandService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/boat_control.ExecuteSetRudderKDCommandService/ExecuteSetRudderKDCommand',
-            control__pb2.SetRudderKDCommand.SerializeToString,
+            '/boat_control.SetParameterService/ExecuteSetRudderOvershootBiasCommand',
+            control__pb2.SetRudderOvershootBiasCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options,
             channel_credentials,
@@ -738,50 +530,6 @@ class ExecuteSetRudderKDCommandService(object):
             timeout,
             metadata,
             _registered_method=True)
-
-
-class ExecuteSetCVParametersCommandServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def __init__(self, channel):
-        """Constructor.
-
-        Args:
-            channel: A grpc.Channel.
-        """
-        self.ExecuteSetCVParametersCommand = channel.unary_unary(
-                '/boat_control.ExecuteSetCVParametersCommandService/ExecuteSetCVParametersCommand',
-                request_serializer=control__pb2.SetCVParametersCommand.SerializeToString,
-                response_deserializer=control__pb2.ControlResponse.FromString,
-                _registered_method=True)
-
-
-class ExecuteSetCVParametersCommandServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
-
-    def ExecuteSetCVParametersCommand(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-
-def add_ExecuteSetCVParametersCommandServiceServicer_to_server(servicer, server):
-    rpc_method_handlers = {
-            'ExecuteSetCVParametersCommand': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExecuteSetCVParametersCommand,
-                    request_deserializer=control__pb2.SetCVParametersCommand.FromString,
-                    response_serializer=control__pb2.ControlResponse.SerializeToString,
-            ),
-    }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'boat_control.ExecuteSetCVParametersCommandService', rpc_method_handlers)
-    server.add_generic_rpc_handlers((generic_handler,))
-
-
- # This class is part of an EXPERIMENTAL API.
-class ExecuteSetCVParametersCommandService(object):
-    """Missing associated documentation comment in .proto file."""
 
     @staticmethod
     def ExecuteSetCVParametersCommand(request,
@@ -797,7 +545,7 @@ class ExecuteSetCVParametersCommandService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/boat_control.ExecuteSetCVParametersCommandService/ExecuteSetCVParametersCommand',
+            '/boat_control.SetParameterService/ExecuteSetCVParametersCommand',
             control__pb2.SetCVParametersCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options,
