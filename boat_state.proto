@@ -174,10 +174,14 @@ message GetCVParametersRequest {
 
 }
 
+message GetCVParametersResponse {
+    CVParameters parameters = 1;
+}
+
 service GetMapService {
     rpc GetMap (MapRequest) returns (MapResponse) {}
 }
 
 service GetCVParametersService {
-    rpc GetCVParameters (GetCVParametersRequest) returns (CVParameters) {}
+    rpc GetCVParameters (GetCVParametersRequest) returns (GetCVParametersResponse) {}
 }

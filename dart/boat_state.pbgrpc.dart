@@ -135,10 +135,10 @@ abstract class GetMapServiceBase extends $grpc.Service {
 }
 @$pb.GrpcServiceName('boat_state.GetCVParametersService')
 class GetCVParametersServiceClient extends $grpc.Client {
-  static final _$getCVParameters = $grpc.ClientMethod<$0.GetCVParametersRequest, $0.CVParameters>(
+  static final _$getCVParameters = $grpc.ClientMethod<$0.GetCVParametersRequest, $0.GetCVParametersResponse>(
       '/boat_state.GetCVParametersService/GetCVParameters',
       ($0.GetCVParametersRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.CVParameters.fromBuffer(value));
+      ($core.List<$core.int> value) => $0.GetCVParametersResponse.fromBuffer(value));
 
   GetCVParametersServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -146,7 +146,7 @@ class GetCVParametersServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.CVParameters> getCVParameters($0.GetCVParametersRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.GetCVParametersResponse> getCVParameters($0.GetCVParametersRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getCVParameters, request, options: options);
   }
 }
@@ -156,18 +156,18 @@ abstract class GetCVParametersServiceBase extends $grpc.Service {
   $core.String get $name => 'boat_state.GetCVParametersService';
 
   GetCVParametersServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.GetCVParametersRequest, $0.CVParameters>(
+    $addMethod($grpc.ServiceMethod<$0.GetCVParametersRequest, $0.GetCVParametersResponse>(
         'GetCVParameters',
         getCVParameters_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.GetCVParametersRequest.fromBuffer(value),
-        ($0.CVParameters value) => value.writeToBuffer()));
+        ($0.GetCVParametersResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.CVParameters> getCVParameters_Pre($grpc.ServiceCall call, $async.Future<$0.GetCVParametersRequest> request) async {
+  $async.Future<$0.GetCVParametersResponse> getCVParameters_Pre($grpc.ServiceCall call, $async.Future<$0.GetCVParametersRequest> request) async {
     return getCVParameters(call, await request);
   }
 
-  $async.Future<$0.CVParameters> getCVParameters($grpc.ServiceCall call, $0.GetCVParametersRequest request);
+  $async.Future<$0.GetCVParametersResponse> getCVParameters($grpc.ServiceCall call, $0.GetCVParametersRequest request);
 }

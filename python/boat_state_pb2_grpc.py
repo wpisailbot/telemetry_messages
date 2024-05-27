@@ -255,7 +255,7 @@ class GetCVParametersServiceStub(object):
         self.GetCVParameters = channel.unary_unary(
                 '/boat_state.GetCVParametersService/GetCVParameters',
                 request_serializer=boat__state__pb2.GetCVParametersRequest.SerializeToString,
-                response_deserializer=boat__state__pb2.CVParameters.FromString,
+                response_deserializer=boat__state__pb2.GetCVParametersResponse.FromString,
                 _registered_method=True)
 
 
@@ -274,7 +274,7 @@ def add_GetCVParametersServiceServicer_to_server(servicer, server):
             'GetCVParameters': grpc.unary_unary_rpc_method_handler(
                     servicer.GetCVParameters,
                     request_deserializer=boat__state__pb2.GetCVParametersRequest.FromString,
-                    response_serializer=boat__state__pb2.CVParameters.SerializeToString,
+                    response_serializer=boat__state__pb2.GetCVParametersResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -302,7 +302,7 @@ class GetCVParametersService(object):
             target,
             '/boat_state.GetCVParametersService/GetCVParameters',
             boat__state__pb2.GetCVParametersRequest.SerializeToString,
-            boat__state__pb2.CVParameters.FromString,
+            boat__state__pb2.GetCVParametersResponse.FromString,
             options,
             channel_credentials,
             insecure,

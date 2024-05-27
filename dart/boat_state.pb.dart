@@ -1529,6 +1529,58 @@ class GetCVParametersRequest extends $pb.GeneratedMessage {
   static GetCVParametersRequest? _defaultInstance;
 }
 
+class GetCVParametersResponse extends $pb.GeneratedMessage {
+  factory GetCVParametersResponse({
+    CVParameters? parameters,
+  }) {
+    final $result = create();
+    if (parameters != null) {
+      $result.parameters = parameters;
+    }
+    return $result;
+  }
+  GetCVParametersResponse._() : super();
+  factory GetCVParametersResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetCVParametersResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetCVParametersResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
+    ..aOM<CVParameters>(1, _omitFieldNames ? '' : 'parameters', subBuilder: CVParameters.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetCVParametersResponse clone() => GetCVParametersResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetCVParametersResponse copyWith(void Function(GetCVParametersResponse) updates) => super.copyWith((message) => updates(message as GetCVParametersResponse)) as GetCVParametersResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetCVParametersResponse create() => GetCVParametersResponse._();
+  GetCVParametersResponse createEmptyInstance() => create();
+  static $pb.PbList<GetCVParametersResponse> createRepeated() => $pb.PbList<GetCVParametersResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetCVParametersResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetCVParametersResponse>(create);
+  static GetCVParametersResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  CVParameters get parameters => $_getN(0);
+  @$pb.TagNumber(1)
+  set parameters(CVParameters v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasParameters() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParameters() => clearField(1);
+  @$pb.TagNumber(1)
+  CVParameters ensureParameters() => $_ensure(0);
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
