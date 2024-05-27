@@ -400,12 +400,15 @@ final $typed_data.Uint8List getCVParametersRequestDescriptor = $convert.base64De
 const GetCVParametersResponse$json = {
   '1': 'GetCVParametersResponse',
   '2': [
-    {'1': 'parameters', '3': 1, '4': 1, '5': 11, '6': '.boat_state.CVParameters', '10': 'parameters'},
+    {'1': 'parameters', '3': 1, '4': 1, '5': 11, '6': '.boat_state.CVParameters', '9': 0, '10': 'parameters', '17': true},
+  ],
+  '8': [
+    {'1': '_parameters'},
   ],
 };
 
 /// Descriptor for `GetCVParametersResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getCVParametersResponseDescriptor = $convert.base64Decode(
-    'ChdHZXRDVlBhcmFtZXRlcnNSZXNwb25zZRI4CgpwYXJhbWV0ZXJzGAEgASgLMhguYm9hdF9zdG'
-    'F0ZS5DVlBhcmFtZXRlcnNSCnBhcmFtZXRlcnM=');
+    'ChdHZXRDVlBhcmFtZXRlcnNSZXNwb25zZRI9CgpwYXJhbWV0ZXJzGAEgASgLMhguYm9hdF9zdG'
+    'F0ZS5DVlBhcmFtZXRlcnNIAFIKcGFyYW1ldGVyc4gBAUINCgtfcGFyYW1ldGVycw==');
 

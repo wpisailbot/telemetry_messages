@@ -175,7 +175,7 @@ message GetCVParametersRequest {
 }
 
 message GetCVParametersResponse {
-    CVParameters parameters = 1;
+    optional CVParameters parameters = 1;
 }
 
 service GetMapService {
