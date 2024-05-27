@@ -1434,15 +1434,11 @@ class BuoyTypeInfo extends $pb.GeneratedMessage {
 class CVParameters extends $pb.GeneratedMessage {
   factory CVParameters({
     $core.double? circularityThreshold,
-    $core.double? buoyDiameter,
     $core.Iterable<BuoyTypeInfo>? buoyTypes,
   }) {
     final $result = create();
     if (circularityThreshold != null) {
       $result.circularityThreshold = circularityThreshold;
-    }
-    if (buoyDiameter != null) {
-      $result.buoyDiameter = buoyDiameter;
     }
     if (buoyTypes != null) {
       $result.buoyTypes.addAll(buoyTypes);
@@ -1455,7 +1451,6 @@ class CVParameters extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CVParameters', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
     ..a<$core.double>(1, _omitFieldNames ? '' : 'circularityThreshold', $pb.PbFieldType.OF)
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'buoyDiameter', $pb.PbFieldType.OF)
     ..pc<BuoyTypeInfo>(3, _omitFieldNames ? '' : 'buoyTypes', $pb.PbFieldType.PM, subBuilder: BuoyTypeInfo.create)
     ..hasRequiredFields = false
   ;
@@ -1490,17 +1485,8 @@ class CVParameters extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCircularityThreshold() => clearField(1);
 
-  @$pb.TagNumber(2)
-  $core.double get buoyDiameter => $_getN(1);
-  @$pb.TagNumber(2)
-  set buoyDiameter($core.double v) { $_setFloat(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasBuoyDiameter() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearBuoyDiameter() => clearField(2);
-
   @$pb.TagNumber(3)
-  $core.List<BuoyTypeInfo> get buoyTypes => $_getList(2);
+  $core.List<BuoyTypeInfo> get buoyTypes => $_getList(1);
 }
 
 class GetCVParametersRequest extends $pb.GeneratedMessage {

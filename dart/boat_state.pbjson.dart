@@ -375,7 +375,6 @@ const CVParameters$json = {
   '1': 'CVParameters',
   '2': [
     {'1': 'circularity_threshold', '3': 1, '4': 1, '5': 2, '10': 'circularityThreshold'},
-    {'1': 'buoy_diameter', '3': 2, '4': 1, '5': 2, '10': 'buoyDiameter'},
     {'1': 'buoy_types', '3': 3, '4': 3, '5': 11, '6': '.boat_state.BuoyTypeInfo', '10': 'buoyTypes'},
   ],
 };
@@ -383,8 +382,8 @@ const CVParameters$json = {
 /// Descriptor for `CVParameters`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List cVParametersDescriptor = $convert.base64Decode(
     'CgxDVlBhcmFtZXRlcnMSMwoVY2lyY3VsYXJpdHlfdGhyZXNob2xkGAEgASgCUhRjaXJjdWxhcm'
-    'l0eVRocmVzaG9sZBIjCg1idW95X2RpYW1ldGVyGAIgASgCUgxidW95RGlhbWV0ZXISNwoKYnVv'
-    'eV90eXBlcxgDIAMoCzIYLmJvYXRfc3RhdGUuQnVveVR5cGVJbmZvUglidW95VHlwZXM=');
+    'l0eVRocmVzaG9sZBI3CgpidW95X3R5cGVzGAMgAygLMhguYm9hdF9zdGF0ZS5CdW95VHlwZUlu'
+    'Zm9SCWJ1b3lUeXBlcw==');
 
 @$core.Deprecated('Use getCVParametersRequestDescriptor instead')
 const GetCVParametersRequest$json = {

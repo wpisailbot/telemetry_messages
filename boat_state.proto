@@ -166,7 +166,6 @@ message BuoyTypeInfo {
 
 message CVParameters {
     float circularity_threshold = 1;
-    float buoy_diameter = 2;
     repeated BuoyTypeInfo buoy_types = 3;
 }
 
