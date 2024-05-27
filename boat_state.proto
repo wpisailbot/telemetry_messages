@@ -159,8 +159,9 @@ message HSVBounds {
 }
 
 message buoyTypeInfo {
-    HSVBounds hsv_bounds = 1;
-    float buoy_diameter = 2;
+    string name = 1;
+    HSVBounds hsv_bounds = 2;
+    float buoy_diameter = 3;
 }
 
 message CVParameters {

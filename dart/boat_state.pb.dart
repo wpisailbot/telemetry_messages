@@ -1353,10 +1353,14 @@ class HSVBounds extends $pb.GeneratedMessage {
 
 class buoyTypeInfo extends $pb.GeneratedMessage {
   factory buoyTypeInfo({
+    $core.String? name,
     HSVBounds? hsvBounds,
     $core.double? buoyDiameter,
   }) {
     final $result = create();
+    if (name != null) {
+      $result.name = name;
+    }
     if (hsvBounds != null) {
       $result.hsvBounds = hsvBounds;
     }
@@ -1370,8 +1374,9 @@ class buoyTypeInfo extends $pb.GeneratedMessage {
   factory buoyTypeInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'buoyTypeInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..aOM<HSVBounds>(1, _omitFieldNames ? '' : 'hsvBounds', subBuilder: HSVBounds.create)
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'buoyDiameter', $pb.PbFieldType.OF)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<HSVBounds>(2, _omitFieldNames ? '' : 'hsvBounds', subBuilder: HSVBounds.create)
+    ..a<$core.double>(3, _omitFieldNames ? '' : 'buoyDiameter', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
@@ -1397,24 +1402,33 @@ class buoyTypeInfo extends $pb.GeneratedMessage {
   static buoyTypeInfo? _defaultInstance;
 
   @$pb.TagNumber(1)
-  HSVBounds get hsvBounds => $_getN(0);
+  $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set hsvBounds(HSVBounds v) { setField(1, v); }
+  set name($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasHsvBounds() => $_has(0);
+  $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearHsvBounds() => clearField(1);
-  @$pb.TagNumber(1)
-  HSVBounds ensureHsvBounds() => $_ensure(0);
+  void clearName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.double get buoyDiameter => $_getN(1);
+  HSVBounds get hsvBounds => $_getN(1);
   @$pb.TagNumber(2)
-  set buoyDiameter($core.double v) { $_setFloat(1, v); }
+  set hsvBounds(HSVBounds v) { setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasBuoyDiameter() => $_has(1);
+  $core.bool hasHsvBounds() => $_has(1);
   @$pb.TagNumber(2)
-  void clearBuoyDiameter() => clearField(2);
+  void clearHsvBounds() => clearField(2);
+  @$pb.TagNumber(2)
+  HSVBounds ensureHsvBounds() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.double get buoyDiameter => $_getN(2);
+  @$pb.TagNumber(3)
+  set buoyDiameter($core.double v) { $_setFloat(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasBuoyDiameter() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearBuoyDiameter() => clearField(3);
 }
 
 class CVParameters extends $pb.GeneratedMessage {

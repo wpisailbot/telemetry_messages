@@ -358,15 +358,17 @@ final $typed_data.Uint8List hSVBoundsDescriptor = $convert.base64Decode(
 const buoyTypeInfo$json = {
   '1': 'buoyTypeInfo',
   '2': [
-    {'1': 'hsv_bounds', '3': 1, '4': 1, '5': 11, '6': '.boat_state.HSVBounds', '10': 'hsvBounds'},
-    {'1': 'buoy_diameter', '3': 2, '4': 1, '5': 2, '10': 'buoyDiameter'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'hsv_bounds', '3': 2, '4': 1, '5': 11, '6': '.boat_state.HSVBounds', '10': 'hsvBounds'},
+    {'1': 'buoy_diameter', '3': 3, '4': 1, '5': 2, '10': 'buoyDiameter'},
   ],
 };
 
 /// Descriptor for `buoyTypeInfo`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List buoyTypeInfoDescriptor = $convert.base64Decode(
-    'CgxidW95VHlwZUluZm8SNAoKaHN2X2JvdW5kcxgBIAEoCzIVLmJvYXRfc3RhdGUuSFNWQm91bm'
-    'RzUgloc3ZCb3VuZHMSIwoNYnVveV9kaWFtZXRlchgCIAEoAlIMYnVveURpYW1ldGVy');
+    'CgxidW95VHlwZUluZm8SEgoEbmFtZRgBIAEoCVIEbmFtZRI0Cgpoc3ZfYm91bmRzGAIgASgLMh'
+    'UuYm9hdF9zdGF0ZS5IU1ZCb3VuZHNSCWhzdkJvdW5kcxIjCg1idW95X2RpYW1ldGVyGAMgASgC'
+    'UgxidW95RGlhbWV0ZXI=');
 
 @$core.Deprecated('Use cVParametersDescriptor instead')
 const CVParameters$json = {
