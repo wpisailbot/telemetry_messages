@@ -1231,16 +1231,14 @@ class MapResponse extends $pb.GeneratedMessage {
   void clearWest() => clearField(5);
 }
 
-class CVParameters extends $pb.GeneratedMessage {
-  factory CVParameters({
+class HSVBounds extends $pb.GeneratedMessage {
+  factory HSVBounds({
     $core.double? lowerH,
     $core.double? lowerS,
     $core.double? lowerV,
     $core.double? upperH,
     $core.double? upperS,
     $core.double? upperV,
-    $core.double? circularityThreshold,
-    $core.double? buoyDiameter,
   }) {
     final $result = create();
     if (lowerH != null) {
@@ -1261,27 +1259,19 @@ class CVParameters extends $pb.GeneratedMessage {
     if (upperV != null) {
       $result.upperV = upperV;
     }
-    if (circularityThreshold != null) {
-      $result.circularityThreshold = circularityThreshold;
-    }
-    if (buoyDiameter != null) {
-      $result.buoyDiameter = buoyDiameter;
-    }
     return $result;
   }
-  CVParameters._() : super();
-  factory CVParameters.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CVParameters.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  HSVBounds._() : super();
+  factory HSVBounds.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory HSVBounds.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CVParameters', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HSVBounds', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
     ..a<$core.double>(1, _omitFieldNames ? '' : 'lowerH', $pb.PbFieldType.OF)
     ..a<$core.double>(2, _omitFieldNames ? '' : 'lowerS', $pb.PbFieldType.OF)
     ..a<$core.double>(3, _omitFieldNames ? '' : 'lowerV', $pb.PbFieldType.OF)
     ..a<$core.double>(4, _omitFieldNames ? '' : 'upperH', $pb.PbFieldType.OF)
     ..a<$core.double>(5, _omitFieldNames ? '' : 'upperS', $pb.PbFieldType.OF)
     ..a<$core.double>(6, _omitFieldNames ? '' : 'upperV', $pb.PbFieldType.OF)
-    ..a<$core.double>(7, _omitFieldNames ? '' : 'circularityThreshold', $pb.PbFieldType.OF)
-    ..a<$core.double>(8, _omitFieldNames ? '' : 'buoyDiameter', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
@@ -1289,22 +1279,22 @@ class CVParameters extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  CVParameters clone() => CVParameters()..mergeFromMessage(this);
+  HSVBounds clone() => HSVBounds()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CVParameters copyWith(void Function(CVParameters) updates) => super.copyWith((message) => updates(message as CVParameters)) as CVParameters;
+  HSVBounds copyWith(void Function(HSVBounds) updates) => super.copyWith((message) => updates(message as HSVBounds)) as HSVBounds;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static CVParameters create() => CVParameters._();
-  CVParameters createEmptyInstance() => create();
-  static $pb.PbList<CVParameters> createRepeated() => $pb.PbList<CVParameters>();
+  static HSVBounds create() => HSVBounds._();
+  HSVBounds createEmptyInstance() => create();
+  static $pb.PbList<HSVBounds> createRepeated() => $pb.PbList<HSVBounds>();
   @$core.pragma('dart2js:noInline')
-  static CVParameters getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CVParameters>(create);
-  static CVParameters? _defaultInstance;
+  static HSVBounds getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HSVBounds>(create);
+  static HSVBounds? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.double get lowerH => $_getN(0);
@@ -1359,24 +1349,144 @@ class CVParameters extends $pb.GeneratedMessage {
   $core.bool hasUpperV() => $_has(5);
   @$pb.TagNumber(6)
   void clearUpperV() => clearField(6);
+}
 
-  @$pb.TagNumber(7)
-  $core.double get circularityThreshold => $_getN(6);
-  @$pb.TagNumber(7)
-  set circularityThreshold($core.double v) { $_setFloat(6, v); }
-  @$pb.TagNumber(7)
-  $core.bool hasCircularityThreshold() => $_has(6);
-  @$pb.TagNumber(7)
-  void clearCircularityThreshold() => clearField(7);
+class buoyTypeInfo extends $pb.GeneratedMessage {
+  factory buoyTypeInfo({
+    HSVBounds? hsvBounds,
+    $core.double? buoyDiameter,
+  }) {
+    final $result = create();
+    if (hsvBounds != null) {
+      $result.hsvBounds = hsvBounds;
+    }
+    if (buoyDiameter != null) {
+      $result.buoyDiameter = buoyDiameter;
+    }
+    return $result;
+  }
+  buoyTypeInfo._() : super();
+  factory buoyTypeInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory buoyTypeInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  @$pb.TagNumber(8)
-  $core.double get buoyDiameter => $_getN(7);
-  @$pb.TagNumber(8)
-  set buoyDiameter($core.double v) { $_setFloat(7, v); }
-  @$pb.TagNumber(8)
-  $core.bool hasBuoyDiameter() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearBuoyDiameter() => clearField(8);
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'buoyTypeInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
+    ..aOM<HSVBounds>(1, _omitFieldNames ? '' : 'hsvBounds', subBuilder: HSVBounds.create)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'buoyDiameter', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  buoyTypeInfo clone() => buoyTypeInfo()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  buoyTypeInfo copyWith(void Function(buoyTypeInfo) updates) => super.copyWith((message) => updates(message as buoyTypeInfo)) as buoyTypeInfo;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static buoyTypeInfo create() => buoyTypeInfo._();
+  buoyTypeInfo createEmptyInstance() => create();
+  static $pb.PbList<buoyTypeInfo> createRepeated() => $pb.PbList<buoyTypeInfo>();
+  @$core.pragma('dart2js:noInline')
+  static buoyTypeInfo getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<buoyTypeInfo>(create);
+  static buoyTypeInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  HSVBounds get hsvBounds => $_getN(0);
+  @$pb.TagNumber(1)
+  set hsvBounds(HSVBounds v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasHsvBounds() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearHsvBounds() => clearField(1);
+  @$pb.TagNumber(1)
+  HSVBounds ensureHsvBounds() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.double get buoyDiameter => $_getN(1);
+  @$pb.TagNumber(2)
+  set buoyDiameter($core.double v) { $_setFloat(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasBuoyDiameter() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearBuoyDiameter() => clearField(2);
+}
+
+class CVParameters extends $pb.GeneratedMessage {
+  factory CVParameters({
+    $core.double? circularityThreshold,
+    $core.double? buoyDiameter,
+    $core.Iterable<buoyTypeInfo>? buoyTypes,
+  }) {
+    final $result = create();
+    if (circularityThreshold != null) {
+      $result.circularityThreshold = circularityThreshold;
+    }
+    if (buoyDiameter != null) {
+      $result.buoyDiameter = buoyDiameter;
+    }
+    if (buoyTypes != null) {
+      $result.buoyTypes.addAll(buoyTypes);
+    }
+    return $result;
+  }
+  CVParameters._() : super();
+  factory CVParameters.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CVParameters.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CVParameters', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'circularityThreshold', $pb.PbFieldType.OF)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'buoyDiameter', $pb.PbFieldType.OF)
+    ..pc<buoyTypeInfo>(3, _omitFieldNames ? '' : 'buoyTypes', $pb.PbFieldType.PM, subBuilder: buoyTypeInfo.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CVParameters clone() => CVParameters()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CVParameters copyWith(void Function(CVParameters) updates) => super.copyWith((message) => updates(message as CVParameters)) as CVParameters;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CVParameters create() => CVParameters._();
+  CVParameters createEmptyInstance() => create();
+  static $pb.PbList<CVParameters> createRepeated() => $pb.PbList<CVParameters>();
+  @$core.pragma('dart2js:noInline')
+  static CVParameters getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CVParameters>(create);
+  static CVParameters? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get circularityThreshold => $_getN(0);
+  @$pb.TagNumber(1)
+  set circularityThreshold($core.double v) { $_setFloat(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCircularityThreshold() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCircularityThreshold() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get buoyDiameter => $_getN(1);
+  @$pb.TagNumber(2)
+  set buoyDiameter($core.double v) { $_setFloat(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasBuoyDiameter() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearBuoyDiameter() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<buoyTypeInfo> get buoyTypes => $_getList(2);
 }
 
 class GetCVParametersRequest extends $pb.GeneratedMessage {

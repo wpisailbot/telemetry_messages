@@ -335,9 +335,9 @@ final $typed_data.Uint8List mapResponseDescriptor = $convert.base64Decode(
     'ABKAJSBW5vcnRoEhQKBXNvdXRoGAMgASgCUgVzb3V0aBISCgRlYXN0GAQgASgCUgRlYXN0EhIK'
     'BHdlc3QYBSABKAJSBHdlc3Q=');
 
-@$core.Deprecated('Use cVParametersDescriptor instead')
-const CVParameters$json = {
-  '1': 'CVParameters',
+@$core.Deprecated('Use hSVBoundsDescriptor instead')
+const HSVBounds$json = {
+  '1': 'HSVBounds',
   '2': [
     {'1': 'lower_h', '3': 1, '4': 1, '5': 2, '10': 'lowerH'},
     {'1': 'lower_s', '3': 2, '4': 1, '5': 2, '10': 'lowerS'},
@@ -345,18 +345,44 @@ const CVParameters$json = {
     {'1': 'upper_h', '3': 4, '4': 1, '5': 2, '10': 'upperH'},
     {'1': 'upper_s', '3': 5, '4': 1, '5': 2, '10': 'upperS'},
     {'1': 'upper_v', '3': 6, '4': 1, '5': 2, '10': 'upperV'},
-    {'1': 'circularity_threshold', '3': 7, '4': 1, '5': 2, '10': 'circularityThreshold'},
-    {'1': 'buoy_diameter', '3': 8, '4': 1, '5': 2, '10': 'buoyDiameter'},
+  ],
+};
+
+/// Descriptor for `HSVBounds`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List hSVBoundsDescriptor = $convert.base64Decode(
+    'CglIU1ZCb3VuZHMSFwoHbG93ZXJfaBgBIAEoAlIGbG93ZXJIEhcKB2xvd2VyX3MYAiABKAJSBm'
+    'xvd2VyUxIXCgdsb3dlcl92GAMgASgCUgZsb3dlclYSFwoHdXBwZXJfaBgEIAEoAlIGdXBwZXJI'
+    'EhcKB3VwcGVyX3MYBSABKAJSBnVwcGVyUxIXCgd1cHBlcl92GAYgASgCUgZ1cHBlclY=');
+
+@$core.Deprecated('Use buoyTypeInfoDescriptor instead')
+const buoyTypeInfo$json = {
+  '1': 'buoyTypeInfo',
+  '2': [
+    {'1': 'hsv_bounds', '3': 1, '4': 1, '5': 11, '6': '.boat_state.HSVBounds', '10': 'hsvBounds'},
+    {'1': 'buoy_diameter', '3': 2, '4': 1, '5': 2, '10': 'buoyDiameter'},
+  ],
+};
+
+/// Descriptor for `buoyTypeInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List buoyTypeInfoDescriptor = $convert.base64Decode(
+    'CgxidW95VHlwZUluZm8SNAoKaHN2X2JvdW5kcxgBIAEoCzIVLmJvYXRfc3RhdGUuSFNWQm91bm'
+    'RzUgloc3ZCb3VuZHMSIwoNYnVveV9kaWFtZXRlchgCIAEoAlIMYnVveURpYW1ldGVy');
+
+@$core.Deprecated('Use cVParametersDescriptor instead')
+const CVParameters$json = {
+  '1': 'CVParameters',
+  '2': [
+    {'1': 'circularity_threshold', '3': 1, '4': 1, '5': 2, '10': 'circularityThreshold'},
+    {'1': 'buoy_diameter', '3': 2, '4': 1, '5': 2, '10': 'buoyDiameter'},
+    {'1': 'buoy_types', '3': 3, '4': 3, '5': 11, '6': '.boat_state.buoyTypeInfo', '10': 'buoyTypes'},
   ],
 };
 
 /// Descriptor for `CVParameters`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List cVParametersDescriptor = $convert.base64Decode(
-    'CgxDVlBhcmFtZXRlcnMSFwoHbG93ZXJfaBgBIAEoAlIGbG93ZXJIEhcKB2xvd2VyX3MYAiABKA'
-    'JSBmxvd2VyUxIXCgdsb3dlcl92GAMgASgCUgZsb3dlclYSFwoHdXBwZXJfaBgEIAEoAlIGdXBw'
-    'ZXJIEhcKB3VwcGVyX3MYBSABKAJSBnVwcGVyUxIXCgd1cHBlcl92GAYgASgCUgZ1cHBlclYSMw'
-    'oVY2lyY3VsYXJpdHlfdGhyZXNob2xkGAcgASgCUhRjaXJjdWxhcml0eVRocmVzaG9sZBIjCg1i'
-    'dW95X2RpYW1ldGVyGAggASgCUgxidW95RGlhbWV0ZXI=');
+    'CgxDVlBhcmFtZXRlcnMSMwoVY2lyY3VsYXJpdHlfdGhyZXNob2xkGAEgASgCUhRjaXJjdWxhcm'
+    'l0eVRocmVzaG9sZBIjCg1idW95X2RpYW1ldGVyGAIgASgCUgxidW95RGlhbWV0ZXISNwoKYnVv'
+    'eV90eXBlcxgDIAMoCzIYLmJvYXRfc3RhdGUuYnVveVR5cGVJbmZvUglidW95VHlwZXM=');
 
 @$core.Deprecated('Use getCVParametersRequestDescriptor instead')
 const GetCVParametersRequest$json = {
