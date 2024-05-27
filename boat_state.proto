@@ -158,7 +158,7 @@ message HSVBounds {
     float upper_v = 6;
 }
 
-message buoyTypeInfo {
+message BuoyTypeInfo {
     string name = 1;
     HSVBounds hsv_bounds = 2;
     float buoy_diameter = 3;
@@ -167,7 +167,7 @@ message buoyTypeInfo {
 message CVParameters {
     float circularity_threshold = 1;
     float buoy_diameter = 2;
-    repeated buoyTypeInfo buoy_types = 3;
+    repeated BuoyTypeInfo buoy_types = 3;
 }
 
 message GetCVParametersRequest {

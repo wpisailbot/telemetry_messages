@@ -355,8 +355,8 @@ final $typed_data.Uint8List hSVBoundsDescriptor = $convert.base64Decode(
     'EhcKB3VwcGVyX3MYBSABKAJSBnVwcGVyUxIXCgd1cHBlcl92GAYgASgCUgZ1cHBlclY=');
 
 @$core.Deprecated('Use buoyTypeInfoDescriptor instead')
-const buoyTypeInfo$json = {
-  '1': 'buoyTypeInfo',
+const BuoyTypeInfo$json = {
+  '1': 'BuoyTypeInfo',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     {'1': 'hsv_bounds', '3': 2, '4': 1, '5': 11, '6': '.boat_state.HSVBounds', '10': 'hsvBounds'},
@@ -364,9 +364,9 @@ const buoyTypeInfo$json = {
   ],
 };
 
-/// Descriptor for `buoyTypeInfo`. Decode as a `google.protobuf.DescriptorProto`.
+/// Descriptor for `BuoyTypeInfo`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List buoyTypeInfoDescriptor = $convert.base64Decode(
-    'CgxidW95VHlwZUluZm8SEgoEbmFtZRgBIAEoCVIEbmFtZRI0Cgpoc3ZfYm91bmRzGAIgASgLMh'
+    'CgxCdW95VHlwZUluZm8SEgoEbmFtZRgBIAEoCVIEbmFtZRI0Cgpoc3ZfYm91bmRzGAIgASgLMh'
     'UuYm9hdF9zdGF0ZS5IU1ZCb3VuZHNSCWhzdkJvdW5kcxIjCg1idW95X2RpYW1ldGVyGAMgASgC'
     'UgxidW95RGlhbWV0ZXI=');
 
@@ -376,7 +376,7 @@ const CVParameters$json = {
   '2': [
     {'1': 'circularity_threshold', '3': 1, '4': 1, '5': 2, '10': 'circularityThreshold'},
     {'1': 'buoy_diameter', '3': 2, '4': 1, '5': 2, '10': 'buoyDiameter'},
-    {'1': 'buoy_types', '3': 3, '4': 3, '5': 11, '6': '.boat_state.buoyTypeInfo', '10': 'buoyTypes'},
+    {'1': 'buoy_types', '3': 3, '4': 3, '5': 11, '6': '.boat_state.BuoyTypeInfo', '10': 'buoyTypes'},
   ],
 };
 
@@ -384,7 +384,7 @@ const CVParameters$json = {
 final $typed_data.Uint8List cVParametersDescriptor = $convert.base64Decode(
     'CgxDVlBhcmFtZXRlcnMSMwoVY2lyY3VsYXJpdHlfdGhyZXNob2xkGAEgASgCUhRjaXJjdWxhcm'
     'l0eVRocmVzaG9sZBIjCg1idW95X2RpYW1ldGVyGAIgASgCUgxidW95RGlhbWV0ZXISNwoKYnVv'
-    'eV90eXBlcxgDIAMoCzIYLmJvYXRfc3RhdGUuYnVveVR5cGVJbmZvUglidW95VHlwZXM=');
+    'eV90eXBlcxgDIAMoCzIYLmJvYXRfc3RhdGUuQnVveVR5cGVJbmZvUglidW95VHlwZXM=');
 
 @$core.Deprecated('Use getCVParametersRequestDescriptor instead')
 const GetCVParametersRequest$json = {
