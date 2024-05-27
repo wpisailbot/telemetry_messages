@@ -526,6 +526,7 @@ class BoatState extends $pb.GeneratedMessage {
     $core.double? targetHeading_35,
     $core.bool? hasTargetTrack,
     $core.double? targetTrack_37,
+    $core.Iterable<$core.String>? availableVideoSources,
   }) {
     final $result = create();
     if (latitude != null) {
@@ -639,6 +640,9 @@ class BoatState extends $pb.GeneratedMessage {
     if (targetTrack_37 != null) {
       $result.targetTrack_37 = targetTrack_37;
     }
+    if (availableVideoSources != null) {
+      $result.availableVideoSources.addAll(availableVideoSources);
+    }
     return $result;
   }
   BoatState._() : super();
@@ -683,6 +687,7 @@ class BoatState extends $pb.GeneratedMessage {
     ..a<$core.double>(35, _omitFieldNames ? '' : 'targetHeading', $pb.PbFieldType.OF)
     ..aOB(36, _omitFieldNames ? '' : 'hasTargetTrack')
     ..a<$core.double>(37, _omitFieldNames ? '' : 'targetTrack', $pb.PbFieldType.OF)
+    ..pPS(38, _omitFieldNames ? '' : 'availableVideoSources')
     ..hasRequiredFields = false
   ;
 
@@ -1041,6 +1046,9 @@ class BoatState extends $pb.GeneratedMessage {
   $core.bool hasTargetTrack_37() => $_has(36);
   @$pb.TagNumber(37)
   void clearTargetTrack_37() => clearField(37);
+
+  @$pb.TagNumber(38)
+  $core.List<$core.String> get availableVideoSources => $_getList(37);
 }
 
 class BoatStateRequest extends $pb.GeneratedMessage {
