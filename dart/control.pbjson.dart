@@ -184,3 +184,12 @@ final $typed_data.Uint8List setCVParametersCommandDescriptor = $convert.base64De
     'ChZTZXRDVlBhcmFtZXRlcnNDb21tYW5kEjgKCnBhcmFtZXRlcnMYASABKAsyGC5ib2F0X3N0YX'
     'RlLkNWUGFyYW1ldGVyc1IKcGFyYW1ldGVycw==');
 
+@$core.Deprecated('Use requestTackCommandDescriptor instead')
+const RequestTackCommand$json = {
+  '1': 'RequestTackCommand',
+};
+
+/// Descriptor for `RequestTackCommand`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List requestTackCommandDescriptor = $convert.base64Decode(
+    'ChJSZXF1ZXN0VGFja0NvbW1hbmQ=');
+

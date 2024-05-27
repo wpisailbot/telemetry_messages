@@ -49,6 +49,10 @@ class ControlCommandServiceClient extends $grpc.Client {
       '/boat_control.ControlCommandService/ExecuteMarkBuoyCommand',
       ($1.MarkBuoyCommand value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
+  static final _$executeRequestTackCommand = $grpc.ClientMethod<$1.RequestTackCommand, $1.ControlResponse>(
+      '/boat_control.ControlCommandService/ExecuteRequestTackCommand',
+      ($1.RequestTackCommand value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
 
   ControlCommandServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -82,6 +86,10 @@ class ControlCommandServiceClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$1.ControlResponse> executeMarkBuoyCommand($1.MarkBuoyCommand request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$executeMarkBuoyCommand, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.ControlResponse> executeRequestTackCommand($1.RequestTackCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeRequestTackCommand, request, options: options);
   }
 }
 
@@ -139,6 +147,13 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.MarkBuoyCommand.fromBuffer(value),
         ($1.ControlResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.RequestTackCommand, $1.ControlResponse>(
+        'ExecuteRequestTackCommand',
+        executeRequestTackCommand_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.RequestTackCommand.fromBuffer(value),
+        ($1.ControlResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.ControlResponse> executeRudderCommand_Pre($grpc.ServiceCall call, $async.Future<$1.RudderCommand> request) async {
@@ -169,6 +184,10 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
     return executeMarkBuoyCommand(call, await request);
   }
 
+  $async.Future<$1.ControlResponse> executeRequestTackCommand_Pre($grpc.ServiceCall call, $async.Future<$1.RequestTackCommand> request) async {
+    return executeRequestTackCommand(call, await request);
+  }
+
   $async.Future<$1.ControlResponse> executeRudderCommand($grpc.ServiceCall call, $1.RudderCommand request);
   $async.Future<$1.ControlResponse> executeTrimTabCommand($grpc.ServiceCall call, $1.TrimTabCommand request);
   $async.Future<$1.ControlResponse> executeBallastCommand($grpc.ServiceCall call, $1.BallastCommand request);
@@ -176,6 +195,7 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
   $async.Future<$1.ControlResponse> executeSetWaypointsCommand($grpc.ServiceCall call, $1.SetWaypointsCommand request);
   $async.Future<$1.ControlResponse> executeAddWaypointCommand($grpc.ServiceCall call, $1.AddWaypointCommand request);
   $async.Future<$1.ControlResponse> executeMarkBuoyCommand($grpc.ServiceCall call, $1.MarkBuoyCommand request);
+  $async.Future<$1.ControlResponse> executeRequestTackCommand($grpc.ServiceCall call, $1.RequestTackCommand request);
 }
 @$pb.GrpcServiceName('boat_control.SetParameterService')
 class SetParameterServiceClient extends $grpc.Client {

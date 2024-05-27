@@ -56,6 +56,10 @@ message SetCVParametersCommand {
     boat_state.CVParameters parameters = 1;
 }
 
+message RequestTackCommand {
+
+}
+
 service ControlCommandService {
     rpc ExecuteRudderCommand (RudderCommand) returns (ControlResponse);
     rpc ExecuteTrimTabCommand (TrimTabCommand) returns (ControlResponse);
@@ -64,6 +68,7 @@ service ControlCommandService {
     rpc ExecuteSetWaypointsCommand (SetWaypointsCommand) returns (ControlResponse);
     rpc ExecuteAddWaypointCommand (AddWaypointCommand) returns (ControlResponse);
     rpc ExecuteMarkBuoyCommand (MarkBuoyCommand) returns (ControlResponse);
+    rpc ExecuteRequestTackCommand (RequestTackCommand) returns (ControlResponse);
 }
 
 service SetParameterService {

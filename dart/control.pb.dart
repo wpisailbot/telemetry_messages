@@ -627,6 +627,38 @@ class SetCVParametersCommand extends $pb.GeneratedMessage {
   $0.CVParameters ensureParameters() => $_ensure(0);
 }
 
+class RequestTackCommand extends $pb.GeneratedMessage {
+  factory RequestTackCommand() => create();
+  RequestTackCommand._() : super();
+  factory RequestTackCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory RequestTackCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RequestTackCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  RequestTackCommand clone() => RequestTackCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  RequestTackCommand copyWith(void Function(RequestTackCommand) updates) => super.copyWith((message) => updates(message as RequestTackCommand)) as RequestTackCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RequestTackCommand create() => RequestTackCommand._();
+  RequestTackCommand createEmptyInstance() => create();
+  static $pb.PbList<RequestTackCommand> createRepeated() => $pb.PbList<RequestTackCommand>();
+  @$core.pragma('dart2js:noInline')
+  static RequestTackCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RequestTackCommand>(create);
+  static RequestTackCommand? _defaultInstance;
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
