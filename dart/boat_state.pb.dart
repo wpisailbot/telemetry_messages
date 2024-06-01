@@ -527,6 +527,7 @@ class BoatState extends $pb.GeneratedMessage {
     $core.bool? hasTargetTrack,
     $core.double? targetTrack_37,
     $core.Iterable<$core.String>? availableVideoSources,
+    $core.bool? reachedBuoy,
   }) {
     final $result = create();
     if (latitude != null) {
@@ -643,6 +644,9 @@ class BoatState extends $pb.GeneratedMessage {
     if (availableVideoSources != null) {
       $result.availableVideoSources.addAll(availableVideoSources);
     }
+    if (reachedBuoy != null) {
+      $result.reachedBuoy = reachedBuoy;
+    }
     return $result;
   }
   BoatState._() : super();
@@ -688,6 +692,7 @@ class BoatState extends $pb.GeneratedMessage {
     ..aOB(36, _omitFieldNames ? '' : 'hasTargetTrack')
     ..a<$core.double>(37, _omitFieldNames ? '' : 'targetTrack', $pb.PbFieldType.OF)
     ..pPS(38, _omitFieldNames ? '' : 'availableVideoSources')
+    ..aOB(39, _omitFieldNames ? '' : 'reachedBuoy')
     ..hasRequiredFields = false
   ;
 
@@ -1049,6 +1054,15 @@ class BoatState extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(38)
   $core.List<$core.String> get availableVideoSources => $_getList(37);
+
+  @$pb.TagNumber(39)
+  $core.bool get reachedBuoy => $_getBF(38);
+  @$pb.TagNumber(39)
+  set reachedBuoy($core.bool v) { $_setBool(38, v); }
+  @$pb.TagNumber(39)
+  $core.bool hasReachedBuoy() => $_has(38);
+  @$pb.TagNumber(39)
+  void clearReachedBuoy() => clearField(39);
 }
 
 class BoatStateRequest extends $pb.GeneratedMessage {

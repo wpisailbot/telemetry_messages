@@ -258,6 +258,7 @@ const BoatState$json = {
     {'1': 'has_target_track', '3': 36, '4': 1, '5': 8, '10': 'hasTargetTrack'},
     {'1': 'target_track', '3': 37, '4': 1, '5': 2, '10': 'targetTrack'},
     {'1': 'available_video_sources', '3': 38, '4': 3, '5': 9, '10': 'availableVideoSources'},
+    {'1': 'reached_buoy', '3': 39, '4': 1, '5': 8, '10': 'reachedBuoy'},
   ],
 };
 
@@ -296,7 +297,8 @@ final $typed_data.Uint8List boatStateDescriptor = $convert.base64Decode(
     'IiABKAhSEGhhc1RhcmdldEhlYWRpbmcSJQoOdGFyZ2V0X2hlYWRpbmcYIyABKAJSDXRhcmdldE'
     'hlYWRpbmcSKAoQaGFzX3RhcmdldF90cmFjaxgkIAEoCFIOaGFzVGFyZ2V0VHJhY2sSIQoMdGFy'
     'Z2V0X3RyYWNrGCUgASgCUgt0YXJnZXRUcmFjaxI2ChdhdmFpbGFibGVfdmlkZW9fc291cmNlcx'
-    'gmIAMoCVIVYXZhaWxhYmxlVmlkZW9Tb3VyY2Vz');
+    'gmIAMoCVIVYXZhaWxhYmxlVmlkZW9Tb3VyY2VzEiEKDHJlYWNoZWRfYnVveRgnIAEoCFILcmVh'
+    'Y2hlZEJ1b3k=');
 
 @$core.Deprecated('Use boatStateRequestDescriptor instead')
 const BoatStateRequest$json = {

@@ -123,6 +123,7 @@ message BoatState {
     bool has_target_track = 36;
     float target_track = 37;
     repeated string available_video_sources = 38;
+    bool reached_buoy = 39;
 }
 
 message BoatStateRequest {
