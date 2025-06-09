@@ -120,6 +120,34 @@ final $typed_data.Uint8List addWaypointCommandDescriptor = $convert.base64Decode
     'ChJBZGRXYXlwb2ludENvbW1hbmQSNwoMbmV3X3dheXBvaW50GAEgASgLMhQuYm9hdF9zdGF0ZS'
     '5XYXlwb2ludFILbmV3V2F5cG9pbnQ=');
 
+@$core.Deprecated('Use replaceWaypointCommandDescriptor instead')
+const ReplaceWaypointCommand$json = {
+  '1': 'ReplaceWaypointCommand',
+  '2': [
+    {'1': 'new_waypoint', '3': 1, '4': 1, '5': 11, '6': '.boat_state.Waypoint', '10': 'newWaypoint'},
+    {'1': 'old_waypoint', '3': 2, '4': 1, '5': 11, '6': '.boat_state.Waypoint', '10': 'oldWaypoint'},
+  ],
+};
+
+/// Descriptor for `ReplaceWaypointCommand`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List replaceWaypointCommandDescriptor = $convert.base64Decode(
+    'ChZSZXBsYWNlV2F5cG9pbnRDb21tYW5kEjcKDG5ld193YXlwb2ludBgBIAEoCzIULmJvYXRfc3'
+    'RhdGUuV2F5cG9pbnRSC25ld1dheXBvaW50EjcKDG9sZF93YXlwb2ludBgCIAEoCzIULmJvYXRf'
+    'c3RhdGUuV2F5cG9pbnRSC29sZFdheXBvaW50');
+
+@$core.Deprecated('Use addBuoyCommandDescriptor instead')
+const AddBuoyCommand$json = {
+  '1': 'AddBuoyCommand',
+  '2': [
+    {'1': 'position', '3': 1, '4': 1, '5': 11, '6': '.boat_state.Point', '10': 'position'},
+  ],
+};
+
+/// Descriptor for `AddBuoyCommand`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addBuoyCommandDescriptor = $convert.base64Decode(
+    'Cg5BZGRCdW95Q29tbWFuZBItCghwb3NpdGlvbhgBIAEoCzIRLmJvYXRfc3RhdGUuUG9pbnRSCH'
+    'Bvc2l0aW9u');
+
 @$core.Deprecated('Use markBuoyCommandDescriptor instead')
 const MarkBuoyCommand$json = {
   '1': 'MarkBuoyCommand',

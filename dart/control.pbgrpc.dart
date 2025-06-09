@@ -45,6 +45,14 @@ class ControlCommandServiceClient extends $grpc.Client {
       '/boat_control.ControlCommandService/ExecuteAddWaypointCommand',
       ($1.AddWaypointCommand value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
+  static final _$executeAddBuoyCommand = $grpc.ClientMethod<$1.AddBuoyCommand, $1.ControlResponse>(
+      '/boat_control.ControlCommandService/ExecuteAddBuoyCommand',
+      ($1.AddBuoyCommand value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
+  static final _$executeReplaceWaypointCommand = $grpc.ClientMethod<$1.ReplaceWaypointCommand, $1.ControlResponse>(
+      '/boat_control.ControlCommandService/ExecuteReplaceWaypointCommand',
+      ($1.ReplaceWaypointCommand value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ControlResponse.fromBuffer(value));
   static final _$executeMarkBuoyCommand = $grpc.ClientMethod<$1.MarkBuoyCommand, $1.ControlResponse>(
       '/boat_control.ControlCommandService/ExecuteMarkBuoyCommand',
       ($1.MarkBuoyCommand value) => value.writeToBuffer(),
@@ -82,6 +90,14 @@ class ControlCommandServiceClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$1.ControlResponse> executeAddWaypointCommand($1.AddWaypointCommand request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$executeAddWaypointCommand, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.ControlResponse> executeAddBuoyCommand($1.AddBuoyCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeAddBuoyCommand, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.ControlResponse> executeReplaceWaypointCommand($1.ReplaceWaypointCommand request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeReplaceWaypointCommand, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.ControlResponse> executeMarkBuoyCommand($1.MarkBuoyCommand request, {$grpc.CallOptions? options}) {
@@ -140,6 +156,20 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.AddWaypointCommand.fromBuffer(value),
         ($1.ControlResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.AddBuoyCommand, $1.ControlResponse>(
+        'ExecuteAddBuoyCommand',
+        executeAddBuoyCommand_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.AddBuoyCommand.fromBuffer(value),
+        ($1.ControlResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.ReplaceWaypointCommand, $1.ControlResponse>(
+        'ExecuteReplaceWaypointCommand',
+        executeReplaceWaypointCommand_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.ReplaceWaypointCommand.fromBuffer(value),
+        ($1.ControlResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$1.MarkBuoyCommand, $1.ControlResponse>(
         'ExecuteMarkBuoyCommand',
         executeMarkBuoyCommand_Pre,
@@ -180,6 +210,14 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
     return executeAddWaypointCommand(call, await request);
   }
 
+  $async.Future<$1.ControlResponse> executeAddBuoyCommand_Pre($grpc.ServiceCall call, $async.Future<$1.AddBuoyCommand> request) async {
+    return executeAddBuoyCommand(call, await request);
+  }
+
+  $async.Future<$1.ControlResponse> executeReplaceWaypointCommand_Pre($grpc.ServiceCall call, $async.Future<$1.ReplaceWaypointCommand> request) async {
+    return executeReplaceWaypointCommand(call, await request);
+  }
+
   $async.Future<$1.ControlResponse> executeMarkBuoyCommand_Pre($grpc.ServiceCall call, $async.Future<$1.MarkBuoyCommand> request) async {
     return executeMarkBuoyCommand(call, await request);
   }
@@ -194,6 +232,8 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
   $async.Future<$1.ControlResponse> executeAutonomousModeCommand($grpc.ServiceCall call, $1.AutonomousModeCommand request);
   $async.Future<$1.ControlResponse> executeSetWaypointsCommand($grpc.ServiceCall call, $1.SetWaypointsCommand request);
   $async.Future<$1.ControlResponse> executeAddWaypointCommand($grpc.ServiceCall call, $1.AddWaypointCommand request);
+  $async.Future<$1.ControlResponse> executeAddBuoyCommand($grpc.ServiceCall call, $1.AddBuoyCommand request);
+  $async.Future<$1.ControlResponse> executeReplaceWaypointCommand($grpc.ServiceCall call, $1.ReplaceWaypointCommand request);
   $async.Future<$1.ControlResponse> executeMarkBuoyCommand($grpc.ServiceCall call, $1.MarkBuoyCommand request);
   $async.Future<$1.ControlResponse> executeRequestTackCommand($grpc.ServiceCall call, $1.RequestTackCommand request);
 }

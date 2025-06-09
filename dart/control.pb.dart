@@ -373,6 +373,126 @@ class AddWaypointCommand extends $pb.GeneratedMessage {
   $0.Waypoint ensureNewWaypoint() => $_ensure(0);
 }
 
+class ReplaceWaypointCommand extends $pb.GeneratedMessage {
+  factory ReplaceWaypointCommand({
+    $0.Waypoint? newWaypoint,
+    $0.Waypoint? oldWaypoint,
+  }) {
+    final $result = create();
+    if (newWaypoint != null) {
+      $result.newWaypoint = newWaypoint;
+    }
+    if (oldWaypoint != null) {
+      $result.oldWaypoint = oldWaypoint;
+    }
+    return $result;
+  }
+  ReplaceWaypointCommand._() : super();
+  factory ReplaceWaypointCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ReplaceWaypointCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ReplaceWaypointCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+    ..aOM<$0.Waypoint>(1, _omitFieldNames ? '' : 'newWaypoint', subBuilder: $0.Waypoint.create)
+    ..aOM<$0.Waypoint>(2, _omitFieldNames ? '' : 'oldWaypoint', subBuilder: $0.Waypoint.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ReplaceWaypointCommand clone() => ReplaceWaypointCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ReplaceWaypointCommand copyWith(void Function(ReplaceWaypointCommand) updates) => super.copyWith((message) => updates(message as ReplaceWaypointCommand)) as ReplaceWaypointCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ReplaceWaypointCommand create() => ReplaceWaypointCommand._();
+  ReplaceWaypointCommand createEmptyInstance() => create();
+  static $pb.PbList<ReplaceWaypointCommand> createRepeated() => $pb.PbList<ReplaceWaypointCommand>();
+  @$core.pragma('dart2js:noInline')
+  static ReplaceWaypointCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ReplaceWaypointCommand>(create);
+  static ReplaceWaypointCommand? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.Waypoint get newWaypoint => $_getN(0);
+  @$pb.TagNumber(1)
+  set newWaypoint($0.Waypoint v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNewWaypoint() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNewWaypoint() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Waypoint ensureNewWaypoint() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $0.Waypoint get oldWaypoint => $_getN(1);
+  @$pb.TagNumber(2)
+  set oldWaypoint($0.Waypoint v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasOldWaypoint() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearOldWaypoint() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Waypoint ensureOldWaypoint() => $_ensure(1);
+}
+
+class AddBuoyCommand extends $pb.GeneratedMessage {
+  factory AddBuoyCommand({
+    $0.Point? position,
+  }) {
+    final $result = create();
+    if (position != null) {
+      $result.position = position;
+    }
+    return $result;
+  }
+  AddBuoyCommand._() : super();
+  factory AddBuoyCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AddBuoyCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AddBuoyCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+    ..aOM<$0.Point>(1, _omitFieldNames ? '' : 'position', subBuilder: $0.Point.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  AddBuoyCommand clone() => AddBuoyCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AddBuoyCommand copyWith(void Function(AddBuoyCommand) updates) => super.copyWith((message) => updates(message as AddBuoyCommand)) as AddBuoyCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddBuoyCommand create() => AddBuoyCommand._();
+  AddBuoyCommand createEmptyInstance() => create();
+  static $pb.PbList<AddBuoyCommand> createRepeated() => $pb.PbList<AddBuoyCommand>();
+  @$core.pragma('dart2js:noInline')
+  static AddBuoyCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AddBuoyCommand>(create);
+  static AddBuoyCommand? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.Point get position => $_getN(0);
+  @$pb.TagNumber(1)
+  set position($0.Point v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasPosition() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPosition() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Point ensurePosition() => $_ensure(0);
+}
+
 class MarkBuoyCommand extends $pb.GeneratedMessage {
   factory MarkBuoyCommand({
     $0.Point? position,

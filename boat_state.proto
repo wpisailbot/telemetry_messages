@@ -124,6 +124,7 @@ message BoatState {
     float target_track = 37;
     repeated string available_video_sources = 38;
     bool reached_buoy = 39;
+    Path past_path = 40;
 }
 
 message BoatStateRequest {
