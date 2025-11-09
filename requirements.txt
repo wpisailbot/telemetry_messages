@@ -1,0 +1,6 @@
+# Python dependencies for telemetry_messages
+# This package contains generated protobuf code for gRPC communication
+
+grpcio>=1.50.0
+protobuf>=4.21.0
+
