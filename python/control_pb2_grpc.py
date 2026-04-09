@@ -5,10 +5,8 @@ import warnings
 
 import control_pb2 as control__pb2
 
-GRPC_GENERATED_VERSION = '1.63.0'
+GRPC_GENERATED_VERSION = '1.76.0'
 GRPC_VERSION = grpc.__version__
-EXPECTED_ERROR_RELEASE = '1.65.0'
-SCHEDULED_RELEASE_DATE = 'June 25, 2024'
 _version_not_supported = False
 
 try:
@@ -18,15 +16,12 @@ except ImportError:
     _version_not_supported = True
 
 if _version_not_supported:
-    warnings.warn(
+    raise RuntimeError(
         f'The grpc package installed is at version {GRPC_VERSION},'
-        + f' but the generated code in control_pb2_grpc.py depends on'
+        + ' but the generated code in control_pb2_grpc.py depends on'
         + f' grpcio>={GRPC_GENERATED_VERSION}.'
         + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
         + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
-        + f' This warning will become an error in {EXPECTED_ERROR_RELEASE},'
-        + f' scheduled for release on {SCHEDULED_RELEASE_DATE}.',
-        RuntimeWarning
     )
 
 
@@ -179,6 +174,7 @@ def add_ControlCommandServiceServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'boat_control.ControlCommandService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('boat_control.ControlCommandService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -426,6 +422,21 @@ class SetParameterServiceStub(object):
                 request_serializer=control__pb2.SetRudderOvershootBiasCommand.SerializeToString,
                 response_deserializer=control__pb2.ControlResponse.FromString,
                 _registered_method=True)
+        self.ExecuteSetHeadingErrorScaleCommand = channel.unary_unary(
+                '/boat_control.SetParameterService/ExecuteSetHeadingErrorScaleCommand',
+                request_serializer=control__pb2.SetHeadingErrorScaleCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                _registered_method=True)
+        self.ExecuteSetRateOfChangeScaleCommand = channel.unary_unary(
+                '/boat_control.SetParameterService/ExecuteSetRateOfChangeScaleCommand',
+                request_serializer=control__pb2.SetRateOfChangeScaleCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                _registered_method=True)
+        self.ExecuteSetCrossTrackErrorScaleCommand = channel.unary_unary(
+                '/boat_control.SetParameterService/ExecuteSetCrossTrackErrorScaleCommand',
+                request_serializer=control__pb2.SetCrossTrackErrorScaleCommand.SerializeToString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
+                _registered_method=True)
         self.ExecuteSetCVParametersCommand = channel.unary_unary(
                 '/boat_control.SetParameterService/ExecuteSetCVParametersCommand',
                 request_serializer=control__pb2.SetCVParametersCommand.SerializeToString,
@@ -449,6 +460,24 @@ class SetParameterServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ExecuteSetRudderOvershootBiasCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ExecuteSetHeadingErrorScaleCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ExecuteSetRateOfChangeScaleCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ExecuteSetCrossTrackErrorScaleCommand(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -478,6 +507,21 @@ def add_SetParameterServiceServicer_to_server(servicer, server):
                     request_deserializer=control__pb2.SetRudderOvershootBiasCommand.FromString,
                     response_serializer=control__pb2.ControlResponse.SerializeToString,
             ),
+            'ExecuteSetHeadingErrorScaleCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteSetHeadingErrorScaleCommand,
+                    request_deserializer=control__pb2.SetHeadingErrorScaleCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
+            'ExecuteSetRateOfChangeScaleCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteSetRateOfChangeScaleCommand,
+                    request_deserializer=control__pb2.SetRateOfChangeScaleCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
+            'ExecuteSetCrossTrackErrorScaleCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteSetCrossTrackErrorScaleCommand,
+                    request_deserializer=control__pb2.SetCrossTrackErrorScaleCommand.FromString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
             'ExecuteSetCVParametersCommand': grpc.unary_unary_rpc_method_handler(
                     servicer.ExecuteSetCVParametersCommand,
                     request_deserializer=control__pb2.SetCVParametersCommand.FromString,
@@ -487,6 +531,7 @@ def add_SetParameterServiceServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'boat_control.SetParameterService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('boat_control.SetParameterService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -563,6 +608,87 @@ class SetParameterService(object):
             target,
             '/boat_control.SetParameterService/ExecuteSetRudderOvershootBiasCommand',
             control__pb2.SetRudderOvershootBiasCommand.SerializeToString,
+            control__pb2.ControlResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ExecuteSetHeadingErrorScaleCommand(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/boat_control.SetParameterService/ExecuteSetHeadingErrorScaleCommand',
+            control__pb2.SetHeadingErrorScaleCommand.SerializeToString,
+            control__pb2.ControlResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ExecuteSetRateOfChangeScaleCommand(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/boat_control.SetParameterService/ExecuteSetRateOfChangeScaleCommand',
+            control__pb2.SetRateOfChangeScaleCommand.SerializeToString,
+            control__pb2.ControlResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ExecuteSetCrossTrackErrorScaleCommand(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/boat_control.SetParameterService/ExecuteSetCrossTrackErrorScaleCommand',
+            control__pb2.SetCrossTrackErrorScaleCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
             options,
             channel_credentials,

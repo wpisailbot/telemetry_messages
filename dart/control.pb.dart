@@ -1,43 +1,39 @@
-//
+///
 //  Generated code. Do not modify.
 //  source: control.proto
 //
 // @dart = 2.12
-
-// ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'boat_state.pb.dart' as $0;
-import 'boat_state.pbenum.dart' as $0;
+
 import 'control.pbenum.dart';
+import 'boat_state.pbenum.dart' as $0;
 
 export 'control.pbenum.dart';
 
 class ControlResponse extends $pb.GeneratedMessage {
-  factory ControlResponse({
-    ControlExecutionStatus? executionStatus,
-  }) {
-    final $result = create();
-    if (executionStatus != null) {
-      $result.executionStatus = executionStatus;
-    }
-    return $result;
-  }
-  ControlResponse._() : super();
-  factory ControlResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ControlResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ControlResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..e<ControlExecutionStatus>(1, _omitFieldNames ? '' : 'executionStatus', $pb.PbFieldType.OE, defaultOrMaker: ControlExecutionStatus.CONTROL_EXECUTION_UNDEFINED, valueOf: ControlExecutionStatus.valueOf, enumValues: ControlExecutionStatus.values)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ControlResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..e<ControlExecutionStatus>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'executionStatus', $pb.PbFieldType.OE, defaultOrMaker: ControlExecutionStatus.CONTROL_EXECUTION_UNDEFINED, valueOf: ControlExecutionStatus.valueOf, enumValues: ControlExecutionStatus.values)
     ..hasRequiredFields = false
   ;
 
+  ControlResponse._() : super();
+  factory ControlResponse({
+    ControlExecutionStatus? executionStatus,
+  }) {
+    final _result = create();
+    if (executionStatus != null) {
+      _result.executionStatus = executionStatus;
+    }
+    return _result;
+  }
+  factory ControlResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ControlResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -47,10 +43,8 @@ class ControlResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ControlResponse copyWith(void Function(ControlResponse) updates) => super.copyWith((message) => updates(message as ControlResponse)) as ControlResponse;
-
+  ControlResponse copyWith(void Function(ControlResponse) updates) => super.copyWith((message) => updates(message as ControlResponse)) as ControlResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static ControlResponse create() => ControlResponse._();
   ControlResponse createEmptyInstance() => create();
@@ -70,24 +64,23 @@ class ControlResponse extends $pb.GeneratedMessage {
 }
 
 class RudderCommand extends $pb.GeneratedMessage {
-  factory RudderCommand({
-    $core.double? rudderControlValue,
-  }) {
-    final $result = create();
-    if (rudderControlValue != null) {
-      $result.rudderControlValue = rudderControlValue;
-    }
-    return $result;
-  }
-  RudderCommand._() : super();
-  factory RudderCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory RudderCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RudderCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'rudderControlValue', $pb.PbFieldType.OF)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'RudderCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rudderControlValue', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
+  RudderCommand._() : super();
+  factory RudderCommand({
+    $core.double? rudderControlValue,
+  }) {
+    final _result = create();
+    if (rudderControlValue != null) {
+      _result.rudderControlValue = rudderControlValue;
+    }
+    return _result;
+  }
+  factory RudderCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory RudderCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -97,10 +90,8 @@ class RudderCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  RudderCommand copyWith(void Function(RudderCommand) updates) => super.copyWith((message) => updates(message as RudderCommand)) as RudderCommand;
-
+  RudderCommand copyWith(void Function(RudderCommand) updates) => super.copyWith((message) => updates(message as RudderCommand)) as RudderCommand; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static RudderCommand create() => RudderCommand._();
   RudderCommand createEmptyInstance() => create();
@@ -120,24 +111,23 @@ class RudderCommand extends $pb.GeneratedMessage {
 }
 
 class TrimTabCommand extends $pb.GeneratedMessage {
-  factory TrimTabCommand({
-    $core.double? trimtabControlValue,
-  }) {
-    final $result = create();
-    if (trimtabControlValue != null) {
-      $result.trimtabControlValue = trimtabControlValue;
-    }
-    return $result;
-  }
-  TrimTabCommand._() : super();
-  factory TrimTabCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory TrimTabCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TrimTabCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'trimtabControlValue', $pb.PbFieldType.OF)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TrimTabCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'trimtabControlValue', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
+  TrimTabCommand._() : super();
+  factory TrimTabCommand({
+    $core.double? trimtabControlValue,
+  }) {
+    final _result = create();
+    if (trimtabControlValue != null) {
+      _result.trimtabControlValue = trimtabControlValue;
+    }
+    return _result;
+  }
+  factory TrimTabCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TrimTabCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -147,10 +137,8 @@ class TrimTabCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TrimTabCommand copyWith(void Function(TrimTabCommand) updates) => super.copyWith((message) => updates(message as TrimTabCommand)) as TrimTabCommand;
-
+  TrimTabCommand copyWith(void Function(TrimTabCommand) updates) => super.copyWith((message) => updates(message as TrimTabCommand)) as TrimTabCommand; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static TrimTabCommand create() => TrimTabCommand._();
   TrimTabCommand createEmptyInstance() => create();
@@ -170,24 +158,23 @@ class TrimTabCommand extends $pb.GeneratedMessage {
 }
 
 class BallastCommand extends $pb.GeneratedMessage {
-  factory BallastCommand({
-    $core.double? ballastControlValue,
-  }) {
-    final $result = create();
-    if (ballastControlValue != null) {
-      $result.ballastControlValue = ballastControlValue;
-    }
-    return $result;
-  }
-  BallastCommand._() : super();
-  factory BallastCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory BallastCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BallastCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'ballastControlValue', $pb.PbFieldType.OF)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BallastCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ballastControlValue', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
+  BallastCommand._() : super();
+  factory BallastCommand({
+    $core.double? ballastControlValue,
+  }) {
+    final _result = create();
+    if (ballastControlValue != null) {
+      _result.ballastControlValue = ballastControlValue;
+    }
+    return _result;
+  }
+  factory BallastCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory BallastCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -197,10 +184,8 @@ class BallastCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  BallastCommand copyWith(void Function(BallastCommand) updates) => super.copyWith((message) => updates(message as BallastCommand)) as BallastCommand;
-
+  BallastCommand copyWith(void Function(BallastCommand) updates) => super.copyWith((message) => updates(message as BallastCommand)) as BallastCommand; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static BallastCommand create() => BallastCommand._();
   BallastCommand createEmptyInstance() => create();
@@ -220,24 +205,23 @@ class BallastCommand extends $pb.GeneratedMessage {
 }
 
 class AutonomousModeCommand extends $pb.GeneratedMessage {
-  factory AutonomousModeCommand({
-    $0.AutonomousMode? autonomousMode,
-  }) {
-    final $result = create();
-    if (autonomousMode != null) {
-      $result.autonomousMode = autonomousMode;
-    }
-    return $result;
-  }
-  AutonomousModeCommand._() : super();
-  factory AutonomousModeCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AutonomousModeCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AutonomousModeCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..e<$0.AutonomousMode>(5, _omitFieldNames ? '' : 'autonomousMode', $pb.PbFieldType.OE, defaultOrMaker: $0.AutonomousMode.AUTONOMOUS_MODE_UNDEFINED, valueOf: $0.AutonomousMode.valueOf, enumValues: $0.AutonomousMode.values)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AutonomousModeCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..e<$0.AutonomousMode>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'autonomousMode', $pb.PbFieldType.OE, defaultOrMaker: $0.AutonomousMode.AUTONOMOUS_MODE_UNDEFINED, valueOf: $0.AutonomousMode.valueOf, enumValues: $0.AutonomousMode.values)
     ..hasRequiredFields = false
   ;
 
+  AutonomousModeCommand._() : super();
+  factory AutonomousModeCommand({
+    $0.AutonomousMode? autonomousMode,
+  }) {
+    final _result = create();
+    if (autonomousMode != null) {
+      _result.autonomousMode = autonomousMode;
+    }
+    return _result;
+  }
+  factory AutonomousModeCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AutonomousModeCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -247,10 +231,8 @@ class AutonomousModeCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AutonomousModeCommand copyWith(void Function(AutonomousModeCommand) updates) => super.copyWith((message) => updates(message as AutonomousModeCommand)) as AutonomousModeCommand;
-
+  AutonomousModeCommand copyWith(void Function(AutonomousModeCommand) updates) => super.copyWith((message) => updates(message as AutonomousModeCommand)) as AutonomousModeCommand; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static AutonomousModeCommand create() => AutonomousModeCommand._();
   AutonomousModeCommand createEmptyInstance() => create();
@@ -270,24 +252,23 @@ class AutonomousModeCommand extends $pb.GeneratedMessage {
 }
 
 class SetWaypointsCommand extends $pb.GeneratedMessage {
-  factory SetWaypointsCommand({
-    $0.WaypointPath? newWaypoints,
-  }) {
-    final $result = create();
-    if (newWaypoints != null) {
-      $result.newWaypoints = newWaypoints;
-    }
-    return $result;
-  }
-  SetWaypointsCommand._() : super();
-  factory SetWaypointsCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetWaypointsCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetWaypointsCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..aOM<$0.WaypointPath>(1, _omitFieldNames ? '' : 'newWaypoints', subBuilder: $0.WaypointPath.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetWaypointsCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..aOM<$0.WaypointPath>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'newWaypoints', subBuilder: $0.WaypointPath.create)
     ..hasRequiredFields = false
   ;
 
+  SetWaypointsCommand._() : super();
+  factory SetWaypointsCommand({
+    $0.WaypointPath? newWaypoints,
+  }) {
+    final _result = create();
+    if (newWaypoints != null) {
+      _result.newWaypoints = newWaypoints;
+    }
+    return _result;
+  }
+  factory SetWaypointsCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetWaypointsCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -297,10 +278,8 @@ class SetWaypointsCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SetWaypointsCommand copyWith(void Function(SetWaypointsCommand) updates) => super.copyWith((message) => updates(message as SetWaypointsCommand)) as SetWaypointsCommand;
-
+  SetWaypointsCommand copyWith(void Function(SetWaypointsCommand) updates) => super.copyWith((message) => updates(message as SetWaypointsCommand)) as SetWaypointsCommand; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static SetWaypointsCommand create() => SetWaypointsCommand._();
   SetWaypointsCommand createEmptyInstance() => create();
@@ -322,24 +301,23 @@ class SetWaypointsCommand extends $pb.GeneratedMessage {
 }
 
 class AddWaypointCommand extends $pb.GeneratedMessage {
-  factory AddWaypointCommand({
-    $0.Waypoint? newWaypoint,
-  }) {
-    final $result = create();
-    if (newWaypoint != null) {
-      $result.newWaypoint = newWaypoint;
-    }
-    return $result;
-  }
-  AddWaypointCommand._() : super();
-  factory AddWaypointCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AddWaypointCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AddWaypointCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..aOM<$0.Waypoint>(1, _omitFieldNames ? '' : 'newWaypoint', subBuilder: $0.Waypoint.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AddWaypointCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..aOM<$0.Waypoint>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'newWaypoint', subBuilder: $0.Waypoint.create)
     ..hasRequiredFields = false
   ;
 
+  AddWaypointCommand._() : super();
+  factory AddWaypointCommand({
+    $0.Waypoint? newWaypoint,
+  }) {
+    final _result = create();
+    if (newWaypoint != null) {
+      _result.newWaypoint = newWaypoint;
+    }
+    return _result;
+  }
+  factory AddWaypointCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AddWaypointCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -349,10 +327,8 @@ class AddWaypointCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AddWaypointCommand copyWith(void Function(AddWaypointCommand) updates) => super.copyWith((message) => updates(message as AddWaypointCommand)) as AddWaypointCommand;
-
+  AddWaypointCommand copyWith(void Function(AddWaypointCommand) updates) => super.copyWith((message) => updates(message as AddWaypointCommand)) as AddWaypointCommand; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static AddWaypointCommand create() => AddWaypointCommand._();
   AddWaypointCommand createEmptyInstance() => create();
@@ -374,24 +350,23 @@ class AddWaypointCommand extends $pb.GeneratedMessage {
 }
 
 class MarkBuoyCommand extends $pb.GeneratedMessage {
-  factory MarkBuoyCommand({
-    $0.Point? position,
-  }) {
-    final $result = create();
-    if (position != null) {
-      $result.position = position;
-    }
-    return $result;
-  }
-  MarkBuoyCommand._() : super();
-  factory MarkBuoyCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory MarkBuoyCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MarkBuoyCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..aOM<$0.Point>(1, _omitFieldNames ? '' : 'position', subBuilder: $0.Point.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MarkBuoyCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..aOM<$0.Point>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'position', subBuilder: $0.Point.create)
     ..hasRequiredFields = false
   ;
 
+  MarkBuoyCommand._() : super();
+  factory MarkBuoyCommand({
+    $0.Point? position,
+  }) {
+    final _result = create();
+    if (position != null) {
+      _result.position = position;
+    }
+    return _result;
+  }
+  factory MarkBuoyCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MarkBuoyCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -401,10 +376,8 @@ class MarkBuoyCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  MarkBuoyCommand copyWith(void Function(MarkBuoyCommand) updates) => super.copyWith((message) => updates(message as MarkBuoyCommand)) as MarkBuoyCommand;
-
+  MarkBuoyCommand copyWith(void Function(MarkBuoyCommand) updates) => super.copyWith((message) => updates(message as MarkBuoyCommand)) as MarkBuoyCommand; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static MarkBuoyCommand create() => MarkBuoyCommand._();
   MarkBuoyCommand createEmptyInstance() => create();
@@ -426,24 +399,23 @@ class MarkBuoyCommand extends $pb.GeneratedMessage {
 }
 
 class SetVFForwardMagnitudeCommand extends $pb.GeneratedMessage {
-  factory SetVFForwardMagnitudeCommand({
-    $core.double? magnitude,
-  }) {
-    final $result = create();
-    if (magnitude != null) {
-      $result.magnitude = magnitude;
-    }
-    return $result;
-  }
-  SetVFForwardMagnitudeCommand._() : super();
-  factory SetVFForwardMagnitudeCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetVFForwardMagnitudeCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetVFForwardMagnitudeCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'magnitude', $pb.PbFieldType.OF)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetVFForwardMagnitudeCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'magnitude', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
+  SetVFForwardMagnitudeCommand._() : super();
+  factory SetVFForwardMagnitudeCommand({
+    $core.double? magnitude,
+  }) {
+    final _result = create();
+    if (magnitude != null) {
+      _result.magnitude = magnitude;
+    }
+    return _result;
+  }
+  factory SetVFForwardMagnitudeCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetVFForwardMagnitudeCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -453,10 +425,8 @@ class SetVFForwardMagnitudeCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SetVFForwardMagnitudeCommand copyWith(void Function(SetVFForwardMagnitudeCommand) updates) => super.copyWith((message) => updates(message as SetVFForwardMagnitudeCommand)) as SetVFForwardMagnitudeCommand;
-
+  SetVFForwardMagnitudeCommand copyWith(void Function(SetVFForwardMagnitudeCommand) updates) => super.copyWith((message) => updates(message as SetVFForwardMagnitudeCommand)) as SetVFForwardMagnitudeCommand; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static SetVFForwardMagnitudeCommand create() => SetVFForwardMagnitudeCommand._();
   SetVFForwardMagnitudeCommand createEmptyInstance() => create();
@@ -476,24 +446,23 @@ class SetVFForwardMagnitudeCommand extends $pb.GeneratedMessage {
 }
 
 class SetRudderAdjustmentScaleCommand extends $pb.GeneratedMessage {
-  factory SetRudderAdjustmentScaleCommand({
-    $core.double? scale,
-  }) {
-    final $result = create();
-    if (scale != null) {
-      $result.scale = scale;
-    }
-    return $result;
-  }
-  SetRudderAdjustmentScaleCommand._() : super();
-  factory SetRudderAdjustmentScaleCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetRudderAdjustmentScaleCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetRudderAdjustmentScaleCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'scale', $pb.PbFieldType.OF)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetRudderAdjustmentScaleCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'scale', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
+  SetRudderAdjustmentScaleCommand._() : super();
+  factory SetRudderAdjustmentScaleCommand({
+    $core.double? scale,
+  }) {
+    final _result = create();
+    if (scale != null) {
+      _result.scale = scale;
+    }
+    return _result;
+  }
+  factory SetRudderAdjustmentScaleCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetRudderAdjustmentScaleCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -503,10 +472,8 @@ class SetRudderAdjustmentScaleCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SetRudderAdjustmentScaleCommand copyWith(void Function(SetRudderAdjustmentScaleCommand) updates) => super.copyWith((message) => updates(message as SetRudderAdjustmentScaleCommand)) as SetRudderAdjustmentScaleCommand;
-
+  SetRudderAdjustmentScaleCommand copyWith(void Function(SetRudderAdjustmentScaleCommand) updates) => super.copyWith((message) => updates(message as SetRudderAdjustmentScaleCommand)) as SetRudderAdjustmentScaleCommand; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static SetRudderAdjustmentScaleCommand create() => SetRudderAdjustmentScaleCommand._();
   SetRudderAdjustmentScaleCommand createEmptyInstance() => create();
@@ -525,25 +492,165 @@ class SetRudderAdjustmentScaleCommand extends $pb.GeneratedMessage {
   void clearScale() => clearField(1);
 }
 
-class SetRudderOvershootBiasCommand extends $pb.GeneratedMessage {
-  factory SetRudderOvershootBiasCommand({
-    $core.double? bias,
-  }) {
-    final $result = create();
-    if (bias != null) {
-      $result.bias = bias;
-    }
-    return $result;
-  }
-  SetRudderOvershootBiasCommand._() : super();
-  factory SetRudderOvershootBiasCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetRudderOvershootBiasCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetRudderOvershootBiasCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'bias', $pb.PbFieldType.OF)
+class SetHeadingErrorScaleCommand extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetHeadingErrorScaleCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'headingScale', $pb.PbFieldType.OF, protoName: 'headingScale')
     ..hasRequiredFields = false
   ;
 
+  SetHeadingErrorScaleCommand._() : super();
+  factory SetHeadingErrorScaleCommand({
+    $core.double? headingScale,
+  }) {
+    final _result = create();
+    if (headingScale != null) {
+      _result.headingScale = headingScale;
+    }
+    return _result;
+  }
+  factory SetHeadingErrorScaleCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetHeadingErrorScaleCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SetHeadingErrorScaleCommand clone() => SetHeadingErrorScaleCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SetHeadingErrorScaleCommand copyWith(void Function(SetHeadingErrorScaleCommand) updates) => super.copyWith((message) => updates(message as SetHeadingErrorScaleCommand)) as SetHeadingErrorScaleCommand; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SetHeadingErrorScaleCommand create() => SetHeadingErrorScaleCommand._();
+  SetHeadingErrorScaleCommand createEmptyInstance() => create();
+  static $pb.PbList<SetHeadingErrorScaleCommand> createRepeated() => $pb.PbList<SetHeadingErrorScaleCommand>();
+  @$core.pragma('dart2js:noInline')
+  static SetHeadingErrorScaleCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetHeadingErrorScaleCommand>(create);
+  static SetHeadingErrorScaleCommand? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get headingScale => $_getN(0);
+  @$pb.TagNumber(1)
+  set headingScale($core.double v) { $_setFloat(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasHeadingScale() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearHeadingScale() => clearField(1);
+}
+
+class SetRateOfChangeScaleCommand extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetRateOfChangeScaleCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'roc', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  SetRateOfChangeScaleCommand._() : super();
+  factory SetRateOfChangeScaleCommand({
+    $core.double? roc,
+  }) {
+    final _result = create();
+    if (roc != null) {
+      _result.roc = roc;
+    }
+    return _result;
+  }
+  factory SetRateOfChangeScaleCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetRateOfChangeScaleCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SetRateOfChangeScaleCommand clone() => SetRateOfChangeScaleCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SetRateOfChangeScaleCommand copyWith(void Function(SetRateOfChangeScaleCommand) updates) => super.copyWith((message) => updates(message as SetRateOfChangeScaleCommand)) as SetRateOfChangeScaleCommand; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SetRateOfChangeScaleCommand create() => SetRateOfChangeScaleCommand._();
+  SetRateOfChangeScaleCommand createEmptyInstance() => create();
+  static $pb.PbList<SetRateOfChangeScaleCommand> createRepeated() => $pb.PbList<SetRateOfChangeScaleCommand>();
+  @$core.pragma('dart2js:noInline')
+  static SetRateOfChangeScaleCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetRateOfChangeScaleCommand>(create);
+  static SetRateOfChangeScaleCommand? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get roc => $_getN(0);
+  @$pb.TagNumber(1)
+  set roc($core.double v) { $_setFloat(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasRoc() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRoc() => clearField(1);
+}
+
+class SetCrossTrackErrorScaleCommand extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetCrossTrackErrorScaleCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cte', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  SetCrossTrackErrorScaleCommand._() : super();
+  factory SetCrossTrackErrorScaleCommand({
+    $core.double? cte,
+  }) {
+    final _result = create();
+    if (cte != null) {
+      _result.cte = cte;
+    }
+    return _result;
+  }
+  factory SetCrossTrackErrorScaleCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetCrossTrackErrorScaleCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SetCrossTrackErrorScaleCommand clone() => SetCrossTrackErrorScaleCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SetCrossTrackErrorScaleCommand copyWith(void Function(SetCrossTrackErrorScaleCommand) updates) => super.copyWith((message) => updates(message as SetCrossTrackErrorScaleCommand)) as SetCrossTrackErrorScaleCommand; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SetCrossTrackErrorScaleCommand create() => SetCrossTrackErrorScaleCommand._();
+  SetCrossTrackErrorScaleCommand createEmptyInstance() => create();
+  static $pb.PbList<SetCrossTrackErrorScaleCommand> createRepeated() => $pb.PbList<SetCrossTrackErrorScaleCommand>();
+  @$core.pragma('dart2js:noInline')
+  static SetCrossTrackErrorScaleCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetCrossTrackErrorScaleCommand>(create);
+  static SetCrossTrackErrorScaleCommand? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get cte => $_getN(0);
+  @$pb.TagNumber(1)
+  set cte($core.double v) { $_setFloat(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCte() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCte() => clearField(1);
+}
+
+class SetRudderOvershootBiasCommand extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetRudderOvershootBiasCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bias', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  SetRudderOvershootBiasCommand._() : super();
+  factory SetRudderOvershootBiasCommand({
+    $core.double? bias,
+  }) {
+    final _result = create();
+    if (bias != null) {
+      _result.bias = bias;
+    }
+    return _result;
+  }
+  factory SetRudderOvershootBiasCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetRudderOvershootBiasCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -553,10 +660,8 @@ class SetRudderOvershootBiasCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SetRudderOvershootBiasCommand copyWith(void Function(SetRudderOvershootBiasCommand) updates) => super.copyWith((message) => updates(message as SetRudderOvershootBiasCommand)) as SetRudderOvershootBiasCommand;
-
+  SetRudderOvershootBiasCommand copyWith(void Function(SetRudderOvershootBiasCommand) updates) => super.copyWith((message) => updates(message as SetRudderOvershootBiasCommand)) as SetRudderOvershootBiasCommand; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static SetRudderOvershootBiasCommand create() => SetRudderOvershootBiasCommand._();
   SetRudderOvershootBiasCommand createEmptyInstance() => create();
@@ -576,24 +681,23 @@ class SetRudderOvershootBiasCommand extends $pb.GeneratedMessage {
 }
 
 class SetCVParametersCommand extends $pb.GeneratedMessage {
-  factory SetCVParametersCommand({
-    $0.CVParameters? parameters,
-  }) {
-    final $result = create();
-    if (parameters != null) {
-      $result.parameters = parameters;
-    }
-    return $result;
-  }
-  SetCVParametersCommand._() : super();
-  factory SetCVParametersCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetCVParametersCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetCVParametersCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
-    ..aOM<$0.CVParameters>(1, _omitFieldNames ? '' : 'parameters', subBuilder: $0.CVParameters.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetCVParametersCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..aOM<$0.CVParameters>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parameters', subBuilder: $0.CVParameters.create)
     ..hasRequiredFields = false
   ;
 
+  SetCVParametersCommand._() : super();
+  factory SetCVParametersCommand({
+    $0.CVParameters? parameters,
+  }) {
+    final _result = create();
+    if (parameters != null) {
+      _result.parameters = parameters;
+    }
+    return _result;
+  }
+  factory SetCVParametersCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetCVParametersCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -603,10 +707,8 @@ class SetCVParametersCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SetCVParametersCommand copyWith(void Function(SetCVParametersCommand) updates) => super.copyWith((message) => updates(message as SetCVParametersCommand)) as SetCVParametersCommand;
-
+  SetCVParametersCommand copyWith(void Function(SetCVParametersCommand) updates) => super.copyWith((message) => updates(message as SetCVParametersCommand)) as SetCVParametersCommand; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static SetCVParametersCommand create() => SetCVParametersCommand._();
   SetCVParametersCommand createEmptyInstance() => create();
@@ -628,15 +730,14 @@ class SetCVParametersCommand extends $pb.GeneratedMessage {
 }
 
 class RequestTackCommand extends $pb.GeneratedMessage {
-  factory RequestTackCommand() => create();
-  RequestTackCommand._() : super();
-  factory RequestTackCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory RequestTackCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RequestTackCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_control'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'RequestTackCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
+  RequestTackCommand._() : super();
+  factory RequestTackCommand() => create();
+  factory RequestTackCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory RequestTackCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -646,10 +747,8 @@ class RequestTackCommand extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  RequestTackCommand copyWith(void Function(RequestTackCommand) updates) => super.copyWith((message) => updates(message as RequestTackCommand)) as RequestTackCommand;
-
+  RequestTackCommand copyWith(void Function(RequestTackCommand) updates) => super.copyWith((message) => updates(message as RequestTackCommand)) as RequestTackCommand; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static RequestTackCommand create() => RequestTackCommand._();
   RequestTackCommand createEmptyInstance() => create();
@@ -659,6 +758,3 @@ class RequestTackCommand extends $pb.GeneratedMessage {
   static RequestTackCommand? _defaultInstance;
 }
 
-
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

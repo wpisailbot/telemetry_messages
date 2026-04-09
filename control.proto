@@ -48,6 +48,18 @@ message SetRudderAdjustmentScaleCommand {
     float scale = 1;
 } 
 
+message SetHeadingErrorScaleCommand {
+    float headingScale = 1;
+} 
+
+message SetRateOfChangeScaleCommand {
+    float roc = 1;
+} 
+
+message SetCrossTrackErrorScaleCommand {
+    float cte = 1;
+} 
+
 message SetRudderOvershootBiasCommand {
     float bias = 1;
 } 
@@ -75,5 +87,8 @@ service SetParameterService {
     rpc ExecuteSetVFForwardMagnitudeCommand (SetVFForwardMagnitudeCommand) returns (ControlResponse);
     rpc ExecuteSetRudderAdjustmentScaleCommand (SetRudderAdjustmentScaleCommand) returns (ControlResponse);
     rpc ExecuteSetRudderOvershootBiasCommand (SetRudderOvershootBiasCommand) returns (ControlResponse);
+    rpc ExecuteSetHeadingErrorScaleCommand (SetHeadingErrorScaleCommand) returns (ControlResponse);
+    rpc ExecuteSetRateOfChangeScaleCommand (SetRateOfChangeScaleCommand) returns (ControlResponse);
+    rpc ExecuteSetCrossTrackErrorScaleCommand (SetCrossTrackErrorScaleCommand) returns (ControlResponse); 
     rpc ExecuteSetCVParametersCommand (SetCVParametersCommand) returns (ControlResponse);
 }
