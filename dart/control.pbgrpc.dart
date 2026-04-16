@@ -62,6 +62,12 @@ class ControlCommandServiceClient extends $grpc.Client {
           ($1.RequestTackCommand value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $1.ControlResponse.fromBuffer(value));
+  static final _$executeCycleDamperModeCommand =
+      $grpc.ClientMethod<$1.CycleDamperModeCommand, $1.DamperModeResponse>(
+          '/boat_control.ControlCommandService/ExecuteCycleDamperModeCommand',
+          ($1.CycleDamperModeCommand value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $1.DamperModeResponse.fromBuffer(value));
 
   ControlCommandServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -118,6 +124,13 @@ class ControlCommandServiceClient extends $grpc.Client {
       $1.RequestTackCommand request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$executeRequestTackCommand, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$1.DamperModeResponse> executeCycleDamperModeCommand(
+      $1.CycleDamperModeCommand request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$executeCycleDamperModeCommand, request,
         options: options);
   }
 }
@@ -187,6 +200,15 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $1.RequestTackCommand.fromBuffer(value),
         ($1.ControlResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$1.CycleDamperModeCommand, $1.DamperModeResponse>(
+            'ExecuteCycleDamperModeCommand',
+            executeCycleDamperModeCommand_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $1.CycleDamperModeCommand.fromBuffer(value),
+            ($1.DamperModeResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.ControlResponse> executeRudderCommand_Pre(
@@ -233,6 +255,12 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
     return executeRequestTackCommand(call, await request);
   }
 
+  $async.Future<$1.DamperModeResponse> executeCycleDamperModeCommand_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$1.CycleDamperModeCommand> request) async {
+    return executeCycleDamperModeCommand(call, await request);
+  }
+
   $async.Future<$1.ControlResponse> executeRudderCommand(
       $grpc.ServiceCall call, $1.RudderCommand request);
   $async.Future<$1.ControlResponse> executeTrimTabCommand(
@@ -249,6 +277,8 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $1.MarkBuoyCommand request);
   $async.Future<$1.ControlResponse> executeRequestTackCommand(
       $grpc.ServiceCall call, $1.RequestTackCommand request);
+  $async.Future<$1.DamperModeResponse> executeCycleDamperModeCommand(
+      $grpc.ServiceCall call, $1.CycleDamperModeCommand request);
 }
 
 class SetParameterServiceClient extends $grpc.Client {

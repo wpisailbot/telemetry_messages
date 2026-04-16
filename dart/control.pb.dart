@@ -16,6 +16,82 @@ import 'boat_state.pbenum.dart' as $0;
 
 export 'control.pbenum.dart';
 
+class CycleDamperModeCommand extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CycleDamperModeCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  CycleDamperModeCommand._() : super();
+  factory CycleDamperModeCommand() => create();
+  factory CycleDamperModeCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CycleDamperModeCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CycleDamperModeCommand clone() => CycleDamperModeCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CycleDamperModeCommand copyWith(void Function(CycleDamperModeCommand) updates) => super.copyWith((message) => updates(message as CycleDamperModeCommand)) as CycleDamperModeCommand; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CycleDamperModeCommand create() => CycleDamperModeCommand._();
+  CycleDamperModeCommand createEmptyInstance() => create();
+  static $pb.PbList<CycleDamperModeCommand> createRepeated() => $pb.PbList<CycleDamperModeCommand>();
+  @$core.pragma('dart2js:noInline')
+  static CycleDamperModeCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CycleDamperModeCommand>(create);
+  static CycleDamperModeCommand? _defaultInstance;
+}
+
+class DamperModeResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DamperModeResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..e<DamperMode>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currentMode', $pb.PbFieldType.OE, defaultOrMaker: DamperMode.DAMPER_MODE_MANUAL_OFF, valueOf: DamperMode.valueOf, enumValues: DamperMode.values)
+    ..hasRequiredFields = false
+  ;
+
+  DamperModeResponse._() : super();
+  factory DamperModeResponse({
+    DamperMode? currentMode,
+  }) {
+    final _result = create();
+    if (currentMode != null) {
+      _result.currentMode = currentMode;
+    }
+    return _result;
+  }
+  factory DamperModeResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory DamperModeResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  DamperModeResponse clone() => DamperModeResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  DamperModeResponse copyWith(void Function(DamperModeResponse) updates) => super.copyWith((message) => updates(message as DamperModeResponse)) as DamperModeResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DamperModeResponse create() => DamperModeResponse._();
+  DamperModeResponse createEmptyInstance() => create();
+  static $pb.PbList<DamperModeResponse> createRepeated() => $pb.PbList<DamperModeResponse>();
+  @$core.pragma('dart2js:noInline')
+  static DamperModeResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DamperModeResponse>(create);
+  static DamperModeResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  DamperMode get currentMode => $_getN(0);
+  @$pb.TagNumber(1)
+  set currentMode(DamperMode v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCurrentMode() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCurrentMode() => clearField(1);
+}
+
 class ControlResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ControlResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
     ..e<ControlExecutionStatus>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'executionStatus', $pb.PbFieldType.OE, defaultOrMaker: ControlExecutionStatus.CONTROL_EXECUTION_UNDEFINED, valueOf: ControlExecutionStatus.valueOf, enumValues: ControlExecutionStatus.values)

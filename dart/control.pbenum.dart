@@ -26,3 +26,20 @@ class ControlExecutionStatus extends $pb.ProtobufEnum {
   const ControlExecutionStatus._($core.int v, $core.String n) : super(v, n);
 }
 
+class DamperMode extends $pb.ProtobufEnum {
+  static const DamperMode DAMPER_MODE_MANUAL_OFF = DamperMode._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DAMPER_MODE_MANUAL_OFF');
+  static const DamperMode DAMPER_MODE_MANUAL_ON = DamperMode._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DAMPER_MODE_MANUAL_ON');
+  static const DamperMode DAMPER_MODE_AUTO = DamperMode._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DAMPER_MODE_AUTO');
+
+  static const $core.List<DamperMode> values = <DamperMode> [
+    DAMPER_MODE_MANUAL_OFF,
+    DAMPER_MODE_MANUAL_ON,
+    DAMPER_MODE_AUTO,
+  ];
+
+  static final $core.Map<$core.int, DamperMode> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DamperMode? valueOf($core.int value) => _byValue[value];
+
+  const DamperMode._($core.int v, $core.String n) : super(v, n);
+}
+

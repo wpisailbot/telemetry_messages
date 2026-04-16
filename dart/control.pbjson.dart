@@ -20,6 +20,35 @@ const ControlExecutionStatus$json = const {
 
 /// Descriptor for `ControlExecutionStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List controlExecutionStatusDescriptor = $convert.base64Decode('ChZDb250cm9sRXhlY3V0aW9uU3RhdHVzEh8KG0NPTlRST0xfRVhFQ1VUSU9OX1VOREVGSU5FRBAAEh0KGUNPTlRST0xfRVhFQ1VUSU9OX1NVQ0NFU1MQARIbChdDT05UUk9MX0VYRUNVVElPTl9FUlJPUhAC');
+@$core.Deprecated('Use damperModeDescriptor instead')
+const DamperMode$json = const {
+  '1': 'DamperMode',
+  '2': const [
+    const {'1': 'DAMPER_MODE_MANUAL_OFF', '2': 0},
+    const {'1': 'DAMPER_MODE_MANUAL_ON', '2': 1},
+    const {'1': 'DAMPER_MODE_AUTO', '2': 2},
+  ],
+};
+
+/// Descriptor for `DamperMode`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List damperModeDescriptor = $convert.base64Decode('CgpEYW1wZXJNb2RlEhoKFkRBTVBFUl9NT0RFX01BTlVBTF9PRkYQABIZChVEQU1QRVJfTU9ERV9NQU5VQUxfT04QARIUChBEQU1QRVJfTU9ERV9BVVRPEAI=');
+@$core.Deprecated('Use cycleDamperModeCommandDescriptor instead')
+const CycleDamperModeCommand$json = const {
+  '1': 'CycleDamperModeCommand',
+};
+
+/// Descriptor for `CycleDamperModeCommand`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cycleDamperModeCommandDescriptor = $convert.base64Decode('ChZDeWNsZURhbXBlck1vZGVDb21tYW5k');
+@$core.Deprecated('Use damperModeResponseDescriptor instead')
+const DamperModeResponse$json = const {
+  '1': 'DamperModeResponse',
+  '2': const [
+    const {'1': 'current_mode', '3': 1, '4': 1, '5': 14, '6': '.boat_control.DamperMode', '10': 'currentMode'},
+  ],
+};
+
+/// Descriptor for `DamperModeResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List damperModeResponseDescriptor = $convert.base64Decode('ChJEYW1wZXJNb2RlUmVzcG9uc2USOwoMY3VycmVudF9tb2RlGAEgASgOMhguYm9hdF9jb250cm9sLkRhbXBlck1vZGVSC2N1cnJlbnRNb2Rl');
 @$core.Deprecated('Use controlResponseDescriptor instead')
 const ControlResponse$json = const {
   '1': 'ControlResponse',

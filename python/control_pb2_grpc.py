@@ -74,6 +74,11 @@ class ControlCommandServiceStub(object):
                 request_serializer=control__pb2.RequestTackCommand.SerializeToString,
                 response_deserializer=control__pb2.ControlResponse.FromString,
                 _registered_method=True)
+        self.ExecuteCycleDamperModeCommand = channel.unary_unary(
+                '/boat_control.ControlCommandService/ExecuteCycleDamperModeCommand',
+                request_serializer=control__pb2.CycleDamperModeCommand.SerializeToString,
+                response_deserializer=control__pb2.DamperModeResponse.FromString,
+                _registered_method=True)
 
 
 class ControlCommandServiceServicer(object):
@@ -127,6 +132,12 @@ class ControlCommandServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def ExecuteCycleDamperModeCommand(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_ControlCommandServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -169,6 +180,11 @@ def add_ControlCommandServiceServicer_to_server(servicer, server):
                     servicer.ExecuteRequestTackCommand,
                     request_deserializer=control__pb2.RequestTackCommand.FromString,
                     response_serializer=control__pb2.ControlResponse.SerializeToString,
+            ),
+            'ExecuteCycleDamperModeCommand': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExecuteCycleDamperModeCommand,
+                    request_deserializer=control__pb2.CycleDamperModeCommand.FromString,
+                    response_serializer=control__pb2.DamperModeResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -387,6 +403,33 @@ class ControlCommandService(object):
             '/boat_control.ControlCommandService/ExecuteRequestTackCommand',
             control__pb2.RequestTackCommand.SerializeToString,
             control__pb2.ControlResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ExecuteCycleDamperModeCommand(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/boat_control.ControlCommandService/ExecuteCycleDamperModeCommand',
+            control__pb2.CycleDamperModeCommand.SerializeToString,
+            control__pb2.DamperModeResponse.FromString,
             options,
             channel_credentials,
             insecure,
