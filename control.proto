@@ -14,9 +14,9 @@ enum DamperMode {
     DAMPER_MODE_AUTO = 2;
 }
 
-message CycleDamperModeCommand {
-    // Empty - just a trigger
-}
+message CycleDamperModeCommand {}
+
+message GetDamperModeCommand {} 
 
 message DamperModeResponse {
     DamperMode current_mode = 1;
@@ -95,7 +95,8 @@ service ControlCommandService {
     rpc ExecuteAddWaypointCommand (AddWaypointCommand) returns (ControlResponse);
     rpc ExecuteMarkBuoyCommand (MarkBuoyCommand) returns (ControlResponse);
     rpc ExecuteRequestTackCommand (RequestTackCommand) returns (ControlResponse);
-    rpc ExecuteCycleDamperModeCommand (CycleDamperModeCommand) returns (DamperModeResponse); 
+    rpc ExecuteCycleDamperModeCommand (CycleDamperModeCommand) returns (ControlResponse); 
+    rpc GetDamperMode (GetDamperModeCommand) returns (DamperModeResponse);
 }
 
 service SetParameterService {

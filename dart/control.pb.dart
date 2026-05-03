@@ -45,6 +45,35 @@ class CycleDamperModeCommand extends $pb.GeneratedMessage {
   static CycleDamperModeCommand? _defaultInstance;
 }
 
+class GetDamperModeCommand extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetDamperModeCommand', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  GetDamperModeCommand._() : super();
+  factory GetDamperModeCommand() => create();
+  factory GetDamperModeCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetDamperModeCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetDamperModeCommand clone() => GetDamperModeCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetDamperModeCommand copyWith(void Function(GetDamperModeCommand) updates) => super.copyWith((message) => updates(message as GetDamperModeCommand)) as GetDamperModeCommand; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetDamperModeCommand create() => GetDamperModeCommand._();
+  GetDamperModeCommand createEmptyInstance() => create();
+  static $pb.PbList<GetDamperModeCommand> createRepeated() => $pb.PbList<GetDamperModeCommand>();
+  @$core.pragma('dart2js:noInline')
+  static GetDamperModeCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDamperModeCommand>(create);
+  static GetDamperModeCommand? _defaultInstance;
+}
+
 class DamperModeResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DamperModeResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_control'), createEmptyInstance: create)
     ..e<DamperMode>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currentMode', $pb.PbFieldType.OE, defaultOrMaker: DamperMode.DAMPER_MODE_MANUAL_OFF, valueOf: DamperMode.valueOf, enumValues: DamperMode.values)

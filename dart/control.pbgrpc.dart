@@ -63,9 +63,15 @@ class ControlCommandServiceClient extends $grpc.Client {
           ($core.List<$core.int> value) =>
               $1.ControlResponse.fromBuffer(value));
   static final _$executeCycleDamperModeCommand =
-      $grpc.ClientMethod<$1.CycleDamperModeCommand, $1.DamperModeResponse>(
+      $grpc.ClientMethod<$1.CycleDamperModeCommand, $1.ControlResponse>(
           '/boat_control.ControlCommandService/ExecuteCycleDamperModeCommand',
           ($1.CycleDamperModeCommand value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $1.ControlResponse.fromBuffer(value));
+  static final _$getDamperMode =
+      $grpc.ClientMethod<$1.GetDamperModeCommand, $1.DamperModeResponse>(
+          '/boat_control.ControlCommandService/GetDamperMode',
+          ($1.GetDamperModeCommand value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $1.DamperModeResponse.fromBuffer(value));
 
@@ -127,11 +133,17 @@ class ControlCommandServiceClient extends $grpc.Client {
         options: options);
   }
 
-  $grpc.ResponseFuture<$1.DamperModeResponse> executeCycleDamperModeCommand(
+  $grpc.ResponseFuture<$1.ControlResponse> executeCycleDamperModeCommand(
       $1.CycleDamperModeCommand request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$executeCycleDamperModeCommand, request,
         options: options);
+  }
+
+  $grpc.ResponseFuture<$1.DamperModeResponse> getDamperMode(
+      $1.GetDamperModeCommand request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getDamperMode, request, options: options);
   }
 }
 
@@ -201,13 +213,22 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
             $1.RequestTackCommand.fromBuffer(value),
         ($1.ControlResponse value) => value.writeToBuffer()));
     $addMethod(
-        $grpc.ServiceMethod<$1.CycleDamperModeCommand, $1.DamperModeResponse>(
+        $grpc.ServiceMethod<$1.CycleDamperModeCommand, $1.ControlResponse>(
             'ExecuteCycleDamperModeCommand',
             executeCycleDamperModeCommand_Pre,
             false,
             false,
             ($core.List<$core.int> value) =>
                 $1.CycleDamperModeCommand.fromBuffer(value),
+            ($1.ControlResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$1.GetDamperModeCommand, $1.DamperModeResponse>(
+            'GetDamperMode',
+            getDamperMode_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $1.GetDamperModeCommand.fromBuffer(value),
             ($1.DamperModeResponse value) => value.writeToBuffer()));
   }
 
@@ -255,10 +276,15 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
     return executeRequestTackCommand(call, await request);
   }
 
-  $async.Future<$1.DamperModeResponse> executeCycleDamperModeCommand_Pre(
+  $async.Future<$1.ControlResponse> executeCycleDamperModeCommand_Pre(
       $grpc.ServiceCall call,
       $async.Future<$1.CycleDamperModeCommand> request) async {
     return executeCycleDamperModeCommand(call, await request);
+  }
+
+  $async.Future<$1.DamperModeResponse> getDamperMode_Pre($grpc.ServiceCall call,
+      $async.Future<$1.GetDamperModeCommand> request) async {
+    return getDamperMode(call, await request);
   }
 
   $async.Future<$1.ControlResponse> executeRudderCommand(
@@ -277,8 +303,10 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $1.MarkBuoyCommand request);
   $async.Future<$1.ControlResponse> executeRequestTackCommand(
       $grpc.ServiceCall call, $1.RequestTackCommand request);
-  $async.Future<$1.DamperModeResponse> executeCycleDamperModeCommand(
+  $async.Future<$1.ControlResponse> executeCycleDamperModeCommand(
       $grpc.ServiceCall call, $1.CycleDamperModeCommand request);
+  $async.Future<$1.DamperModeResponse> getDamperMode(
+      $grpc.ServiceCall call, $1.GetDamperModeCommand request);
 }
 
 class SetParameterServiceClient extends $grpc.Client {

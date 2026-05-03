@@ -39,6 +39,13 @@ const CycleDamperModeCommand$json = const {
 
 /// Descriptor for `CycleDamperModeCommand`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List cycleDamperModeCommandDescriptor = $convert.base64Decode('ChZDeWNsZURhbXBlck1vZGVDb21tYW5k');
+@$core.Deprecated('Use getDamperModeCommandDescriptor instead')
+const GetDamperModeCommand$json = const {
+  '1': 'GetDamperModeCommand',
+};
+
+/// Descriptor for `GetDamperModeCommand`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getDamperModeCommandDescriptor = $convert.base64Decode('ChRHZXREYW1wZXJNb2RlQ29tbWFuZA==');
 @$core.Deprecated('Use damperModeResponseDescriptor instead')
 const DamperModeResponse$json = const {
   '1': 'DamperModeResponse',
