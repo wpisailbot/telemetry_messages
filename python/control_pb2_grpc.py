@@ -77,7 +77,7 @@ class ControlCommandServiceStub(object):
         self.ExecuteCycleDamperModeCommand = channel.unary_unary(
                 '/boat_control.ControlCommandService/ExecuteCycleDamperModeCommand',
                 request_serializer=control__pb2.CycleDamperModeCommand.SerializeToString,
-                response_deserializer=control__pb2.DamperModeResponse.FromString,
+                response_deserializer=control__pb2.ControlResponse.FromString,
                 _registered_method=True)
 
 
@@ -184,7 +184,7 @@ def add_ControlCommandServiceServicer_to_server(servicer, server):
             'ExecuteCycleDamperModeCommand': grpc.unary_unary_rpc_method_handler(
                     servicer.ExecuteCycleDamperModeCommand,
                     request_deserializer=control__pb2.CycleDamperModeCommand.FromString,
-                    response_serializer=control__pb2.DamperModeResponse.SerializeToString,
+                    response_serializer=control__pb2.ControlResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -429,7 +429,7 @@ class ControlCommandService(object):
             target,
             '/boat_control.ControlCommandService/ExecuteCycleDamperModeCommand',
             control__pb2.CycleDamperModeCommand.SerializeToString,
-            control__pb2.DamperModeResponse.FromString,
+            control__pb2.ControlResponse.FromString,
             options,
             channel_credentials,
             insecure,
