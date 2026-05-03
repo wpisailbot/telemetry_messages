@@ -39,6 +39,12 @@ enum AutonomousMode {
     AUTONOMOUS_MODE_FULL=5;
 }
 
+enum DamperMode {
+    DAMPER_AUTO = 0;
+    DAMPER_MODE_MANUAL_ON = 1;
+    DAMPER_MODE_MANUAL_OFF = 2;
+}
+
 enum TrimState {
     TRIM_STATE_MIN_LIFT = 0;
     TRIM_STATE_MAX_DRAG_PORT = 1;
@@ -124,6 +130,7 @@ message BoatState {
     float target_track = 37;
     repeated string available_video_sources = 38;
     bool reached_buoy = 39;
+    DamperMode damperMode = 40;
 }
 
 message BoatStateRequest {

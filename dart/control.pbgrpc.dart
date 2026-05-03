@@ -68,12 +68,6 @@ class ControlCommandServiceClient extends $grpc.Client {
           ($1.CycleDamperModeCommand value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $1.ControlResponse.fromBuffer(value));
-  static final _$getDamperMode =
-      $grpc.ClientMethod<$1.GetDamperModeCommand, $1.DamperModeResponse>(
-          '/boat_control.ControlCommandService/GetDamperMode',
-          ($1.GetDamperModeCommand value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              $1.DamperModeResponse.fromBuffer(value));
 
   ControlCommandServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -138,12 +132,6 @@ class ControlCommandServiceClient extends $grpc.Client {
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$executeCycleDamperModeCommand, request,
         options: options);
-  }
-
-  $grpc.ResponseFuture<$1.DamperModeResponse> getDamperMode(
-      $1.GetDamperModeCommand request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getDamperMode, request, options: options);
   }
 }
 
@@ -221,15 +209,6 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $1.CycleDamperModeCommand.fromBuffer(value),
             ($1.ControlResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$1.GetDamperModeCommand, $1.DamperModeResponse>(
-            'GetDamperMode',
-            getDamperMode_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $1.GetDamperModeCommand.fromBuffer(value),
-            ($1.DamperModeResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.ControlResponse> executeRudderCommand_Pre(
@@ -282,11 +261,6 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
     return executeCycleDamperModeCommand(call, await request);
   }
 
-  $async.Future<$1.DamperModeResponse> getDamperMode_Pre($grpc.ServiceCall call,
-      $async.Future<$1.GetDamperModeCommand> request) async {
-    return getDamperMode(call, await request);
-  }
-
   $async.Future<$1.ControlResponse> executeRudderCommand(
       $grpc.ServiceCall call, $1.RudderCommand request);
   $async.Future<$1.ControlResponse> executeTrimTabCommand(
@@ -305,8 +279,6 @@ abstract class ControlCommandServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $1.RequestTackCommand request);
   $async.Future<$1.ControlResponse> executeCycleDamperModeCommand(
       $grpc.ServiceCall call, $1.CycleDamperModeCommand request);
-  $async.Future<$1.DamperModeResponse> getDamperMode(
-      $grpc.ServiceCall call, $1.GetDamperModeCommand request);
 }
 
 class SetParameterServiceClient extends $grpc.Client {

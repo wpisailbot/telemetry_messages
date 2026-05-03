@@ -8,19 +8,9 @@ enum ControlExecutionStatus {
     CONTROL_EXECUTION_ERROR = 2;
 }
 
-enum DamperMode {
-    DAMPER_MODE_MANUAL_OFF = 0;
-    DAMPER_MODE_MANUAL_ON = 1;
-    DAMPER_MODE_AUTO = 2;
-}
 
 message CycleDamperModeCommand {}
 
-message GetDamperModeCommand {} 
-
-message DamperModeResponse {
-    DamperMode current_mode = 1;
-}
 
 message ControlResponse {
     ControlExecutionStatus execution_status = 1;
@@ -96,7 +86,6 @@ service ControlCommandService {
     rpc ExecuteMarkBuoyCommand (MarkBuoyCommand) returns (ControlResponse);
     rpc ExecuteRequestTackCommand (RequestTackCommand) returns (ControlResponse);
     rpc ExecuteCycleDamperModeCommand (CycleDamperModeCommand) returns (ControlResponse); 
-    rpc GetDamperMode (GetDamperModeCommand) returns (DamperModeResponse);
 }
 
 service SetParameterService {

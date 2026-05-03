@@ -1,13 +1,9 @@
-//
+///
 //  Generated code. Do not modify.
 //  source: boat_state.proto
 //
 // @dart = 2.12
-
-// ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -18,39 +14,38 @@ import 'boat_state.pbenum.dart';
 export 'boat_state.pbenum.dart';
 
 class NodeInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'NodeInfo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..e<NodeStatus>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: NodeStatus.NODE_STATUS_UNDEFINED, valueOf: NodeStatus.valueOf, enumValues: NodeStatus.values)
+    ..e<NodeLifecycleState>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lifecycleState', $pb.PbFieldType.OE, defaultOrMaker: NodeLifecycleState.NODE_LIFECYCLE_STATE_UNCONFIGURED, valueOf: NodeLifecycleState.valueOf, enumValues: NodeLifecycleState.values)
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'info')
+    ..hasRequiredFields = false
+  ;
+
+  NodeInfo._() : super();
   factory NodeInfo({
     $core.String? name,
     NodeStatus? status,
     NodeLifecycleState? lifecycleState,
     $core.String? info,
   }) {
-    final $result = create();
+    final _result = create();
     if (name != null) {
-      $result.name = name;
+      _result.name = name;
     }
     if (status != null) {
-      $result.status = status;
+      _result.status = status;
     }
     if (lifecycleState != null) {
-      $result.lifecycleState = lifecycleState;
+      _result.lifecycleState = lifecycleState;
     }
     if (info != null) {
-      $result.info = info;
+      _result.info = info;
     }
-    return $result;
+    return _result;
   }
-  NodeInfo._() : super();
   factory NodeInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory NodeInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NodeInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<NodeStatus>(2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: NodeStatus.NODE_STATUS_UNDEFINED, valueOf: NodeStatus.valueOf, enumValues: NodeStatus.values)
-    ..e<NodeLifecycleState>(3, _omitFieldNames ? '' : 'lifecycleState', $pb.PbFieldType.OE, defaultOrMaker: NodeLifecycleState.NODE_LIFECYCLE_STATE_UNCONFIGURED, valueOf: NodeLifecycleState.valueOf, enumValues: NodeLifecycleState.values)
-    ..aOS(4, _omitFieldNames ? '' : 'info')
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -60,10 +55,8 @@ class NodeInfo extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  NodeInfo copyWith(void Function(NodeInfo) updates) => super.copyWith((message) => updates(message as NodeInfo)) as NodeInfo;
-
+  NodeInfo copyWith(void Function(NodeInfo) updates) => super.copyWith((message) => updates(message as NodeInfo)) as NodeInfo; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static NodeInfo create() => NodeInfo._();
   NodeInfo createEmptyInstance() => create();
@@ -110,29 +103,28 @@ class NodeInfo extends $pb.GeneratedMessage {
 }
 
 class Point extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Point', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'latitude', $pb.PbFieldType.OD)
+    ..a<$core.double>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'longitude', $pb.PbFieldType.OD)
+    ..hasRequiredFields = false
+  ;
+
+  Point._() : super();
   factory Point({
     $core.double? latitude,
     $core.double? longitude,
   }) {
-    final $result = create();
+    final _result = create();
     if (latitude != null) {
-      $result.latitude = latitude;
+      _result.latitude = latitude;
     }
     if (longitude != null) {
-      $result.longitude = longitude;
+      _result.longitude = longitude;
     }
-    return $result;
+    return _result;
   }
-  Point._() : super();
   factory Point.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Point.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Point', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'latitude', $pb.PbFieldType.OD)
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'longitude', $pb.PbFieldType.OD)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -142,10 +134,8 @@ class Point extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Point copyWith(void Function(Point) updates) => super.copyWith((message) => updates(message as Point)) as Point;
-
+  Point copyWith(void Function(Point) updates) => super.copyWith((message) => updates(message as Point)) as Point; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static Point create() => Point._();
   Point createEmptyInstance() => create();
@@ -174,29 +164,28 @@ class Point extends $pb.GeneratedMessage {
 }
 
 class Waypoint extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Waypoint', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
+    ..aOM<Point>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'point', subBuilder: Point.create)
+    ..e<WaypointType>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: WaypointType.WAYPOINT_TYPE_INTERSECT, valueOf: WaypointType.valueOf, enumValues: WaypointType.values)
+    ..hasRequiredFields = false
+  ;
+
+  Waypoint._() : super();
   factory Waypoint({
     Point? point,
     WaypointType? type,
   }) {
-    final $result = create();
+    final _result = create();
     if (point != null) {
-      $result.point = point;
+      _result.point = point;
     }
     if (type != null) {
-      $result.type = type;
+      _result.type = type;
     }
-    return $result;
+    return _result;
   }
-  Waypoint._() : super();
   factory Waypoint.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Waypoint.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Waypoint', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..aOM<Point>(1, _omitFieldNames ? '' : 'point', subBuilder: Point.create)
-    ..e<WaypointType>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: WaypointType.WAYPOINT_TYPE_INTERSECT, valueOf: WaypointType.valueOf, enumValues: WaypointType.values)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -206,10 +195,8 @@ class Waypoint extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Waypoint copyWith(void Function(Waypoint) updates) => super.copyWith((message) => updates(message as Waypoint)) as Waypoint;
-
+  Waypoint copyWith(void Function(Waypoint) updates) => super.copyWith((message) => updates(message as Waypoint)) as Waypoint; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static Waypoint create() => Waypoint._();
   Waypoint createEmptyInstance() => create();
@@ -240,24 +227,23 @@ class Waypoint extends $pb.GeneratedMessage {
 }
 
 class WaypointPath extends $pb.GeneratedMessage {
-  factory WaypointPath({
-    $core.Iterable<Waypoint>? waypoints,
-  }) {
-    final $result = create();
-    if (waypoints != null) {
-      $result.waypoints.addAll(waypoints);
-    }
-    return $result;
-  }
-  WaypointPath._() : super();
-  factory WaypointPath.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory WaypointPath.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'WaypointPath', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..pc<Waypoint>(1, _omitFieldNames ? '' : 'waypoints', $pb.PbFieldType.PM, subBuilder: Waypoint.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'WaypointPath', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
+    ..pc<Waypoint>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'waypoints', $pb.PbFieldType.PM, subBuilder: Waypoint.create)
     ..hasRequiredFields = false
   ;
 
+  WaypointPath._() : super();
+  factory WaypointPath({
+    $core.Iterable<Waypoint>? waypoints,
+  }) {
+    final _result = create();
+    if (waypoints != null) {
+      _result.waypoints.addAll(waypoints);
+    }
+    return _result;
+  }
+  factory WaypointPath.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory WaypointPath.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -267,10 +253,8 @@ class WaypointPath extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  WaypointPath copyWith(void Function(WaypointPath) updates) => super.copyWith((message) => updates(message as WaypointPath)) as WaypointPath;
-
+  WaypointPath copyWith(void Function(WaypointPath) updates) => super.copyWith((message) => updates(message as WaypointPath)) as WaypointPath; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static WaypointPath create() => WaypointPath._();
   WaypointPath createEmptyInstance() => create();
@@ -284,34 +268,33 @@ class WaypointPath extends $pb.GeneratedMessage {
 }
 
 class Path extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Path', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'latitudeDirection')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'longitudeDirection')
+    ..pc<Point>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'points', $pb.PbFieldType.PM, subBuilder: Point.create)
+    ..hasRequiredFields = false
+  ;
+
+  Path._() : super();
   factory Path({
     $core.String? latitudeDirection,
     $core.String? longitudeDirection,
     $core.Iterable<Point>? points,
   }) {
-    final $result = create();
+    final _result = create();
     if (latitudeDirection != null) {
-      $result.latitudeDirection = latitudeDirection;
+      _result.latitudeDirection = latitudeDirection;
     }
     if (longitudeDirection != null) {
-      $result.longitudeDirection = longitudeDirection;
+      _result.longitudeDirection = longitudeDirection;
     }
     if (points != null) {
-      $result.points.addAll(points);
+      _result.points.addAll(points);
     }
-    return $result;
+    return _result;
   }
-  Path._() : super();
   factory Path.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Path.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Path', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'latitudeDirection')
-    ..aOS(2, _omitFieldNames ? '' : 'longitudeDirection')
-    ..pc<Point>(3, _omitFieldNames ? '' : 'points', $pb.PbFieldType.PM, subBuilder: Point.create)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -321,10 +304,8 @@ class Path extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Path copyWith(void Function(Path) updates) => super.copyWith((message) => updates(message as Path)) as Path;
-
+  Path copyWith(void Function(Path) updates) => super.copyWith((message) => updates(message as Path)) as Path; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static Path create() => Path._();
   Path createEmptyInstance() => create();
@@ -356,29 +337,28 @@ class Path extends $pb.GeneratedMessage {
 }
 
 class PathSegment extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PathSegment', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
+    ..aOM<Point>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'start', subBuilder: Point.create)
+    ..aOM<Point>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end', subBuilder: Point.create)
+    ..hasRequiredFields = false
+  ;
+
+  PathSegment._() : super();
   factory PathSegment({
     Point? start,
     Point? end,
   }) {
-    final $result = create();
+    final _result = create();
     if (start != null) {
-      $result.start = start;
+      _result.start = start;
     }
     if (end != null) {
-      $result.end = end;
+      _result.end = end;
     }
-    return $result;
+    return _result;
   }
-  PathSegment._() : super();
   factory PathSegment.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory PathSegment.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PathSegment', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..aOM<Point>(1, _omitFieldNames ? '' : 'start', subBuilder: Point.create)
-    ..aOM<Point>(2, _omitFieldNames ? '' : 'end', subBuilder: Point.create)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -388,10 +368,8 @@ class PathSegment extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  PathSegment copyWith(void Function(PathSegment) updates) => super.copyWith((message) => updates(message as PathSegment)) as PathSegment;
-
+  PathSegment copyWith(void Function(PathSegment) updates) => super.copyWith((message) => updates(message as PathSegment)) as PathSegment; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static PathSegment create() => PathSegment._();
   PathSegment createEmptyInstance() => create();
@@ -424,29 +402,28 @@ class PathSegment extends $pb.GeneratedMessage {
 }
 
 class Wind extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Wind', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'speed', $pb.PbFieldType.OF)
+    ..a<$core.double>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'direction', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  Wind._() : super();
   factory Wind({
     $core.double? speed,
     $core.double? direction,
   }) {
-    final $result = create();
+    final _result = create();
     if (speed != null) {
-      $result.speed = speed;
+      _result.speed = speed;
     }
     if (direction != null) {
-      $result.direction = direction;
+      _result.direction = direction;
     }
-    return $result;
+    return _result;
   }
-  Wind._() : super();
   factory Wind.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Wind.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Wind', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'speed', $pb.PbFieldType.OF)
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'direction', $pb.PbFieldType.OF)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -456,10 +433,8 @@ class Wind extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Wind copyWith(void Function(Wind) updates) => super.copyWith((message) => updates(message as Wind)) as Wind;
-
+  Wind copyWith(void Function(Wind) updates) => super.copyWith((message) => updates(message as Wind)) as Wind; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static Wind create() => Wind._();
   Wind createEmptyInstance() => create();
@@ -488,6 +463,51 @@ class Wind extends $pb.GeneratedMessage {
 }
 
 class BoatState extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BoatState', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'latitude', $pb.PbFieldType.OD)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'latitudeDirection')
+    ..a<$core.double>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'longitude', $pb.PbFieldType.OD)
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'longitudeDirection')
+    ..a<$core.double>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currentHeading', $pb.PbFieldType.OF)
+    ..a<$core.double>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'magneticDeviation', $pb.PbFieldType.OF)
+    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'magneticDeviationDirection')
+    ..a<$core.double>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'magneticVariation', $pb.PbFieldType.OF)
+    ..aOS(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'magneticVariationDirection')
+    ..a<$core.double>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'trackDegreesTrue', $pb.PbFieldType.OF)
+    ..a<$core.double>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'trackDegreesMagnetic', $pb.PbFieldType.OF)
+    ..a<$core.double>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'speedKnots', $pb.PbFieldType.OF)
+    ..a<$core.double>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'speedKmh', $pb.PbFieldType.OF)
+    ..a<$core.double>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rateOfTurn', $pb.PbFieldType.OF)
+    ..a<$core.double>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'outsideTemp', $pb.PbFieldType.OF)
+    ..a<$core.double>(16, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'atmosphericPressure', $pb.PbFieldType.OF)
+    ..aOM<Wind>(17, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'trueWind', subBuilder: Wind.create)
+    ..aOM<Wind>(18, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'apparentWind', subBuilder: Wind.create)
+    ..a<$core.double>(19, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pitch', $pb.PbFieldType.OF)
+    ..a<$core.double>(20, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'roll', $pb.PbFieldType.OF)
+    ..pc<NodeInfo>(21, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nodeStates', $pb.PbFieldType.PM, subBuilder: NodeInfo.create)
+    ..e<AutonomousMode>(22, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currentAutonomousMode', $pb.PbFieldType.OE, defaultOrMaker: AutonomousMode.AUTONOMOUS_MODE_UNDEFINED, valueOf: AutonomousMode.valueOf, enumValues: AutonomousMode.values)
+    ..aOM<Path>(23, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currentPath', subBuilder: Path.create)
+    ..aOM<Path>(24, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'previousPositions', subBuilder: Path.create)
+    ..aOM<WaypointPath>(25, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currentWaypoints', subBuilder: WaypointPath.create)
+    ..aOM<Point>(26, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currentTargetPoint', subBuilder: Point.create)
+    ..e<TrimState>(27, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currentTrimState', $pb.PbFieldType.OE, defaultOrMaker: TrimState.TRIM_STATE_MIN_LIFT, valueOf: TrimState.valueOf, enumValues: TrimState.values)
+    ..pc<Point>(28, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'buoyPositions', $pb.PbFieldType.PM, subBuilder: Point.create)
+    ..a<$core.double>(29, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rudderPosition', $pb.PbFieldType.OF)
+    ..a<$core.double>(30, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ballastPosition', $pb.PbFieldType.OF)
+    ..a<$core.double>(31, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'trimTabPosition', $pb.PbFieldType.OF)
+    ..aOB(32, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hasCurrentPathSegment')
+    ..aOM<PathSegment>(33, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currentPathSegment', subBuilder: PathSegment.create)
+    ..aOB(34, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hasTargetHeading')
+    ..a<$core.double>(35, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'targetHeading', $pb.PbFieldType.OF)
+    ..aOB(36, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hasTargetTrack')
+    ..a<$core.double>(37, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'targetTrack', $pb.PbFieldType.OF)
+    ..pPS(38, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'availableVideoSources')
+    ..aOB(39, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'reachedBuoy')
+    ..e<DamperMode>(40, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'damperMode', $pb.PbFieldType.OE, protoName: 'damperMode', defaultOrMaker: DamperMode.DAMPER_AUTO, valueOf: DamperMode.valueOf, enumValues: DamperMode.values)
+    ..hasRequiredFields = false
+  ;
+
+  BoatState._() : super();
   factory BoatState({
     $core.double? latitude,
     $core.String? latitudeDirection,
@@ -528,174 +548,133 @@ class BoatState extends $pb.GeneratedMessage {
     $core.double? targetTrack_37,
     $core.Iterable<$core.String>? availableVideoSources,
     $core.bool? reachedBuoy,
+    DamperMode? damperMode,
   }) {
-    final $result = create();
+    final _result = create();
     if (latitude != null) {
-      $result.latitude = latitude;
+      _result.latitude = latitude;
     }
     if (latitudeDirection != null) {
-      $result.latitudeDirection = latitudeDirection;
+      _result.latitudeDirection = latitudeDirection;
     }
     if (longitude != null) {
-      $result.longitude = longitude;
+      _result.longitude = longitude;
     }
     if (longitudeDirection != null) {
-      $result.longitudeDirection = longitudeDirection;
+      _result.longitudeDirection = longitudeDirection;
     }
     if (currentHeading != null) {
-      $result.currentHeading = currentHeading;
+      _result.currentHeading = currentHeading;
     }
     if (magneticDeviation != null) {
-      $result.magneticDeviation = magneticDeviation;
+      _result.magneticDeviation = magneticDeviation;
     }
     if (magneticDeviationDirection != null) {
-      $result.magneticDeviationDirection = magneticDeviationDirection;
+      _result.magneticDeviationDirection = magneticDeviationDirection;
     }
     if (magneticVariation != null) {
-      $result.magneticVariation = magneticVariation;
+      _result.magneticVariation = magneticVariation;
     }
     if (magneticVariationDirection != null) {
-      $result.magneticVariationDirection = magneticVariationDirection;
+      _result.magneticVariationDirection = magneticVariationDirection;
     }
     if (trackDegreesTrue != null) {
-      $result.trackDegreesTrue = trackDegreesTrue;
+      _result.trackDegreesTrue = trackDegreesTrue;
     }
     if (trackDegreesMagnetic != null) {
-      $result.trackDegreesMagnetic = trackDegreesMagnetic;
+      _result.trackDegreesMagnetic = trackDegreesMagnetic;
     }
     if (speedKnots != null) {
-      $result.speedKnots = speedKnots;
+      _result.speedKnots = speedKnots;
     }
     if (speedKmh != null) {
-      $result.speedKmh = speedKmh;
+      _result.speedKmh = speedKmh;
     }
     if (rateOfTurn != null) {
-      $result.rateOfTurn = rateOfTurn;
+      _result.rateOfTurn = rateOfTurn;
     }
     if (outsideTemp != null) {
-      $result.outsideTemp = outsideTemp;
+      _result.outsideTemp = outsideTemp;
     }
     if (atmosphericPressure != null) {
-      $result.atmosphericPressure = atmosphericPressure;
+      _result.atmosphericPressure = atmosphericPressure;
     }
     if (trueWind != null) {
-      $result.trueWind = trueWind;
+      _result.trueWind = trueWind;
     }
     if (apparentWind != null) {
-      $result.apparentWind = apparentWind;
+      _result.apparentWind = apparentWind;
     }
     if (pitch != null) {
-      $result.pitch = pitch;
+      _result.pitch = pitch;
     }
     if (roll != null) {
-      $result.roll = roll;
+      _result.roll = roll;
     }
     if (nodeStates != null) {
-      $result.nodeStates.addAll(nodeStates);
+      _result.nodeStates.addAll(nodeStates);
     }
     if (currentAutonomousMode != null) {
-      $result.currentAutonomousMode = currentAutonomousMode;
+      _result.currentAutonomousMode = currentAutonomousMode;
     }
     if (currentPath != null) {
-      $result.currentPath = currentPath;
+      _result.currentPath = currentPath;
     }
     if (previousPositions != null) {
-      $result.previousPositions = previousPositions;
+      _result.previousPositions = previousPositions;
     }
     if (currentWaypoints != null) {
-      $result.currentWaypoints = currentWaypoints;
+      _result.currentWaypoints = currentWaypoints;
     }
     if (currentTargetPoint != null) {
-      $result.currentTargetPoint = currentTargetPoint;
+      _result.currentTargetPoint = currentTargetPoint;
     }
     if (currentTrimState != null) {
-      $result.currentTrimState = currentTrimState;
+      _result.currentTrimState = currentTrimState;
     }
     if (buoyPositions != null) {
-      $result.buoyPositions.addAll(buoyPositions);
+      _result.buoyPositions.addAll(buoyPositions);
     }
     if (rudderPosition != null) {
-      $result.rudderPosition = rudderPosition;
+      _result.rudderPosition = rudderPosition;
     }
     if (ballastPosition != null) {
-      $result.ballastPosition = ballastPosition;
+      _result.ballastPosition = ballastPosition;
     }
     if (trimTabPosition != null) {
-      $result.trimTabPosition = trimTabPosition;
+      _result.trimTabPosition = trimTabPosition;
     }
     if (hasCurrentPathSegment != null) {
-      $result.hasCurrentPathSegment = hasCurrentPathSegment;
+      _result.hasCurrentPathSegment = hasCurrentPathSegment;
     }
     if (currentPathSegment_33 != null) {
-      $result.currentPathSegment_33 = currentPathSegment_33;
+      _result.currentPathSegment_33 = currentPathSegment_33;
     }
     if (hasTargetHeading != null) {
-      $result.hasTargetHeading = hasTargetHeading;
+      _result.hasTargetHeading = hasTargetHeading;
     }
     if (targetHeading_35 != null) {
-      $result.targetHeading_35 = targetHeading_35;
+      _result.targetHeading_35 = targetHeading_35;
     }
     if (hasTargetTrack != null) {
-      $result.hasTargetTrack = hasTargetTrack;
+      _result.hasTargetTrack = hasTargetTrack;
     }
     if (targetTrack_37 != null) {
-      $result.targetTrack_37 = targetTrack_37;
+      _result.targetTrack_37 = targetTrack_37;
     }
     if (availableVideoSources != null) {
-      $result.availableVideoSources.addAll(availableVideoSources);
+      _result.availableVideoSources.addAll(availableVideoSources);
     }
     if (reachedBuoy != null) {
-      $result.reachedBuoy = reachedBuoy;
+      _result.reachedBuoy = reachedBuoy;
     }
-    return $result;
+    if (damperMode != null) {
+      _result.damperMode = damperMode;
+    }
+    return _result;
   }
-  BoatState._() : super();
   factory BoatState.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BoatState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BoatState', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'latitude', $pb.PbFieldType.OD)
-    ..aOS(2, _omitFieldNames ? '' : 'latitudeDirection')
-    ..a<$core.double>(3, _omitFieldNames ? '' : 'longitude', $pb.PbFieldType.OD)
-    ..aOS(4, _omitFieldNames ? '' : 'longitudeDirection')
-    ..a<$core.double>(5, _omitFieldNames ? '' : 'currentHeading', $pb.PbFieldType.OF)
-    ..a<$core.double>(6, _omitFieldNames ? '' : 'magneticDeviation', $pb.PbFieldType.OF)
-    ..aOS(7, _omitFieldNames ? '' : 'magneticDeviationDirection')
-    ..a<$core.double>(8, _omitFieldNames ? '' : 'magneticVariation', $pb.PbFieldType.OF)
-    ..aOS(9, _omitFieldNames ? '' : 'magneticVariationDirection')
-    ..a<$core.double>(10, _omitFieldNames ? '' : 'trackDegreesTrue', $pb.PbFieldType.OF)
-    ..a<$core.double>(11, _omitFieldNames ? '' : 'trackDegreesMagnetic', $pb.PbFieldType.OF)
-    ..a<$core.double>(12, _omitFieldNames ? '' : 'speedKnots', $pb.PbFieldType.OF)
-    ..a<$core.double>(13, _omitFieldNames ? '' : 'speedKmh', $pb.PbFieldType.OF)
-    ..a<$core.double>(14, _omitFieldNames ? '' : 'rateOfTurn', $pb.PbFieldType.OF)
-    ..a<$core.double>(15, _omitFieldNames ? '' : 'outsideTemp', $pb.PbFieldType.OF)
-    ..a<$core.double>(16, _omitFieldNames ? '' : 'atmosphericPressure', $pb.PbFieldType.OF)
-    ..aOM<Wind>(17, _omitFieldNames ? '' : 'trueWind', subBuilder: Wind.create)
-    ..aOM<Wind>(18, _omitFieldNames ? '' : 'apparentWind', subBuilder: Wind.create)
-    ..a<$core.double>(19, _omitFieldNames ? '' : 'pitch', $pb.PbFieldType.OF)
-    ..a<$core.double>(20, _omitFieldNames ? '' : 'roll', $pb.PbFieldType.OF)
-    ..pc<NodeInfo>(21, _omitFieldNames ? '' : 'nodeStates', $pb.PbFieldType.PM, subBuilder: NodeInfo.create)
-    ..e<AutonomousMode>(22, _omitFieldNames ? '' : 'currentAutonomousMode', $pb.PbFieldType.OE, defaultOrMaker: AutonomousMode.AUTONOMOUS_MODE_UNDEFINED, valueOf: AutonomousMode.valueOf, enumValues: AutonomousMode.values)
-    ..aOM<Path>(23, _omitFieldNames ? '' : 'currentPath', subBuilder: Path.create)
-    ..aOM<Path>(24, _omitFieldNames ? '' : 'previousPositions', subBuilder: Path.create)
-    ..aOM<WaypointPath>(25, _omitFieldNames ? '' : 'currentWaypoints', subBuilder: WaypointPath.create)
-    ..aOM<Point>(26, _omitFieldNames ? '' : 'currentTargetPoint', subBuilder: Point.create)
-    ..e<TrimState>(27, _omitFieldNames ? '' : 'currentTrimState', $pb.PbFieldType.OE, defaultOrMaker: TrimState.TRIM_STATE_MIN_LIFT, valueOf: TrimState.valueOf, enumValues: TrimState.values)
-    ..pc<Point>(28, _omitFieldNames ? '' : 'buoyPositions', $pb.PbFieldType.PM, subBuilder: Point.create)
-    ..a<$core.double>(29, _omitFieldNames ? '' : 'rudderPosition', $pb.PbFieldType.OF)
-    ..a<$core.double>(30, _omitFieldNames ? '' : 'ballastPosition', $pb.PbFieldType.OF)
-    ..a<$core.double>(31, _omitFieldNames ? '' : 'trimTabPosition', $pb.PbFieldType.OF)
-    ..aOB(32, _omitFieldNames ? '' : 'hasCurrentPathSegment')
-    ..aOM<PathSegment>(33, _omitFieldNames ? '' : 'currentPathSegment', subBuilder: PathSegment.create)
-    ..aOB(34, _omitFieldNames ? '' : 'hasTargetHeading')
-    ..a<$core.double>(35, _omitFieldNames ? '' : 'targetHeading', $pb.PbFieldType.OF)
-    ..aOB(36, _omitFieldNames ? '' : 'hasTargetTrack')
-    ..a<$core.double>(37, _omitFieldNames ? '' : 'targetTrack', $pb.PbFieldType.OF)
-    ..pPS(38, _omitFieldNames ? '' : 'availableVideoSources')
-    ..aOB(39, _omitFieldNames ? '' : 'reachedBuoy')
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -705,10 +684,8 @@ class BoatState extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  BoatState copyWith(void Function(BoatState) updates) => super.copyWith((message) => updates(message as BoatState)) as BoatState;
-
+  BoatState copyWith(void Function(BoatState) updates) => super.copyWith((message) => updates(message as BoatState)) as BoatState; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static BoatState create() => BoatState._();
   BoatState createEmptyInstance() => create();
@@ -1063,18 +1040,26 @@ class BoatState extends $pb.GeneratedMessage {
   $core.bool hasReachedBuoy() => $_has(38);
   @$pb.TagNumber(39)
   void clearReachedBuoy() => clearField(39);
+
+  @$pb.TagNumber(40)
+  DamperMode get damperMode => $_getN(39);
+  @$pb.TagNumber(40)
+  set damperMode(DamperMode v) { setField(40, v); }
+  @$pb.TagNumber(40)
+  $core.bool hasDamperMode() => $_has(39);
+  @$pb.TagNumber(40)
+  void clearDamperMode() => clearField(40);
 }
 
 class BoatStateRequest extends $pb.GeneratedMessage {
-  factory BoatStateRequest() => create();
-  BoatStateRequest._() : super();
-  factory BoatStateRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory BoatStateRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BoatStateRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BoatStateRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
+  BoatStateRequest._() : super();
+  factory BoatStateRequest() => create();
+  factory BoatStateRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory BoatStateRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1084,10 +1069,8 @@ class BoatStateRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  BoatStateRequest copyWith(void Function(BoatStateRequest) updates) => super.copyWith((message) => updates(message as BoatStateRequest)) as BoatStateRequest;
-
+  BoatStateRequest copyWith(void Function(BoatStateRequest) updates) => super.copyWith((message) => updates(message as BoatStateRequest)) as BoatStateRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static BoatStateRequest create() => BoatStateRequest._();
   BoatStateRequest createEmptyInstance() => create();
@@ -1098,24 +1081,23 @@ class BoatStateRequest extends $pb.GeneratedMessage {
 }
 
 class MapRequest extends $pb.GeneratedMessage {
-  factory MapRequest({
-    $core.String? mapId,
-  }) {
-    final $result = create();
-    if (mapId != null) {
-      $result.mapId = mapId;
-    }
-    return $result;
-  }
-  MapRequest._() : super();
-  factory MapRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory MapRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MapRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'mapId', protoName: 'mapId')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MapRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapId', protoName: 'mapId')
     ..hasRequiredFields = false
   ;
 
+  MapRequest._() : super();
+  factory MapRequest({
+    $core.String? mapId,
+  }) {
+    final _result = create();
+    if (mapId != null) {
+      _result.mapId = mapId;
+    }
+    return _result;
+  }
+  factory MapRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MapRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1125,10 +1107,8 @@ class MapRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  MapRequest copyWith(void Function(MapRequest) updates) => super.copyWith((message) => updates(message as MapRequest)) as MapRequest;
-
+  MapRequest copyWith(void Function(MapRequest) updates) => super.copyWith((message) => updates(message as MapRequest)) as MapRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static MapRequest create() => MapRequest._();
   MapRequest createEmptyInstance() => create();
@@ -1148,6 +1128,16 @@ class MapRequest extends $pb.GeneratedMessage {
 }
 
 class MapResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MapResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'imageData', $pb.PbFieldType.OY)
+    ..a<$core.double>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'north', $pb.PbFieldType.OF)
+    ..a<$core.double>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'south', $pb.PbFieldType.OF)
+    ..a<$core.double>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'east', $pb.PbFieldType.OF)
+    ..a<$core.double>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'west', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  MapResponse._() : super();
   factory MapResponse({
     $core.List<$core.int>? imageData,
     $core.double? north,
@@ -1155,37 +1145,26 @@ class MapResponse extends $pb.GeneratedMessage {
     $core.double? east,
     $core.double? west,
   }) {
-    final $result = create();
+    final _result = create();
     if (imageData != null) {
-      $result.imageData = imageData;
+      _result.imageData = imageData;
     }
     if (north != null) {
-      $result.north = north;
+      _result.north = north;
     }
     if (south != null) {
-      $result.south = south;
+      _result.south = south;
     }
     if (east != null) {
-      $result.east = east;
+      _result.east = east;
     }
     if (west != null) {
-      $result.west = west;
+      _result.west = west;
     }
-    return $result;
+    return _result;
   }
-  MapResponse._() : super();
   factory MapResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory MapResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MapResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'imageData', $pb.PbFieldType.OY)
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'north', $pb.PbFieldType.OF)
-    ..a<$core.double>(3, _omitFieldNames ? '' : 'south', $pb.PbFieldType.OF)
-    ..a<$core.double>(4, _omitFieldNames ? '' : 'east', $pb.PbFieldType.OF)
-    ..a<$core.double>(5, _omitFieldNames ? '' : 'west', $pb.PbFieldType.OF)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1195,10 +1174,8 @@ class MapResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  MapResponse copyWith(void Function(MapResponse) updates) => super.copyWith((message) => updates(message as MapResponse)) as MapResponse;
-
+  MapResponse copyWith(void Function(MapResponse) updates) => super.copyWith((message) => updates(message as MapResponse)) as MapResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static MapResponse create() => MapResponse._();
   MapResponse createEmptyInstance() => create();
@@ -1254,6 +1231,17 @@ class MapResponse extends $pb.GeneratedMessage {
 }
 
 class HSVBounds extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'HSVBounds', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lowerH', $pb.PbFieldType.OF)
+    ..a<$core.double>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lowerS', $pb.PbFieldType.OF)
+    ..a<$core.double>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lowerV', $pb.PbFieldType.OF)
+    ..a<$core.double>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'upperH', $pb.PbFieldType.OF)
+    ..a<$core.double>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'upperS', $pb.PbFieldType.OF)
+    ..a<$core.double>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'upperV', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  HSVBounds._() : super();
   factory HSVBounds({
     $core.double? lowerH,
     $core.double? lowerS,
@@ -1262,41 +1250,29 @@ class HSVBounds extends $pb.GeneratedMessage {
     $core.double? upperS,
     $core.double? upperV,
   }) {
-    final $result = create();
+    final _result = create();
     if (lowerH != null) {
-      $result.lowerH = lowerH;
+      _result.lowerH = lowerH;
     }
     if (lowerS != null) {
-      $result.lowerS = lowerS;
+      _result.lowerS = lowerS;
     }
     if (lowerV != null) {
-      $result.lowerV = lowerV;
+      _result.lowerV = lowerV;
     }
     if (upperH != null) {
-      $result.upperH = upperH;
+      _result.upperH = upperH;
     }
     if (upperS != null) {
-      $result.upperS = upperS;
+      _result.upperS = upperS;
     }
     if (upperV != null) {
-      $result.upperV = upperV;
+      _result.upperV = upperV;
     }
-    return $result;
+    return _result;
   }
-  HSVBounds._() : super();
   factory HSVBounds.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory HSVBounds.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HSVBounds', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'lowerH', $pb.PbFieldType.OF)
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'lowerS', $pb.PbFieldType.OF)
-    ..a<$core.double>(3, _omitFieldNames ? '' : 'lowerV', $pb.PbFieldType.OF)
-    ..a<$core.double>(4, _omitFieldNames ? '' : 'upperH', $pb.PbFieldType.OF)
-    ..a<$core.double>(5, _omitFieldNames ? '' : 'upperS', $pb.PbFieldType.OF)
-    ..a<$core.double>(6, _omitFieldNames ? '' : 'upperV', $pb.PbFieldType.OF)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1306,10 +1282,8 @@ class HSVBounds extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  HSVBounds copyWith(void Function(HSVBounds) updates) => super.copyWith((message) => updates(message as HSVBounds)) as HSVBounds;
-
+  HSVBounds copyWith(void Function(HSVBounds) updates) => super.copyWith((message) => updates(message as HSVBounds)) as HSVBounds; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static HSVBounds create() => HSVBounds._();
   HSVBounds createEmptyInstance() => create();
@@ -1374,34 +1348,33 @@ class HSVBounds extends $pb.GeneratedMessage {
 }
 
 class BuoyTypeInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BuoyTypeInfo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOM<HSVBounds>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hsvBounds', subBuilder: HSVBounds.create)
+    ..a<$core.double>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'buoyDiameter', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  BuoyTypeInfo._() : super();
   factory BuoyTypeInfo({
     $core.String? name,
     HSVBounds? hsvBounds,
     $core.double? buoyDiameter,
   }) {
-    final $result = create();
+    final _result = create();
     if (name != null) {
-      $result.name = name;
+      _result.name = name;
     }
     if (hsvBounds != null) {
-      $result.hsvBounds = hsvBounds;
+      _result.hsvBounds = hsvBounds;
     }
     if (buoyDiameter != null) {
-      $result.buoyDiameter = buoyDiameter;
+      _result.buoyDiameter = buoyDiameter;
     }
-    return $result;
+    return _result;
   }
-  BuoyTypeInfo._() : super();
   factory BuoyTypeInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BuoyTypeInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BuoyTypeInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..aOM<HSVBounds>(2, _omitFieldNames ? '' : 'hsvBounds', subBuilder: HSVBounds.create)
-    ..a<$core.double>(3, _omitFieldNames ? '' : 'buoyDiameter', $pb.PbFieldType.OF)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1411,10 +1384,8 @@ class BuoyTypeInfo extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  BuoyTypeInfo copyWith(void Function(BuoyTypeInfo) updates) => super.copyWith((message) => updates(message as BuoyTypeInfo)) as BuoyTypeInfo;
-
+  BuoyTypeInfo copyWith(void Function(BuoyTypeInfo) updates) => super.copyWith((message) => updates(message as BuoyTypeInfo)) as BuoyTypeInfo; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static BuoyTypeInfo create() => BuoyTypeInfo._();
   BuoyTypeInfo createEmptyInstance() => create();
@@ -1454,29 +1425,28 @@ class BuoyTypeInfo extends $pb.GeneratedMessage {
 }
 
 class CVParameters extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CVParameters', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'circularityThreshold', $pb.PbFieldType.OF)
+    ..pc<BuoyTypeInfo>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'buoyTypes', $pb.PbFieldType.PM, subBuilder: BuoyTypeInfo.create)
+    ..hasRequiredFields = false
+  ;
+
+  CVParameters._() : super();
   factory CVParameters({
     $core.double? circularityThreshold,
     $core.Iterable<BuoyTypeInfo>? buoyTypes,
   }) {
-    final $result = create();
+    final _result = create();
     if (circularityThreshold != null) {
-      $result.circularityThreshold = circularityThreshold;
+      _result.circularityThreshold = circularityThreshold;
     }
     if (buoyTypes != null) {
-      $result.buoyTypes.addAll(buoyTypes);
+      _result.buoyTypes.addAll(buoyTypes);
     }
-    return $result;
+    return _result;
   }
-  CVParameters._() : super();
   factory CVParameters.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CVParameters.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CVParameters', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'circularityThreshold', $pb.PbFieldType.OF)
-    ..pc<BuoyTypeInfo>(3, _omitFieldNames ? '' : 'buoyTypes', $pb.PbFieldType.PM, subBuilder: BuoyTypeInfo.create)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1486,10 +1456,8 @@ class CVParameters extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CVParameters copyWith(void Function(CVParameters) updates) => super.copyWith((message) => updates(message as CVParameters)) as CVParameters;
-
+  CVParameters copyWith(void Function(CVParameters) updates) => super.copyWith((message) => updates(message as CVParameters)) as CVParameters; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static CVParameters create() => CVParameters._();
   CVParameters createEmptyInstance() => create();
@@ -1512,15 +1480,14 @@ class CVParameters extends $pb.GeneratedMessage {
 }
 
 class GetCVParametersRequest extends $pb.GeneratedMessage {
-  factory GetCVParametersRequest() => create();
-  GetCVParametersRequest._() : super();
-  factory GetCVParametersRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetCVParametersRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetCVParametersRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetCVParametersRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
+  GetCVParametersRequest._() : super();
+  factory GetCVParametersRequest() => create();
+  factory GetCVParametersRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetCVParametersRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1530,10 +1497,8 @@ class GetCVParametersRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetCVParametersRequest copyWith(void Function(GetCVParametersRequest) updates) => super.copyWith((message) => updates(message as GetCVParametersRequest)) as GetCVParametersRequest;
-
+  GetCVParametersRequest copyWith(void Function(GetCVParametersRequest) updates) => super.copyWith((message) => updates(message as GetCVParametersRequest)) as GetCVParametersRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static GetCVParametersRequest create() => GetCVParametersRequest._();
   GetCVParametersRequest createEmptyInstance() => create();
@@ -1544,24 +1509,23 @@ class GetCVParametersRequest extends $pb.GeneratedMessage {
 }
 
 class GetCVParametersResponse extends $pb.GeneratedMessage {
-  factory GetCVParametersResponse({
-    CVParameters? parameters,
-  }) {
-    final $result = create();
-    if (parameters != null) {
-      $result.parameters = parameters;
-    }
-    return $result;
-  }
-  GetCVParametersResponse._() : super();
-  factory GetCVParametersResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetCVParametersResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetCVParametersResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'boat_state'), createEmptyInstance: create)
-    ..aOM<CVParameters>(1, _omitFieldNames ? '' : 'parameters', subBuilder: CVParameters.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetCVParametersResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'boat_state'), createEmptyInstance: create)
+    ..aOM<CVParameters>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parameters', subBuilder: CVParameters.create)
     ..hasRequiredFields = false
   ;
 
+  GetCVParametersResponse._() : super();
+  factory GetCVParametersResponse({
+    CVParameters? parameters,
+  }) {
+    final _result = create();
+    if (parameters != null) {
+      _result.parameters = parameters;
+    }
+    return _result;
+  }
+  factory GetCVParametersResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetCVParametersResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1571,10 +1535,8 @@ class GetCVParametersResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetCVParametersResponse copyWith(void Function(GetCVParametersResponse) updates) => super.copyWith((message) => updates(message as GetCVParametersResponse)) as GetCVParametersResponse;
-
+  GetCVParametersResponse copyWith(void Function(GetCVParametersResponse) updates) => super.copyWith((message) => updates(message as GetCVParametersResponse)) as GetCVParametersResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static GetCVParametersResponse create() => GetCVParametersResponse._();
   GetCVParametersResponse createEmptyInstance() => create();
@@ -1595,6 +1557,3 @@ class GetCVParametersResponse extends $pb.GeneratedMessage {
   CVParameters ensureParameters() => $_ensure(0);
 }
 
-
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
